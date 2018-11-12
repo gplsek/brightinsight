@@ -1,6 +1,6 @@
 uuid: 27392a9b-285c-4a70-bc6f-815bb488a459
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
@@ -13,7 +13,7 @@ _core:
 id: brightinsight_main_menu
 theme: brightinsight
 region: navigation
-weight: 0
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:
