@@ -1,0 +1,24 @@
+/**
+ *  Main css for card-career
+ */
+
+.component-card-career {
+
+	header {
+
+		&:before {
+			background: url('../images/logo-arrows-only.png') no-repeat 0 0;
+			content: '';
+			display: block;
+			height: 33px;
+			margin: 0 0 60px;
+		}
+	}
+
+	.content {
+
+		.meta {
+			margin: 10px 0 15px;
+		}
+	}
+}
