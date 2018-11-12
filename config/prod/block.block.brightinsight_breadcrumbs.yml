@@ -1,0 +1,22 @@
+uuid: 22ce0d43-038f-4b26-b4f2-1bdce574e3a9
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - brightinsight
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: brightinsight_breadcrumbs
+theme: brightinsight
+region: navigation
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,120 @@
+uuid: cd5c9d24-f4e5-46eb-ac8c-fd9b89194eb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_text_50_50.field_background
+    - field.field.paragraph.image_text_50_50.field_button_link
+    - field.field.paragraph.image_text_50_50.field_button_text
+    - field.field.paragraph.image_text_50_50.field_content
+    - field.field.paragraph.image_text_50_50.field_image
+    - field.field.paragraph.image_text_50_50.field_image_location
+    - field.field.paragraph.image_text_50_50.field_mask
+    - field.field.paragraph.image_text_50_50.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_text_50_50
+  module:
+    - color_field
+    - field_group
+    - image
+    - text
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_image_location
+        - field_mask
+        - field_background
+      parent_name: group_fields
+      weight: 6
+      format_type: accordion
+      format_settings:
+        id: ''
+        classes: ''
+        effect: bounceslide
+      label: Settings
+    group_fields:
+      children:
+        - field_title
+        - field_content
+        - field_image
+        - field_button_text
+        - field_button_link
+        - group_settings
+      parent_name: ''
+      weight: 0
+      format_type: accordion
+      format_settings:
+        id: ''
+        classes: ''
+        effect: bounceslide
+      label: Fields
+id: paragraph.image_text_50_50.default
+targetEntityType: paragraph
+bundle: image_text_50_50
+mode: default
+content:
+  field_background:
+    weight: 10
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_button_link:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_button_text:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image_location:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mask:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

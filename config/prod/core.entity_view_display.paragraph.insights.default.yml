@@ -1,0 +1,57 @@
+uuid: 48994306-1f02-462f-95f5-4ea89b9731c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.insights.field_benefit
+    - field.field.paragraph.insights.field_button_link
+    - field.field.paragraph.insights.field_button_text
+    - field.field.paragraph.insights.field_description
+    - field.field.paragraph.insights.field_title
+    - paragraphs.paragraphs_type.insights
+  module:
+    - field_collection
+id: paragraph.insights.default
+targetEntityType: paragraph
+bundle: insights
+mode: default
+content:
+  field_benefit:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_list
+    region: content
+  field_button_link:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_button_text:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 707e05a5-1989-4045-a3aa-aad90397e7ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_link
+    - paragraphs.paragraphs_type.image_text_50_50
+id: paragraph.image_text_50_50.field_button_link
+field_name: field_button_link
+entity_type: paragraph
+bundle: image_text_50_50
+label: 'Button Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
