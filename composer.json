@@ -26,6 +26,7 @@
         "drupal/better_exposed_filters": "^3.0@alpha",
         "drupal/blazy": "^1.0@RC",
         "drupal/block_exclude_pages": "^1.2",
+        "drupal/bootstrap": "^3.14",
         "drupal/ckeditor_iframe": "^2.0@beta",
         "drupal/components": "^1.0",
         "drupal/console": "^1.8",
