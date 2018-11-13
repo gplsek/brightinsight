@@ -1,0 +1,46 @@
+<!--/*
+    Main HTML template for the careers component.
+*/-->
+
+<section class="component-careers pad-top-lg pad-bot-lg text-centered text-black bg-lt-gray">
+	<div class="container">
+		<div class="component-header">
+			<div class="row">
+				<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+					<header>
+						<h2>Careers</h2>
+					</header>
+					<!-- if Intro Text -->
+					<div class="component-intro text-large">
+						<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel. Munere fabulas lucilius ei mea. An vix salutandi expetenda ullamcorper.</p>
+					</div>
+					<!-- end if -->
+				</div>
+			</div>
+		</div>
+		<div class="component-body sync-boxes">
+			<div class="row">
+				<div class="col-12 col-lg-4">
+					@@include('../card-career/card-career.html', { "title" : "Feugiat quis consequat eget tincidunt congue augue", "meta" : "San Jose, CA", "body" : "Maecenas maximus varius ante, id vulputate odio malesuada semper. Suspendisse potenti. Nulla at ligula molestie, molestie dolor vel, finibus diam."})
+				</div>
+				<div class="col-12 col-lg-4">
+					@@include('../card-career/card-career.html', { "title" : "Adipiscing elit nullam erat justo", "meta" : "New York, NY", "body" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque sapien, blandit ut viverra non, facilisis ut nisi. Maecenas euismod faucibus erat non rhoncus. Sed cursus, nisl in auctor egestas, quam neque lacinia leo." })
+				</div>
+				<div class="col-12 col-lg-4">
+					@@include('../card-career/card-career.html', { "title" : "Lorem ipsum dolor sit amet consectetur", "meta" : "San Francisco, CA", "body" : "Aenean neque sapien, blandit ut viverra non, facilisis ut nisi. Maecenas euismod faucibus erat non rhoncus. Sed cursus, nisl in auctor egestas, quam neque lacinia leo, eget dapibus dolor augue sit amet justo." })
+				</div>
+				<div class="col-12 col-lg-4">
+					@@include('../card-career/card-career.html', { "title" : "Adipiscing elit nullam erat justo", "meta" : "New York, NY", "body" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque sapien, blandit ut viverra non, facilisis ut nisi. Maecenas euismod faucibus erat non rhoncus. Sed cursus, nisl in auctor egestas, quam neque lacinia leo." })
+				</div>
+				<div class="col-12 col-lg-4">
+					@@include('../card-career/card-career.html', { "title" : "Feugiat quis consequat eget tincidunt congue augue", "meta" : "San Jose, CA", "body" : "Maecenas maximus varius ante, id vulputate odio malesuada semper. Suspendisse potenti. Nulla at ligula molestie, molestie dolor vel, finibus diam."})
+				</div>
+			</div>
+		</div>
+		<!-- if Footer CTA -->
+		<div class="component-footer">
+			@@include('../cta/cta.html', { "url" : "index.html", "class" : "primary", "label" : "learn more" })
+		</div>
+		<!-- end if -->
+	</div>
+</section>

@@ -1,0 +1,46 @@
+<!--/*
+    Main HTML template for the columns component.
+*/-->
+
+<section class="component-columns pad-top-lg pad-bot-lg text-centered text-white bg-teal">
+	<div class="container">
+		<div class="component-header">
+			<div class="row">
+				<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+					<header>
+						<h2>Columns Component</h2>
+					</header>
+					<!-- if Intro Text -->
+					<div class="component-intro text-large">
+						<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel. Munere fabulas lucilius ei mea. An vix salutandi expetenda ullamcorper.</p>
+					</div>
+					<!-- end if -->
+				</div>
+			</div>
+		</div>
+		<div class="component-body sync-boxes">
+			<div class="row">
+				<div class="col-12 col-lg-10 offset-lg-1">
+					<div class="columns row">
+						<div class="col-12 col-md-4 col-lg-3">
+							@@include('../card-icon/card-icon.html', { "image" : "../../images/icons/arrows-cloud.png", "title" : "Suspendisse", "body" : "<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel.</p>" })
+						</div>
+						<div class="col-12 col-md-4 col-lg-3">
+							@@include('../card-icon/card-icon.html', { "image" : "../../images/icons/health-ipad.png", "title" : "Elementum", "body" : "<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel.</p>" })
+						</div>
+						<div class="col-12 col-md-4 col-lg-3">
+							@@include('../card-icon/card-icon.html', { "image" : "../../images/icons/wearable.png", "title" : "Convallis", "body" : "<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel.</p>" })
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- if Footer CTA -->
+		<div class="component-footer">
+			@@include('../cta/cta.html', { "url" : "index.html", "class" : "secondary-white", "label" : "learn more" })
+		</div>
+		<!-- end if -->
+	</div>
+</section>
+
+

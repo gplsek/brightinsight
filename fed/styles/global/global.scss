@@ -1,0 +1,36 @@
+// bower:scss
+// endbower
+/*
+--------------------------------------------------
+	Global SCSS
+--------------------------------------------------
+*/
+
+body {
+	background: $color-white;
+	margin: 0;
+}
+
+.relative-wrapper {
+	position: relative;
+}
+
+.visible-mobile {
+
+	@include media-breakpoint-up(md) {
+		display: none;
+	}
+}
+
+.visible-desktop {
+
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+}
+
+ol {
+	li {
+		list-style: inherit;
+	}
+}

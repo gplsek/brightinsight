@@ -1,0 +1,20 @@
+<!--/*
+    Main HTML template for the card component without image.
+*/-->
+
+<article class="component-card component-card-no-image box">
+	<div class="content">
+		<div class="type">
+			 @@type
+		</div>
+		<header>
+			<h4>@@title</h4>
+		</header>
+		<div class="body">
+			@@body
+		</div>
+		<div class="cta">
+			@@include('../cta/cta.html', { "url" : "index.html", "class" : "secondary", "label" : "learn more" })
+		</div>
+	</div>
+</article>

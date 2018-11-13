@@ -1,0 +1,50 @@
+﻿// bower:scss
+// endbower
+/*
+--------------------------------------------------
+    Variables
+-------------------------------------------------- 
+*/
+
+
+/* Font Families */
+$font-family: 'Gilroy', Helvetica, sans-serif;
+
+
+/* Colors Palette */
+$color-black:			#000000;
+$color-white:			#FFFFFF;
+
+$color-blue:			#1A3E6C;
+$color-blue-muted:		#506B8F;
+
+$color-teal:			#007378;
+$color-teal-muted:		#389398;
+
+$color-green:			#00A56A;
+$color-green-muted:		#35BA8C;
+
+$color-lime:			#BDD441;
+$color-lime-muted:		#CBDD66;
+
+$color-dk-gray:			#323F48;
+$color-md-gray:			#7C878E;
+$color-gray:			#D0D3D3;
+$color-lt-gray:			#F0F0F0;
+
+$theme-color-map: (
+	black:			$color-black,
+	white:			$color-white,
+	blue:			$color-blue,
+	blue-muted:		$color-blue-muted,
+	green:			$color-green,
+	green-muted:	$color-green-muted,
+	lime:			$color-lime,
+	lime-muted:		$color-lime-muted,
+	teal:			$color-teal,
+	teal-muted:		$color-teal-muted,
+	dk-gray:		$color-dk-gray,
+	md-gray:		$color-md-gray,
+	gray:			$color-gray,
+	lt-gray:		$color-lt-gray,
+);
