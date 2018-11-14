@@ -1,0 +1,21 @@
+uuid: 67b34c7c-b5c5-44db-9528-167b55365f76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overlay_direction
+    - node.type.secondary_page
+  module:
+    - options
+id: node.secondary_page.field_overlay_direction
+field_name: field_overlay_direction
+entity_type: node
+bundle: secondary_page
+label: 'Overlay Direction'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
