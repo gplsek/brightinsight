@@ -6,11 +6,16 @@ dependencies:
     - field.field.node.homepage.field_button_link
     - field.field.node.homepage.field_button_text
     - field.field.node.homepage.field_hero_image
+    - field.field.node.homepage.field_ov
+    - field.field.node.homepage.field_overlay_direction
+    - field.field.node.homepage.field_overlay_fill_color
     - field.field.node.homepage.field_paragraphblock
     - field.field.node.homepage.field_sub_headline
     - node.type.homepage
   module:
+    - color_field
     - entity_reference_revisions
+    - options
     - user
 id: node.homepage.default
 targetEntityType: node
@@ -41,6 +46,29 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_ov:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_overlay_direction:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_overlay_fill_color:
+    weight: 8
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
     region: content
   field_paragraphblock:
     type: entity_reference_revisions_entity_view

@@ -11,7 +11,7 @@ id: paragraph.simple.field_mask_horizontal
 field_name: field_mask_horizontal
 entity_type: paragraph
 bundle: simple
-label: 'Mask '
+label: OverLay
 description: ''
 required: false
 translatable: false

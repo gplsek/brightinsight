@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.image_text_50_50.field_image
     - field.field.paragraph.image_text_50_50.field_image_location
     - field.field.paragraph.image_text_50_50.field_mask
+    - field.field.paragraph.image_text_50_50.field_overlay_fill_color
     - field.field.paragraph.image_text_50_50.field_title
     - paragraphs.paragraphs_type.image_text_50_50
   module:
@@ -76,6 +77,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_overlay_fill_color:
+    weight: 9
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
     region: content
   field_title:
     weight: 0

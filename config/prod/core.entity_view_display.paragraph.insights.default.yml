@@ -7,10 +7,15 @@ dependencies:
     - field.field.paragraph.insights.field_button_link
     - field.field.paragraph.insights.field_button_text
     - field.field.paragraph.insights.field_description
+    - field.field.paragraph.insights.field_item_separator
+    - field.field.paragraph.insights.field_mask_horizontal
+    - field.field.paragraph.insights.field_overlay_fill_color
     - field.field.paragraph.insights.field_title
     - paragraphs.paragraphs_type.insights
   module:
+    - color_field
     - field_collection
+    - options
 id: paragraph.insights.default
 targetEntityType: paragraph
 bundle: insights
@@ -45,6 +50,31 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_item_separator:
+    type: entity_reference_entity_view
+    weight: 7
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_mask_horizontal:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_overlay_fill_color:
+    weight: 6
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
     region: content
   field_title:
     weight: 0
