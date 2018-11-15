@@ -65,6 +65,22 @@ var bs4Overlay = function () {
 'use strict';
 
 /**
+ *  This is the main file for card-career
+ */
+ 
+if ($('.component-card-career').length) {
+    $(function() {
+        initCardCareer();
+    });
+}
+
+function initCardCareer() {
+    console.log('Initializing CardCareer');
+}
+
+'use strict';
+
+/**
  *  This is the main file for banner
  */
  
@@ -76,22 +92,6 @@ if ($('.component-banner').length) {
 
 function initBanner() {
     console.log('Initializing Banner');
-}
-
-'use strict';
-
-/**
- *  This is the main file for card
- */
- 
-if ($('.component-card').length) {
-    $(function() {
-        initCard();
-    });
-}
-
-function initCard() {
-    console.log('Initializing Card');
 }
 
 'use strict';
@@ -113,17 +113,17 @@ function initCardBlog() {
 'use strict';
 
 /**
- *  This is the main file for card-career
+ *  This is the main file for card
  */
  
-if ($('.component-card-career').length) {
+if ($('.component-card').length) {
     $(function() {
-        initCardCareer();
+        initCard();
     });
 }
 
-function initCardCareer() {
-    console.log('Initializing CardCareer');
+function initCard() {
+    console.log('Initializing Card');
 }
 
 'use strict';
@@ -185,22 +185,6 @@ function initCareers() {
 'use strict';
 
 /**
- *  This is the main file for cta
- */
- 
-if ($('.component-cta').length) {
-    $(function() {
-        initCta();
-    });
-}
-
-function initCta() {
-    console.log('Initializing Cta');
-}
-
-'use strict';
-
-/**
  *  This is the main file for columns
  */
  
@@ -241,6 +225,22 @@ function initColumns()
 'use strict';
 
 /**
+ *  This is the main file for cta
+ */
+ 
+if ($('.component-cta').length) {
+    $(function() {
+        initCta();
+    });
+}
+
+function initCta() {
+    console.log('Initializing Cta');
+}
+
+'use strict';
+
+/**
  *  This is the main file for fifty-fifty
  */
  
@@ -252,6 +252,22 @@ if ($('.component-fifty-fifty').length) {
 
 function initFiftyFifty() {
     console.log('Initializing FiftyFifty');
+}
+
+'use strict';
+
+/**
+ *  This is the main file for fifty-fifty-fullbleed
+ */
+ 
+if ($('.component-fifty-fifty-fullbleed').length) {
+    $(function() {
+        initFiftyFiftyFullbleed();
+    });
+}
+
+function initFiftyFiftyFullbleed() {
+    console.log('Initializing FiftyFiftyFullbleed');
 }
 
 'use strict';
@@ -284,22 +300,6 @@ if ($('.component-global-navigation').length) {
 
 function initGlobalNavigation() {
     console.log('Initializing GlobalNavigation');
-}
-
-'use strict';
-
-/**
- *  This is the main file for image-text
- */
- 
-if ($('.component-image-text').length) {
-    $(function() {
-        initImageText();
-    });
-}
-
-function initImageText() {
-    console.log('Initializing ImageText');
 }
 
 'use strict';
