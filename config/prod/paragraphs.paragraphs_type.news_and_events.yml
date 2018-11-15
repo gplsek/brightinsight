@@ -1,0 +1,14 @@
+uuid: 1d27625b-4494-4cea-9114-96d8f2f2da97
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: news_and_events
+label: 'News and Events'
+icon_uuid: null
+description: 'News and events paragraph , select up to 3 news and events'
+behavior_plugins: {  }
