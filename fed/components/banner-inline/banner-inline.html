@@ -1,0 +1,107 @@
+<!--/*
+    Main HTML template for the banner-inline component.
+
+    CMS Options:
+
+    Text Color:
+      - black:		text-black
+      - white:		text-white
+      (Note: In this component, the CTA is always green (primary) even when the text is white.)
+
+    Background Color:
+      - black:			bg-black
+      - white:			bg-white
+      - blue:			bg-blue
+      - blue (muted):	bg-blue-muted
+      - green:			bg-green
+      - green (muted):	bg-green-muted
+      - lime:			bg-lime
+      - lime (muted):	bg-lime-muted
+      - teal:			bg-teal
+      - teal (muted):	bg-teal-muted
+      - dark gray:		bg-dk-gray
+      - medium gray:	bg-md-gray
+      - gray:			bg-gray
+      - light gray:		bg-lt-gray
+
+    Background Image
+      Help text: Recommended banner size is: 1900x600.
+
+      (Note: If defined use bg-image class and style="background-image:url(...)" attribute.)
+
+    Top Angle:
+      - none:
+      - right:			top-angle-right
+      - left:			top-angle-left
+
+    Top Angle Color:
+      - black:			top-angle-black
+      - white:			top-angle-white
+      - blue:			top-angle-blue
+      - blue (muted):	top-angle-blue-muted
+      - green:			top-angle-green
+      - green (muted):	top-angle-green-muted
+      - lime:			top-angle-lime
+      - lime (muted):	top-angle-lime-muted
+      - teal:			top-angle-teal
+      - teal (muted):	top-angle-teal-muted
+      - dark gray:		top-angle-dk-gray
+      - medium gray:	top-angle-md-gray
+      - gray:			top-angle-gray
+      - light gray:		top-angle-lt-gray
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
+
+*/-->
+
+
+<!-- Variation: top right angle, white top angle, background image, CTA solid green -->
+<section class="component-banner-inline top-angle-right top-angle-white text-centered text-white bg-image" style="background-image:url('http://picsum.photos/1900/601')">
+	<div class="container">
+		<div class="row pad-top-lg pad-bot-lg">
+			<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+				<header>
+					<h2>Inline Banner Component (a.k.a. Value Prop)</h2>
+				</header>
+				<div class="component-content">
+					<div class="body">
+						<p>Subhead lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<!-- If CTA -->
+					<div class="cta">
+						@@include('../cta/cta.html', { "url" : "index.html", "class" : "primary", "label" : "learn more" })
+					</div>
+					<!-- end if -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Variation: blue backgroud, CTA white outline -->
+<section class="component-banner-inline text-centered text-white bg-blue">
+	<div class="container">
+		<div class="row pad-top-lg pad-bot-lg">
+			<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+				<header>
+					<h2>Inline Banner Component (a.k.a. Value Prop)</h2>
+				</header>
+				<div class="component-content">
+					<div class="body">
+						<p>Subhead lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<!-- If CTA -->
+					<div class="cta">
+						@@include('../cta/cta.html', { "url" : "index.html", "class" : "secondary-white", "label" : "learn more" })
+					</div>
+					<!-- end if -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+

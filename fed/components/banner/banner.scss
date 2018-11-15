@@ -4,4 +4,71 @@
 
 .component-banner {
 
+	.row {
+		align-items: center;
+	}
+
+	.component-content {
+		font-size: 22px;
+		line-height: 32px;
+		margin: 20px 0 0;
+
+		@include media-breakpoint-up(md) {
+
+			.component-content {
+				font-size: 30px;
+				line-height: 40px;
+				margin: 15px 0 0;
+			}		
+		}
+	}
+
+	.cta {
+		margin: 40px 0 0;
+	}
+
+	&.component-banner-tall {
+
+		.row {
+			min-height: 540px;
+		}
+
+		@include media-breakpoint-up(md) {
+
+			.row {
+				min-height: 820px;
+			}
+
+			h1 { font-size: 60px; line-height: 66px; }
+		}
+	}
+
+	&.component-banner-medium {
+
+		.row {
+			min-height: 400px;
+		}
+
+		@include media-breakpoint-up(md) {
+
+			.row {
+				min-height: 570px;
+			}
+		}
+
+	}
+
+	&.component-banner-short {
+
+		.row {
+			min-height: 190px;
+		}
+
+		@include media-breakpoint-up(md) {
+
+			.row {
+				min-height: 270px;
+			}
+		}
+	}
 }
