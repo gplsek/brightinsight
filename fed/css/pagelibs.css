@@ -2652,12 +2652,34 @@ body {
   .visible-mobile {
     display: none; } }
 
-@media (max-width: 991.98px) {
-  .visible-desktop {
-    display: none; } }
+.visible-desktop {
+  display: none; }
+  @media (min-width: 768px) {
+    .visible-desktop {
+      display: block; } }
+
+.visible-desktop-inline {
+  display: none; }
+  @media (min-width: 768px) {
+    .visible-desktop-inline {
+      display: inline; } }
 
 ol li {
   list-style: inherit; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+  ul li {
+    padding-left: 20px;
+    position: relative; }
+    ul li::before {
+      color: #00A56A;
+      content: "\2022";
+      display: block;
+      font-weight: bold;
+      left: 1px;
+      position: absolute; }
 
 /*
 --------------------------------------------------
@@ -2721,9 +2743,23 @@ body {
 b, strong {
   font-weight: 600; }
 
+p {
+  margin: 0 0 1em; }
+
 h1, h2, h3, h4, h5, h6 {
+  color: #1A3E6C;
   font-weight: 500;
   margin: 0; }
+  h1.line:after, h2.line:after, h3.line:after, h4.line:after, h5.line:after, h6.line:after {
+    background: #BDD441;
+    content: '';
+    display: block;
+    height: 3px;
+    margin: 12px 0 25px;
+    width: 20px; }
+
+.text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6 {
+  color: #FFFFFF; }
 
 h1 {
   font-size: 32px;
@@ -2763,6 +2799,9 @@ h6 {
 /* MD Tablet */
 /* LG Desktop */
 @media (min-width: 992px) {
+  h1.line:after, h2.line:after, h3.line:after, h4.line:after, h5.line:after, h6.line:after {
+    height: 4px;
+    width: 30px; }
   h1 {
     font-size: 46px;
     line-height: 56px; }
@@ -3032,10 +3071,11 @@ h6 {
     @media (min-width: 768px) {
       .component-header .component-intro {
         margin: 30px 0 0; } }
-    .component-header .component-intro p {
-      margin: 0 0 1em; }
-      .component-header .component-intro p:last-child {
-        margin: 0; }
+    .component-header .component-intro *:last-child {
+      margin-bottom: 0; }
+
+.component-content .body *:last-child {
+  margin-bottom: 0; }
 
 .component-footer {
   margin: 20px 0 0; }
@@ -3152,12 +3192,164 @@ h6 {
 .component-columns .component-body .columns {
   justify-content: space-between; }
 
-/**
- *  Main css for image-text
- */
+.component-columns.component-columns-connectors .cols-connector {
+  margin: -20px 0 30px; }
+
+.component-columns.component-columns-connectors .desktop-connector {
+  display: none; }
+
+@media (min-width: 992px) {
+  .component-columns.component-columns-connectors .cols-connector {
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    transform: translateX(-50%); }
+  .component-columns.component-columns-connectors .desktop-connector {
+    display: block; }
+  .component-columns.component-columns-connectors .mobile-connector {
+    display: none; } }
+
 /**
  *  Main css for fifty-fifty
  */
+@media (max-width: 991.98px) {
+  .component-fifty-fifty {
+    padding-bottom: 150px;
+    position: relative; }
+    .component-fifty-fifty .col-content {
+      position: static; }
+      .component-fifty-fifty .col-content .cta {
+        bottom: 60px;
+        position: absolute; }
+    .component-fifty-fifty .component-image {
+      margin-bottom: 40px; } }
+
+@media (min-width: 768px) {
+  .component-fifty-fifty.show-arrows {
+    background-image: url("../../images/bg-arrows-right.png");
+    background-repeat: no-repeat;
+    background-position: 100% 50%; }
+  .component-fifty-fifty.image-left.show-arrows {
+    background-image: url("../../images/bg-arrows-left.png");
+    background-position: 0 50%; }
+  .component-fifty-fifty .col-content .cta {
+    padding-top: 80px; } }
+
+/**
+ *  Main css for fifty-fifty-fullbleed
+ */
+.component-fifty-fifty-fullbleed {
+  position: relative; }
+  .component-fifty-fifty-fullbleed .col-image {
+    overflow: hidden;
+    position: relative; }
+    .component-fifty-fifty-fullbleed .col-image img {
+      display: block; }
+    .component-fifty-fifty-fullbleed .col-image:before {
+      border-bottom-style: solid;
+      border-bottom-width: 30px;
+      border-right: 100vw solid transparent;
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 0;
+      left: 0;
+      position: absolute;
+      width: 0; }
+  .component-fifty-fifty-fullbleed.bg-black .col-image:before {
+    border-bottom-color: #000000; }
+  .component-fifty-fifty-fullbleed.bg-black .col-image:after {
+    background: #000000; }
+  .component-fifty-fifty-fullbleed.bg-white .col-image:before {
+    border-bottom-color: #FFFFFF; }
+  .component-fifty-fifty-fullbleed.bg-white .col-image:after {
+    background: #FFFFFF; }
+  .component-fifty-fifty-fullbleed.bg-blue .col-image:before {
+    border-bottom-color: #1A3E6C; }
+  .component-fifty-fifty-fullbleed.bg-blue .col-image:after {
+    background: #1A3E6C; }
+  .component-fifty-fifty-fullbleed.bg-blue-muted .col-image:before {
+    border-bottom-color: #506B8F; }
+  .component-fifty-fifty-fullbleed.bg-blue-muted .col-image:after {
+    background: #506B8F; }
+  .component-fifty-fifty-fullbleed.bg-green .col-image:before {
+    border-bottom-color: #00A56A; }
+  .component-fifty-fifty-fullbleed.bg-green .col-image:after {
+    background: #00A56A; }
+  .component-fifty-fifty-fullbleed.bg-green-muted .col-image:before {
+    border-bottom-color: #35BA8C; }
+  .component-fifty-fifty-fullbleed.bg-green-muted .col-image:after {
+    background: #35BA8C; }
+  .component-fifty-fifty-fullbleed.bg-lime .col-image:before {
+    border-bottom-color: #BDD441; }
+  .component-fifty-fifty-fullbleed.bg-lime .col-image:after {
+    background: #BDD441; }
+  .component-fifty-fifty-fullbleed.bg-lime-muted .col-image:before {
+    border-bottom-color: #CBDD66; }
+  .component-fifty-fifty-fullbleed.bg-lime-muted .col-image:after {
+    background: #CBDD66; }
+  .component-fifty-fifty-fullbleed.bg-teal .col-image:before {
+    border-bottom-color: #007378; }
+  .component-fifty-fifty-fullbleed.bg-teal .col-image:after {
+    background: #007378; }
+  .component-fifty-fifty-fullbleed.bg-teal-muted .col-image:before {
+    border-bottom-color: #389398; }
+  .component-fifty-fifty-fullbleed.bg-teal-muted .col-image:after {
+    background: #389398; }
+  .component-fifty-fifty-fullbleed.bg-dk-gray .col-image:before {
+    border-bottom-color: #323F48; }
+  .component-fifty-fifty-fullbleed.bg-dk-gray .col-image:after {
+    background: #323F48; }
+  .component-fifty-fifty-fullbleed.bg-md-gray .col-image:before {
+    border-bottom-color: #7C878E; }
+  .component-fifty-fifty-fullbleed.bg-md-gray .col-image:after {
+    background: #7C878E; }
+  .component-fifty-fifty-fullbleed.bg-gray .col-image:before {
+    border-bottom-color: #D0D3D3; }
+  .component-fifty-fifty-fullbleed.bg-gray .col-image:after {
+    background: #D0D3D3; }
+  .component-fifty-fifty-fullbleed.bg-lt-gray .col-image:before {
+    border-bottom-color: #F0F0F0; }
+  .component-fifty-fifty-fullbleed.bg-lt-gray .col-image:after {
+    background: #F0F0F0; }
+  @media (min-width: 768px) {
+    .component-fifty-fifty-fullbleed .col-image {
+      background-size: cover;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 50%;
+      top: 0; }
+      .component-fifty-fifty-fullbleed .col-image img {
+        visibility: hidden; }
+      .component-fifty-fifty-fullbleed .col-image:before {
+        display: none; }
+      .component-fifty-fifty-fullbleed .col-image:after {
+        bottom: 0;
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        clip-path: polygon(100% 0, 0 100%, 100% 100%); }
+    .component-fifty-fifty-fullbleed.image-right .col-image:after {
+      left: 0;
+      right: auto;
+      -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+      clip-path: polygon(0 0, 0 100%, 100% 0); } }
+  @media (min-width: 768px) {
+    .is-ie .component-fifty-fifty-fullbleed .col-image:after {
+      right: -10%;
+      transform: skewX(-5deg);
+      transform-origin: 100%;
+      width: 90px; }
+    .is-ie .component-fifty-fifty-fullbleed.image-right .col-image:after {
+      left: -10%;
+      right: auto;
+      transform: skewX(-5deg); } }
+
 /**
  *  Main css for card
  */
@@ -3166,7 +3358,7 @@ h6 {
   margin: 0 0 20px;
   position: relative;
   text-align: left; }
-  .component-card header {
+  .component-card header h1, .component-card header h2, .component-card header h3, .component-card header h4, .component-card header h5, .component-card header h6 {
     color: #1A3E6C; }
   .component-card .content {
     padding: 20px 30px 120px; }

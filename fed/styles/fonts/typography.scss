@@ -19,13 +19,37 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-b, strong{
+b, strong {
 	font-weight: 600;
 }
 
+p {
+	margin: 0 0 1em;
+}
+
 h1, h2, h3, h4, h5, h6 {
+	color: $color-blue;
 	font-weight: 500;
 	margin: 0;
+
+	&.line {
+
+		&:after {
+			background: $color-lime;
+			content: '';
+			display: block;
+			height: 3px;
+			margin: 12px 0 25px;
+			width: 20px;
+		}
+	}
+}
+
+.text-white {
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $color-white;
+	}
 }
 
 h1 { font-size: 32px; line-height: 42px; font-weight: 600; }
@@ -62,6 +86,17 @@ h6 { font-size: 20px; line-height: 24px; }
 
 /* LG Desktop */
 @include media-breakpoint-up(lg) {
+
+	h1, h2, h3, h4, h5, h6 {
+
+		&.line {
+
+			&:after {
+				height: 4px;
+				width: 30px;
+			}
+		}
+	}
 
 	h1 { font-size: 46px; line-height: 56px; }
 	h2 { font-size: 44px; line-height: 52px; }
