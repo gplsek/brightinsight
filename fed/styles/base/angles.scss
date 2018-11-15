@@ -45,7 +45,7 @@
 
 	&:before {
 		border-bottom-style: solid;
-		border-bottom-width: 30px;
+		border-bottom-width: 40px;
 		bottom: 0;
 
 		@include media-breakpoint-up(md) {
@@ -63,7 +63,7 @@
 
 	&:before {
 		border-top-style: solid;
-		border-top-width: 30px;
+		border-top-width: 40px;
 		top: 0;
 
 		@include media-breakpoint-up(md) {

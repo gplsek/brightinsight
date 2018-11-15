@@ -21,3 +21,4 @@ require('components/card-career');
 require('components/careers');
 require('components/use-cases');
 require('components/card-blog');
+require('components/banner-inline');
