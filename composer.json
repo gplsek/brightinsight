@@ -43,7 +43,7 @@
         "drupal/field_group": "^1.0",
         "drupal/flexslider": "^2.0@beta",
         "drupal/google_analytics": "^2.3",
-        "drupal/hubspot": "^1.0@alpha",
+        "drupal/insert": "^1.0",
         "drupal/libraries": "^3.0@alpha",
         "drupal/media_entity": "^1.7",
         "drupal/media_entity_image": "^1.3",
