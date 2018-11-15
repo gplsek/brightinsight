@@ -30,6 +30,126 @@
 
 
 <!--/*
+	Main HTML template for the banner component.
+
+    CMS Options:
+
+    Text Color:
+      - black:		text-black
+      - white:		text-white
+
+    Background Color:
+      - black:			bg-black
+      - white:			bg-white
+      - blue:			bg-blue
+      - blue (muted):	bg-blue-muted
+      - green:			bg-green
+      - green (muted):	bg-green-muted
+      - lime:			bg-lime
+      - lime (muted):	bg-lime-muted
+      - teal:			bg-teal
+      - teal (muted):	bg-teal-muted
+      - dark gray:		bg-dk-gray
+      - medium gray:	bg-md-gray
+      - gray:			bg-gray
+      - light gray:		bg-lt-gray
+
+    Background Image
+      Help text: Recommended banner sizes are: Tall (1900x820), Medium (1900x570), Small (1900x270).
+
+      (Note: If defined use bg-image class and style="background-image:url(...)" attribute.)
+
+    Bottom Angle Color:
+      - black:			bottom-angle-black
+      - white:			bottom-angle-white
+      - blue:			bottom-angle-blue
+      - blue (muted):	bottom-angle-blue-muted
+      - green:			bottom-angle-green
+      - green (muted):	bottom-angle-green-muted
+      - lime:			bottom-angle-lime
+      - lime (muted):	bottom-angle-lime-muted
+      - teal:			bottom-angle-teal
+      - teal (muted):	bottom-angle-teal-muted
+      - dark gray:		bottom-angle-dk-gray
+      - medium gray:	bottom-angle-md-gray
+      - gray:			bottom-angle-gray
+      - light gray:		bottom-angle-lt-gray
+
+      (Note: If not defined, use bottom-angle-white as the class.)
+
+    Banner Height:
+      - Tall:           component-banner-tall
+      - Medium:         component-banner-medium
+      - Short:          component-banner-short
+
+    CTA Style:
+      - Solid Green:    primary
+      - Green Outline:  secondary
+      - White Outline:  secondary-white
+
+*/-->
+
+
+<!-- Variation: Tall banner, white text, white bottom angle, background image -->
+<section class="component-banner component-banner-tall bottom-angle-right bottom-angle-white text-white bg-image" style="background-image:url('http://picsum.photos/1900/820')">
+	<div class="container">
+		<div class="row pad-top-lg pad-bot-lg">
+			<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+				<header>
+					<h1>Banner Component (Tall)</h1>
+				</header>
+				<div class="component-content">
+					<div class="body">
+						<p>Subhead lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<!-- If CTA -->
+					<div class="cta">
+						<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta primary"><span>learn more</span></a>
+
+
+					</div>
+					<!-- end if -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Variation: Default banner, white text, white bottom angle, background image -->
+<section class="component-banner component-banner-medium bottom-angle-right bottom-angle-white text-white bg-image" style="background-image:url('http://picsum.photos/1901/570')">
+	<div class="container">
+		<div class="row pad-top-lg pad-bot-lg">
+			<div class="col-12 col-md-8 offset-md-2">
+				<header>
+					<h1>Banner Component (Default)</h1>
+				</header>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Variation: Short banner, white text, white bottom angle, background image -->
+<section class="component-banner component-banner-short bottom-angle-right bottom-angle-white text-white bg-image" style="background-image:url('http://picsum.photos/1901/270')">
+	<div class="container">
+		<div class="row pad-top-lg pad-bot-lg">
+			<div class="col-12 col-md-8 offset-md-2">
+				<header>
+					<h1>Banner Component (Short)</h1>
+				</header>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--/*
     Main HTML template for the fifty-fifty-fullbleed component.
 
     CMS Options:
@@ -43,6 +163,11 @@
     Variation:
       - Image on Left:     image-left
       - Image on Right:    image-right
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
 */-->
 
 
@@ -132,6 +257,11 @@
 
     Show Arrows:
       - Yes (checkbox to enable)
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
 */-->
 
 
@@ -290,9 +420,154 @@
 
 
 <!--/*
-    Main HTML template for the columns component.
+    Main HTML template for the banner-inline component.
+
+    CMS Options:
+
+    Text Color:
+      - black:		text-black
+      - white:		text-white
+      (Note: In this component, the CTA is always green (primary) even when the text is white.)
+
+    Background Color:
+      - black:			bg-black
+      - white:			bg-white
+      - blue:			bg-blue
+      - blue (muted):	bg-blue-muted
+      - green:			bg-green
+      - green (muted):	bg-green-muted
+      - lime:			bg-lime
+      - lime (muted):	bg-lime-muted
+      - teal:			bg-teal
+      - teal (muted):	bg-teal-muted
+      - dark gray:		bg-dk-gray
+      - medium gray:	bg-md-gray
+      - gray:			bg-gray
+      - light gray:		bg-lt-gray
+
+    Background Image
+      Help text: Recommended banner size is: 1900x600.
+
+      (Note: If defined use bg-image class and style="background-image:url(...)" attribute.)
+
+    Top Angle:
+      - none:
+      - right:			top-angle-right
+      - left:			top-angle-left
+
+    Top Angle Color:
+      - black:			top-angle-black
+      - white:			top-angle-white
+      - blue:			top-angle-blue
+      - blue (muted):	top-angle-blue-muted
+      - green:			top-angle-green
+      - green (muted):	top-angle-green-muted
+      - lime:			top-angle-lime
+      - lime (muted):	top-angle-lime-muted
+      - teal:			top-angle-teal
+      - teal (muted):	top-angle-teal-muted
+      - dark gray:		top-angle-dk-gray
+      - medium gray:	top-angle-md-gray
+      - gray:			top-angle-gray
+      - light gray:		top-angle-lt-gray
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
+
 */-->
 
+
+<!-- Variation: top right angle, white top angle, background image, CTA solid green -->
+<section class="component-banner-inline top-angle-right top-angle-white text-centered text-white bg-image" style="background-image:url('http://picsum.photos/1900/601')">
+	<div class="container">
+		<div class="row pad-top-lg pad-bot-lg">
+			<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+				<header>
+					<h2>Inline Banner Component (a.k.a. Value Prop)</h2>
+				</header>
+				<div class="component-content">
+					<div class="body">
+						<p>Subhead lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<!-- If CTA -->
+					<div class="cta">
+						<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta primary"><span>learn more</span></a>
+
+
+					</div>
+					<!-- end if -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Variation: blue backgroud, CTA white outline -->
+<section class="component-banner-inline text-centered text-white bg-blue">
+	<div class="container">
+		<div class="row pad-top-lg pad-bot-lg">
+			<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+				<header>
+					<h2>Inline Banner Component (a.k.a. Value Prop)</h2>
+				</header>
+				<div class="component-content">
+					<div class="body">
+						<p>Subhead lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<!-- If CTA -->
+					<div class="cta">
+						<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta secondary-white"><span>learn more</span></a>
+
+
+					</div>
+					<!-- end if -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--/*
+    Main HTML template for the columns component.
+
+    CMS Options:
+
+    Text Color
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    Background Color
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
+
+    Connector Image (optional):
+      - Desktop version:    desktop-connector
+      - Mobile version:    mobile-connector
+
+      (Note: If the desktop version is uploaded, then assign trhe component-columns-connectors class to the component.)
+*/-->
+
+
+<!-- Variation: Connector images, black text, lt gray background -->
 <section class="component-columns component-columns-connectors pad-top-lg pad-bot-lg text-centered text-black bg-lt-gray">
 	<div class="container">
 		<div class="component-header">
@@ -402,6 +677,7 @@
 </section>
 
 
+<!-- Variation: White text, teal background -->
 <section class="component-columns pad-top-lg pad-bot-lg text-centered text-white bg-teal">
 	<div class="container">
 		<div class="component-header">
@@ -512,11 +788,6 @@
       - black:		text-black
       - white:		text-white
 
-      (note: when white text is chosen, the CTA if present should receive the secondary-white class. 
-             Otherwise the primary or secondary classes are used according to the template. Of course, 
-             this rule doesn't apply to nested CTAs in cards. Those should geta class based on their 
-             own background.)
-
     Background Color:
       - black:			bg-black
       - white:			bg-white
@@ -533,13 +804,19 @@
       - gray:			bg-gray
       - light gray:		bg-lt-gray
 
-    Background Image (if defined use bg-image class and style="background-image:url(...)" attribute)
+    Background Image
+      (Note: If defined use bg-image class and style="background-image:url(...)" attribute.)
 
     Title
 
     Intro Text
 
-    Footer CTA
+    CTA
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
 
     Top Angle:
       - none:
@@ -692,7 +969,30 @@
 
 <!--/*
     Main HTML template for the cards component.
+
+    CMS Options:
+
+    Text Color
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    Background Color
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    Background Image
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    Number of Columns:
+      - 3
+      - 4
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
 */-->
+
+
+<!-- Variation: Three columns, black text, lt gray background -->
 <section class="component-cards pad-top-lg pad-bot-lg text-centered text-black bg-lt-gray">
 	<div class="container">
 		<div class="component-header">
@@ -823,12 +1123,7 @@
 </section>
 
 
-
-
-<!--/*
-    Example HTML template for the cards component with 4-columns.
-*/-->
-
+<!-- Variation: Four columns, white text, blue (muted) background -->
 <section class="component-cards pad-top-lg pad-bot-lg text-centered text-white bg-blue-muted">
 	<div class="container">
 		<div class="component-header">
@@ -991,6 +1286,19 @@
 
 <!--/*
     Main HTML template for the careers component.
+
+    CMS Options:
+
+    Text Color
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    Background Color
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
 */-->
 
 <section class="component-careers pad-top-lg pad-bot-lg text-centered text-black bg-lt-gray">

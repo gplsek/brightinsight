@@ -2763,8 +2763,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 32px;
-  line-height: 42px;
-  font-weight: 600; }
+  line-height: 42px; }
 
 h2 {
   font-size: 30px;
@@ -2804,7 +2803,8 @@ h6 {
     width: 30px; }
   h1 {
     font-size: 46px;
-    line-height: 56px; }
+    line-height: 56px;
+    font-weight: 600; }
   h2 {
     font-size: 44px;
     line-height: 52px; }
@@ -2950,7 +2950,7 @@ h6 {
 .bottom-angle-left:before,
 .bottom-angle-right:before {
   border-bottom-style: solid;
-  border-bottom-width: 30px;
+  border-bottom-width: 40px;
   bottom: 0; }
   @media (min-width: 768px) {
     .bottom-angle-left:before,
@@ -2964,7 +2964,7 @@ h6 {
 .top-angle-left:before,
 .top-angle-right:before {
   border-top-style: solid;
-  border-top-width: 30px;
+  border-top-width: 40px;
   top: 0; }
   @media (min-width: 768px) {
     .top-angle-left:before,
@@ -3186,6 +3186,46 @@ h6 {
 /**
  *  Main css for banner
  */
+.component-banner .row {
+  align-items: center; }
+
+.component-banner .component-content {
+  font-size: 22px;
+  line-height: 32px;
+  margin: 20px 0 0; }
+  @media (min-width: 768px) {
+    .component-banner .component-content .component-content {
+      font-size: 30px;
+      line-height: 40px;
+      margin: 15px 0 0; } }
+
+.component-banner .cta {
+  margin: 40px 0 0; }
+
+.component-banner.component-banner-tall .row {
+  min-height: 540px; }
+
+@media (min-width: 768px) {
+  .component-banner.component-banner-tall .row {
+    min-height: 820px; }
+  .component-banner.component-banner-tall h1 {
+    font-size: 60px;
+    line-height: 66px; } }
+
+.component-banner.component-banner-medium .row {
+  min-height: 400px; }
+
+@media (min-width: 768px) {
+  .component-banner.component-banner-medium .row {
+    min-height: 570px; } }
+
+.component-banner.component-banner-short .row {
+  min-height: 190px; }
+
+@media (min-width: 768px) {
+  .component-banner.component-banner-short .row {
+    min-height: 270px; } }
+
 /**
  *  Main css for columns
  */
@@ -3475,3 +3515,22 @@ h6 {
 /**
  *  Main css for card-blog
  */
+/**
+ *  Main css for banner-inline
+ */
+.component-banner-inline .row {
+  align-items: center;
+  min-height: 600px; }
+
+.component-banner-inline .component-content {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 20px 0 0; }
+  @media (min-width: 768px) {
+    .component-banner-inline .component-content .component-content {
+      font-size: 24px;
+      line-height: 34px;
+      margin: 15px 0 0; } }
+
+.component-banner-inline .cta {
+  margin: 40px 0 0; }
