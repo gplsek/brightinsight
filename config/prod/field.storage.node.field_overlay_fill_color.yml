@@ -1,0 +1,20 @@
+uuid: 8bc56ab9-b15b-4dbc-b2d0-9a51a91056bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - node
+id: node.field_overlay_fill_color
+field_name: field_overlay_fill_color
+entity_type: node
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

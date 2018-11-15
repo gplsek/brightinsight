@@ -1,0 +1,22 @@
+uuid: ddfa9102-1548-4060-9735-a3a4d68b4895
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.secondary_page
+  module:
+    - text
+id: node.secondary_page.body
+field_name: body
+entity_type: node
+bundle: secondary_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

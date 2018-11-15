@@ -8,7 +8,7 @@ third_party_settings:
   paragraphs_library:
     allow_library_conversion: true
 id: insights
-label: Insights
+label: Steps
 icon_uuid: null
-description: 'Insights and Benefits'
+description: 'Steps example Insights and Benefits, optional divider image'
 behavior_plugins: {  }

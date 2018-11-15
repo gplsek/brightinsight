@@ -8,7 +8,7 @@ third_party_settings:
   paragraphs_library:
     allow_library_conversion: true
 id: simple
-label: Simple
+label: 'Value Prop'
 icon_uuid: null
 description: 'Simple content, with button and background option'
 behavior_plugins: {  }

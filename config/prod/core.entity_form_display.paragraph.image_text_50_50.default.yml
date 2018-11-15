@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.image_text_50_50.field_image
     - field.field.paragraph.image_text_50_50.field_image_location
     - field.field.paragraph.image_text_50_50.field_mask
+    - field.field.paragraph.image_text_50_50.field_overlay_fill_color
     - field.field.paragraph.image_text_50_50.field_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.image_text_50_50
@@ -22,40 +23,39 @@ third_party_settings:
   field_group:
     group_settings:
       children:
-        - field_image_location
         - field_mask
+        - field_overlay_fill_color
         - field_background
-      parent_name: group_fields
-      weight: 6
-      format_type: accordion
-      format_settings:
-        id: ''
-        classes: ''
-        effect: bounceslide
-      label: Settings
-    group_fields:
-      children:
-        - field_title
-        - field_content
-        - field_image
-        - field_button_text
-        - field_button_link
-        - group_settings
       parent_name: ''
-      weight: 0
-      format_type: accordion
+      weight: 7
+      format_type: tab
       format_settings:
         id: ''
         classes: ''
-        effect: bounceslide
-      label: Fields
+        formatter: open
+        description: ''
+        required_fields: true
+      label: Settings
+    group_image:
+      children:
+        - field_image
+        - field_image_location
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Image
 id: paragraph.image_text_50_50.default
 targetEntityType: paragraph
 bundle: image_text_50_50
 mode: default
 content:
   field_background:
-    weight: 10
+    weight: 8
     settings:
       placeholder_color: ''
       placeholder_opacity: ''
@@ -63,7 +63,7 @@ content:
     type: color_field_widget_default
     region: content
   field_button_link:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -71,7 +71,7 @@ content:
     type: string_textfield
     region: content
   field_button_text:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -79,7 +79,7 @@ content:
     type: string_textfield
     region: content
   field_content:
-    weight: 2
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
@@ -95,19 +95,26 @@ content:
     type: image_image
     region: content
   field_image_location:
-    weight: 8
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_mask:
-    weight: 9
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_overlay_fill_color:
+    weight: 7
+    settings:
+      default_colors: "\n#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46\n#42D692,#16A765,#7BD148,#B3DC6C,#FBE983\n#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF\n#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2\n#CD74E6,#A47AE2"
+    third_party_settings: {  }
+    type: color_field_widget_box
+    region: content
   field_title:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''

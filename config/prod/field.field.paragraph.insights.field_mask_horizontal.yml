@@ -1,0 +1,21 @@
+uuid: 8bc46e78-cc66-4d1f-b47b-d14087ce7ef8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mask_horizontal
+    - paragraphs.paragraphs_type.insights
+  module:
+    - options
+id: paragraph.insights.field_mask_horizontal
+field_name: field_mask_horizontal
+entity_type: paragraph
+bundle: insights
+label: OverLay
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

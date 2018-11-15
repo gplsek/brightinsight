@@ -7,28 +7,32 @@ dependencies:
     - field.field.paragraph.insights.field_button_link
     - field.field.paragraph.insights.field_button_text
     - field.field.paragraph.insights.field_description
+    - field.field.paragraph.insights.field_item_separator
+    - field.field.paragraph.insights.field_mask_horizontal
+    - field.field.paragraph.insights.field_overlay_fill_color
     - field.field.paragraph.insights.field_title
     - paragraphs.paragraphs_type.insights
   module:
+    - color_field
     - field_collection
     - field_group
 third_party_settings:
   field_group:
-    group_fields:
+    group_settings:
       children:
-        - field_title
-        - field_description
-        - field_benefit
-        - field_button_text
-        - field_button_link
+        - field_item_separator
+        - field_mask_horizontal
+        - field_overlay_fill_color
       parent_name: ''
-      weight: 0
-      format_type: accordion
+      weight: 6
+      format_type: tab
       format_settings:
         id: ''
         classes: ''
-        effect: bounceslide
-      label: Fields
+        formatter: open
+        description: ''
+        required_fields: true
+      label: Settings
 id: paragraph.insights.default
 targetEntityType: paragraph
 bundle: insights
@@ -63,6 +67,28 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_item_separator:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_mask_horizontal:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_overlay_fill_color:
+    weight: 9
+    settings:
+      default_colors: '#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46,#42D692,#16A765,#7BD148,#B3DC6C,#FBE983,#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF,#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2,#CD74E6,#A47AE2'
+    third_party_settings: {  }
+    type: color_field_widget_box
     region: content
   field_title:
     weight: 1
