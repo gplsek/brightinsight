@@ -1,0 +1,93 @@
+// bower:scss
+// endbower
+/*
+--------------------------------------------------
+    Angle Classes
+-------------------------------------------------- 
+*/
+
+.bottom-angle-left,
+.bottom-angle-right,
+.top-angle-left,
+.top-angle-right {
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		height: 0;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		width: 0;
+	}
+}
+
+.bottom-angle-left,
+.top-angle-left {
+
+	&:before {
+		border-right: 100vw solid transparent;
+	}
+}
+
+.bottom-angle-right,
+.top-angle-right {
+
+	&:before {
+		border-left: 100vw solid transparent;
+	}
+}
+
+.bottom-angle-left,
+.bottom-angle-right {
+
+	&:before {
+		border-bottom-style: solid;
+		border-bottom-width: 40px;
+		bottom: 0;
+
+		@include media-breakpoint-up(md) {
+			border-bottom-width: 60px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			border-bottom-width: 90px;
+		}
+	}
+}
+
+.top-angle-left,
+.top-angle-right {
+
+	&:before {
+		border-top-style: solid;
+		border-top-width: 40px;
+		top: 0;
+
+		@include media-breakpoint-up(md) {
+			border-top-width: 60px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			border-top-width: 90px;
+		}
+	}
+}
+
+@each $name, $color in $theme-color-map {
+
+	.bottom-angle-#{$name} {
+		&:before {
+			border-bottom-color: $color;
+		}
+	}
+
+	.top-angle-#{$name} {
+		&:before {
+			border-top-color: $color;
+		}
+	}
+}
+
