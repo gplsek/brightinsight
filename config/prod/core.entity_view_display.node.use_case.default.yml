@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.use_case.field_description
     - field.field.node.use_case.field_files
     - field.field.node.use_case.field_gated_
+    - field.field.node.use_case.field_gated_file
     - node.type.use_case
   module:
     - file
@@ -40,9 +41,17 @@ content:
     third_party_settings: {  }
     type: boolean
     region: content
+  field_gated_file:
+    weight: 105
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

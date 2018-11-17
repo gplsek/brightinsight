@@ -23,7 +23,7 @@ mode: default
 content:
   field_background:
     weight: 6
-    label: above
+    label: hidden
     settings:
       format: hex
       opacity: '1'
@@ -33,7 +33,7 @@ content:
   field_background_image:
     type: entity_reference_entity_view
     weight: 5
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -41,7 +41,7 @@ content:
     region: content
   field_button_link:
     weight: 3
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -49,7 +49,7 @@ content:
     region: content
   field_button_text:
     weight: 2
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -57,21 +57,21 @@ content:
     region: content
   field_content:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_mask_horizontal:
     weight: 4
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_overlay_fill_color:
     weight: 7
-    label: above
+    label: hidden
     settings:
       format: hex
       opacity: '1'
@@ -80,7 +80,7 @@ content:
     region: content
   field_title:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

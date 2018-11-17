@@ -4,7 +4,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.homepage.field_button_link
+    - field.field.node.homepage.field_button_text
     - field.field.node.homepage.field_hero_image
+    - field.field.node.homepage.field_ov
+    - field.field.node.homepage.field_overlay_direction
+    - field.field.node.homepage.field_overlay_fill_color
+    - field.field.node.homepage.field_paragraphblock
+    - field.field.node.homepage.field_sub_headline
     - node.type.homepage
   module:
     - user
@@ -15,8 +22,15 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
+  field_button_link: true
+  field_button_text: true
   field_hero_image: true
+  field_ov: true
+  field_overlay_direction: true
+  field_overlay_fill_color: true
+  field_paragraphblock: true
+  field_sub_headline: true
