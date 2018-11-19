@@ -1,0 +1,51 @@
+<!--/*
+    Main HTML template for the blog-list component.
+*/-->
+<section class="component-blog-list pad-top-lg pad-bot-lg text-black bg-lt-gray">
+	<div class="container">
+		<!-- if Title -->
+		<div class="component-header">
+			<div class="row">
+				<div class="col-12">
+					<header>
+						<h2>Blog</h2>
+					</header>
+				</div>
+			</div>
+		</div>
+		<!-- end if -->
+		<div class="component-body">
+			<div class="blog-grid row">
+				<div class="column column-primary col-12 col-xl-6">
+					@@include('../card-blog/card-blog-featured.html', { "image-square" : "../../images/fpo/blog-featured-square.jpg", "meta" : "Dec 20, 2018", "title" : "Feugiat quis consequat eget tincidunt congue augue", "body" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." })
+				</div>
+				<div class="column column-secondary col-12 col-xl-6">
+					@@include('../card-blog/card-blog.html', { "image" : "../../images/fpo/blog-1.jpg", "image-square" : "../../images/fpo/blog-1-square.jpg", "meta" : "Dec 15, 2019", "title" : "Adipiscing elit nullam erat justo exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat nostrud exercitation" })
+					@@include('../card-blog/card-blog.html', { "image" : "../../images/fpo/blog-2.jpg", "image-square" : "../../images/fpo/blog-2-square.jpg", "meta" : "Dec 09, 2019", "title" : "Lorem ipsum dolor sit amet consectetur" })
+				</div>
+			</div>
+			<div class="row sync-boxes">
+				<div class="col-12 col-lg-6 col-xl-4">
+					@@include('../card/card.html', { "image" : "../../images/fpo/city-alt.jpg","meta" : "Dec 01, 2019", "title" : "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo" })
+				</div>
+				<div class="col-12 col-lg-6 col-xl-4">
+					@@include('../card/card.html', { "image" : "../../images/fpo/doctors.jpg", "meta" : "Nov 15, 2019", "title" : "Duis aute irure dolor in reprehenderit in voluptate velit esse" })
+				</div>
+				<div class="col-12 col-lg-6 col-xl-4">
+					@@include('../card/card.html', { "image" : "../../images/fpo/watch.jpg", "meta" : "Nov 07, 2019", "title" : "Feugiat quis consequat eget tincidunt congue augue" })
+				</div>
+				<div class="col-12 col-lg-6 col-xl-4">
+					@@include('../card/card.html', { "image" : "../../images/fpo/office.jpg", "meta" : "Nov 01, 2019", "title" : "Justo exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat" })
+				</div>
+				<div class="col-12 col-lg-6 col-xl-4">
+					@@include('../card/card.html', { "image" : "../../images/fpo/city.jpg","meta" : "Oct 15, 2019", "title" : "Lorem ipsum dolor sit amet consectetur" })
+				</div>
+			</div>
+		</div>
+		<!-- if Footer CTA -->
+		<div class="component-footer text-centered">
+			@@include('../cta/cta.html', { "url" : "index.html", "class" : "primary", "label" : "learn more" })
+		</div>
+		<!-- end if -->
+	</div>
+</section>
