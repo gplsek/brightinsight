@@ -2681,6 +2681,11 @@ ul {
       left: 1px;
       position: absolute; }
 
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both; }
+
 /*
 --------------------------------------------------
    Font Faces
@@ -3399,9 +3404,10 @@ h6 {
   position: relative;
   text-align: left; }
   .component-card header h1, .component-card header h2, .component-card header h3, .component-card header h4, .component-card header h5, .component-card header h6 {
-    color: #1A3E6C; }
+    color: #1A3E6C;
+    font-weight: 400; }
   .component-card .content {
-    padding: 20px 30px 120px; }
+    padding: 15px 20px 20px; }
     .component-card .content .type {
       color: #323F48;
       font-size: 16px;
@@ -3430,11 +3436,18 @@ h6 {
       line-height: 26px;
       margin: 20px 0 0; }
     .component-card .content .cta {
-      bottom: 30px;
-      position: absolute; }
+      margin: 20px 0 0; }
   @media (min-width: 768px) {
     .component-card {
-      margin: 0 0 30px; } }
+      margin: 0 0 30px; }
+      .component-card .content {
+        padding: 20px 30px 30px; } }
+  @media (min-width: 992px) {
+    .component-card .content {
+      padding-bottom: 120px; }
+      .component-card .content .cta {
+        bottom: 30px;
+        position: absolute; } }
 
 /**
  *  Main css for text
@@ -3515,6 +3528,125 @@ h6 {
 /**
  *  Main css for card-blog
  */
+.component-card-blog {
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: left; }
+  .component-card-blog .image .img-square {
+    display: none; }
+  .component-card-blog header h1, .component-card-blog header h2, .component-card-blog header h3, .component-card-blog header h4, .component-card-blog header h5, .component-card-blog header h6 {
+    font-weight: 400; }
+  .component-card-blog .content {
+    padding: 15px 20px 20px; }
+    .component-card-blog .content .type {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin: 0 0 90px;
+      padding: 0 0 10px;
+      position: relative;
+      text-transform: uppercase; }
+      .component-card-blog .content .type:after {
+        background: #BDD441;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 3px;
+        position: absolute;
+        width: 20px; }
+    .component-card-blog .content .body {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 26px;
+      margin: 20px 0 0; }
+    .component-card-blog .content .cta {
+      margin: 20px 0 0; }
+  .component-card-blog.featured-card {
+    position: relative; }
+    .component-card-blog.featured-card.bg-image {
+      background-position: 100% 50%; }
+    .component-card-blog.featured-card .mask {
+      background-image: linear-gradient(-90deg, rgba(90, 119, 157, 0.56) 0%, rgba(27, 61, 109, 0.8) 100%);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .component-card-blog.featured-card .content {
+      position: relative; }
+      .component-card-blog.featured-card .content .cta {
+        margin: 60px 0 0; }
+  .component-card-blog.standard-card .col-12 {
+    position: static; }
+  .component-card-blog.standard-card .meta {
+    color: #7C878E;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0 0 15px; }
+  @media (min-width: 768px) {
+    .component-card-blog {
+      margin-bottom: 30px; }
+      .component-card-blog .content {
+        padding: 20px 30px 30px; }
+      .component-card-blog.featured-card .mask {
+        background-image: linear-gradient(-90deg, rgba(199, 219, 239, 0) 0%, rgba(90, 119, 157, 0.56) 45%, rgba(27, 61, 109, 0.88) 100%); }
+      .component-card-blog.featured-card .content {
+        padding: 30px;
+        position: relative; }
+        .component-card-blog.featured-card .content .type {
+          margin: 0 0 60px; }
+        .component-card-blog.featured-card .content .inner {
+          margin: 0 0 50px 50px;
+          max-width: 420px; } }
+  @media (min-width: 992px) {
+    .component-card-blog.standard-card {
+      flex: 0 0 50%;
+      max-width: calc(50% - 30px);
+      min-height: 1px;
+      margin-left: 15px;
+      margin-right: 15px;
+      position: relative; }
+      .component-card-blog.standard-card .content {
+        padding-bottom: 120px; }
+        .component-card-blog.standard-card .content .cta {
+          bottom: 30px;
+          position: absolute; } }
+  @media (min-width: 1200px) {
+    .component-card-blog {
+      flex: 1;
+      margin-bottom: 30px; }
+      .component-card-blog.standard-card {
+        flex: 1;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%; }
+        .component-card-blog.standard-card .content {
+          padding-bottom: 30px; }
+          .component-card-blog.standard-card .content h4 {
+            font-size: 22px;
+            line-height: 30px;
+            max-height: 120px;
+            overflow: hidden; }
+          .component-card-blog.standard-card .content .cta {
+            bottom: auto;
+            position: static; }
+      .component-card-blog .image .img-default {
+        display: none; }
+      .component-card-blog .image .img-square {
+        display: block; }
+      .component-card-blog.featured-card {
+        flex: 2; } }
+  @media (min-width: 1600px) {
+    .component-card-blog.standard-card .content h4 {
+      font-size: 26px;
+      line-height: 36px;
+      max-height: 180px; } }
+
 /**
  *  Main css for banner-inline
  */
@@ -3534,3 +3666,26 @@ h6 {
 
 .component-banner-inline .cta {
   margin: 40px 0 0; }
+
+/**
+ *  Main css for blog-list
+ */
+@media (min-width: 992px) {
+  .component-blog-list .column-secondary {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0; } }
+
+@media (min-width: 1200px) {
+  .component-blog-list .column-secondary {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .component-blog-list .blog-grid {
+    display: flex;
+    flex-wrap: wrap; }
+    .component-blog-list .blog-grid .column {
+      flex: 1;
+      display: flex;
+      flex-direction: column; } }

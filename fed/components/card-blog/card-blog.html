@@ -1,10 +1,28 @@
 <!--/*
     Main HTML template for the card-blog component.
 */-->
-<section class="component-card-blog">
-
-    <h2>Hello World!</h2>
-    <p>I'm the <b>card-blog</b> component</p>
-
-</section>
-
+<article class="component-card-blog standard-card">
+	<div class="blog-card-container">
+		<div class="row no-gutters">
+			<div class="col-12 col-xl-6">
+				<div class="image">
+					<img class="img-responsive img-fullwidth img-default" src="@@image">
+					<img class="img-responsive img-fullwidth img-square" src="@@image-square">
+				</div>
+			</div>
+			<div class="col-12 col-xl-6">
+				<div class="content">
+					<div class="meta">
+						 @@meta
+					</div>
+					<header>
+						<h4>@@title</h4>
+					</header>
+					<div class="cta">
+						@@include('../cta/cta.html', { "url" : "index.html", "class" : "secondary", "label" : "learn more" })
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
