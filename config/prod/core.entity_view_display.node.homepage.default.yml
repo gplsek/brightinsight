@@ -23,7 +23,7 @@ bundle: homepage
 mode: default
 content:
   field_button_link:
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
@@ -31,7 +31,7 @@ content:
     type: string
     region: content
   field_button_text:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -40,7 +40,7 @@ content:
     region: content
   field_hero_image:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       view_mode: default
@@ -48,22 +48,22 @@ content:
     third_party_settings: {  }
     region: content
   field_ov:
-    weight: 6
-    label: above
+    weight: 4
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_overlay_direction:
-    weight: 7
-    label: above
+    weight: 5
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_overlay_fill_color:
-    weight: 8
-    label: above
+    weight: 6
+    label: hidden
     settings:
       format: hex
       opacity: '1'
@@ -72,7 +72,7 @@ content:
     region: content
   field_paragraphblock:
     type: entity_reference_revisions_entity_view
-    weight: 5
+    weight: 8
     label: hidden
     settings:
       view_mode: default
@@ -80,14 +80,14 @@ content:
     third_party_settings: {  }
     region: content
   field_sub_headline:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   links:
-    weight: 0
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

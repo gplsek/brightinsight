@@ -1,0 +1,98 @@
+<!--/*
+    Main HTML template for the use-cases component.
+
+    CMS Options (shared across most components):
+
+    Text Color:
+      - black:		text-black
+      - white:		text-white
+
+    Background Color:
+      - black:			bg-black
+      - white:			bg-white
+      - blue:			bg-blue
+      - blue (muted):	bg-blue-muted
+      - green:			bg-green
+      - green (muted):	bg-green-muted
+      - lime:			bg-lime
+      - lime (muted):	bg-lime-muted
+      - teal:			bg-teal
+      - teal (muted):	bg-teal-muted
+      - dark gray:		bg-dk-gray
+      - medium gray:	bg-md-gray
+      - gray:			bg-gray
+      - light gray:		bg-lt-gray
+
+    Background Image
+      (Note: If defined use bg-image class and style="background-image:url(...)" attribute.)
+
+    Title
+
+    Intro Text
+
+    CTA
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
+
+    Top Angle:
+      - none:
+      - right:			top-angle-right
+      - left:			top-angle-left
+
+    Top Angle Color:
+      - black:			top-angle-black
+      - white:			top-angle-white
+      - blue:			top-angle-blue
+      - blue (muted):	top-angle-blue-muted
+      - green:			top-angle-green
+      - green (muted):	top-angle-green-muted
+      - lime:			top-angle-lime
+      - lime (muted):	top-angle-lime-muted
+      - teal:			top-angle-teal
+      - teal (muted):	top-angle-teal-muted
+      - dark gray:		top-angle-dk-gray
+      - medium gray:	top-angle-md-gray
+      - gray:			top-angle-gray
+      - light gray:		top-angle-lt-gray
+
+*/-->
+
+<section class="component-use-cases top-angle-right top-angle-teal pad-top-lg pad-bot-lg text-centered text-white bg-image" style="background-image:url('../../images/fpo/bg-use-cases.jpg')">
+	<div class="container">
+		<div class="component-header">
+			<div class="row">
+				<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+					<header>
+						<h2>Use Cases</h2>
+					</header>
+					<!-- if Intro Text -->
+					<div class="component-intro text-large">
+						<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel. Munere fabulas lucilius ei mea. An vix salutandi expetenda ullamcorper.</p>
+					</div>
+					<!-- end if -->
+				</div>
+			</div>
+		</div>
+		<div class="component-body sync-boxes">
+			<div class="row">
+				<div class="col-12 col-lg-4">
+					@@include('../card-no-image/card-no-image.html', { "type" : "Use Case", "title" : "Feugiat quis consequat eget tincidunt congue augue", "body" : "Maecenas maximus varius ante, id vulputate odio malesuada semper. Suspendisse potenti. Nulla at ligula molestie, molestie dolor vel, finibus diam."})
+				</div>
+				<div class="col-12 col-lg-4">
+					@@include('../card-no-image/card-no-image.html', { "type" : "Use Case", "title" : "Adipiscing elit nullam erat justo", "body" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean neque sapien, blandit ut viverra non, facilisis ut nisi. Maecenas euismod faucibus erat non rhoncus. Sed cursus, nisl in auctor egestas, quam neque lacinia leo." })
+				</div>
+				<div class="col-12 col-lg-4">
+					@@include('../card-no-image/card-no-image.html', { "type" : "Use Case", "title" : "Lorem ipsum dolor sit amet consectetur", "body" : "Aenean neque sapien, blandit ut viverra non, facilisis ut nisi. Maecenas euismod faucibus erat non rhoncus. Sed cursus, nisl in auctor egestas, quam neque lacinia leo, eget dapibus dolor augue sit amet justo." })
+				</div>
+			</div>
+		</div>
+		<!-- if Footer CTA -->
+		<div class="component-footer">
+			@@include('../cta/cta.html', { "url" : "index.html", "class" : "secondary-white", "label" : "learn more" })
+		</div>
+		<!-- end if -->
+	</div>
+</section>

@@ -1,0 +1,74 @@
+<!--/*
+    Main HTML template for the fifty-fifty-fullbleed component.
+
+    CMS Options:
+
+    Text Color
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    Background Color
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    Variation:
+      - Image on Left:     image-left
+      - Image on Right:    image-right
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
+*/-->
+
+
+<!-- Variation: Image right, white text, blue background -->
+<section class="component-fifty-fifty-fullbleed image-right text-white bg-blue">
+	<div class="container-fullbleed">
+		<div class="row no-gutters">
+			<div class="col-image col-12 col-md-6 offset-md-6" style="background-image:url('../../images/fpo/meeting-solo.jpg')">
+				<img class="img-responsive" src="../../images/fpo/meeting-solo.jpg">
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-content col-12 col-md-4 offset-md-1">
+				<div class="component-content pad-top-lg pad-bot-lg">
+					<h3 class="line">Aliquam ultricies sit amet mauris ac condimentum</h3>
+					<div class="body">
+						<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel. Munere fabulas lucilius mea.  An vix salutandi expetenda ullam corper, eum eulorem ipsum dolor sit amet, cum ut tantas partiendo, soluta ridens ex mel.</p>
+					</div>
+					<div class="cta pad-top-md">
+						@@include('../cta/cta.html', { "url" : "index.html", "class" : "secondary-white", "label" : "learn more" })
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Variation: Image left, white text, teal (muted) background -->
+<section class="component-fifty-fifty-fullbleed image-left text-white bg-teal-muted">
+	<div class="container-fullbleed">
+		<div class="row no-gutters">
+			<div class="col-image col-12 col-md-6" style="background-image:url('../../images/fpo/technician.jpg')">
+				<img class="img-responsive" src="../../images/fpo/technician.jpg">
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-content col-12 col-md-4 offset-md-7">
+				<div class="component-content pad-top-lg pad-bot-lg">
+					<h3 class="line">Aliquam ultricies sit amet mauris ac condimentum</h3>
+					<div class="body">
+						<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel. Munere fabulas lucilius mea.  An vix salutandi expetenda ullam corper, eum eulorem ipsum dolor sit amet, cum ut tantas partiendo, soluta ridens ex mel.</p>
+					</div>
+					<div class="cta pad-top-md">
+						@@include('../cta/cta.html', { "url" : "index.html", "class" : "secondary-white", "label" : "learn more" })
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

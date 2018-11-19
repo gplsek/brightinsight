@@ -1,0 +1,117 @@
+<!--/*
+    Main HTML template for the columns component.
+
+    CMS Options:
+
+    Text Color
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    Background Color
+      - (cf. /fed/components/use-cases/use-cases.html)
+
+    CTA Style:
+      - Solid Green:	primary
+      - Green Outline:	secondary
+      - White Outline:	secondary-white
+
+    Connector Image (optional):
+      - Desktop version:    desktop-connector
+      - Mobile version:    mobile-connector
+
+      (Note: If the desktop version is uploaded, then assign trhe component-columns-connectors class to the component.)
+*/-->
+
+
+<!-- Variation: Connector images, black text, lt gray background -->
+<section class="component-columns component-columns-connectors pad-top-lg pad-bot-lg text-centered text-black bg-lt-gray">
+	<div class="container">
+		<div class="component-header">
+			<div class="row">
+				<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+					<header>
+						<h2>Columns Component (with Connector)</h2>
+					</header>
+					<!-- if Intro Text -->
+					<div class="component-intro text-large">
+						<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel. Munere fabulas lucilius ei mea. An vix salutandi expetenda ullamcorper.</p>
+					</div>
+					<!-- end if -->
+				</div>
+			</div>
+		</div>
+		<div class="component-body sync-boxes">
+			<div class="row">
+				<div class="col-12 col-lg-10 offset-lg-1">
+					<div class="columns row">
+						<div class="col-12 col-lg-3">
+							@@include('../card-icon/card-icon.html', { "image" : "../../images/icons/green-connectivity.png", "title" : "Connectivity", "body" : "<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel.</p>" })
+						</div>
+						<div class="col-12 col-lg-1">
+							<img class="cols-connector desktop-connector" src="../../images/icons/green-lock.png">
+							<img class="cols-connector mobile-connector" src="../../images/icons/green-lock-vertical.png">
+						</div>
+						<div class="col-12 col-lg-3">
+							@@include('../card-icon/card-icon.html', { "image" : "../../images/icons/green-cloud.png", "title" : "Data Management", "body" : "<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel.</p>" })
+						</div>
+						<div class="col-12 col-lg-1">
+							<img class="cols-connector desktop-connector" src="../../images/icons/green-lock.png">
+							<img class="cols-connector mobile-connector" src="../../images/icons/green-lock-vertical.png">
+						</div>
+						<div class="col-12 col-lg-3">
+							@@include('../card-icon/card-icon.html', { "image" : "../../images/icons/green-analytics.png", "title" : "Analytics + Insight", "body" : "<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel.</p>" })
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- if Footer CTA -->
+		<div class="component-footer">
+			@@include('../cta/cta.html', { "url" : "index.html", "class" : "primary", "label" : "learn more" })
+		</div>
+		<!-- end if -->
+	</div>
+</section>
+
+
+<!-- Variation: White text, teal background -->
+<section class="component-columns pad-top-lg pad-bot-lg text-centered text-white bg-teal">
+	<div class="container">
+		<div class="component-header">
+			<div class="row">
+				<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+					<header>
+						<h2>Columns Component</h2>
+					</header>
+					<!-- if Intro Text -->
+					<div class="component-intro text-large">
+						<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel. Munere fabulas lucilius ei mea. An vix salutandi expetenda ullamcorper.</p>
+					</div>
+					<!-- end if -->
+				</div>
+			</div>
+		</div>
+		<div class="component-body sync-boxes">
+			<div class="row">
+				<div class="col-12 col-lg-10 offset-lg-1">
+					<div class="columns row">
+						<div class="col-12 col-md-4 col-lg-3">
+							@@include('../card-icon/card-icon.html', { "image" : "../../images/icons/arrows-cloud.png", "title" : "Suspendisse", "body" : "<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel.</p>" })
+						</div>
+						<div class="col-12 col-md-4 col-lg-3">
+							@@include('../card-icon/card-icon.html', { "image" : "../../images/icons/health-ipad.png", "title" : "Elementum", "body" : "<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel.</p>" })
+						</div>
+						<div class="col-12 col-md-4 col-lg-3">
+							@@include('../card-icon/card-icon.html', { "image" : "../../images/icons/wearable.png", "title" : "Convallis", "body" : "<p>Lorem ipsum dolor sit amet, cum ut tantas dolores partiendo, soluta ridens ex mel.</p>" })
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- if Footer CTA -->
+		<div class="component-footer">
+			@@include('../cta/cta.html', { "url" : "index.html", "class" : "secondary-white", "label" : "learn more" })
+		</div>
+		<!-- end if -->
+	</div>
+</section>
+

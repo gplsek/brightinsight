@@ -2,18 +2,13 @@ global-styling:
   #version: VERSION
   css:
     theme:
-      dist/css/pagelibs.css: {}
+      css/pagelibs.css: {}
   js:
     # Development version.
     # dist/js/init.js: {}
     # dist/js/pagelibs.js: {}
-    js/jquery.modal.min.js: {}
-    js/jquery-ui.js: {}
-    js/jquery.ui.touch-punch.min.js: {}
-    js/rotating-module.js: {}
-    js/scalability.js: {}
-    js/main-banner.js: {}
-
+    js/pagelibs.js: {}
+    # js/headlibs.js: {}
     # Production version.
     #dist/js/scripts.min.js: {}
 

@@ -121,17 +121,17 @@
     },
     {
         "name": "aws/aws-sdk-php",
-        "version": "3.71.3",
-        "version_normalized": "3.71.3.0",
+        "version": "3.72.0",
+        "version_normalized": "3.72.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/aws/aws-sdk-php.git",
-            "reference": "fa7f498cb41c7eb47e952355b8be2061816a9a60"
+            "reference": "990fc104600d0da59b0229e04c008abd16c5d0ee"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fa7f498cb41c7eb47e952355b8be2061816a9a60",
-            "reference": "fa7f498cb41c7eb47e952355b8be2061816a9a60",
+            "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/990fc104600d0da59b0229e04c008abd16c5d0ee",
+            "reference": "990fc104600d0da59b0229e04c008abd16c5d0ee",
             "shasum": ""
         },
         "require": {
@@ -165,7 +165,7 @@
             "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
             "ext-sockets": "To use client-side monitoring"
         },
-        "time": "2018-11-09T21:57:53+00:00",
+        "time": "2018-11-15T23:57:11+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -678,21 +678,21 @@
     },
     {
         "name": "consolidation/annotated-command",
-        "version": "2.9.1",
-        "version_normalized": "2.9.1.0",
+        "version": "2.10.0",
+        "version_normalized": "2.10.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/consolidation/annotated-command.git",
-            "reference": "4bdbb8fa149e1cc1511bd77b0bc4729fd66bccac"
+            "reference": "8e7d1a05230dc1159c751809e98b74f2b7f71873"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/4bdbb8fa149e1cc1511bd77b0bc4729fd66bccac",
-            "reference": "4bdbb8fa149e1cc1511bd77b0bc4729fd66bccac",
+            "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/8e7d1a05230dc1159c751809e98b74f2b7f71873",
+            "reference": "8e7d1a05230dc1159c751809e98b74f2b7f71873",
             "shasum": ""
         },
         "require": {
-            "consolidation/output-formatters": "^3.1.12",
+            "consolidation/output-formatters": "^3.4",
             "php": ">=5.4.0",
             "psr/log": "^1",
             "symfony/console": "^2.8|^3|^4",
@@ -705,7 +705,7 @@
             "satooshi/php-coveralls": "^2",
             "squizlabs/php_codesniffer": "^2.7"
         },
-        "time": "2018-09-19T17:47:18+00:00",
+        "time": "2018-11-15T01:46:18+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2134,6 +2134,55 @@
         "homepage": "https://www.drupal.org/project/adminimal_theme",
         "support": {
             "source": "http://cgit.drupalcode.org/adminimal_theme"
+        }
+    },
+    {
+        "name": "drupal/antibot",
+        "version": "1.2.0",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/antibot",
+            "reference": "8.x-1.2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/antibot-8.x-1.2.zip",
+            "reference": "8.x-1.2",
+            "shasum": "4cb067e77929984c8cf5b05a84734c62d6fd19b3"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.2",
+                "datestamp": "1522335671",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "mstef",
+                "homepage": "https://www.drupal.org/user/107190"
+            }
+        ],
+        "description": "Prevent forms from being submitted without JavaScript enabled",
+        "homepage": "https://www.drupal.org/project/antibot",
+        "support": {
+            "source": "http://cgit.drupalcode.org/antibot"
         }
     },
     {

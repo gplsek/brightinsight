@@ -1,0 +1,87 @@
+uuid: 0eb4d93c-6bfc-4e55-9804-12228ceaf058
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.use_cases.field_background
+    - field.field.paragraph.use_cases.field_background_image
+    - field.field.paragraph.use_cases.field_content
+    - field.field.paragraph.use_cases.field_mask
+    - field.field.paragraph.use_cases.field_overlay_fill_color
+    - field.field.paragraph.use_cases.field_overlay_position
+    - field.field.paragraph.use_cases.field_title
+    - field.field.paragraph.use_cases.field_use_case
+    - paragraphs.paragraphs_type.use_cases
+  module:
+    - color_field
+    - options
+    - text
+id: paragraph.use_cases.default
+targetEntityType: paragraph
+bundle: use_cases
+mode: default
+content:
+  field_background:
+    weight: 4
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_background_image:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_content:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_mask:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_overlay_fill_color:
+    weight: 6
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_overlay_position:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_use_case:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }
