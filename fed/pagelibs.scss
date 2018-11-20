@@ -5,7 +5,8 @@
 /* Load all component styles */
 @import "styles/vendor/custom-bootstrap-grid.scss";
 @import "node_modules/bootstrap-4-grid/scss/grid.scss";
-@import "styles/vendor/bootstrap-overrides.scss";
+@import "styles/vendor/hamburgers-overrides.scss";
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 @import "styles/global/variables.scss";
 @import "styles/global/spacing.scss";
 @import "styles/global/global.scss";
