@@ -15,14 +15,123 @@
 
     <!--/*
     Main HTML template for the global-navigation component.
+
+    CMS Options:
+
+	Variation:
+	 - Standard:                            (no extra class needed)
+	 - Transparent:   variant-transparent   (append this class to the <header class="component-global-navigation"> tag)
+
+	Logos:
+	 - Standard Logo
+	 - Transparent Logo
 */-->
-<section class="component-global-navigation">
 
-    <h2>Hello World!</h2>
-    <p>I'm the <b>global-navigation</b> component</p>
-
-</section>
-
+<header class="component-global-navigation" role="banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-6 col-lg-3">
+				<div class="logo">
+					<img class="img-responsive img-standard" src="../../images/logo-color.png">
+					<img class="img-responsive img-transparent" src="../../images/logo-white-color.png">
+				</div>
+			</div>
+			<div class="col-6 col-lg-9">
+				<div class="mobile-nav-trigger">
+					<button class="hamburger hamburger--squeeze" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+				<div class="desktop-menu">
+					<nav class="nav-utility clearfix">
+						<ul>
+							<li><a href="#">Customer Login</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</nav>
+					<nav class="nav-primary clearfix">
+						<ul>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle">Products + Services</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">BrightInsight Platform</a></li>
+									<li><a href="#">Starter Assets</a></li>
+									<li><a href="#">Services</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle">Solutions</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pharma</a></li>
+									<li><a href="#">Medtech</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Knowledge Center</a>
+							</li>
+							<li>
+								<a href="#">News + Events</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle">Company</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Our Story</a></li>
+									<li><a href="#">Leadership Team</a></li>
+									<li><a href="#">Clinical Board</a></li>
+									<li><a href="#">Careers</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu">
+		<div class="container">
+			<nav class="nav-primary">
+				<ul>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Products + Services</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">BrightInsight Platform</a></li>
+							<li><a href="#">Starter Assets</a></li>
+							<li><a href="#">Services</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Solutions</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Pharma</a></li>
+							<li><a href="#">Medtech</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Knowledge Center</a>
+					</li>
+					<li>
+						<a href="#">News + Events</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Company</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Our Story</a></li>
+							<li><a href="#">Leadership Team</a></li>
+							<li><a href="#">Clinical Board</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav-utility">
+					<li><a href="#">Customer Login</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
 
 
     <!-- ______________________ MAIN _______________________ -->

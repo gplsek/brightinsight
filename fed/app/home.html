@@ -15,323 +15,128 @@
 
     <!--/*
     Main HTML template for the global-navigation component.
+
+    CMS Options:
+
+	Variation:
+	 - Standard:                            (no extra class needed)
+	 - Transparent:   variant-transparent   (append this class to the <header class="component-global-navigation"> tag)
+
+	Logos:
+	 - Standard Logo
+	 - Transparent Logo
 */-->
-<section class="component-global-navigation">
 
-    <h2>Hello World!</h2>
-    <p>I'm the <b>global-navigation</b> component</p>
-
-</section>
-
+<header class="component-global-navigation" role="banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-6 col-lg-3">
+				<div class="logo">
+					<img class="img-responsive img-standard" src="../../images/logo-color.png">
+					<img class="img-responsive img-transparent" src="../../images/logo-white-color.png">
+				</div>
+			</div>
+			<div class="col-6 col-lg-9">
+				<div class="mobile-nav-trigger">
+					<button class="hamburger hamburger--squeeze" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+				<div class="desktop-menu">
+					<nav class="nav-utility clearfix">
+						<ul>
+							<li><a href="#">Customer Login</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</nav>
+					<nav class="nav-primary clearfix">
+						<ul>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle">Products + Services</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">BrightInsight Platform</a></li>
+									<li><a href="#">Starter Assets</a></li>
+									<li><a href="#">Services</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle">Solutions</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pharma</a></li>
+									<li><a href="#">Medtech</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Knowledge Center</a>
+							</li>
+							<li>
+								<a href="#">News + Events</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle">Company</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Our Story</a></li>
+									<li><a href="#">Leadership Team</a></li>
+									<li><a href="#">Clinical Board</a></li>
+									<li><a href="#">Careers</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu">
+		<div class="container">
+			<nav class="nav-primary">
+				<ul>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Products + Services</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">BrightInsight Platform</a></li>
+							<li><a href="#">Starter Assets</a></li>
+							<li><a href="#">Services</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Solutions</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Pharma</a></li>
+							<li><a href="#">Medtech</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Knowledge Center</a>
+					</li>
+					<li>
+						<a href="#">News + Events</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Company</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Our Story</a></li>
+							<li><a href="#">Leadership Team</a></li>
+							<li><a href="#">Clinical Board</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav-utility">
+					<li><a href="#">Customer Login</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
 
 
     <!-- ______________________ MAIN _______________________ -->
     <div class="main">
 
-
-<!--/*
-    Main HTML template for the blog-list component.
-*/-->
-<section class="component-blog-list pad-top-lg pad-bot-lg text-black bg-lt-gray">
-	<div class="container">
-		<!-- if Title -->
-		<div class="component-header">
-			<div class="row">
-				<div class="col-12">
-					<header>
-						<h2>Blog</h2>
-					</header>
-				</div>
-			</div>
-		</div>
-		<!-- end if -->
-		<div class="component-body">
-			<div class="blog-grid row">
-				<div class="column column-primary col-12 col-xl-6">
-					<!--/*
-    Main HTML template for the card-blog component.
-*/-->
-<article class="component-card-blog featured-card text-white bg-image" style="background-image:url('../../images/fpo/blog-featured-square.jpg')">
-	<div class="blog-card-container">
-		<div class="mask"></div>
-		<div class="content">
-			<div class="type">
-				Featured
-			</div>
-			<div class="inner">
-				<header>
-					<h4>Feugiat quis consequat eget tincidunt congue augue</h4>
-				</header>
-				<div class="body">
-					 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</div>
-				<div class="cta">
-					<!--/*
-    Main HTML template for the cta component.
-
-    - class: primary, secondary, secondary-white
-*/-->
-
-<a href="index.html" class="component-cta primary"><span>learn more</span></a>
-
-
-				</div>
-			</div>
-		</div>
-	</div>
-</article>
-
-				</div>
-				<div class="column column-secondary col-12 col-xl-6">
-					<!--/*
-    Main HTML template for the card-blog component.
-*/-->
-<article class="component-card-blog standard-card">
-	<div class="blog-card-container">
-		<div class="row no-gutters">
-			<div class="col-12 col-xl-6">
-				<div class="image">
-					<img class="img-responsive img-fullwidth img-default" src="../../images/fpo/blog-1.jpg">
-					<img class="img-responsive img-fullwidth img-square" src="../../images/fpo/blog-1-square.jpg">
-				</div>
-			</div>
-			<div class="col-12 col-xl-6">
-				<div class="content">
-					<div class="meta">
-						 Dec 15, 2019
-					</div>
-					<header>
-						<h4>Adipiscing elit nullam erat justo exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat nostrud exercitation</h4>
-					</header>
-					<div class="cta">
-						<!--/*
-    Main HTML template for the cta component.
-
-    - class: primary, secondary, secondary-white
-*/-->
-
-<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
-
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</article>
-
-					<!--/*
-    Main HTML template for the card-blog component.
-*/-->
-<article class="component-card-blog standard-card">
-	<div class="blog-card-container">
-		<div class="row no-gutters">
-			<div class="col-12 col-xl-6">
-				<div class="image">
-					<img class="img-responsive img-fullwidth img-default" src="../../images/fpo/blog-2.jpg">
-					<img class="img-responsive img-fullwidth img-square" src="../../images/fpo/blog-2-square.jpg">
-				</div>
-			</div>
-			<div class="col-12 col-xl-6">
-				<div class="content">
-					<div class="meta">
-						 Dec 09, 2019
-					</div>
-					<header>
-						<h4>Lorem ipsum dolor sit amet consectetur</h4>
-					</header>
-					<div class="cta">
-						<!--/*
-    Main HTML template for the cta component.
-
-    - class: primary, secondary, secondary-white
-*/-->
-
-<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
-
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</article>
-
-				</div>
-			</div>
-			<div class="row sync-boxes">
-				<div class="col-12 col-lg-6 col-xl-4">
-					<!--/*
-    Main HTML template for the card component.
-*/-->
-
-<article class="component-card box">
-	<div class="image">
-		<img class="img-responsive img-fullwidth" src="../../images/fpo/city-alt.jpg">
-	</div>
-	<div class="content">
-		<div class="meta">
-			 Dec 01, 2019
-		</div>
-		<header>
-			<h4>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h4>
-		</header>
-		<div class="cta">
-			<!--/*
-    Main HTML template for the cta component.
-
-    - class: primary, secondary, secondary-white
-*/-->
-
-<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
-
-
-		</div>
-	</div>
-</article>
-
-				</div>
-				<div class="col-12 col-lg-6 col-xl-4">
-					<!--/*
-    Main HTML template for the card component.
-*/-->
-
-<article class="component-card box">
-	<div class="image">
-		<img class="img-responsive img-fullwidth" src="../../images/fpo/doctors.jpg">
-	</div>
-	<div class="content">
-		<div class="meta">
-			 Nov 15, 2019
-		</div>
-		<header>
-			<h4>Duis aute irure dolor in reprehenderit in voluptate velit esse</h4>
-		</header>
-		<div class="cta">
-			<!--/*
-    Main HTML template for the cta component.
-
-    - class: primary, secondary, secondary-white
-*/-->
-
-<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
-
-
-		</div>
-	</div>
-</article>
-
-				</div>
-				<div class="col-12 col-lg-6 col-xl-4">
-					<!--/*
-    Main HTML template for the card component.
-*/-->
-
-<article class="component-card box">
-	<div class="image">
-		<img class="img-responsive img-fullwidth" src="../../images/fpo/watch.jpg">
-	</div>
-	<div class="content">
-		<div class="meta">
-			 Nov 07, 2019
-		</div>
-		<header>
-			<h4>Feugiat quis consequat eget tincidunt congue augue</h4>
-		</header>
-		<div class="cta">
-			<!--/*
-    Main HTML template for the cta component.
-
-    - class: primary, secondary, secondary-white
-*/-->
-
-<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
-
-
-		</div>
-	</div>
-</article>
-
-				</div>
-				<div class="col-12 col-lg-6 col-xl-4">
-					<!--/*
-    Main HTML template for the card component.
-*/-->
-
-<article class="component-card box">
-	<div class="image">
-		<img class="img-responsive img-fullwidth" src="../../images/fpo/office.jpg">
-	</div>
-	<div class="content">
-		<div class="meta">
-			 Nov 01, 2019
-		</div>
-		<header>
-			<h4>Justo exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h4>
-		</header>
-		<div class="cta">
-			<!--/*
-    Main HTML template for the cta component.
-
-    - class: primary, secondary, secondary-white
-*/-->
-
-<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
-
-
-		</div>
-	</div>
-</article>
-
-				</div>
-				<div class="col-12 col-lg-6 col-xl-4">
-					<!--/*
-    Main HTML template for the card component.
-*/-->
-
-<article class="component-card box">
-	<div class="image">
-		<img class="img-responsive img-fullwidth" src="../../images/fpo/city.jpg">
-	</div>
-	<div class="content">
-		<div class="meta">
-			 Oct 15, 2019
-		</div>
-		<header>
-			<h4>Lorem ipsum dolor sit amet consectetur</h4>
-		</header>
-		<div class="cta">
-			<!--/*
-    Main HTML template for the cta component.
-
-    - class: primary, secondary, secondary-white
-*/-->
-
-<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
-
-
-		</div>
-	</div>
-</article>
-
-				</div>
-			</div>
-		</div>
-		<!-- if Footer CTA -->
-		<div class="component-footer text-centered">
-			<!--/*
-    Main HTML template for the cta component.
-
-    - class: primary, secondary, secondary-white
-*/-->
-
-<a href="index.html" class="component-cta primary"><span>learn more</span></a>
-
-
-		</div>
-		<!-- end if -->
-	</div>
-</section>
 
 <!--/*
 	Main HTML template for the banner component.
@@ -1786,6 +1591,310 @@
 		</div>
 		<!-- if Footer CTA -->
 		<div class="component-footer">
+			<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta primary"><span>learn more</span></a>
+
+
+		</div>
+		<!-- end if -->
+	</div>
+</section>
+
+<!--/*
+    Main HTML template for the blog-list component.
+*/-->
+<section class="component-blog-list pad-top-lg pad-bot-lg text-black bg-lt-gray">
+	<div class="container">
+		<!-- if Title -->
+		<div class="component-header">
+			<div class="row">
+				<div class="col-12">
+					<header>
+						<h2>Blog</h2>
+					</header>
+				</div>
+			</div>
+		</div>
+		<!-- end if -->
+		<div class="component-body">
+			<div class="blog-grid row">
+				<div class="column column-primary col-12 col-xl-6">
+					<!--/*
+    Main HTML template for the card-blog component.
+*/-->
+<article class="component-card-blog featured-card text-white bg-image" style="background-image:url('../../images/fpo/blog-featured-square.jpg')">
+	<div class="blog-card-container">
+		<div class="mask"></div>
+		<div class="content">
+			<div class="type">
+				Featured
+			</div>
+			<div class="inner">
+				<header>
+					<h4>Feugiat quis consequat eget tincidunt congue augue</h4>
+				</header>
+				<div class="body">
+					 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+				<div class="cta">
+					<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta primary"><span>learn more</span></a>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+
+				</div>
+				<div class="column column-secondary col-12 col-xl-6">
+					<!--/*
+    Main HTML template for the card-blog component.
+*/-->
+<article class="component-card-blog standard-card">
+	<div class="blog-card-container">
+		<div class="row no-gutters">
+			<div class="col-12 col-xl-6">
+				<div class="image">
+					<img class="img-responsive img-fullwidth img-default" src="../../images/fpo/blog-1.jpg">
+					<img class="img-responsive img-fullwidth img-square" src="../../images/fpo/blog-1-square.jpg">
+				</div>
+			</div>
+			<div class="col-12 col-xl-6">
+				<div class="content">
+					<div class="meta">
+						 Dec 15, 2019
+					</div>
+					<header>
+						<h4>Adipiscing elit nullam erat justo exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat nostrud exercitation</h4>
+					</header>
+					<div class="cta">
+						<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+
+					<!--/*
+    Main HTML template for the card-blog component.
+*/-->
+<article class="component-card-blog standard-card">
+	<div class="blog-card-container">
+		<div class="row no-gutters">
+			<div class="col-12 col-xl-6">
+				<div class="image">
+					<img class="img-responsive img-fullwidth img-default" src="../../images/fpo/blog-2.jpg">
+					<img class="img-responsive img-fullwidth img-square" src="../../images/fpo/blog-2-square.jpg">
+				</div>
+			</div>
+			<div class="col-12 col-xl-6">
+				<div class="content">
+					<div class="meta">
+						 Dec 09, 2019
+					</div>
+					<header>
+						<h4>Lorem ipsum dolor sit amet consectetur</h4>
+					</header>
+					<div class="cta">
+						<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+
+				</div>
+			</div>
+			<div class="row sync-boxes">
+				<div class="col-12 col-lg-6 col-xl-4">
+					<!--/*
+    Main HTML template for the card component.
+*/-->
+
+<article class="component-card box">
+	<div class="image">
+		<img class="img-responsive img-fullwidth" src="../../images/fpo/city-alt.jpg">
+	</div>
+	<div class="content">
+		<div class="meta">
+			 Dec 01, 2019
+		</div>
+		<header>
+			<h4>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h4>
+		</header>
+		<div class="cta">
+			<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
+
+
+		</div>
+	</div>
+</article>
+
+				</div>
+				<div class="col-12 col-lg-6 col-xl-4">
+					<!--/*
+    Main HTML template for the card component.
+*/-->
+
+<article class="component-card box">
+	<div class="image">
+		<img class="img-responsive img-fullwidth" src="../../images/fpo/doctors.jpg">
+	</div>
+	<div class="content">
+		<div class="meta">
+			 Nov 15, 2019
+		</div>
+		<header>
+			<h4>Duis aute irure dolor in reprehenderit in voluptate velit esse</h4>
+		</header>
+		<div class="cta">
+			<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
+
+
+		</div>
+	</div>
+</article>
+
+				</div>
+				<div class="col-12 col-lg-6 col-xl-4">
+					<!--/*
+    Main HTML template for the card component.
+*/-->
+
+<article class="component-card box">
+	<div class="image">
+		<img class="img-responsive img-fullwidth" src="../../images/fpo/watch.jpg">
+	</div>
+	<div class="content">
+		<div class="meta">
+			 Nov 07, 2019
+		</div>
+		<header>
+			<h4>Feugiat quis consequat eget tincidunt congue augue</h4>
+		</header>
+		<div class="cta">
+			<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
+
+
+		</div>
+	</div>
+</article>
+
+				</div>
+				<div class="col-12 col-lg-6 col-xl-4">
+					<!--/*
+    Main HTML template for the card component.
+*/-->
+
+<article class="component-card box">
+	<div class="image">
+		<img class="img-responsive img-fullwidth" src="../../images/fpo/office.jpg">
+	</div>
+	<div class="content">
+		<div class="meta">
+			 Nov 01, 2019
+		</div>
+		<header>
+			<h4>Justo exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h4>
+		</header>
+		<div class="cta">
+			<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
+
+
+		</div>
+	</div>
+</article>
+
+				</div>
+				<div class="col-12 col-lg-6 col-xl-4">
+					<!--/*
+    Main HTML template for the card component.
+*/-->
+
+<article class="component-card box">
+	<div class="image">
+		<img class="img-responsive img-fullwidth" src="../../images/fpo/city.jpg">
+	</div>
+	<div class="content">
+		<div class="meta">
+			 Oct 15, 2019
+		</div>
+		<header>
+			<h4>Lorem ipsum dolor sit amet consectetur</h4>
+		</header>
+		<div class="cta">
+			<!--/*
+    Main HTML template for the cta component.
+
+    - class: primary, secondary, secondary-white
+*/-->
+
+<a href="index.html" class="component-cta secondary"><span>learn more</span></a>
+
+
+		</div>
+	</div>
+</article>
+
+				</div>
+			</div>
+		</div>
+		<!-- if Footer CTA -->
+		<div class="component-footer text-centered">
 			<!--/*
     Main HTML template for the cta component.
 

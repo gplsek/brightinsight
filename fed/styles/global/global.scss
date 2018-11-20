@@ -38,6 +38,14 @@ body {
 	}
 }
 
+a {
+	color: $color-blue;
+
+	&:visited {
+		color: $color-blue;
+	}
+}
+
 ol {
 	li {
 		list-style: inherit;
@@ -61,6 +69,26 @@ ul {
 			position: absolute;
 		}
 	}
+}
+
+nav {
+
+	ul {
+
+		li {
+			padding-left: 0;
+
+			&::before {
+				content: '';
+				display: none;
+			}
+		}
+	}
+}
+
+.main {
+	position: relative;
+	z-index: 1;
 }
 
 .clearfix {
