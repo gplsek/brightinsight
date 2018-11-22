@@ -1,0 +1,28 @@
+uuid: 84d529a6-c091-4904-8e0b-8369232e02fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_2_posts
+    - node.type.blog_post
+    - paragraphs.paragraphs_type.blog_posts
+id: paragraph.blog_posts.field_2_posts
+field_name: field_2_posts
+entity_type: paragraph
+bundle: blog_posts
+label: '2 posts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blog_post: blog_post
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

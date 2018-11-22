@@ -1,0 +1,14 @@
+uuid: 06b0bd4f-9abb-4f54-9a8a-61d2453f1ef9
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: insights
+label: Steps
+icon_uuid: null
+description: 'Steps example Insights and Benefits, optional divider image'
+behavior_plugins: {  }

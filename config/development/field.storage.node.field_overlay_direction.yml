@@ -1,0 +1,27 @@
+uuid: 242c6420-b703-4178-b562-e6edf3b873aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_overlay_direction
+field_name: field_overlay_direction
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: left
+    -
+      value: right
+      label: right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

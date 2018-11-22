@@ -1,0 +1,24 @@
+uuid: 42effb49-9038-4f41-9248-c351715f8b23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_benefit
+    - paragraphs.paragraphs_type.insights
+  module:
+    - field_collection
+id: paragraph.insights.field_benefit
+field_name: field_benefit
+entity_type: paragraph
+bundle: insights
+label: Benefit
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

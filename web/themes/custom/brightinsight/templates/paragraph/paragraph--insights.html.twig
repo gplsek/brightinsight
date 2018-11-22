@@ -75,7 +75,7 @@
 
 
         <!-- Variation: Connector images, black text, lt gray background -->
-        <section class="component-columns component-columns-connectors pad-top-lg pad-bot-lg text-centered text-black bg-lt-gray">
+        <section class="component-columns component-columns-connectors pad-top-lg pad-bot-lg text-centered {{ css.section_classes }}">
         	<div class="container">
         		<div class="component-header">
         			<div class="row">
@@ -99,15 +99,15 @@
                                     {{ content.field_benefit.0 }}
         						</div>
         						<div class="col-12 col-lg-1">
-        							<img class="cols-connector desktop-connector" src="../../images/icons/green-lock.png">
-        							<img class="cols-connector mobile-connector" src="../../images/icons/green-lock-vertical.png">
+        							<img class="cols-connector desktop-connector" src="{{directory}}/images/icons/green-lock.png">
+        							<img class="cols-connector mobile-connector" src="{{directory}}/images/icons/green-lock-vertical.png">
         						</div>
         						<div class="col-12 col-lg-3">
                                     {{ content.field_benefit.1 }}
         						</div>
         						<div class="col-12 col-lg-1">
-        							<img class="cols-connector desktop-connector" src="../../images/icons/green-lock.png">
-        							<img class="cols-connector mobile-connector" src="../../images/icons/green-lock-vertical.png">
+        							<img class="cols-connector desktop-connector" src="{{directory}}/images/icons/green-lock.png">
+        							<img class="cols-connector mobile-connector" src="{{directory}}/images/icons/green-lock-vertical.png">
         						</div>
         						<div class="col-12 col-lg-3">
                                     {{ content.field_benefit.2 }}
@@ -125,7 +125,7 @@
                             - class: primary, secondary, secondary-white
                         */-->
 
-                        <a class='component-cta primary' href="{{ content.field_button_link.0 }}"><span>{{ content.field_button_text.0 }}</span></a>
+                        <a class='component-cta {{css.cta_classes}}' href="{{ content.field_button_link.0 }}"><span>{{ content.field_button_text.0 }}</span></a>
 
         		</div>
         		<!-- end if -->
