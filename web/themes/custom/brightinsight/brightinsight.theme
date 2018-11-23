@@ -30,7 +30,8 @@ function _accumulate_css($entity) {
    $css = [
      'section' => [],
      'cta' => [],
-     'order' => []
+     'order' => [],
+     'visibility' => []
    ];
 
   if ($entity->hasField('field_ov') && $entity->hasField('field_overlay_direction')) 
@@ -57,16 +58,22 @@ function _accumulate_css($entity) {
   // 50/50 paragraph
   if ($entity->hasField('field_image_location')) {
     $css['section']['image_location'] = $entity->get('field_image_location')->value ? 'image-'.$entity->get('field_image_location')->value : '';
-    $css['order']['img_order'] = $entity->get('field_image_location')->value == 'left' ? 'order-md-1' : 'order-md-2';
-    $css['order']['text_order'] = $entity->get('field_image_location')->value == 'left' ? 'order-md-2' : 'order-md-1';
+    //$css['order']['img_order'] = $entity->get('field_image_location')->value == 'left' ? 'order-md-1' : 'order-md-2';
+    //$css['order']['text_order'] = $entity->get('field_image_location')->value == 'left' ? 'order-md-2' : 'order-md-1';
+    $css['order']['img_order'] = $entity->get('field_image_location')->value == 'left' ? 'left' : 'right';
+    $css['order']['text_order'] = $entity->get('field_image_location')->value == 'left' ? 'right' : 'left';
   }
 
   if ($entity->hasField('field_show_arrows'))
     $css['section']['show_arrows'] = $entity->get('field_show_arrows')->value ? 'show-arrows' : '';
 
+  if ($entity->hasField('field_show_items_separator'))
+    $css['visibility']['show_items_separator'] = $entity->get('field_show_items_separator')->value;
+
   return [
     'section_classes' => implode(' ', $css['section']),
     'blocks_order' => $css['order'],
-    'cta_classes' => implode(' ', $css['cta'])
+    'cta_classes' => implode(' ', $css['cta']),
+    'blocks_visibility' => $css['visibility']
   ];
 }

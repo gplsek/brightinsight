@@ -1,0 +1,23 @@
+uuid: f4e511ce-7074-4ccb-920c-66a11c1251f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_location
+    - paragraphs.paragraphs_type.image_text_50_50_fullbleed
+  module:
+    - options
+id: paragraph.image_text_50_50_fullbleed.field_image_location
+field_name: field_image_location
+entity_type: paragraph
+bundle: image_text_50_50_fullbleed
+label: 'Image Location'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

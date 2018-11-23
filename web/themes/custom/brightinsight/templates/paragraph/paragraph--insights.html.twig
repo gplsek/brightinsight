@@ -98,17 +98,25 @@
         						<div class="col-12 col-lg-3">
                                     {{ content.field_benefit.0 }}
         						</div>
-        						<div class="col-12 col-lg-1">
-        							<img class="cols-connector desktop-connector" src="{{directory}}/images/icons/green-lock.png">
-        							<img class="cols-connector mobile-connector" src="{{directory}}/images/icons/green-lock-vertical.png">
-        						</div>
+
+                                {% if css.blocks_visibility.show_items_separator %}
+            						<div class="col-12 col-lg-1">
+            							<img class="cols-connector desktop-connector" src="{{directory}}/images/icons/green-lock.png">
+            							<img class="cols-connector mobile-connector" src="{{directory}}/images/icons/green-lock-vertical.png">
+            						</div>
+                                {% endif %}
+
         						<div class="col-12 col-lg-3">
                                     {{ content.field_benefit.1 }}
         						</div>
-        						<div class="col-12 col-lg-1">
-        							<img class="cols-connector desktop-connector" src="{{directory}}/images/icons/green-lock.png">
-        							<img class="cols-connector mobile-connector" src="{{directory}}/images/icons/green-lock-vertical.png">
-        						</div>
+
+                                {% if css.blocks_visibility.show_items_separator %}
+            						<div class="col-12 col-lg-1">
+            							<img class="cols-connector desktop-connector" src="{{directory}}/images/icons/green-lock.png">
+            							<img class="cols-connector mobile-connector" src="{{directory}}/images/icons/green-lock-vertical.png">
+            						</div>
+                                {% endif %}
+
         						<div class="col-12 col-lg-3">
                                     {{ content.field_benefit.2 }}
         						</div>

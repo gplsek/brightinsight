@@ -12,6 +12,7 @@ dependencies:
     - field.field.paragraph.insights.field_item_separator
     - field.field.paragraph.insights.field_mask_horizontal
     - field.field.paragraph.insights.field_overlay_fill_color
+    - field.field.paragraph.insights.field_show_items_separator
     - field.field.paragraph.insights.field_text_color
     - field.field.paragraph.insights.field_title
     - paragraphs.paragraphs_type.insights
@@ -92,6 +93,16 @@ content:
       opacity: '1'
     third_party_settings: {  }
     type: color_field_formatter_text
+    region: content
+  field_show_items_separator:
+    weight: 11
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_text_color:
     weight: 8
