@@ -9,6 +9,7 @@
 	z-index: 2;
 
 	.logo {
+		display: block;
 		width: 170px;
 
 		.img-standard {
@@ -28,20 +29,173 @@
 	}
 
 	.mobile-menu {
+		//background: $color-dk-gray url('../images/mobile-menu-angle.png') no-repeat 0 100%;
 		background: $color-dk-gray;
 		bottom: 0;
-		display: none;
+		color: $color-white;
+		font-weight: 500;
 		height: 100%;
-		left: 0;
-		overflow: auto;
+		overflow-x: hidden;
+		overflow-y: auto;
+		padding-bottom: 60px;
 		position: fixed;
+		right: -100%;
 		top: 0;
+		transition: all 0.3s ease 0s;
 		width: 100%;
 		z-index: 3;
+
+		&.is-active {
+			right: 0;
+		}
+
+		.header {
+			height: 100px;
+			padding: 30px 0 0;
+
+			.back {
+				cursor: pointer;
+				display: none;
+				font-size: 16px;
+				margin: -15px 0 0 -15px;
+				padding: 15px;
+
+				.chevron {
+					color: $color-white;
+				}
+			}
+
+			.close {
+				cursor: pointer;
+				float: right;
+				margin: -15px -15px 0 0;
+				padding: 15px;
+			}
+		}
+
+		&.subnav-exposed {
+			//background-image: none;
+
+			.header {
+
+				.logo {
+					display: none;
+				}
+
+				.back {
+					display: block;
+				}
+			}
+		}
 
 		a {
 			color: $color-white;
 			text-decoration: none;
+		}
+
+		.nav-wrap {
+			position: relative;
+		}
+
+		.nav-primary {
+			font-size: 20px;
+
+			ul {
+				margin: 0;
+				padding: 0 15px;
+			}
+
+			a {
+				display: block;
+				padding: 5px 0;
+
+				&.slide-toggle {
+					padding-right: 10px;
+					position: relative;
+
+					.chevron-icon {
+						position: absolute;
+						right: 0;
+						top: 10px;
+					}
+				}
+			}
+
+			li {
+				margin: 0 0 20px;
+				position: static;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				&.headline {
+					padding: 5px 0;
+
+					em {
+						border-bottom: 2px solid rgba(255,255,255,0.5);
+						display: inline-block;
+						font-style: normal;
+						padding-bottom: 8px;
+					}
+				}
+			}
+
+			.slide-item {
+
+				.slide-menu {
+					background: $color-dk-gray;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					transition: all 0.3s ease 0s;
+					right: -100%;
+					width: 100%;
+					z-index: 4;
+				}
+
+				&.is-active {
+
+					> .slide-menu {
+						right: 0;
+					}
+				}
+			}
+		}
+
+		.nav-utility {
+			margin: 90px 0 0;
+
+			ul {
+				margin: 0;
+				padding: 0 15px;
+			}
+
+			li {
+				font-size: 16px;
+				line-height: 19px;
+				margin: 30px 0 0;
+				text-transform: uppercase;
+
+				a {
+					padding-right: 18px;
+					position: relative;
+					text-shadow: 1px 1px 2px $color-dk-gray;
+
+					&:after {
+						color: $color-lime;
+						content: '\00bb';
+						display: block;
+						font-size: 24px;
+						font-weight: 400;
+						line-height: 14px;
+						position: absolute;
+						right: 0;
+						top: 0;
+						text-shadow: none;
+					}
+				}
+			}
 		}
 	}
 
@@ -210,11 +364,21 @@
 					&.active,
 					&:hover {
 
-						a {
+						> a {
 							color: $color-white;
 							text-decoration: underline;
 						}
 					}
+				}
+
+				ul {
+					background: transparent;
+					display: block;
+					left: auto;
+					min-width: 100%;
+					padding: 10px 0 0;
+					position: static;
+					top: auto;
 				}
 			}
 		}
