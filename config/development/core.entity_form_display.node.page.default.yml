@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.page.field_ov
     - field.field.node.page.field_overlay_direction
     - field.field.node.page.field_overlay_fill_color
-    - field.field.node.page.field_page_type
     - node.type.page
   module:
     - color_field
@@ -23,7 +22,7 @@ third_party_settings:
         - field_overlay_direction
         - field_overlay_fill_color
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: tab
       format_settings:
         id: ''
@@ -50,7 +49,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -83,18 +82,9 @@ content:
     third_party_settings: {  }
     type: color_field_widget_default
     region: content
-  field_page_type:
-    weight: 3
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   path:
     type: path
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -102,21 +92,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 6
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 7
     region: content
     third_party_settings: {  }
   title:
@@ -129,7 +119,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS

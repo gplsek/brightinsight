@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.page.field_ov
     - field.field.node.page.field_overlay_direction
     - field.field.node.page.field_overlay_fill_color
-    - field.field.node.page.field_page_type
     - node.type.page
   module:
     - color_field
@@ -59,14 +58,6 @@ content:
       opacity: '1'
     third_party_settings: {  }
     type: color_field_formatter_text
-    region: content
-  field_page_type:
-    weight: 106
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   links:
     weight: 101

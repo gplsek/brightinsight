@@ -1,9 +1,0 @@
-uuid: 58bbb427-0baf-4b08-9fff-e6ab05474ee3
-langcode: en
-status: true
-dependencies: {  }
-name: 'Page Type'
-vid: page_type
-description: 'page type for tertiary pages'
-hierarchy: 0
-weight: 0
