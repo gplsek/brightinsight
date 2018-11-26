@@ -25,6 +25,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_background_color: true
   field_banner_height: true
   field_bottom_angle_color: true
   field_button_link: true
@@ -36,3 +37,4 @@ hidden:
   field_paragraphblock: true
   field_sub_headline: true
   field_text_color: true
+  field_top_angle_color: true
