@@ -1,23 +1,21 @@
-uuid: 2c8fbac4-2320-412b-9c8b-3f2d2c7f1666
+uuid: 9d204531-c52e-4956-a599-3b520fed75dd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_mask_horizontal
+    - field.storage.paragraph.field_cta_style
     - paragraphs.paragraphs_type.simple
   module:
     - options
-id: paragraph.simple.field_mask_horizontal
-field_name: field_mask_horizontal
+id: paragraph.simple.field_cta_style
+field_name: field_cta_style
 entity_type: paragraph
 bundle: simple
-label: OverLay
+label: 'CTA Style'
 description: ''
 required: false
-translatable: false
-default_value:
-  -
-    value: none
+translatable: true
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string

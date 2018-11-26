@@ -150,15 +150,11 @@
 						<p>{{ content.field_sub_headline }}</p>
 					</div>
 					<!-- If CTA -->
-					<div class="cta">
-                        <!--/*
-                            Main HTML template for the cta component.
-
-                            - class: primary, secondary, secondary-white
-                        */-->
-
-                        <a class='component-cta {{css.cta_classes}}' href="{{ content.field_button_link.0 }}"><span>{{ content.field_button_text.0 }}</span></a>
-					</div>
+          {% if content.field_button_link.0 %}
+  					<div class="cta">
+              <a class='component-cta {{css.cta_classes}}' href="{{ content.field_button_link.0 }}"><span>{{ content.field_button_text.0 }}</span></a>
+  					</div>
+          {% endif %}
 					<!-- end if -->
 				</div>
 			</div>

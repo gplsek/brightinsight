@@ -93,9 +93,12 @@
                 <div class="body">
                   {{ content.field_content }}
                 </div>
-                <div class="cta pad-top-md">
-                  <a href="{{ content.field_button_link.0 }}" class="component-cta {{css.cta_classes}}"><span>{{ content.field_button_text.0 }}</span></a>
-                </div>
+
+                {% if content.field_button_link.0 %}
+                  <div class="cta pad-top-md">
+                    <a href="{{ content.field_button_link.0 }}" class="component-cta {{css.cta_classes}}"><span>{{ content.field_button_text.0 }}</span></a>
+                  </div>
+                {% endif %}
               </div>
             </div>
           </div>

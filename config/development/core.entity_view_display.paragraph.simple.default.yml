@@ -3,17 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.simple.field_background
+    - field.field.paragraph.simple.field_background_color
     - field.field.paragraph.simple.field_background_image
+    - field.field.paragraph.simple.field_bottom_angle_color
     - field.field.paragraph.simple.field_button_link
     - field.field.paragraph.simple.field_button_text
     - field.field.paragraph.simple.field_content
-    - field.field.paragraph.simple.field_mask_horizontal
-    - field.field.paragraph.simple.field_overlay_fill_color
+    - field.field.paragraph.simple.field_cta_style
+    - field.field.paragraph.simple.field_ov
+    - field.field.paragraph.simple.field_overlay_direction
+    - field.field.paragraph.simple.field_text_color
     - field.field.paragraph.simple.field_title
+    - field.field.paragraph.simple.field_top_angle_color
     - paragraphs.paragraphs_type.simple
   module:
-    - color_field
     - options
     - text
 id: paragraph.simple.default
@@ -21,14 +24,12 @@ targetEntityType: paragraph
 bundle: simple
 mode: default
 content:
-  field_background:
-    weight: 6
-    label: hidden
-    settings:
-      format: hex
-      opacity: '1'
+  field_background_color:
+    weight: 9
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_formatter_text
+    type: list_default
     region: content
   field_background_image:
     type: entity_reference_entity_view
@@ -38,6 +39,13 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_bottom_angle_color:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_button_link:
     weight: 3
@@ -62,21 +70,33 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_mask_horizontal:
-    weight: 4
-    label: hidden
+  field_cta_style:
+    weight: 12
+    label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_overlay_fill_color:
-    weight: 7
-    label: hidden
-    settings:
-      format: hex
-      opacity: '1'
+  field_ov:
+    weight: 13
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_formatter_text
+    type: list_default
+    region: content
+  field_overlay_direction:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_color:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_title:
     weight: 0
@@ -85,5 +105,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_top_angle_color:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
 hidden: {  }

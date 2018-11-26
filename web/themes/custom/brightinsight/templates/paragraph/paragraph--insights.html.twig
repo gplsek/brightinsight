@@ -125,17 +125,11 @@
         			</div>
         		</div>
         		<!-- if Footer CTA -->
-        		<div class="component-footer">
-
-                        <!--/*
-                            Main HTML template for the cta component.
-
-                            - class: primary, secondary, secondary-white
-                        */-->
-
-                        <a class='component-cta {{css.cta_classes}}' href="{{ content.field_button_link.0 }}"><span>{{ content.field_button_text.0 }}</span></a>
-
-        		</div>
+                {% if content.field_button_link.0 %}
+                  <div class="component-footer">
+                    <a class='component-cta {{css.cta_classes}}' href="{{ content.field_button_link.0 }}"><span>{{ content.field_button_text.0 }}</span></a>
+                  </div>
+                {% endif %}
         		<!-- end if -->
         	</div>
         </section>

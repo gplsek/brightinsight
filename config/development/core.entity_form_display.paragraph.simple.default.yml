@@ -3,17 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.simple.field_background
+    - field.field.paragraph.simple.field_background_color
     - field.field.paragraph.simple.field_background_image
+    - field.field.paragraph.simple.field_bottom_angle_color
     - field.field.paragraph.simple.field_button_link
     - field.field.paragraph.simple.field_button_text
     - field.field.paragraph.simple.field_content
-    - field.field.paragraph.simple.field_mask_horizontal
-    - field.field.paragraph.simple.field_overlay_fill_color
+    - field.field.paragraph.simple.field_cta_style
+    - field.field.paragraph.simple.field_ov
+    - field.field.paragraph.simple.field_overlay_direction
+    - field.field.paragraph.simple.field_text_color
     - field.field.paragraph.simple.field_title
+    - field.field.paragraph.simple.field_top_angle_color
     - paragraphs.paragraphs_type.simple
   module:
-    - color_field
     - field_group
     - text
 third_party_settings:
@@ -21,9 +24,14 @@ third_party_settings:
     group_settings:
       children:
         - field_background_image
-        - field_background
+        - field_background_color
         - field_mask_horizontal
-        - field_overlay_fill_color
+        - field_text_color
+        - field_overlay_direction
+        - field_top_angle_color
+        - field_cta_style
+        - field_ov
+        - field_bottom_angle_color
       parent_name: ''
       weight: 4
       format_type: tab
@@ -40,12 +48,11 @@ targetEntityType: paragraph
 bundle: simple
 mode: default
 content:
-  field_background:
+  field_background_color:
     weight: 6
-    settings:
-      default_colors: "\n#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46\n#42D692,#16A765,#7BD148,#B3DC6C,#FBE983\n#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF\n#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2\n#CD74E6,#A47AE2"
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_box
+    type: options_select
     region: content
   field_background_image:
     weight: 5
@@ -55,6 +62,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_bottom_angle_color:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_button_link:
     weight: 3
@@ -80,18 +93,29 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_mask_horizontal:
-    weight: 7
+  field_cta_style:
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_overlay_fill_color:
-    weight: 8
-    settings:
-      default_colors: "\n#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46\n#42D692,#16A765,#7BD148,#B3DC6C,#FBE983\n#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF\n#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2\n#CD74E6,#A47AE2"
+  field_ov:
+    weight: 12
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_box
+    type: options_select
+    region: content
+  field_overlay_direction:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_color:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_title:
     weight: 0
@@ -100,6 +124,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_top_angle_color:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   created: true
