@@ -81,22 +81,6 @@ function initBanner() {
 'use strict';
 
 /**
- *  This is the main file for blog-list
- */
- 
-if ($('.component-blog-list').length) {
-    $(function() {
-        initBlogList();
-    });
-}
-
-function initBlogList() {
-    console.log('Initializing BlogList');
-}
-
-'use strict';
-
-/**
  *  This is the main file for banner-inline
  */
  
@@ -113,17 +97,33 @@ function initBannerInline() {
 'use strict';
 
 /**
- *  This is the main file for card-career
+ *  This is the main file for blog-list
  */
  
-if ($('.component-card-career').length) {
+if ($('.component-blog-list').length) {
     $(function() {
-        initCardCareer();
+        initBlogList();
     });
 }
 
-function initCardCareer() {
-    console.log('Initializing CardCareer');
+function initBlogList() {
+    console.log('Initializing BlogList');
+}
+
+'use strict';
+
+/**
+ *  This is the main file for card
+ */
+ 
+if ($('.component-card').length) {
+    $(function() {
+        initCard();
+    });
+}
+
+function initCard() {
+    console.log('Initializing Card');
 }
 
 'use strict';
@@ -145,17 +145,17 @@ function initCardBlog() {
 'use strict';
 
 /**
- *  This is the main file for card
+ *  This is the main file for card-career
  */
  
-if ($('.component-card').length) {
+if ($('.component-card-career').length) {
     $(function() {
-        initCard();
+        initCardCareer();
     });
 }
 
-function initCard() {
-    console.log('Initializing Card');
+function initCardCareer() {
+    console.log('Initializing CardCareer');
 }
 
 'use strict';
