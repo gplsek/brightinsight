@@ -1,0 +1,21 @@
+uuid: 7773671b-77f8-4656-9f3c-c95d629d9b74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mask
+    - paragraphs.paragraphs_type.use_cases
+  module:
+    - options
+id: paragraph.use_cases.field_mask
+field_name: field_mask
+entity_type: paragraph
+bundle: use_cases
+label: OverLay
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

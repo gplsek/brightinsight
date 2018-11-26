@@ -75,25 +75,19 @@
 
 
       <!-- Variation: Image right, show arrows, black text, lt gray background -->
-      {% if content.field_image_location.0|render == 'right' %}
-          {% set img_location = 'image-right' %}
-          {% set img_order = 'order-md-2' %}
-          {% set text_order = 'order-md-1' %}
-      {% else %}
-          {% set img_location = 'image-left' %}
-          {% set img_order = 'order-md-1' %}
-          {% set text_order = 'order-md-2' %}
-      {% endif %}
-      <section class="component-fifty-fifty pad-top-lg pad-bot-lg {{ img_location }} show-arrows text-black bg-lt-gray">
+      {% set img_order_class = (css.blocks_order.img_order == 'left') ? 'order-md-1' : 'order-md-2' %}
+      {% set text_order_class = (css.blocks_order.img_order == 'left') ? 'order-md-2' : 'order-md-1' %}
+
+      <section class="component-fifty-fifty pad-top-lg pad-bot-lg {{ css.section_classes }}">
       	<div class="container">
       		<div class="row align-items-center">
-      			<div class="col-image col-12 col-md-4 offset-md-1 {{ img_order }}">
+      			<div class="col-image col-12 col-md-4 offset-md-1 {{img_order_class}}">
       				<div class="component-image">
                         {% set media_img_url = file_url(content.field_image.0['#item'].entity.uri.value) %}
       					<img class="img-responsive" src="{{ media_img_url }}">
       				</div>
       			</div>
-      			<div class="col-content col-12 col-md-5 offset-md-1 {{ text_order }}">
+      			<div class="col-content col-12 col-md-5 offset-md-1 {{text_order_class}}">
       				<div class="component-content">
       					<h3 class="line">{{ content.field_title }}</h3>
       					<div class="body">
@@ -101,15 +95,11 @@
       					</div>
       				</div>
 					<!-- If CTA -->
-					<div class="cta">
-                        <!--/*
-                            Main HTML template for the cta component.
-
-                            - class: primary, secondary, secondary-white
-                        */-->
-
-                        <a class='component-cta primary' href="{{ content.field_button_link.0 }}"><span>{{ content.field_button_text.0 }}</span></a>
-					</div>
+          {% if content.field_button_link.0 %}
+  					<div class="cta">
+              <a class='component-cta {{css.cta_classes}}' href="{{ content.field_button_link.0 }}"><span>{{ content.field_button_text.0 }}</span></a>
+  					</div>
+          {% endif %}
 					<!-- end if -->
       			</div>
       		</div>

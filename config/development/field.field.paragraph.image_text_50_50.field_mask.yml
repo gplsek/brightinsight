@@ -1,0 +1,23 @@
+uuid: 385cf898-5de8-4b6e-8e67-204b3ce381b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mask
+    - paragraphs.paragraphs_type.image_text_50_50
+  module:
+    - options
+id: paragraph.image_text_50_50.field_mask
+field_name: field_mask
+entity_type: paragraph
+bundle: image_text_50_50
+label: OverLay
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: none
+default_value_callback: ''
+settings: {  }
+field_type: list_string

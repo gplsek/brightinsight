@@ -1,0 +1,18 @@
+uuid: ced8e369-d953-4762-bb3e-18e280b40f18
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Blog Post'
+type: blog_post
+description: 'Single Blog Post'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

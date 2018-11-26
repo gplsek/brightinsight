@@ -1,0 +1,21 @@
+uuid: fd50a242-de4a-43e5-a35f-fff31099e34b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay_position
+    - paragraphs.paragraphs_type.use_cases
+  module:
+    - options
+id: paragraph.use_cases.field_overlay_position
+field_name: field_overlay_position
+entity_type: paragraph
+bundle: use_cases
+label: 'OverLay Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

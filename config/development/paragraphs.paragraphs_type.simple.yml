@@ -1,0 +1,14 @@
+uuid: 2d206f36-1b9d-455e-bdb6-eec1a495c3b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: simple
+label: 'Value Prop'
+icon_uuid: null
+description: 'Simple content, with button and background option'
+behavior_plugins: {  }
