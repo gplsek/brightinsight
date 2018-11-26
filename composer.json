@@ -78,7 +78,7 @@
         "drupal/video_embed_field": "^2.0",
         "drupal/view_mode_page": "^3.1",
         "drupal/webform": "^5.0@RC",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "^9.5",
         "vlucas/phpdotenv": "^2.5",
         "webflo/drupal-finder": "^1.1",
         "webmozart/path-util": "^2.3"
