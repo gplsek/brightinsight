@@ -1,0 +1,22 @@
+uuid: 4fb71f46-8ab2-40ea-857e-c88f2c4ba893
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: usecase
+label: usecase
+type: 'canonical_entities:node'
+pattern: 'usecase/[node:title]'
+selection_criteria:
+  4c90c934-f933-4f08-939a-f798d832b93e:
+    id: node_type
+    bundles:
+      use_case: use_case
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4c90c934-f933-4f08-939a-f798d832b93e
+selection_logic: and
+weight: -5
+relationships: {  }
