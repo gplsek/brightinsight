@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.blog_post.body
-    - field.field.node.blog_post.field_hero_image
+    - field.field.node.blog_post.field_blog_hero_image
+    - field.field.node.blog_post.field_hero_card_image
+    - image.style.thumbnail
     - node.type.blog_post
   module:
+    - image
     - path
     - text
 id: node.blog_post.default
@@ -29,14 +32,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_hero_image:
-    weight: 2
+  field_blog_hero_image:
+    weight: 27
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: image_image
+    region: content
+  field_hero_card_image:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   path:
     type: path

@@ -1,0 +1,21 @@
+uuid: 5aef7c18-6dbc-4931-9037-daf0af5c8436
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_top_angle_color
+    - node.type.clinicalboard
+  module:
+    - options
+id: node.clinicalboard.field_top_angle_color
+field_name: field_top_angle_color
+entity_type: node
+bundle: clinicalboard
+label: 'Top Angle Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

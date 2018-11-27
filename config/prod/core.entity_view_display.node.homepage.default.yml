@@ -3,17 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.homepage.field_background_color
+    - field.field.node.homepage.field_banner_height
+    - field.field.node.homepage.field_bottom_angle_color
     - field.field.node.homepage.field_button_link
     - field.field.node.homepage.field_button_text
+    - field.field.node.homepage.field_cta_style
     - field.field.node.homepage.field_hero_image
     - field.field.node.homepage.field_ov
     - field.field.node.homepage.field_overlay_direction
-    - field.field.node.homepage.field_overlay_fill_color
     - field.field.node.homepage.field_paragraphblock
     - field.field.node.homepage.field_sub_headline
+    - field.field.node.homepage.field_text_color
+    - field.field.node.homepage.field_top_angle_color
     - node.type.homepage
   module:
-    - color_field
     - entity_reference_revisions
     - options
     - user
@@ -22,6 +26,27 @@ targetEntityType: node
 bundle: homepage
 mode: default
 content:
+  field_background_color:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_banner_height:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_bottom_angle_color:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_button_link:
     weight: 3
     label: hidden
@@ -37,6 +62,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_cta_style:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_hero_image:
     type: entity_reference_entity_view
@@ -61,15 +93,6 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-  field_overlay_fill_color:
-    weight: 6
-    label: hidden
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
-    type: color_field_formatter_text
-    region: content
   field_paragraphblock:
     type: entity_reference_revisions_entity_view
     weight: 8
@@ -85,6 +108,20 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_text_color:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_top_angle_color:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   links:
     weight: 7

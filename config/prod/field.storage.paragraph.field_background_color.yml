@@ -1,0 +1,63 @@
+uuid: b01eaa25-3ca8-4944-9110-8a23d2e0a6ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bg-black
+      label: black
+    -
+      value: bg-white
+      label: white
+    -
+      value: bg-blue
+      label: blue
+    -
+      value: bg-blue-muted
+      label: 'blue (muted)'
+    -
+      value: bg-green
+      label: green
+    -
+      value: bg-green-muted
+      label: 'green (muted)'
+    -
+      value: bg-lime
+      label: lime
+    -
+      value: bg-lime-muted
+      label: 'lime (muted)'
+    -
+      value: bg-teal
+      label: teal
+    -
+      value: bg-teal-muted
+      label: 'teal (muted)'
+    -
+      value: bg-dk-gray
+      label: 'dark gray'
+    -
+      value: bg-md-gray
+      label: 'medium gray'
+    -
+      value: bg-gray
+      label: gray
+    -
+      value: bg-lt-gray
+      label: 'light gray'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

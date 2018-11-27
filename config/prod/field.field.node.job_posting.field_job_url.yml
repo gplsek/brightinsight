@@ -1,0 +1,23 @@
+uuid: 4b7bbb30-4ad3-4cd8-b114-85340a019387
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_url
+    - node.type.job_posting
+  module:
+    - link
+id: node.job_posting.field_job_url
+field_name: field_job_url
+entity_type: node
+bundle: job_posting
+label: 'Job URL'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

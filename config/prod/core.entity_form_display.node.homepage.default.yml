@@ -3,17 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.homepage.field_background_color
+    - field.field.node.homepage.field_banner_height
+    - field.field.node.homepage.field_bottom_angle_color
     - field.field.node.homepage.field_button_link
     - field.field.node.homepage.field_button_text
+    - field.field.node.homepage.field_cta_style
     - field.field.node.homepage.field_hero_image
     - field.field.node.homepage.field_ov
     - field.field.node.homepage.field_overlay_direction
-    - field.field.node.homepage.field_overlay_fill_color
     - field.field.node.homepage.field_paragraphblock
     - field.field.node.homepage.field_sub_headline
+    - field.field.node.homepage.field_text_color
+    - field.field.node.homepage.field_top_angle_color
     - node.type.homepage
   module:
-    - color_field
     - field_group
     - paragraphs
     - path
@@ -23,7 +27,12 @@ third_party_settings:
       children:
         - field_ov
         - field_overlay_direction
-        - field_overlay_fill_color
+        - field_bottom_angle_color
+        - field_top_angle_color
+        - field_text_color
+        - field_cta_style
+        - field_banner_height
+        - field_background_color
       parent_name: ''
       weight: 6
       format_type: tab
@@ -45,6 +54,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_background_color:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_banner_height:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_bottom_angle_color:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_button_link:
     weight: 5
     settings:
@@ -60,6 +87,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_cta_style:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_hero_image:
     weight: 2
@@ -81,13 +114,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_overlay_fill_color:
-    weight: 10
-    settings:
-      default_colors: "\n#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46\n#42D692,#16A765,#7BD148,#B3DC6C,#FBE983\n#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF\n#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2\n#CD74E6,#A47AE2"
-    third_party_settings: {  }
-    type: color_field_widget_box
     region: content
   field_paragraphblock:
     type: paragraphs
@@ -115,6 +141,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_text_color:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_top_angle_color:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   path:
     type: path

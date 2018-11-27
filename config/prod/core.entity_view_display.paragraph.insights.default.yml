@@ -3,13 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.insights.field_background_color
     - field.field.paragraph.insights.field_benefit
     - field.field.paragraph.insights.field_button_link
     - field.field.paragraph.insights.field_button_text
+    - field.field.paragraph.insights.field_cta_style
     - field.field.paragraph.insights.field_description
     - field.field.paragraph.insights.field_item_separator
     - field.field.paragraph.insights.field_mask_horizontal
     - field.field.paragraph.insights.field_overlay_fill_color
+    - field.field.paragraph.insights.field_show_items_separator
+    - field.field.paragraph.insights.field_text_color
     - field.field.paragraph.insights.field_title
     - paragraphs.paragraphs_type.insights
   module:
@@ -21,6 +25,13 @@ targetEntityType: paragraph
 bundle: insights
 mode: default
 content:
+  field_background_color:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_benefit:
     weight: 2
     label: hidden
@@ -43,6 +54,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_cta_style:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_description:
     weight: 1
@@ -75,6 +93,23 @@ content:
       opacity: '1'
     third_party_settings: {  }
     type: color_field_formatter_text
+    region: content
+  field_show_items_separator:
+    weight: 11
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_text_color:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_title:
     weight: 0
