@@ -1,0 +1,30 @@
+uuid: 42cbf8a9-5dec-474e-810c-446a1e515f4f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_banner_height
+field_name: field_banner_height
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: component-banner-tall
+      label: Tall
+    -
+      value: component-banner-medium
+      label: Medium
+    -
+      value: component-banner-short
+      label: Short
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,32 @@
+uuid: 9d1f5857-a148-4831-8dd5-49294325a663
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_events_blog
+    - node.type.blog_post
+    - node.type.event
+    - node.type.news
+    - paragraphs.paragraphs_type.news_and_events
+id: paragraph.news_and_events.field_news_events_blog
+field_name: field_news_events_blog
+entity_type: paragraph
+bundle: news_and_events
+label: 'News, events, blog'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blog_post: blog_post
+      event: event
+      news: news
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: event
+field_type: entity_reference
