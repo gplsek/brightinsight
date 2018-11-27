@@ -125,32 +125,6 @@
         
 }(jQuery));
 
-
-(function ($) {
-    'use strict';
-    Drupal.behaviors.bannerinline = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-          *  This is the main file for banner-inline
-          */
- 
-          if ($('.component-banner-inline').length) {
-              $(function() {
-                  initBannerInline();
-              });
-          }
-
-          function initBannerInline() {
-              console.log('Initializing BannerInline');
-          }
-
-      }
-  };
-        
-}(jQuery));
-
 (function ($) {
     'use strict';
     Drupal.behaviors.card = {
@@ -200,6 +174,32 @@
   };
         
 }(jQuery));
+
+(function ($) {
+    'use strict';
+    Drupal.behaviors.bannerinline = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+          *  This is the main file for banner-inline
+          */
+ 
+          if ($('.component-banner-inline').length) {
+              $(function() {
+                  initBannerInline();
+              });
+          }
+
+          function initBannerInline() {
+              console.log('Initializing BannerInline');
+          }
+
+      }
+  };
+        
+}(jQuery));
+
 (function ($) {
     'use strict';
     Drupal.behaviors.cardCareer = {
@@ -288,34 +288,6 @@
 
 (function ($) {
     'use strict';
-    Drupal.behaviors.careers = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-           *  This is the main file for careers
-           */
- 
-          if ($('.component-careers').length) {
-              $(function() {
-                  initCareers();
-              });
-          }
-
-          function initCareers() {
-              console.log('Initializing Careers');
-          }
-          
-    
-      }
-  };
-        
-}(jQuery));
-
-
-
-(function ($) {
-    'use strict';
     Drupal.behaviors.columns = {
       attach: function(context, settings) {
           'use strict';
@@ -366,6 +338,34 @@
         
 }(jQuery));
 
+
+
+
+(function ($) {
+    'use strict';
+    Drupal.behaviors.careers = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+           *  This is the main file for careers
+           */
+ 
+          if ($('.component-careers').length) {
+              $(function() {
+                  initCareers();
+              });
+          }
+
+          function initCareers() {
+              console.log('Initializing Careers');
+          }
+          
+    
+      }
+  };
+        
+}(jQuery));
 
 
 
