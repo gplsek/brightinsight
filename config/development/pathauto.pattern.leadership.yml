@@ -1,0 +1,22 @@
+uuid: f1844215-8065-4344-880c-5cce26e9b29a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: leadership
+label: leadership
+type: 'canonical_entities:node'
+pattern: 'leadership/[node:title]'
+selection_criteria:
+  8c17795d-f9a0-489a-bd1b-0980adaafe01:
+    id: node_type
+    bundles:
+      leadership: leadership
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 8c17795d-f9a0-489a-bd1b-0980adaafe01
+selection_logic: and
+weight: -5
+relationships: {  }
