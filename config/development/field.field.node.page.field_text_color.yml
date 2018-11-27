@@ -1,23 +1,23 @@
-uuid: 06bda24b-c186-4864-84c3-899acb43283c
+uuid: 46c83648-8bf8-4c0f-b977-ff915674ee49
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_height
+    - field.storage.node.field_text_color
     - node.type.page
   module:
     - options
-id: node.page.field_banner_height
-field_name: field_banner_height
+id: node.page.field_text_color
+field_name: field_text_color
 entity_type: node
 bundle: page
-label: 'Banner Height'
+label: 'Text Color'
 description: ''
 required: false
 translatable: true
 default_value:
   -
-    value: component-banner-short
+    value: text-white
 default_value_callback: ''
 settings: {  }
 field_type: list_string

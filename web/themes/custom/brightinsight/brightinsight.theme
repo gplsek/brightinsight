@@ -18,7 +18,7 @@ function brightinsight_preprocess_node(&$variables) {
   $variables['background'] = '';
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['node'];
-      if (($node->getType() == 'homepage') || ($node->getType() == 'secondary_page')) {
+      if (($node->getType() == 'homepage') || ($node->getType() == 'secondary_page') || ($node->getType() == 'page')) {
         if (!$node->get('field_hero_image')->isEmpty()) {
           // One line uri without loading. 
           $uri = $node->get('field_hero_image')->entity->get('field_media_image')->entity->uri->value;

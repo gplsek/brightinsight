@@ -7,7 +7,7 @@ dependencies:
     - media.type.image
     - node.type.page
   content:
-    - 'media:image:384bdee5-5983-4f89-8d4f-dec4f6cb4f21'
+    - 'media:image:7708399a-3f84-4957-876b-a2fd07fa44e7'
 id: node.page.field_hero_image
 field_name: field_hero_image
 entity_type: node
@@ -18,7 +18,7 @@ required: false
 translatable: true
 default_value:
   -
-    target_uuid: 384bdee5-5983-4f89-8d4f-dec4f6cb4f21
+    target_uuid: 7708399a-3f84-4957-876b-a2fd07fa44e7
 default_value_callback: ''
 settings:
   handler: 'default:media'
