@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.page.field_hero_image
     - field.field.node.page.field_ov
     - field.field.node.page.field_overlay_direction
+    - field.field.node.page.field_text_color
     - field.field.node.page.field_top_angle_color
     - node.type.page
   module:
@@ -68,6 +69,13 @@ content:
     region: content
   field_overlay_direction:
     weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_color:
+    weight: 109
     label: above
     settings: {  }
     third_party_settings: {  }
