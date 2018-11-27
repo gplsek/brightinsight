@@ -1,0 +1,23 @@
+uuid: 7b1313d5-7f0e-4e06-ad49-73ea0c540a9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gated_
+    - node.type.use_case
+id: node.use_case.field_gated_
+field_name: field_gated_
+entity_type: node
+bundle: use_case
+label: 'Gated?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 90a04bd0-80d2-4ce8-88ba-f9dd6bcadad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_background_color
+    - node.type.leadership
+  module:
+    - options
+id: node.leadership.field_background_color
+field_name: field_background_color
+entity_type: node
+bundle: leadership
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,30 @@
+uuid: b14acb09-28c6-4c0d-8c65-1fc25c11682c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_ov
+field_name: field_ov
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: none
+      label: none
+    -
+      value: top
+      label: top
+    -
+      value: bottom
+      label: bottom
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

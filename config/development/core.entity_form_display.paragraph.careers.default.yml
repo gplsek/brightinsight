@@ -1,0 +1,126 @@
+uuid: 1bf07133-c59b-4a34-b223-af970717dc00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.careers.field_background
+    - field.field.paragraph.careers.field_background_color
+    - field.field.paragraph.careers.field_background_image
+    - field.field.paragraph.careers.field_content
+    - field.field.paragraph.careers.field_mask
+    - field.field.paragraph.careers.field_overlay_position
+    - field.field.paragraph.careers.field_title
+    - field.field.paragraph.careers.field_use_case
+    - paragraphs.paragraphs_type.careers
+  module:
+    - color_field
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_background_image
+        - field_background
+        - field_overlay_position
+        - field_mask
+        - field_overlay_fill_color
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Settings
+    group_use:
+      children:
+        - field_use_case
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        label: Careers
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Careers
+id: paragraph.careers.default
+targetEntityType: paragraph
+bundle: careers
+mode: default
+content:
+  field_background:
+    weight: 4
+    settings:
+      default_colors: "\n#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46\n#42D692,#16A765,#7BD148,#B3DC6C,#FBE983\n#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF\n#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2\n#CD74E6,#A47AE2"
+    third_party_settings: {  }
+    type: color_field_widget_box
+    region: content
+  field_background_color:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_background_image:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_content:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_mask:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_overlay_fill_color:
+    weight: 7
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_overlay_position:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_use_case:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

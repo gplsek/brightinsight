@@ -1,0 +1,57 @@
+uuid: fcd985e8-bafb-494f-9db9-9afecd9889c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.use_case.field_description
+    - field.field.node.use_case.field_files
+    - field.field.node.use_case.field_gated_
+    - field.field.node.use_case.field_gated_file
+    - node.type.use_case
+  module:
+    - file
+    - user
+id: node.use_case.default
+targetEntityType: node
+bundle: use_case
+mode: default
+content:
+  field_description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_files:
+    weight: 102
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_gated_:
+    weight: 103
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_gated_file:
+    weight: 105
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

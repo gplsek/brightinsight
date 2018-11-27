@@ -1,0 +1,19 @@
+uuid: 30b8ecd7-421e-47cc-bb33-aa0928710935
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.use_cases
+id: paragraph.use_cases.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: use_cases
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

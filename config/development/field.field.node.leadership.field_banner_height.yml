@@ -1,0 +1,21 @@
+uuid: e1d4a524-824e-41b6-80d0-11ef0a8ce9f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_height
+    - node.type.leadership
+  module:
+    - options
+id: node.leadership.field_banner_height
+field_name: field_banner_height
+entity_type: node
+bundle: leadership
+label: 'Banner Height'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
