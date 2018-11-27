@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.use_cases.field_background_image
     - field.field.paragraph.use_cases.field_content
     - field.field.paragraph.use_cases.field_mask
+    - field.field.paragraph.use_cases.field_overlay_fill_color
     - field.field.paragraph.use_cases.field_overlay_position
     - field.field.paragraph.use_cases.field_title
     - field.field.paragraph.use_cases.field_use_case
@@ -80,6 +81,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_overlay_fill_color:
+    weight: 7
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
     region: content
   field_overlay_position:
     weight: 5
