@@ -1,0 +1,23 @@
+.edit_tabs {
+    width: 125px;
+    position: fixed;
+    background: #000;
+    z-index: 999;
+    top: 250px;
+    padding-left: 10px;
+    
+    a {
+        color: #fff;
+    }
+
+}
+
+.edit_tabs a {
+     color: #fff;
+     text-decoration: none;
+}
+
+.edit_tabs a:visited {
+    color: #fff;
+    text-decoration: none;
+}
