@@ -3583,6 +3583,134 @@ button {
 /**
  *  Main css for global-footer
  */
+.component-global-footer {
+  background: #323F48;
+  color: #D0D3D3;
+  overflow: hidden;
+  padding: 60px 0 200px;
+  position: relative; }
+  .component-global-footer a {
+    color: #D0D3D3;
+    text-decoration: none; }
+  .component-global-footer ul {
+    margin: 0;
+    padding: 0; }
+  .component-global-footer .logo {
+    display: block;
+    width: 170px; }
+  .component-global-footer .col-legal {
+    position: static; }
+  .component-global-footer .colophon {
+    bottom: 20px;
+    color: #D0D3D3;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    position: absolute; }
+  .component-global-footer .nav-legal ul {
+    margin: 0; }
+    .component-global-footer .nav-legal ul li {
+      display: block;
+      float: left;
+      margin-left: 1em;
+      padding-left: 1em; }
+      .component-global-footer .nav-legal ul li:before {
+        background: #D0D3D3;
+        content: '';
+        display: block;
+        height: 12px;
+        left: 0;
+        position: absolute;
+        top: 5px;
+        width: 1px; }
+      .component-global-footer .nav-legal ul li:first-child {
+        margin-left: 0;
+        padding-left: 0; }
+        .component-global-footer .nav-legal ul li:first-child:before {
+          display: none; }
+  .component-global-footer .nav-footer {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-top: 50px; }
+    .component-global-footer .nav-footer a {
+      color: #FFFFFF; }
+    .component-global-footer .nav-footer li {
+      margin-top: 36px; }
+      .component-global-footer .nav-footer li:last-child a {
+        padding-right: 18px;
+        position: relative; }
+        .component-global-footer .nav-footer li:last-child a:after {
+          color: #BDD441;
+          content: '\00bb';
+          display: block;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 14px;
+          position: absolute;
+          right: 0;
+          top: 3px; }
+  .component-global-footer .nav-social {
+    display: inline-block;
+    font-size: 28px;
+    margin: 40px 0 0;
+    padding: 30px 10px 0 15px;
+    position: relative; }
+    .component-global-footer .nav-social:before {
+      background: #FFFFFF;
+      content: '';
+      display: block;
+      height: 1px;
+      right: 0;
+      position: absolute;
+      top: 0;
+      width: 50vw; }
+    .component-global-footer .nav-social li {
+      float: left;
+      margin-right: 20px; }
+      .component-global-footer .nav-social li:last-child {
+        margin-right: 0; }
+    .component-global-footer .nav-social a {
+      padding: 5px; }
+  @media (min-width: 992px) {
+    .component-global-footer .col-legal {
+      position: relative; }
+    .component-global-footer .colophon {
+      bottom: auto;
+      margin-top: 50px;
+      position: static; }
+      .component-global-footer .colophon .copyright {
+        float: left; }
+      .component-global-footer .colophon .nav-legal {
+        float: left; }
+        .component-global-footer .colophon .nav-legal ul li:first-child {
+          margin-left: 1em;
+          padding-left: 1em; }
+          .component-global-footer .colophon .nav-legal ul li:first-child:before {
+            display: block; }
+    .component-global-footer .nav-footer {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 5px; }
+      .component-global-footer .nav-footer ul {
+        display: flex;
+        justify-content: space-between; }
+      .component-global-footer .nav-footer li {
+        margin-top: 0; }
+        .component-global-footer .nav-footer li:last-child a {
+          padding-right: 14px; }
+          .component-global-footer .nav-footer li:last-child a:after {
+            font-size: 20px;
+            top: 2px; }
+    .component-global-footer .nav-social {
+      display: block;
+      font-size: 30px;
+      margin: 10px 0 0;
+      padding: 30px 0 0 5px; }
+      .component-global-footer .nav-social:before {
+        left: 0;
+        right: auto; } }
+
 /**
  *  Main css for banner
  */

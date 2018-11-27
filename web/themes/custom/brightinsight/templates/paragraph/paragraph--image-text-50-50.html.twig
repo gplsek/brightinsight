@@ -83,8 +83,10 @@
       		<div class="row align-items-center">
       			<div class="col-image col-12 col-md-4 offset-md-1 {{img_order_class}}">
       				<div class="component-image">
-                        {% set media_img_url = file_url(content.field_image.0['#item'].entity.uri.value) %}
-      					<img class="img-responsive" src="{{ media_img_url }}">
+                {% if content.field_image.0 %}
+                  {% set media_img_url = file_url(content.field_image.0['#item'].entity.uri.value) %}
+        					<img class="img-responsive" src="{{ media_img_url }}">
+                {% endif %}
       				</div>
       			</div>
       			<div class="col-content col-12 col-md-5 offset-md-1 {{text_order_class}}">
