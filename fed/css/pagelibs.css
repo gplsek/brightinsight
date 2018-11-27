@@ -3259,7 +3259,7 @@ button {
     width: 100%; }
 
 .bg-image {
-  background-position: 50% 50%;
+  background-position: 0 50%;
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -3975,6 +3975,34 @@ button {
 /**
  *  Main css for text
  */
+.component-text .component-header {
+  margin: 0; }
+  .component-text .component-header .article-share {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 60px; }
+  .component-text .component-header .meta {
+    color: #7C878E;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0 0 30px; }
+  .component-text .component-header h1 {
+    font-size: 26px;
+    line-height: 34px; }
+
+.component-text .cta {
+  margin: 40px 0 20px; }
+
+@media (min-width: 768px) {
+  .component-text .component-header .article-share {
+    margin: 0 0 45px; } }
+
+@media (min-width: 992px) {
+  .component-text .component-header h1 {
+    font-size: 34px;
+    line-height: 42px; } }
+
 /**
  *  Main css for card-icon
  */
