@@ -1,0 +1,28 @@
+uuid: e0ed9530-66b9-4fc8-8cb5-00c6dcd10ae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_post
+    - node.type.blog_post
+    - paragraphs.paragraphs_type.blog_posts
+id: paragraph.blog_posts.field_featured_post
+field_name: field_featured_post
+entity_type: paragraph
+bundle: blog_posts
+label: 'Featured Post'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blog_post: blog_post
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

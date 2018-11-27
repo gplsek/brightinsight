@@ -1,0 +1,30 @@
+uuid: 7a7098d0-5d04-4d98-833e-c1fabb1e3ef2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_cta_style
+field_name: field_cta_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: primary
+      label: 'Solid Green'
+    -
+      value: secondary
+      label: 'Green Outline'
+    -
+      value: secondary-white
+      label: 'White Outline'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
