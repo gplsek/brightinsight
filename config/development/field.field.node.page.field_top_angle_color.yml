@@ -1,0 +1,21 @@
+uuid: 380823fc-7f33-4747-8781-ea2c9a4924fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_top_angle_color
+    - node.type.page
+  module:
+    - options
+id: node.page.field_top_angle_color
+field_name: field_top_angle_color
+entity_type: node
+bundle: page
+label: 'Top Angle Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

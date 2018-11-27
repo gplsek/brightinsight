@@ -1,0 +1,24 @@
+uuid: 7271cb48-db8b-4610-84b6-e2476b652999
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.leadership
+_core:
+  default_config_hash: fPUEnm4T5zfZRr3ttDUqq7yCDd2uW3clWD-pvos4tlQ
+id: node.leadership.promote
+field_name: promote
+entity_type: node
+bundle: leadership
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

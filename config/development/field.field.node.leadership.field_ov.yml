@@ -1,0 +1,21 @@
+uuid: 644f4d2f-4e60-4dcb-a722-9cce4c617c36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ov
+    - node.type.leadership
+  module:
+    - options
+id: node.leadership.field_ov
+field_name: field_ov
+entity_type: node
+bundle: leadership
+label: 'OverLay Position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
