@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_hero_image
     - media.type.image
     - node.type.page
+  content:
+    - 'media:image:384bdee5-5983-4f89-8d4f-dec4f6cb4f21'
 id: node.page.field_hero_image
 field_name: field_hero_image
 entity_type: node
@@ -14,7 +16,9 @@ label: 'Hero Image'
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    target_uuid: 384bdee5-5983-4f89-8d4f-dec4f6cb4f21
 default_value_callback: ''
 settings:
   handler: 'default:media'
