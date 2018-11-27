@@ -1,0 +1,48 @@
+uuid: 9efddcc9-ae3a-4e27-9d4c-032f0d83981a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.clinicalboard.body
+    - field.field.node.clinicalboard.field_background_color
+    - field.field.node.clinicalboard.field_banner_height
+    - field.field.node.clinicalboard.field_bottom_angle_color
+    - field.field.node.clinicalboard.field_head_shot
+    - field.field.node.clinicalboard.field_hero_image
+    - field.field.node.clinicalboard.field_ov
+    - field.field.node.clinicalboard.field_overlay_direction
+    - field.field.node.clinicalboard.field_role
+    - field.field.node.clinicalboard.field_top_angle_color
+    - node.type.clinicalboard
+  module:
+    - text
+    - user
+id: node.clinicalboard.teaser
+targetEntityType: node
+bundle: clinicalboard
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 100
+    region: content
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_background_color: true
+  field_banner_height: true
+  field_bottom_angle_color: true
+  field_head_shot: true
+  field_hero_image: true
+  field_ov: true
+  field_overlay_direction: true
+  field_role: true
+  field_top_angle_color: true

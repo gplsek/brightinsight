@@ -13,14 +13,14 @@ _core:
 id: brightinsight_main_menu
 theme: brightinsight
 region: navigation
-weight: -5
+weight: -3
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
   label: 'Main navigation'
   provider: system
-  label_display: '0'
+  label_display: visible
   level: 1
-  depth: 1
+  depth: 0
 visibility: {  }

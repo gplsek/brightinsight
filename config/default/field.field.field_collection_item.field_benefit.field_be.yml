@@ -1,0 +1,38 @@
+uuid: 9a6fa023-9ac2-4c08-83e1-7634b77e5640
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_be
+    - field_collection.field_collection.field_benefit
+  module:
+    - image
+id: field_collection_item.field_benefit.field_be
+field_name: field_be
+entity_type: field_collection_item
+bundle: field_benefit
+label: 'Benefit Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

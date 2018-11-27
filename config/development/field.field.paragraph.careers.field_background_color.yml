@@ -1,0 +1,21 @@
+uuid: b806491c-6a03-4c33-aecc-6ff28a22bd03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.careers
+  module:
+    - options
+id: paragraph.careers.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: careers
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

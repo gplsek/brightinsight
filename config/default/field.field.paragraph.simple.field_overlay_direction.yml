@@ -1,0 +1,21 @@
+uuid: 1e9388ea-a031-4402-acd1-2d6630c2a9d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay_direction
+    - paragraphs.paragraphs_type.simple
+  module:
+    - options
+id: paragraph.simple.field_overlay_direction
+field_name: field_overlay_direction
+entity_type: paragraph
+bundle: simple
+label: 'Overlay Direction'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

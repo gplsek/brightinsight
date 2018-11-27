@@ -1,6 +1,6 @@
 uuid: 9196bca3-7756-40ef-a406-512bf11c969c
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: brightinsight_branding
 theme: brightinsight
 region: navigation
-weight: -6
+weight: -3
 provider: null
 plugin: system_branding_block
 settings:

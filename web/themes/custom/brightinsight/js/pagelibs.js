@@ -125,31 +125,6 @@
         
 }(jQuery));
 
-(function ($) {
-    'use strict';
-    Drupal.behaviors.card = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-          *  This is the main file for card
-          */
- 
-          if ($('.component-card').length) {
-              $(function() {
-                  initCard();
-              });
-          }
-
-          function initCard() {
-              console.log('Initializing Card');
-          }
-    
-      }
-  };
-        
-}(jQuery));
-
 
 (function ($) {
     'use strict';
@@ -171,6 +146,31 @@
               console.log('Initializing BannerInline');
           }
 
+      }
+  };
+        
+}(jQuery));
+
+(function ($) {
+    'use strict';
+    Drupal.behaviors.card = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+          *  This is the main file for card
+          */
+ 
+          if ($('.component-card').length) {
+              $(function() {
+                  initCard();
+              });
+          }
+
+          function initCard() {
+              console.log('Initializing Card');
+          }
+    
       }
   };
         
@@ -226,30 +226,6 @@
 }(jQuery));
 (function ($) {
     'use strict';
-    Drupal.behaviors.cardNoimage = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-          *  This is the main file for card
-          */
- 
-          if ($('.component-card-no-image').length) {
-              $(function() {
-                  initCardNoImage();
-              });
-          }
-
-          function initCardNoImage() {
-              console.log('Initializing CardNoImage');
-          }
-    
-      }
-  };
-        
-}(jQuery));
-(function ($) {
-    'use strict';
     Drupal.behaviors.cardIcon = {
       attach: function(context, settings) {
           'use strict';
@@ -266,6 +242,30 @@
 
           function initCardIcon() {
               console.log('Initializing Card Icon');
+          }
+    
+      }
+  };
+        
+}(jQuery));
+(function ($) {
+    'use strict';
+    Drupal.behaviors.cardNoimage = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+          *  This is the main file for card
+          */
+ 
+          if ($('.component-card-no-image').length) {
+              $(function() {
+                  initCardNoImage();
+              });
+          }
+
+          function initCardNoImage() {
+              console.log('Initializing CardNoImage');
           }
     
       }
@@ -400,6 +400,35 @@
 
 (function ($) {
     'use strict';
+    Drupal.behaviors.fiftyFifty = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+           *  This is the main file for fifty-fifty
+           */
+ 
+          if ($('.component-fifty-fifty').length) {
+              $(function() {
+                  initFiftyFifty();
+              });
+          }
+
+          function initFiftyFifty() {
+              console.log('Initializing FiftyFifty');
+          }
+    
+      }
+  };
+        
+}(jQuery));
+
+
+
+
+
+(function ($) {
+    'use strict';
     Drupal.behaviors.fiftyFiftyFullBleed = {
       attach: function(context, settings) {
           'use strict';
@@ -424,35 +453,6 @@
         
 }(jQuery));
 
-
-
-
-
-
-(function ($) {
-    'use strict';
-    Drupal.behaviors.fiftyFifty = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-           *  This is the main file for fifty-fifty
-           */
- 
-          if ($('.component-fifty-fifty').length) {
-              $(function() {
-                  initFiftyFifty();
-              });
-          }
-
-          function initFiftyFifty() {
-              console.log('Initializing FiftyFifty');
-          }
-    
-      }
-  };
-        
-}(jQuery));
 
 
 
@@ -487,32 +487,6 @@
 
 (function ($) {
     'use strict';
-    Drupal.behaviors.text = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-           *  This is the main file for text
-           */
- 
-          if ($('.component-text').length) {
-              $(function() {
-                  initText();
-              });
-          }
-
-          function initText() {
-              console.log('Initializing Text');
-          }
-    
-      }
-  };
-        
-}(jQuery));
-
-
-(function ($) {
-    'use strict';
     Drupal.behaviors.globalNavigation = {
       attach: function(context, settings) {
           'use strict';
@@ -536,6 +510,32 @@
         
 }(jQuery));
 
+
+
+(function ($) {
+    'use strict';
+    Drupal.behaviors.text = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+           *  This is the main file for text
+           */
+ 
+          if ($('.component-text').length) {
+              $(function() {
+                  initText();
+              });
+          }
+
+          function initText() {
+              console.log('Initializing Text');
+          }
+    
+      }
+  };
+        
+}(jQuery));
 
 
 (function ($) {

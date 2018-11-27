@@ -1,0 +1,21 @@
+uuid: c23b5444-b1a6-4ff1-bee7-4bb8a5e436d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.careers
+  module:
+    - text
+id: paragraph.careers.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: careers
+label: 'Sub headline'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

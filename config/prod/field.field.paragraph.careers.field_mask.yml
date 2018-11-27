@@ -1,0 +1,21 @@
+uuid: 6116242e-a315-49b5-a0ba-dc7b92280931
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mask
+    - paragraphs.paragraphs_type.careers
+  module:
+    - options
+id: paragraph.careers.field_mask
+field_name: field_mask
+entity_type: paragraph
+bundle: careers
+label: OverLay
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

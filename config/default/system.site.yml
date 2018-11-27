@@ -1,0 +1,14 @@
+uuid: 45259923-ca41-4079-9674-a852879a8fe5
+name: brightinsight
+mail: george@plsek.us
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

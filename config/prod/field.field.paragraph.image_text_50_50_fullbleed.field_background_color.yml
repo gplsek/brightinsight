@@ -1,0 +1,21 @@
+uuid: 61a35d43-05b9-4b9e-bfbb-93857cf0d4ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.image_text_50_50_fullbleed
+  module:
+    - options
+id: paragraph.image_text_50_50_fullbleed.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: image_text_50_50_fullbleed
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

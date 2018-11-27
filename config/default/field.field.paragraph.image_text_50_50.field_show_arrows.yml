@@ -1,0 +1,23 @@
+uuid: 69b4cdab-de54-4113-953f-9eaf1c4aeb04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_show_arrows
+    - paragraphs.paragraphs_type.image_text_50_50
+id: paragraph.image_text_50_50.field_show_arrows
+field_name: field_show_arrows
+entity_type: paragraph
+bundle: image_text_50_50
+label: 'Show Arrows (background bellow image)'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
