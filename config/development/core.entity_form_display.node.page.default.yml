@@ -4,13 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_background_color
+    - field.field.node.page.field_banner_height
+    - field.field.node.page.field_bottom_angle_color
     - field.field.node.page.field_hero_image
     - field.field.node.page.field_ov
     - field.field.node.page.field_overlay_direction
-    - field.field.node.page.field_overlay_fill_color
+    - field.field.node.page.field_top_angle_color
     - node.type.page
   module:
-    - color_field
     - field_group
     - path
     - text
@@ -18,11 +20,14 @@ third_party_settings:
   field_group:
     group_settings:
       children:
+        - field_banner_height
         - field_ov
         - field_overlay_direction
-        - field_overlay_fill_color
+        - field_top_angle_color
+        - field_bottom_angle_color
+        - field_background_color
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: tab
       format_settings:
         id: ''
@@ -49,10 +54,28 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_background_color:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_banner_height:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_bottom_angle_color:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_hero_image:
     weight: 2
     settings:
@@ -63,28 +86,26 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_ov:
-    weight: 10
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_overlay_direction:
-    weight: 11
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_overlay_fill_color:
-    weight: 12
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+  field_top_angle_color:
+    weight: 30
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: options_select
     region: content
   path:
     type: path
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -92,21 +113,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 6
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 7
     region: content
     third_party_settings: {  }
   title:
@@ -119,7 +140,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
