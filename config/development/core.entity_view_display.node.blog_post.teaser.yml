@@ -32,7 +32,7 @@ content:
     label: hidden
     settings:
       image_style: ''
-      image_link: ''
+      image_link: content
     third_party_settings: {  }
   links:
     weight: 0
