@@ -1,0 +1,30 @@
+uuid: 14b1af0a-071a-4a3e-a2d2-18e9bd38d89e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.list_blocks
+  module:
+    - system
+    - views
+  theme:
+    - brightinsight
+id: views_block__list_blocks_block_2
+theme: brightinsight
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:list_blocks-block_2'
+settings:
+  id: 'views_block:list_blocks-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /knowledge-center
+    negate: false
+    context_mapping: {  }
