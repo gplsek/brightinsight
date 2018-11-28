@@ -19,10 +19,15 @@ settings:
           items:
             - Bold
             - Italic
+            - Subscript
+            - RemoveFormat
+            - Underline
+            - Strike
         -
           name: Linking
           items:
             - DrupalLink
+            - Superscript
             - DrupalUnlink
         -
           name: Lists
@@ -42,12 +47,22 @@ settings:
         -
           name: Tools
           items:
+            - HorizontalRule
             - Source
+        -
+          name: Align
+          items:
+            - JustifyLeft
+            - JustifyBlock
+            - JustifyRight
+            - JustifyCenter
+            - Outdent
+            - Indent
   plugins:
-    stylescombo:
-      styles: ''
     language:
       language_list: un
+    stylescombo:
+      styles: ''
     video_embed:
       defaults:
         children:
