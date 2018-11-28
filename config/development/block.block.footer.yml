@@ -1,6 +1,6 @@
 uuid: 157c7228-93da-4892-8708-80bc12774707
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -10,7 +10,7 @@ dependencies:
     - brightinsight
 id: footer
 theme: brightinsight
-region: footer_menu
+region: navigation
 weight: -3
 provider: null
 plugin: 'system_menu_block:footer'

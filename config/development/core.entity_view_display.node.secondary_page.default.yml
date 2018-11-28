@@ -4,14 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.secondary_page.body
+    - field.field.node.secondary_page.field_background_color
+    - field.field.node.secondary_page.field_banner_height
+    - field.field.node.secondary_page.field_bottom_angle_color
     - field.field.node.secondary_page.field_hero_image
     - field.field.node.secondary_page.field_ov
     - field.field.node.secondary_page.field_overlay_direction
-    - field.field.node.secondary_page.field_overlay_fill_color
     - field.field.node.secondary_page.field_paragraphblock
+    - field.field.node.secondary_page.field_top_angle_color
     - node.type.secondary_page
   module:
-    - color_field
     - entity_reference_revisions
     - options
     - text
@@ -28,9 +30,30 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_background_color:
+    weight: 110
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_banner_height:
+    weight: 107
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_bottom_angle_color:
+    weight: 108
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_hero_image:
     weight: 102
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -38,39 +61,37 @@ content:
     region: content
   field_ov:
     weight: 103
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_overlay_direction:
     weight: 104
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_overlay_fill_color:
-    weight: 105
-    label: above
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
-    type: color_field_formatter_text
-    region: content
   field_paragraphblock:
     weight: 106
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  links:
-    weight: 100
+  field_top_angle_color:
+    weight: 109
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    type: list_default
     region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
