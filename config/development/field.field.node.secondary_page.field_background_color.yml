@@ -1,23 +1,21 @@
-uuid: 6d0f496e-5ecb-4ac5-a634-c8eb70414190
+uuid: 9292dc0a-c280-4da1-935b-beb046ead70a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_ov
+    - field.storage.node.field_background_color
     - node.type.secondary_page
   module:
     - options
-id: node.secondary_page.field_ov
-field_name: field_ov
+id: node.secondary_page.field_background_color
+field_name: field_background_color
 entity_type: node
 bundle: secondary_page
-label: 'OverLay Position'
+label: 'Background Color'
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    value: bottom
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string
