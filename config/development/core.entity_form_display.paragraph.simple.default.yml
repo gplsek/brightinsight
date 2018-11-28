@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.simple.field_button_text
     - field.field.paragraph.simple.field_content
     - field.field.paragraph.simple.field_cta_style
+    - field.field.paragraph.simple.field_file
     - field.field.paragraph.simple.field_ov
     - field.field.paragraph.simple.field_overlay_direction
     - field.field.paragraph.simple.field_text_color
@@ -18,6 +19,7 @@ dependencies:
     - paragraphs.paragraphs_type.simple
   module:
     - field_group
+    - file
     - text
 third_party_settings:
   field_group:
@@ -25,7 +27,6 @@ third_party_settings:
       children:
         - field_background_image
         - field_background_color
-        - field_mask_horizontal
         - field_text_color
         - field_overlay_direction
         - field_top_angle_color
@@ -33,7 +34,7 @@ third_party_settings:
         - field_ov
         - field_bottom_angle_color
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: tab
       format_settings:
         label: Settings
@@ -98,6 +99,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_file:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_ov:
     weight: 12
