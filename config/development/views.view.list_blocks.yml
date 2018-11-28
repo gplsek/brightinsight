@@ -7,7 +7,6 @@ dependencies:
     - node.type.blog_post
     - node.type.resource
   module:
-    - blazy
     - node
     - user
 id: list_blocks
@@ -56,12 +55,16 @@ display:
           items_per_page: null
           offset: 0
       style:
-        type: blazy
+        type: grid
         options:
-          style: column
-          grid: 3
-          grid_medium: null
-          grid_small: null
+          uses_fields: false
+          columns: 3
+          automatic_width: true
+          alignment: horizontal
+          col_class_default: true
+          col_class_custom: 'ol-12 col-lg-6 col-xl-4'
+          row_class_default: true
+          row_class_custom: sync-boxes
       row:
         type: 'entity:node'
         options:
