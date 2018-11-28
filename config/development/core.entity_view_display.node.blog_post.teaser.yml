@@ -26,13 +26,12 @@ content:
     third_party_settings: {  }
     region: content
   field_hero_card_image:
-    type: image
+    type: image_url
     weight: 1
     region: content
     label: hidden
     settings:
       image_style: ''
-      image_link: content
     third_party_settings: {  }
   links:
     weight: 0

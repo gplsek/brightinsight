@@ -29,14 +29,20 @@ content:
     label: hidden
     settings:
       image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    type: image_url
     region: content
+  field_hero_card_image:
+    type: image_url
+    weight: 3
+    region: content
+    label: above
+    settings:
+      image_style: ''
+    third_party_settings: {  }
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_hero_card_image: true
+hidden: {  }

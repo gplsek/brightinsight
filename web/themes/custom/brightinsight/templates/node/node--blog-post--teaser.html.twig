@@ -78,11 +78,9 @@
 <!--/*
     Main HTML template for the card component.
 */-->
-{% set media_img_url = file_url(content.field_hero_card_image.0['#item'].entity.uri.value) %}
-<div class="col-12 col-lg-6 col-xl-4">
 <article class="component-card box">
 	<div class="image">
-		<img class="img-responsive img-fullwidth" src="{{ media_img_url }}">
+		<img class="img-responsive img-fullwidth" src="{{ content.field_hero_card_image.0 }}">
 	</div>
 	<div class="content">
 		<div class="meta">
@@ -96,4 +94,3 @@
 		</div>
 	</div>
 </article>
-</div>

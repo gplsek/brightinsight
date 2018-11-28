@@ -40,10 +40,11 @@
       {# <div class="component-body"> #}
         <div class="blog-grid row">
 	        <div class="column column-primary col-12 col-xl-6">
-		        {{ content.field_featured }}
+		        {{ content.field_featured.0 }}
 	        </div>
 	        <div class="column column-secondary col-12 col-xl-6">
-		        {{ content.field_blogs }}
+		        {{ content.field_blogs.0 }}
+                {{ content.field_blogs.1 }}
 	        </div>
         </div>
    {# </div>  #}       

@@ -79,15 +79,13 @@
 <!--/*
     Main HTML template for the card-blog component.
 */-->
-{% set media_img_square_url = file_url(content.field_blog_hero_image.0['#item'].entity.uri.value) %}
-{% set media_img_url = file_url(content.field_hero_card_image.0['#item'].entity.uri.value) %}
 <article class="component-card-blog standard-card">
 	<div class="blog-card-container">
 		<div class="row no-gutters">
 			<div class="col-12 col-xl-6">
 				<div class="image">
-					<img class="img-responsive img-fullwidth img-default" src="{{ media_img_url }}">
-					<img class="img-responsive img-fullwidth img-square" src="{{ media_img_square_url }}">
+					<img class="img-responsive img-fullwidth img-default" src="{{ content.field_hero_card_image.0 }}">
+					<img class="img-responsive img-fullwidth img-square" src="{{ content.field_blog_hero_image.0}}">
 				</div>
 			</div>
 			<div class="col-12 col-xl-6">
