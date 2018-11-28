@@ -1,0 +1,31 @@
+uuid: 1781976a-612f-4327-942d-c180b8b06bc7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:featured_blogs:51b9d9d2-31be-4e8c-88a3-92f8a573db99'
+  module:
+    - block_content
+    - system
+  theme:
+    - brightinsight
+id: featuredblogs
+theme: brightinsight
+region: content
+weight: 1
+provider: null
+plugin: 'block_content:51b9d9d2-31be-4e8c-88a3-92f8a573db99'
+settings:
+  id: 'block_content:51b9d9d2-31be-4e8c-88a3-92f8a573db99'
+  label: 'Featured Blogs'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /blogs
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,20 @@
+uuid: bdc52a2f-ebcc-49e7-8df1-b24ef173a357
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - node
+id: block_content.field_blogs
+field_name: field_blogs
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
