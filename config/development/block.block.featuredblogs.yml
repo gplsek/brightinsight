@@ -2,10 +2,7 @@ uuid: 2581215c-1f66-4daa-826a-6a8ec2ba489b
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:featured_blogs:51b9d9d2-31be-4e8c-88a3-92f8a573db99'
   module:
-    - block_content
     - system
   theme:
     - brightinsight
@@ -18,7 +15,7 @@ plugin: 'block_content:51b9d9d2-31be-4e8c-88a3-92f8a573db99'
 settings:
   id: 'block_content:51b9d9d2-31be-4e8c-88a3-92f8a573db99'
   label: 'Featured Blogs'
-  provider: block_content
+  provider: core
   label_display: '0'
   status: true
   info: ''
