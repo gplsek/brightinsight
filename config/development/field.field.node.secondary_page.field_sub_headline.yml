@@ -1,0 +1,19 @@
+uuid: 0a647c05-5123-4930-8065-076a56058e64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_headline
+    - node.type.secondary_page
+id: node.secondary_page.field_sub_headline
+field_name: field_sub_headline
+entity_type: node
+bundle: secondary_page
+label: 'Sub Headline'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
