@@ -1,5 +1,7 @@
 <!--/*
     Main HTML template for the card-icon component.
+
+    CMS Notes: cta inherits the class (i.e. primary, secondary, etc.) of the parent container.
 */-->
 
 <section class="component-card-icon">
@@ -13,5 +15,10 @@
 		<div class="body">
 			@@body
 		</div>
+		<!-- if CTA -->
+		<div class="cta">
+			@@include('../cta/cta.html', { "url" : "index.html", "class" : "primary", "label" : "learn more" })
+		</div>
+		<!-- end if -->
 	</div>
 </section>
