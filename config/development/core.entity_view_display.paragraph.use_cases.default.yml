@@ -10,8 +10,8 @@ dependencies:
     - field.field.paragraph.use_cases.field_button_text
     - field.field.paragraph.use_cases.field_content
     - field.field.paragraph.use_cases.field_cta_style
+    - field.field.paragraph.use_cases.field_ov
     - field.field.paragraph.use_cases.field_overlay_direction
-    - field.field.paragraph.use_cases.field_overlay_position
     - field.field.paragraph.use_cases.field_text_color
     - field.field.paragraph.use_cases.field_title
     - field.field.paragraph.use_cases.field_top_angle_color
@@ -78,19 +78,19 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_ov:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_overlay_direction:
     weight: 15
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_key
-    region: content
-  field_overlay_position:
-    weight: 7
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_text_color:
     weight: 12
