@@ -2875,6 +2875,12 @@ ul {
       left: 1px;
       position: absolute; }
 
+.text-white ul li::before {
+  color: #FFFFFF; }
+
+.text-black ul li::before {
+  color: #00A56A; }
+
 nav ul li {
   padding-left: 0; }
   nav ul li::before {
@@ -4035,6 +4041,8 @@ button {
   .component-card header h1, .component-card header h2, .component-card header h3, .component-card header h4, .component-card header h5, .component-card header h6 {
     color: #1A3E6C;
     font-weight: 400; }
+  .component-card ul li::before {
+    color: #00A56A; }
   .component-card .content {
     padding: 15px 20px 20px; }
     .component-card .content .type {

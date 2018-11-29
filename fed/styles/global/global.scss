@@ -75,6 +75,21 @@ ul {
 	}
 }
 
+.text-white {
+
+	ul li::before {
+		color: $color-white;
+	}
+}
+
+.text-black {
+
+	ul li::before {
+		color: $color-green;
+	}
+}
+
+
 nav {
 
 	ul {
