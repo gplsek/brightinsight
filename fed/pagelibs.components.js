@@ -23,3 +23,5 @@ require('components/use-cases');
 require('components/card-blog');
 require('components/banner-inline');
 require('components/blog-list');
+require('components/card-video');
+require('components/videos');
