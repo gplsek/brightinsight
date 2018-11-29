@@ -78,10 +78,10 @@ gulp.task('build', ['sass', 'scripts'], function(){
     .pipe(sass())
     .pipe(gulp.dest(cssDest))
     gulp.src(headerScripts)
-        .pipe(concat('headlibs.js'))
+        .pipe(concat('js/headlibs.js'))
         .pipe(gulp.dest(jsDest));
     return gulp.src(jsScripts)
-        .pipe(concat('pagelibs.js'))
+        .pipe(concat('js/pagelibs.js'))
         .pipe(gulp.dest(jsDest));
 
 });

@@ -62,156 +62,15 @@ var bs4Overlay = function () {
  * @usage: $('selectors').syncHeight();
  */
 ;(function($){$.fn.syncHeight=function(){var max=0;$(this).each(function(){$(this).css('height','auto');var val=$(this).outerHeight();if(val>max){max=val;}});$(this).each(function(){$(this).css('height',max+'px');});return this;};})(jQuery);
-'use strict';
-
-/**
- *  This is the main file for banner
- */
- 
-if ($('.component-banner').length) {
-    $(function() {
-        initBanner();
-    });
-}
-
-function initBanner() {
-    console.log('Initializing Banner');
-}
-
-'use strict';
-
-/**
- *  This is the main file for banner-inline
- */
- 
-if ($('.component-banner-inline').length) {
-    $(function() {
-        initBannerInline();
-    });
-}
-
-function initBannerInline() {
-    console.log('Initializing BannerInline');
-}
-
-'use strict';
-
-/**
- *  This is the main file for blog-list
- */
- 
-if ($('.component-blog-list').length) {
-    $(function() {
-        initBlogList();
-    });
-}
-
-function initBlogList() {
-    console.log('Initializing BlogList');
-}
-
-'use strict';
-
-/**
- *  This is the main file for card
- */
- 
-if ($('.component-card').length) {
-    $(function() {
-        initCard();
-    });
-}
-
-function initCard() {
-    console.log('Initializing Card');
-}
-
-'use strict';
-
-/**
- *  This is the main file for card-blog
- */
- 
-if ($('.component-card-blog').length) {
-    $(function() {
-        initCardBlog();
-    });
-}
-
-function initCardBlog() {
-    console.log('Initializing CardBlog');
-}
-
-'use strict';
-
-/**
- *  This is the main file for card-career
- */
- 
-if ($('.component-card-career').length) {
-    $(function() {
-        initCardCareer();
-    });
-}
-
-function initCardCareer() {
-    console.log('Initializing CardCareer');
-}
-
-'use strict';
-
-/**
- *  This is the main file for card-icon
- */
- 
-if ($('.component-card-icon').length) {
-    $(function() {
-        initCardIcon();
-    });
-}
-
-function initCardIcon() {
-    console.log('Initializing CardIcon');
-}
-
-'use strict';
-
-/**
- *  This is the main file for card-no-image
- */
- 
-if ($('.component-card-no-image').length) {
-    $(function() {
-        initCardNoImage();
-    });
-}
-
-function initCardNoImage() {
-    console.log('Initializing CardNoImage');
-}
-
-'use strict';
-
-/**
- *  This is the main file for cards
- */
 
 
-'use strict';
 
-/**
- *  This is the main file for careers
- */
- 
-if ($('.component-careers').length) {
-    $(function() {
-        initCareers();
-    });
-}
 
-function initCareers() {
-    console.log('Initializing Careers');
-}
+
+
+
+
+
 
 
 'use strict';
@@ -254,69 +113,9 @@ function initColumns()
 	});
 }
 
-'use strict';
 
-/**
- *  This is the main file for cta
- */
- 
-if ($('.component-cta').length) {
-    $(function() {
-        initCta();
-    });
-}
 
-function initCta() {
-    console.log('Initializing Cta');
-}
 
-'use strict';
-
-/**
- *  This is the main file for fifty-fifty
- */
- 
-if ($('.component-fifty-fifty').length) {
-    $(function() {
-        initFiftyFifty();
-    });
-}
-
-function initFiftyFifty() {
-    console.log('Initializing FiftyFifty');
-}
-
-'use strict';
-
-/**
- *  This is the main file for fifty-fifty-fullbleed
- */
- 
-if ($('.component-fifty-fifty-fullbleed').length) {
-    $(function() {
-        initFiftyFiftyFullbleed();
-    });
-}
-
-function initFiftyFiftyFullbleed() {
-    console.log('Initializing FiftyFiftyFullbleed');
-}
-
-'use strict';
-
-/**
- *  This is the main file for global-footer
- */
- 
-if ($('.component-global-footer').length) {
-    $(function() {
-        initGlobalFooter();
-    });
-}
-
-function initGlobalFooter() {
-    console.log('Initializing GlobalFooter');
-}
 
 'use strict';
 
@@ -405,34 +204,12 @@ function initGlobalNavigation()
 
 
 //mobile-menu
-'use strict';
 
-/**
- *  This is the main file for text
- */
- 
-if ($('.component-text').length) {
-    $(function() {
-        initText();
-    });
-}
-
-function initText() {
-    console.log('Initializing Text');
-}
 
 'use strict';
 
 /**
- *  This is the main file for use-cases
+ *  This is the main file for videos
  */
- 
-if ($('.component-use-cases').length) {
-    $(function() {
-        initUseCases();
-    });
-}
 
-function initUseCases() {
-    console.log('Initializing UseCases');
-}
+$('.video-modal-trigger').modalVideo();
