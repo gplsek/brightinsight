@@ -5,8 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.job_posting.body
+    - field.field.node.job_posting.field_job_url
+    - field.field.node.job_posting.field_location
+    - field.field.node.job_posting.field_page_settings
     - node.type.job_posting
   module:
+    - link
     - text
     - user
 id: node.job_posting.teaser
@@ -17,16 +21,35 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 2
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_job_url:
+    type: link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_location:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
-  field_job_url: true
-  field_location: true
+  field_page_settings: true

@@ -5,14 +5,16 @@ dependencies:
   config:
     - field.field.paragraph.careers.field_background_color
     - field.field.paragraph.careers.field_background_image
+    - field.field.paragraph.careers.field_bottom_angle_color
     - field.field.paragraph.careers.field_content
-    - field.field.paragraph.careers.field_mask
-    - field.field.paragraph.careers.field_overlay_position
+    - field.field.paragraph.careers.field_ov
+    - field.field.paragraph.careers.field_overlay_direction
+    - field.field.paragraph.careers.field_text_color
     - field.field.paragraph.careers.field_title
+    - field.field.paragraph.careers.field_top_angle_color
     - field.field.paragraph.careers.field_use_case
     - paragraphs.paragraphs_type.careers
   module:
-    - color_field
     - field_group
     - text
 third_party_settings:
@@ -20,10 +22,14 @@ third_party_settings:
     group_settings:
       children:
         - field_background_image
-        - field_background
+        - field_background_color
+        - field_text_color
+        - field_ov
         - field_overlay_position
+        - field_overlay_direction
+        - field_bottom_angle_color
+        - field_top_angle_color
         - field_mask
-        - field_overlay_fill_color
       parent_name: ''
       weight: 4
       format_type: tab
@@ -53,7 +59,7 @@ bundle: careers
 mode: default
 content:
   field_background_color:
-    weight: 8
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -67,6 +73,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_bottom_angle_color:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_content:
     weight: 1
     settings:
@@ -75,8 +87,14 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_mask:
+  field_ov:
     weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_overlay_direction:
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -89,7 +107,7 @@ content:
     third_party_settings: {  }
     type: color_field_widget_default
     region: content
-  field_overlay_position:
+  field_text_color:
     weight: 5
     settings: {  }
     third_party_settings: {  }
@@ -102,6 +120,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_top_angle_color:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_use_case:
     weight: 3
