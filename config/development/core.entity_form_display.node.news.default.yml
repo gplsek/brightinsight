@@ -7,10 +7,12 @@ dependencies:
     - field.field.node.news.field_hero_image
     - field.field.node.news.field_link
     - field.field.node.news.field_news_type
+    - field.field.node.news.field_page_settings
     - field.field.node.news.field_publication_name_and_date
     - node.type.news
   module:
     - link
+    - paragraphs
     - path
     - text
 id: node.news.default
@@ -58,6 +60,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_page_settings:
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: page_settings
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   field_publication_name_and_date:
     weight: 3

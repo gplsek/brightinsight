@@ -6,9 +6,11 @@ dependencies:
     - field.field.node.job_posting.body
     - field.field.node.job_posting.field_job_url
     - field.field.node.job_posting.field_location
+    - field.field.node.job_posting.field_page_settings
     - node.type.job_posting
   module:
     - link
+    - paragraphs
     - path
     - text
 id: node.job_posting.default
@@ -46,6 +48,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_page_settings:
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: page_settings
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   path:
     type: path

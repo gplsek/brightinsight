@@ -1,16 +1,16 @@
-uuid: 4faf8d5c-74e8-43e5-9b86-cbdf73e9eb2d
+uuid: 5b2d3e6a-1295-4e90-ae8e-ab3a60f433ee
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_overlay_direction
-    - node.type.leadership
+    - field.storage.paragraph.field_overlay_direction
+    - paragraphs.paragraphs_type.page_settings
   module:
     - options
-id: node.leadership.field_overlay_direction
+id: paragraph.page_settings.field_overlay_direction
 field_name: field_overlay_direction
-entity_type: node
-bundle: leadership
+entity_type: paragraph
+bundle: page_settings
 label: 'Overlay Direction'
 description: ''
 required: false

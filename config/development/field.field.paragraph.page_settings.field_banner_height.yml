@@ -1,20 +1,20 @@
-uuid: 06bda24b-c186-4864-84c3-899acb43283c
+uuid: 0a394629-b9a1-4c6c-ace0-d4f888cf7d7e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_height
-    - node.type.page
+    - field.storage.paragraph.field_banner_height
+    - paragraphs.paragraphs_type.page_settings
   module:
     - options
-id: node.page.field_banner_height
+id: paragraph.page_settings.field_banner_height
 field_name: field_banner_height
-entity_type: node
-bundle: page
+entity_type: paragraph
+bundle: page_settings
 label: 'Banner Height'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: component-banner-short

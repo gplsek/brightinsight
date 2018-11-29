@@ -8,9 +8,11 @@ dependencies:
     - field.field.node.event.field_event_end_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_hero_image
+    - field.field.node.event.field_page_settings
     - node.type.event
   module:
     - datetime
+    - entity_reference_revisions
     - text
     - user
 id: node.event.default
@@ -58,6 +60,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_page_settings:
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   links:
     weight: 100

@@ -7,8 +7,10 @@ dependencies:
     - field.field.node.use_case.field_files
     - field.field.node.use_case.field_gated_
     - field.field.node.use_case.field_gated_file
+    - field.field.node.use_case.field_page_settings
     - node.type.use_case
   module:
+    - entity_reference_revisions
     - file
     - user
 id: node.use_case.default
@@ -48,6 +50,15 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
+    region: content
+  field_page_settings:
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   links:
     weight: 100

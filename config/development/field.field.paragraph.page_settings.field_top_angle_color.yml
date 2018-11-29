@@ -1,16 +1,16 @@
-uuid: 5aef7c18-6dbc-4931-9037-daf0af5c8436
+uuid: ca534db1-39cf-4122-9580-84cdd0a215d3
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_top_angle_color
-    - node.type.clinicalboard
+    - field.storage.paragraph.field_top_angle_color
+    - paragraphs.paragraphs_type.page_settings
   module:
     - options
-id: node.clinicalboard.field_top_angle_color
+id: paragraph.page_settings.field_top_angle_color
 field_name: field_top_angle_color
-entity_type: node
-bundle: clinicalboard
+entity_type: paragraph
+bundle: page_settings
 label: 'Top Angle Color'
 description: ''
 required: false

@@ -4,40 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.secondary_page.body
-    - field.field.node.secondary_page.field_background_color
-    - field.field.node.secondary_page.field_banner_height
-    - field.field.node.secondary_page.field_bottom_angle_color
     - field.field.node.secondary_page.field_hero_image
-    - field.field.node.secondary_page.field_ov
-    - field.field.node.secondary_page.field_overlay_direction
+    - field.field.node.secondary_page.field_page_settings
     - field.field.node.secondary_page.field_paragraphblock
-    - field.field.node.secondary_page.field_top_angle_color
     - node.type.secondary_page
   module:
-    - field_group
     - paragraphs
     - path
     - text
-third_party_settings:
-  field_group:
-    group_settings:
-      children:
-        - field_banner_height
-        - field_background_color
-        - field_ov
-        - field_top_angle_color
-        - field_bottom_angle_color
-        - field_overlay_direction
-      parent_name: ''
-      weight: 3
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: Settings
 id: node.secondary_page.default
 targetEntityType: node
 bundle: secondary_page
@@ -58,24 +32,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_background_color:
-    weight: 27
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_banner_height:
-    weight: 26
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_bottom_angle_color:
-    weight: 30
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_hero_image:
     weight: 2
     settings:
@@ -85,17 +41,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_ov:
-    weight: 28
-    settings: {  }
+  field_page_settings:
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: page_settings
     third_party_settings: {  }
-    type: options_select
-    region: content
-  field_overlay_direction:
-    weight: 31
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
+    type: entity_reference_paragraphs
     region: content
   field_paragraphblock:
     weight: 7
@@ -115,12 +71,6 @@ content:
         add_above: add_above
     third_party_settings: {  }
     type: paragraphs
-    region: content
-  field_top_angle_color:
-    weight: 29
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   path:
     type: path

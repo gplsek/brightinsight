@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.news.field_hero_image
     - field.field.node.news.field_link
     - field.field.node.news.field_news_type
+    - field.field.node.news.field_page_settings
     - field.field.node.news.field_publication_name_and_date
     - node.type.news
   module:
+    - entity_reference_revisions
     - link
     - text
     - user
@@ -53,6 +55,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_page_settings:
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_publication_name_and_date:
     weight: 104

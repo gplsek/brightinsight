@@ -6,10 +6,12 @@ dependencies:
     - field.field.node.blog_post.body
     - field.field.node.blog_post.field_blog_hero_image
     - field.field.node.blog_post.field_hero_card_image
+    - field.field.node.blog_post.field_page_settings
     - image.style.thumbnail
     - node.type.blog_post
   module:
     - image
+    - paragraphs
     - path
     - text
 id: node.blog_post.default
@@ -47,6 +49,18 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_page_settings:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: page_settings
+    third_party_settings: {  }
     region: content
   path:
     type: path

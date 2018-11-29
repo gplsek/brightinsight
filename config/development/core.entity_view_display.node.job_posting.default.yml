@@ -6,8 +6,10 @@ dependencies:
     - field.field.node.job_posting.body
     - field.field.node.job_posting.field_job_url
     - field.field.node.job_posting.field_location
+    - field.field.node.job_posting.field_page_settings
     - node.type.job_posting
   module:
+    - entity_reference_revisions
     - link
     - text
     - user
@@ -42,6 +44,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_page_settings:
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   links:
     weight: 100
