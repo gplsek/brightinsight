@@ -4003,13 +4003,13 @@ button {
         content: '';
         display: block;
         position: absolute;
-        right: 0;
+        right: -1px;
         top: 0;
         width: 60px;
         -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
         clip-path: polygon(100% 0, 0 100%, 100% 100%); }
     .component-fifty-fifty-fullbleed.image-right .col-image:after {
-      left: 0;
+      left: -1px;
       right: auto;
       -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
       clip-path: polygon(0 0, 0 100%, 100% 0); } }
