@@ -1,0 +1,31 @@
+uuid: 538266eb-4b48-49a9-9bdb-6cc6b853ad4a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:contact_us_form:fba02a92-8a7c-4806-831a-25ce3a86fbed'
+  module:
+    - block_content
+    - system
+  theme:
+    - brightinsight
+id: contactus
+theme: brightinsight
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:fba02a92-8a7c-4806-831a-25ce3a86fbed'
+settings:
+  id: 'block_content:fba02a92-8a7c-4806-831a-25ce3a86fbed'
+  label: 'Contact Us'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact-us
+    negate: false
+    context_mapping: {  }
