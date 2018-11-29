@@ -1,0 +1,31 @@
+uuid: 082a0399-858e-4f9b-bb0e-f54b87dd9b7b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:featured_blogs:05b27c7b-343b-452a-a670-bae15065bcdd'
+  module:
+    - block_content
+    - system
+  theme:
+    - brightinsight
+id: featuredblogs
+theme: brightinsight
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:05b27c7b-343b-452a-a670-bae15065bcdd'
+settings:
+  id: 'block_content:05b27c7b-343b-452a-a670-bae15065bcdd'
+  label: 'Featured Blogs'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/blogs\r\n/news-events"
+    negate: false
+    context_mapping: {  }

@@ -1,5 +1,16 @@
 <?php
 /**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function brightinsight_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+  }
+}
+
+/**
  * Implements template_preprocess_html().
  */
 function brightinsight_preprocess_node(&$variables) {
@@ -7,19 +18,17 @@ function brightinsight_preprocess_node(&$variables) {
   $variables['background'] = '';
   /** @var \Drupal\node\NodeInterface $node */
   $node = $variables['node'];
-      if ($node->getType() == 'homepage') {
-        if (!$node->get('field_hero_image')->isEmpty()) {
-          // One line uri without loading. 
-          $uri = $node->get('field_hero_image')->entity->get('field_media_image')->entity->uri->value;
-          $variables['background'] = file_create_url($uri);
-        }
-      }
+  //$types = ['homepage', 'secondary_page', 'page', 'event', 'news', 'clinicalboard', 'blog_post', 'job_posting', 'leadership', 'use_case', 'page'];
+  //if (in_array($node->getType(), $types) && $node->hasField('field_hero_image') && !$node->get('field_hero_image')->isEmpty()) {
+
+  if ($node->hasField('field_hero_image') && !$node->get('field_hero_image')->isEmpty()) {
+    // One line uri without loading. 
+    $uri = $node->get('field_hero_image')->entity->get('field_media_image')->entity->uri->value;
+    $variables['background'] = file_create_url($uri);
+  }
 
   $variables['css'] = _accumulate_css($node);
 }
-
-
-
 
 function brightinsight_preprocess_paragraph(&$variables) {
   $paragraph = $variables['paragraph'];
@@ -30,55 +39,53 @@ function brightinsight_preprocess_paragraph(&$variables) {
       $uri = $paragraph->get('field_background_image')->entity->get('field_media_image')->entity->uri->value;
       $variables['background'] = file_create_url($uri);
   }
-    
+}
+
+function _get_option($entity, $option, $default_value = null) {
+  // Get option from fields list directly
+  if ($entity->hasField($option))
+    return $entity->get($option)->value ? $entity->get($option)->value : $default_value;
+
+  // Get option from Settings paragraph
+  else if ($entity->hasField('field_page_settings') && !$entity->get('field_page_settings')->isEmpty()) {
+    $options = $entity->get('field_page_settings')->entity;
+
+    if ($options->hasField($option) && !$options->get($option)->isEmpty())
+      return $options->get($option)->value ? $options->get($option)->value : $default_value;
+  }
+
+  return null;
 }
 
 function _accumulate_css($entity) {
-   $css = [
-     'section' => [],
-     'cta' => [],
-     'order' => [],
-     'visibility' => []
-   ];
+  $css = [
+    'section' => [],
+    'cta' => [],
+    'order' => [],
+    'visibility' => []
+  ];
 
-  if ($entity->hasField('field_ov') && $entity->hasField('field_overlay_direction')) 
-    $css['section']['overlay_direction'] = ($entity->get('field_ov')->value && $entity->get('field_overlay_direction')->value) ? $entity->get('field_ov')->value . '-angle-'.$entity->get('field_overlay_direction')->value : '';
+  if (($overlay_ov = _get_option($entity, 'field_ov')) && ($field_overlay_direction = _get_option($entity, 'field_overlay_direction')))
+    $css['section']['overlay_direction'] = $overlay_ov.'-angle-'.$field_overlay_direction;
 
-  if ($entity->hasField('field_bottom_angle_color'))
-    $css['section']['bottom_angle_color'] = $entity->get('field_bottom_angle_color')->value ? $entity->get('field_bottom_angle_color')->value : 'bottom-angle-white';
+  $css['section']['bottom_angle_color'] = _get_option($entity, 'field_bottom_angle_color', 'bottom-angle-white');
+  $css['section']['top_angle_color'] = _get_option($entity, 'field_top_angle_color', 'top-angle-white');
+  $css['section']['background_color'] = _get_option($entity, 'field_background_color');
+  $css['section']['text_color'] = _get_option($entity, 'field_text_color', 'text-black');
+  $css['section']['banner_height'] = _get_option($entity, 'field_banner_height');
+  $css['section']['show_arrows'] = _get_option($entity, 'field_show_arrows');
+  $css['section']['show_arrows'] = $css['section']['show_arrows'] ? 'show-arrows' : '';
+  $css['section']['background_image'] = _get_option($entity, 'field_background_image', 'bg-image');
+  $css['cta']['cta_style'] = _get_option($entity, 'field_cta_style', 'primary');
+  $css['visibility']['show_items_separator'] = _get_option($entity, 'field_show_items_separator');
 
-  if ($entity->hasField('field_top_angle_color'))
-    $css['section']['top_angle_color'] = $entity->get('field_top_angle_color')->value ? $entity->get('field_top_angle_color')->value : 'top-angle-white';
+  $image_location = _get_option($entity, 'field_image_location');
 
-  if ($entity->hasField('field_background_color'))
-    $css['section']['background_color'] = $entity->get('field_background_color')->value ? $entity->get('field_background_color')->value : '';
-
-  if ($entity->hasField('field_text_color'))
-    $css['section']['text_color'] = $entity->get('field_text_color')->value ? $entity->get('field_text_color')->value : 'text-black';
-
-  if ($entity->hasField('field_banner_height'))
-    $css['section']['banner_height'] = $entity->get('field_banner_height')->value ? $entity->get('field_banner_height')->value : '';
-
-  if ($entity->hasField('field_cta_style'))
-    $css['cta']['cta_style'] = $entity->get('field_cta_style')->value ? $entity->get('field_cta_style')->value : 'primary';
-
-  // 50/50 paragraph
-  if ($entity->hasField('field_image_location')) {
-    $css['section']['image_location'] = $entity->get('field_image_location')->value ? 'image-'.$entity->get('field_image_location')->value : '';
-    //$css['order']['img_order'] = $entity->get('field_image_location')->value == 'left' ? 'order-md-1' : 'order-md-2';
-    //$css['order']['text_order'] = $entity->get('field_image_location')->value == 'left' ? 'order-md-2' : 'order-md-1';
-    $css['order']['img_order'] = $entity->get('field_image_location')->value == 'left' ? 'left' : 'right';
-    $css['order']['text_order'] = $entity->get('field_image_location')->value == 'left' ? 'right' : 'left';
+  if ($image_location) {
+    $css['section']['image_location'] = $image_location ? 'image-'.$image_location : '';
+    $css['order']['img_order'] = $image_location == 'left' ? 'left' : 'right';
+    $css['order']['text_order'] = $image_location == 'left' ? 'right' : 'left';
   }
-
-  if ($entity->hasField('field_show_arrows'))
-    $css['section']['show_arrows'] = $entity->get('field_show_arrows')->value ? 'show-arrows' : '';
-
-  if ($entity->hasField('field_show_items_separator'))
-    $css['visibility']['show_items_separator'] = $entity->get('field_show_items_separator')->value;
-
-  if ($entity->hasField('field_background_image'))
-    $css['section']['background_image'] = 'bg-image';
 
   return [
     'section_classes' => implode(' ', $css['section']),

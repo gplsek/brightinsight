@@ -58,12 +58,44 @@
 #}
 
 <section class="component-global-navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-lg-3">
+        <a class="logo" href="{{ url('<front>') }}">
+          <img class="img-responsive img-standard" src="/{{ directory }}/images/logo-color.png">
+          <img class="img-responsive img-transparent" src="/{{ directory }}/images/logo-white-color.png">
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-9">
+        <div class="mobile-nav-trigger">
+          <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="desktop-menu">
+          <nav class="nav-utility clearfix">
+            <ul>
+              <li><a href="#">Customer Login</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        
+          <nav class="nav-primary clearfix">
+            {{ page.navigation }}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--
     <div class="ctas">
       <a href="#" class="btn contact">Contact Us</a>
     </div>
-    <h2>Hello World!</h2>
-    <p>I'm the <b>global-navigation</b> component</p>
-    {{ page.header }}
+    -->
 </section>
 
 <div class="main">
@@ -78,22 +110,37 @@
     Main HTML template for the footer component.
 */-->
 
-<section class="component-global-footer">
-
-    <div class="top-links">
-      <div class="container">
-        <div class="logo">
-          <img src="/{{ directory }}/images/logo.png" width="200px">
+<footer class="component-global-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-legal col-12 col-lg-8 col-xl-9">
+        <a class="logo" href="/">
+          <img class="img-responsive" src="/{{ directory }}/images/logo-white.png">
+        </a>
+        <div class="colophon clearfix">
+          <div class="copyright">&copy; {{ 'now'|date('Y') }} BrightInsight. All rights reserved.</div>
+          <nav class="nav-legal clearfix">
+            <ul>
+              <li><a href="http://flex.com/">Flex.com</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Trademarked</a></li>
+            </ul>
+          </nav>
         </div>
-        {{page.footer_menu}}
+      </div>
+      <div class="col-12 col-lg-4 col-xl-3">
+        <nav class="nav-footer">
+          {{page.footer_menu}}
+        </nav>
+        <nav class="nav-social clearfix">
+          <ul>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </nav>
       </div>
     </div>
-    <div class="bottom-links">
-      <div class="container">
-        <div class="copyright">
-          &copy; {{ 'now'|date('Y') }} BrightInsight. All rights reserved | Felx.com | Privacy Policy | Trademarked
-        </div>
-      </div>
-    </div>
-
-</section>
+  </div>
+</footer>

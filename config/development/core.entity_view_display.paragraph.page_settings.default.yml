@@ -1,0 +1,70 @@
+uuid: 1379dd9a-d4cc-4c15-96a2-09dad1d7a5d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.page_settings.field_background_color
+    - field.field.paragraph.page_settings.field_banner_height
+    - field.field.paragraph.page_settings.field_bottom_angle_color
+    - field.field.paragraph.page_settings.field_ov
+    - field.field.paragraph.page_settings.field_overlay_direction
+    - field.field.paragraph.page_settings.field_text_color
+    - field.field.paragraph.page_settings.field_top_angle_color
+    - paragraphs.paragraphs_type.page_settings
+  module:
+    - options
+id: paragraph.page_settings.default
+targetEntityType: paragraph
+bundle: page_settings
+mode: default
+content:
+  field_background_color:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_banner_height:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_bottom_angle_color:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_ov:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_overlay_direction:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_color:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_top_angle_color:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

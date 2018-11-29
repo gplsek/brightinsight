@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.use_case.field_files
     - field.field.node.use_case.field_gated_
     - field.field.node.use_case.field_gated_file
+    - field.field.node.use_case.field_page_settings
     - node.type.use_case
   module:
     - file
+    - paragraphs
     - path
 id: node.use_case.default
 targetEntityType: node
@@ -50,6 +52,18 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_page_settings:
+    weight: 28
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: page_settings
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   path:
     type: path

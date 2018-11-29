@@ -5,34 +5,13 @@ dependencies:
   config:
     - field.field.node.secondary_page.body
     - field.field.node.secondary_page.field_hero_image
-    - field.field.node.secondary_page.field_ov
-    - field.field.node.secondary_page.field_overlay_direction
-    - field.field.node.secondary_page.field_overlay_fill_color
+    - field.field.node.secondary_page.field_page_settings
     - field.field.node.secondary_page.field_paragraphblock
     - node.type.secondary_page
   module:
-    - color_field
-    - field_group
     - paragraphs
     - path
     - text
-third_party_settings:
-  field_group:
-    group_settings:
-      children:
-        - field_ov
-        - field_overlay_direction
-        - field_overlay_fill_color
-      parent_name: ''
-      weight: 3
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: Settings
 id: node.secondary_page.default
 targetEntityType: node
 bundle: secondary_page
@@ -62,25 +41,17 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_ov:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_overlay_direction:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_overlay_fill_color:
-    weight: 6
+  field_page_settings:
+    weight: 26
     settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: page_settings
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: entity_reference_paragraphs
     region: content
   field_paragraphblock:
     weight: 7

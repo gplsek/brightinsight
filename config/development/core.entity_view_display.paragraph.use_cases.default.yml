@@ -3,16 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.use_cases.field_background
+    - field.field.paragraph.use_cases.field_background_color
     - field.field.paragraph.use_cases.field_background_image
+    - field.field.paragraph.use_cases.field_bottom_angle_color
+    - field.field.paragraph.use_cases.field_button_link
+    - field.field.paragraph.use_cases.field_button_text
     - field.field.paragraph.use_cases.field_content
-    - field.field.paragraph.use_cases.field_mask
-    - field.field.paragraph.use_cases.field_overlay_position
+    - field.field.paragraph.use_cases.field_cta_style
+    - field.field.paragraph.use_cases.field_ov
+    - field.field.paragraph.use_cases.field_overlay_direction
+    - field.field.paragraph.use_cases.field_text_color
     - field.field.paragraph.use_cases.field_title
+    - field.field.paragraph.use_cases.field_top_angle_color
     - field.field.paragraph.use_cases.field_use_case
     - paragraphs.paragraphs_type.use_cases
   module:
-    - color_field
     - options
     - text
 id: paragraph.use_cases.default
@@ -20,58 +25,102 @@ targetEntityType: paragraph
 bundle: use_cases
 mode: default
 content:
-  field_background:
-    weight: 4
-    label: above
-    settings:
-      format: hex
-      opacity: '1'
+  field_background_color:
+    weight: 8
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_formatter_text
+    type: list_default
     region: content
   field_background_image:
     weight: 3
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
+    region: content
+  field_bottom_angle_color:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_button_link:
+    weight: 13
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_button_text:
+    weight: 14
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_content:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_mask:
-    weight: 5
+  field_cta_style:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_ov:
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_overlay_position:
-    weight: 7
-    label: above
+  field_overlay_direction:
+    weight: 15
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_text_color:
+    weight: 12
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_title:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_top_angle_color:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_use_case:
     weight: 2
-    label: above
+    label: hidden
     settings:
-      link: true
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
 hidden: {  }

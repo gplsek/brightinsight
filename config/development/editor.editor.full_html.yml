@@ -20,6 +20,7 @@ settings:
             - Bold
             - Italic
             - Strike
+            - Underline
             - Superscript
             - Subscript
             - '-'
@@ -51,11 +52,20 @@ settings:
           items:
             - ShowBlocks
             - Source
+        -
+          name: Align
+          items:
+            - JustifyBlock
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - Indent
+            - Outdent
   plugins:
-    stylescombo:
-      styles: ''
     language:
       language_list: un
+    stylescombo:
+      styles: ''
     video_embed:
       defaults:
         children:

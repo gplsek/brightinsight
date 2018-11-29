@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.simple.field_button_text
     - field.field.paragraph.simple.field_content
     - field.field.paragraph.simple.field_cta_style
+    - field.field.paragraph.simple.field_file
     - field.field.paragraph.simple.field_ov
     - field.field.paragraph.simple.field_overlay_direction
     - field.field.paragraph.simple.field_text_color
@@ -17,6 +18,7 @@ dependencies:
     - field.field.paragraph.simple.field_top_angle_color
     - paragraphs.paragraphs_type.simple
   module:
+    - file
     - options
     - text
 id: paragraph.simple.default
@@ -26,7 +28,7 @@ mode: default
 content:
   field_background_color:
     weight: 9
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
@@ -42,7 +44,7 @@ content:
     region: content
   field_bottom_angle_color:
     weight: 14
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
@@ -72,28 +74,35 @@ content:
     region: content
   field_cta_style:
     weight: 12
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
+  field_file:
+    weight: 15
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+    region: content
   field_ov:
     weight: 13
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_overlay_direction:
     weight: 10
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_text_color:
     weight: 8
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
@@ -108,7 +117,7 @@ content:
     region: content
   field_top_angle_color:
     weight: 11
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default

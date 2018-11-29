@@ -5,15 +5,11 @@ dependencies:
   config:
     - field.field.node.secondary_page.body
     - field.field.node.secondary_page.field_hero_image
-    - field.field.node.secondary_page.field_ov
-    - field.field.node.secondary_page.field_overlay_direction
-    - field.field.node.secondary_page.field_overlay_fill_color
+    - field.field.node.secondary_page.field_page_settings
     - field.field.node.secondary_page.field_paragraphblock
     - node.type.secondary_page
   module:
-    - color_field
     - entity_reference_revisions
-    - options
     - text
     - user
 id: node.secondary_page.default
@@ -30,38 +26,24 @@ content:
     region: content
   field_hero_image:
     weight: 102
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_ov:
-    weight: 103
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_overlay_direction:
-    weight: 104
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_overlay_fill_color:
-    weight: 105
+  field_page_settings:
+    weight: 107
     label: above
     settings:
-      format: hex
-      opacity: '1'
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: color_field_formatter_text
+    type: entity_reference_revisions_entity_view
     region: content
   field_paragraphblock:
     weight: 106
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -70,7 +52,7 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

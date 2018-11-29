@@ -1,0 +1,9 @@
+uuid: 9145e757-2447-4799-b845-4cd3d412b680
+langcode: en
+status: true
+dependencies: {  }
+id: page_settings
+label: 'Page Settings'
+icon_uuid: null
+description: 'Page Settings: background color, text color, banner height, overlay color, overlay position and so on'
+behavior_plugins: {  }

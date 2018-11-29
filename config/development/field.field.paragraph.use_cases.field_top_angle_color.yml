@@ -1,0 +1,21 @@
+uuid: 8dfdc1db-1c21-4255-92c6-3d429d5c3c19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_top_angle_color
+    - paragraphs.paragraphs_type.use_cases
+  module:
+    - options
+id: paragraph.use_cases.field_top_angle_color
+field_name: field_top_angle_color
+entity_type: paragraph
+bundle: use_cases
+label: 'Top Angle Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

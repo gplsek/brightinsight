@@ -1,0 +1,19 @@
+uuid: a7614e36-6919-47d8-9aea-fbe0fa4fcee3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_link
+    - paragraphs.paragraphs_type.use_cases
+id: paragraph.use_cases.field_button_link
+field_name: field_button_link
+entity_type: paragraph
+bundle: use_cases
+label: 'Button Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

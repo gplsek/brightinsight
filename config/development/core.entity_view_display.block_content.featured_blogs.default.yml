@@ -1,0 +1,32 @@
+uuid: 51a7619a-9b46-4741-89a1-a4e60d6cf7fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_blogs
+    - field.field.block_content.featured_blogs.field_blogs
+    - field.field.block_content.featured_blogs.field_featured
+id: block_content.featured_blogs.default
+targetEntityType: block_content
+bundle: featured_blogs
+mode: default
+content:
+  field_blogs:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: featured
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_featured:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: featured_main
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

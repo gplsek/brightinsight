@@ -78,11 +78,13 @@
       <section class="component-fifty-fifty-fullbleed {{ css.section_classes }}">
         <div class="container-fullbleed">
           <div class="row no-gutters">
-            {% set media_img_url = file_url(content.field_image.0['#item'].entity.uri.value) %}
+            {% if content.field_image.0 %}
+              {% set media_img_url = file_url(content.field_image.0['#item'].entity.uri.value) %}
 
-            <div class="col-image col-12 col-md-6 {{img_offset_class}}" style="background-image:url({{media_img_url}})">
-              <img class="img-responsive" src="{{media_img_url}}">
-            </div>
+              <div class="col-image col-12 col-md-6 {{img_offset_class}}" style="background-image:url({{media_img_url}})">
+                <img class="img-responsive" src="{{media_img_url}}">
+              </div>
+            {% endif %}
           </div>
         </div>
         <div class="container">

@@ -5,8 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog_post.body
+    - field.field.node.blog_post.field_blog_hero_image
+    - field.field.node.blog_post.field_hero_card_image
     - node.type.blog_post
   module:
+    - image
     - text
     - user
 id: node.blog_post.teaser
@@ -17,14 +20,23 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 2
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_hero_card_image:
+    type: image_url
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  field_blog_hero_image: true

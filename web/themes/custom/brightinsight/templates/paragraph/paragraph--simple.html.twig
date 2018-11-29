@@ -123,7 +123,11 @@
                 {{content.field_content}}
               </div>
               <!-- If CTA -->
-              {% if content.field_button_link.0 %}
+              {% if content.field_file.0 %}
+                  <div class="cta">
+                    <a href="{{ content.field_file.0 }}" target="_new" class="component-cta {{css.cta_classes}}"><span>{{ content.field_button_text.0 }}</span></a>
+                  </div>
+              {% elseif content.field_button_link.0 %}
                 <div class="cta">
                   <a href="{{ content.field_button_link.0 }}" class="component-cta {{css.cta_classes}}"><span>{{ content.field_button_text.0 }}</span></a>
                 </div>

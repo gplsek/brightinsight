@@ -1,0 +1,19 @@
+uuid: 1cd5d2dd-1817-4200-aba6-876be86a7e28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_link
+    - paragraphs.paragraphs_type.news_and_events
+id: paragraph.news_and_events.field_button_link
+field_name: field_button_link
+entity_type: paragraph
+bundle: news_and_events
+label: 'Button Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

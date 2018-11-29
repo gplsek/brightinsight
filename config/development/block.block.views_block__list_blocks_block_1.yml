@@ -1,0 +1,30 @@
+uuid: dea817f8-c90a-4e16-8f34-a8ba2459744e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.list_blocks
+  module:
+    - system
+    - views
+  theme:
+    - brightinsight
+id: views_block__list_blocks_block_1
+theme: brightinsight
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:list_blocks-block_1'
+settings:
+  id: 'views_block:list_blocks-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /blogs
+    negate: false
+    context_mapping: {  }

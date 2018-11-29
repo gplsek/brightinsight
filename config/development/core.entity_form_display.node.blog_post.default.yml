@@ -6,10 +6,12 @@ dependencies:
     - field.field.node.blog_post.body
     - field.field.node.blog_post.field_blog_hero_image
     - field.field.node.blog_post.field_hero_card_image
+    - field.field.node.blog_post.field_page_settings
     - image.style.thumbnail
     - node.type.blog_post
   module:
     - image
+    - paragraphs
     - path
     - text
 id: node.blog_post.default
@@ -28,12 +30,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_blog_hero_image:
-    weight: 27
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -41,16 +43,28 @@ content:
     type: image_image
     region: content
   field_hero_card_image:
-    weight: 26
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
+  field_page_settings:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: page_settings
+    third_party_settings: {  }
+    region: content
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -58,21 +72,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 6
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 7
     region: content
     third_party_settings: {  }
   title:
@@ -85,7 +99,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60

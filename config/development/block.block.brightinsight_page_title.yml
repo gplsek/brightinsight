@@ -2,6 +2,8 @@ uuid: ef5d4dc4-ffb0-411b-964a-b03102810dce
 langcode: en
 status: true
 dependencies:
+  module:
+    - ctools
   theme:
     - brightinsight
 _core:
@@ -9,7 +11,7 @@ _core:
 id: brightinsight_page_title
 theme: brightinsight
 region: content
-weight: -50
+weight: -5
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,18 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blog_post: blog_post
+      event: event
+      homepage: homepage
+      job_posting: job_posting
+      news: news
+      page: page
+      secondary_page: secondary_page
+      use_case: use_case
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -3,6 +3,7 @@ global-styling:
   css:
     theme:
       css/pagelibs.css: {}
+      css/system.css: {}
   js:
     # Development version.
     # dist/js/init.js: {}

@@ -1,0 +1,21 @@
+uuid: 93226eae-2f15-4811-ae2b-ddf23ad6f378
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.use_cases
+  module:
+    - options
+id: paragraph.use_cases.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: use_cases
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
