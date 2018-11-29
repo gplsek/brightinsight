@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_use_case
-    - node.type.use_case
+    - node.type.resource
     - paragraphs.paragraphs_type.use_cases
 id: paragraph.use_cases.field_use_case
 field_name: field_use_case
@@ -20,7 +20,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      use_case: use_case
+      resource: resource
     sort:
       field: _none
     auto_create: false

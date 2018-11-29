@@ -59,12 +59,12 @@ display:
         options:
           uses_fields: false
           columns: 3
-          automatic_width: true
+          automatic_width: false
           alignment: horizontal
-          col_class_default: true
-          col_class_custom: 'ol-12 col-lg-6 col-xl-4'
-          row_class_default: true
-          row_class_custom: sync-boxes
+          col_class_default: false
+          col_class_custom: 'col-12 col-lg-6 col-xl-4'
+          row_class_default: false
+          row_class_custom: 'row sync-boxes'
       row:
         type: 'entity:node'
         options:
