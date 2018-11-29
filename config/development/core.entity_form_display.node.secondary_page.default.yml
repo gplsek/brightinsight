@@ -10,9 +10,26 @@ dependencies:
     - field.field.node.secondary_page.field_sub_headline
     - node.type.secondary_page
   module:
+    - field_group
     - paragraphs
     - path
     - text
+third_party_settings:
+  field_group:
+    group_page_settings:
+      children:
+        - field_page_settings
+        - field_hero_image
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Page Settings'
 id: node.secondary_page.default
 targetEntityType: node
 bundle: secondary_page
@@ -29,12 +46,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_hero_image:
-    weight: 3
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -43,7 +60,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_page_settings:
-    weight: 11
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -55,7 +72,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_paragraphblock:
-    weight: 4
+    weight: 6
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -83,7 +100,7 @@ content:
     region: content
   path:
     type: path
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -91,21 +108,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 9
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 12
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -118,7 +135,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
