@@ -1,0 +1,21 @@
+uuid: 2d3ce8b1-9bac-46f6-9dd2-a8437cbd2a00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay_direction
+    - paragraphs.paragraphs_type.use_cases
+  module:
+    - options
+id: paragraph.use_cases.field_overlay_direction
+field_name: field_overlay_direction
+entity_type: paragraph
+bundle: use_cases
+label: 'Overlay Direction'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
