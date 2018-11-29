@@ -1,0 +1,21 @@
+uuid: 0b9ab333-7713-4ec4-85da-262bed6406e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay_direction
+    - paragraphs.paragraphs_type.careers
+  module:
+    - options
+id: paragraph.careers.field_overlay_direction
+field_name: field_overlay_direction
+entity_type: paragraph
+bundle: careers
+label: 'Overlay Direction'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 5c745212-ebdd-489b-8f0f-332076f940ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_color
+    - paragraphs.paragraphs_type.careers
+  module:
+    - options
+id: paragraph.careers.field_text_color
+field_name: field_text_color
+entity_type: paragraph
+bundle: careers
+label: 'Text Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
