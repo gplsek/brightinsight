@@ -3,16 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.use_cases.field_background
+    - field.field.paragraph.use_cases.field_background_color
     - field.field.paragraph.use_cases.field_background_image
+    - field.field.paragraph.use_cases.field_bottom_angle_color
+    - field.field.paragraph.use_cases.field_button_link
+    - field.field.paragraph.use_cases.field_button_text
     - field.field.paragraph.use_cases.field_content
-    - field.field.paragraph.use_cases.field_mask
+    - field.field.paragraph.use_cases.field_cta_style
+    - field.field.paragraph.use_cases.field_overlay_direction
     - field.field.paragraph.use_cases.field_overlay_position
+    - field.field.paragraph.use_cases.field_text_color
     - field.field.paragraph.use_cases.field_title
+    - field.field.paragraph.use_cases.field_top_angle_color
     - field.field.paragraph.use_cases.field_use_case
     - paragraphs.paragraphs_type.use_cases
   module:
-    - color_field
     - field_group
     - text
 third_party_settings:
@@ -20,12 +25,15 @@ third_party_settings:
     group_settings:
       children:
         - field_background_image
-        - field_background
+        - field_background_color
         - field_overlay_position
-        - field_mask
-        - field_overlay_fill_color
+        - field_bottom_angle_color
+        - field_top_angle_color
+        - field_cta_style
+        - field_text_color
+        - field_overlay_direction
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: tab
       format_settings:
         id: ''
@@ -38,7 +46,7 @@ third_party_settings:
       children:
         - field_use_case
       parent_name: ''
-      weight: 2
+      weight: 4
       format_type: fieldset
       format_settings:
         id: ''
@@ -51,12 +59,11 @@ targetEntityType: paragraph
 bundle: use_cases
 mode: default
 content:
-  field_background:
+  field_background_color:
     weight: 4
-    settings:
-      default_colors: "\n#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46\n#42D692,#16A765,#7BD148,#B3DC6C,#FBE983\n#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF\n#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2\n#CD74E6,#A47AE2"
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_box
+    type: options_select
     region: content
   field_background_image:
     weight: 3
@@ -67,6 +74,28 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_bottom_angle_color:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_link:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_button_text:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_content:
     weight: 1
     settings:
@@ -75,14 +104,26 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_mask:
-    weight: 6
+  field_cta_style:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_overlay_direction:
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_overlay_position:
     weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_color:
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -94,6 +135,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_top_angle_color:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_use_case:
     weight: 3
