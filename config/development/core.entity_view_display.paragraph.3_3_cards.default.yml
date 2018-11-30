@@ -1,0 +1,126 @@
+uuid: f0043898-0824-401a-b449-67945ba8108c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.3_3_cards.field_background_color
+    - field.field.paragraph.3_3_cards.field_background_image
+    - field.field.paragraph.3_3_cards.field_bottom_angle_color
+    - field.field.paragraph.3_3_cards.field_button_link
+    - field.field.paragraph.3_3_cards.field_button_text
+    - field.field.paragraph.3_3_cards.field_content
+    - field.field.paragraph.3_3_cards.field_cta_style
+    - field.field.paragraph.3_3_cards.field_ov
+    - field.field.paragraph.3_3_cards.field_overlay_direction
+    - field.field.paragraph.3_3_cards.field_text_color
+    - field.field.paragraph.3_3_cards.field_title
+    - field.field.paragraph.3_3_cards.field_top_angle_color
+    - field.field.paragraph.3_3_cards.field_use_case
+    - paragraphs.paragraphs_type.3_3_cards
+  module:
+    - options
+    - text
+id: paragraph.3_3_cards.default
+targetEntityType: paragraph
+bundle: 3_3_cards
+mode: default
+content:
+  field_background_color:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_background_image:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_bottom_angle_color:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_button_link:
+    weight: 13
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_button_text:
+    weight: 14
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_cta_style:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_ov:
+    weight: 16
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_overlay_direction:
+    weight: 15
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_text_color:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_top_angle_color:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_use_case:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

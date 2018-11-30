@@ -1,0 +1,21 @@
+uuid: fae9cb1f-decd-492c-ae96-493da75784bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_top_angle_color
+    - paragraphs.paragraphs_type.3_3_cards
+  module:
+    - options
+id: paragraph.3_3_cards.field_top_angle_color
+field_name: field_top_angle_color
+entity_type: paragraph
+bundle: 3_3_cards
+label: 'Top Angle Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
