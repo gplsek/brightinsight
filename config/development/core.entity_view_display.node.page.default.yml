@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_hero_image
     - field.field.node.page.field_page_settings
+    - field.field.node.page.field_paragraphblock
     - node.type.page
   module:
     - entity_reference_revisions
@@ -19,23 +20,15 @@ bundle: page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 100
+    weight: 2
     region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
-  field_hero_image:
-    weight: 102
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_page_settings:
-    weight: 103
-    label: above
+  field_paragraphblock:
+    weight: 1
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -43,6 +36,10 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   links:
-    weight: 101
+    weight: 0
     region: content
-hidden: {  }
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_hero_image: true
+  field_page_settings: true
