@@ -25,3 +25,6 @@ require('components/banner-inline');
 require('components/blog-list');
 require('components/card-video');
 require('components/videos');
+require('components/card-bio');
+require('components/bio-detail');
+require('components/bio-list');
