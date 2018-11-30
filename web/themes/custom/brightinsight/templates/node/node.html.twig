@@ -230,12 +230,26 @@
   </section>
   {% endif %}
   <div{{ content_attributes.addClass('content') }}>
-    <div class="container">
         <!-- Content type depended blocks -->
         {% if node.getType == 'page' %}
-           {{ content.body }}
+            {% if content.field_paragraphblock %}
+              {{ content.field_paragraphblock }}
+            {% endif %}
+          {% if content.body|render %}
+            <article class="component-text pad-top-sm pad-bot-lg">
+            	<div class="container">
+            		<div class="row">
+            			<div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+            				<div class="component-body">
+            				   {{ content.body }}
+            				</div>
+
+            			</div>
+            		</div>
+            	</div>
+            </article>
+           {% endif %}    
         {% elseif node.getType == 'event' %}
-          <div class="event-details">
             <article class="component-text pad-top-sm pad-bot-lg">
             	<div class="container">
             		<div class="row">
@@ -262,10 +276,8 @@
             				<div class="component-body">
             					{{ content.body }}
             				</div>
-
             			</div>
             		</div>
-            	</div>
             </article>
             
             
@@ -273,20 +285,21 @@
           </div>
         {% elseif node.getType == 'news' %}
           <div class="news-details">
-            {{ content.field_publication_name_and_date }}
-            {{ content.field_news_type }}
-            {{ content.field_link }}
+            <!--/*
+                no nodepage
+            */-->
           </div>
         {% elseif node.getType == 'use_case' %}
           <div class="usecase-details">
-            {{ content.field_description }}
-            {{ content.field_files }}
-            {{ content.field_gated_file }}
+            <!--/*
+                no nodepage
+            */-->
           </div>
         {% elseif node.getType == 'job_posting' %}
           <div class="jobs-details">
-            {{ content.field_location }}
-            {{ content.field_job_url }}
+            <!--/*
+                no nodepage
+            */-->
           </div>
         {% elseif node.getType == 'leadership' or  node.getType == 'clinicalboard' %}
             <!--/*
@@ -357,7 +370,6 @@
           </article>
         {% endif %}
       <!-- /Content type depended blocks -->
-    </div>
   </div>
 </article>
 {% endif %}
