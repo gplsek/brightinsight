@@ -2611,6 +2611,112 @@ html {
     transform: rotate(-90deg);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
+@keyframes modal-video {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes modal-video-inner {
+  from {
+    transform: translate(0, 100px); }
+  to {
+    transform: translate(0, 0); } }
+
+.modal-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
+  cursor: pointer;
+  opacity: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.3s;
+  animation-name: modal-video;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out; }
+
+.modal-video-close {
+  opacity: 0; }
+  .modal-video-close .modal-video-movie-wrap {
+    -webkit-transform: translate(0, 100px);
+    -moz-transform: translate(0, 100px);
+    -ms-transform: translate(0, 100px);
+    -o-transform: translate(0, 100px);
+    transform: translate(0, 100px); }
+
+.modal-video-body {
+  max-width: 940px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: table; }
+
+.modal-video-inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%; }
+
+.modal-video-movie-wrap {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  background-color: #333;
+  animation-timing-function: ease-out;
+  animation-duration: 0.3s;
+  animation-name: modal-video-inner;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -ms-transition: -ms-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out; }
+  .modal-video-movie-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.modal-video-close-btn {
+  position: absolute;
+  z-index: 2;
+  top: -35px;
+  right: -35px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border: none;
+  background: transparent; }
+  .modal-video-close-btn:before {
+    transform: rotate(45deg); }
+  .modal-video-close-btn:after {
+    transform: rotate(-45deg); }
+  .modal-video-close-btn:before, .modal-video-close-btn:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: -6px; }
+
 /*
 --------------------------------------------------
     Variables
@@ -2768,6 +2874,12 @@ ul {
       font-weight: bold;
       left: 1px;
       position: absolute; }
+
+.text-white ul li::before {
+  color: #FFFFFF; }
+
+.text-black ul li::before {
+  color: #00A56A; }
 
 nav ul li {
   padding-left: 0; }
@@ -3259,7 +3371,7 @@ button {
     width: 100%; }
 
 .bg-image {
-  background-position: 50% 50%;
+  background-position: 0 50%;
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -3897,13 +4009,13 @@ button {
         content: '';
         display: block;
         position: absolute;
-        right: 0;
+        right: -1px;
         top: 0;
         width: 60px;
         -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
         clip-path: polygon(100% 0, 0 100%, 100% 100%); }
     .component-fifty-fifty-fullbleed.image-right .col-image:after {
-      left: 0;
+      left: -1px;
       right: auto;
       -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
       clip-path: polygon(0 0, 0 100%, 100% 0); } }
@@ -3929,6 +4041,8 @@ button {
   .component-card header h1, .component-card header h2, .component-card header h3, .component-card header h4, .component-card header h5, .component-card header h6 {
     color: #1A3E6C;
     font-weight: 400; }
+  .component-card ul li::before {
+    color: #00A56A; }
   .component-card .content {
     padding: 15px 20px 20px; }
     .component-card .content .type {
@@ -3975,6 +4089,34 @@ button {
 /**
  *  Main css for text
  */
+.component-text .component-header {
+  margin: 0; }
+  .component-text .component-header .article-share {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 60px; }
+  .component-text .component-header .meta {
+    color: #7C878E;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0 0 30px; }
+  .component-text .component-header h1 {
+    font-size: 26px;
+    line-height: 34px; }
+
+.component-text .cta {
+  margin: 40px 0 20px; }
+
+@media (min-width: 768px) {
+  .component-text .component-header .article-share {
+    margin: 0 0 45px; } }
+
+@media (min-width: 992px) {
+  .component-text .component-header h1 {
+    font-size: 34px;
+    line-height: 42px; } }
+
 /**
  *  Main css for card-icon
  */
@@ -4033,7 +4175,7 @@ button {
  *  Main css for card-career
  */
 .component-card-career header:before {
-  background: url("../images/logo-arrows-only.png") no-repeat 0 0;
+  background: url("./../images/logo-arrows-only.png") no-repeat 0 0;
   content: '';
   display: block;
   height: 33px;
@@ -4212,3 +4354,99 @@ button {
       flex: 1;
       display: flex;
       flex-direction: column; } }
+
+/**
+ *  Main css for card-video
+ */
+.component-card-video {
+  margin: 0 0 20px; }
+  .component-card-video:last-child {
+    margin: 0; }
+  .component-card-video .video-modal-trigger {
+    color: inherit;
+    display: block;
+    text-decoration: none; }
+    .component-card-video .video-modal-trigger .video {
+      position: relative; }
+      .component-card-video .video-modal-trigger .video .mask {
+        background: rgba(0, 0, 0, 0.3);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0; }
+        .component-card-video .video-modal-trigger .video .mask .play-button {
+          color: #FFFFFF;
+          font-size: 42px;
+          left: 50%;
+          opacity: 0.6;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%); }
+    .component-card-video .video-modal-trigger .content {
+      margin: 20px 0 0; }
+      .component-card-video .video-modal-trigger .content header {
+        color: #1A3E6C; }
+      .component-card-video .video-modal-trigger .content .body {
+        color: #323F48;
+        font-size: 16px;
+        line-height: 26px;
+        margin: 10px 0 20px; }
+  @media (min-width: 992px) {
+    .component-card-video {
+      margin-bottom: 30px; }
+      .component-card-video .video-modal-trigger .content .body {
+        margin-bottom: 0; } }
+
+/**
+ *  Main css for videos
+ */
+/**
+ *  Main css for card-bio
+ */
+.component-card-bio header h1, .component-card-bio header h2, .component-card-bio header h3, .component-card-bio header h4, .component-card-bio header h5, .component-card-bio header h6 {
+  font-weight: 500; }
+
+.component-card-bio .content .meta {
+  margin: 5px 0 20px; }
+
+@media (min-width: 992px) {
+  .component-card-bio .content {
+    padding: 60px 30px 120px; }
+    .component-card-bio .content .cta {
+      bottom: 40px; } }
+
+/**
+ *  Main css for bio-detail
+ */
+.component-bio-detail .component-header {
+  margin: 0; }
+  .component-bio-detail .component-header .article-share {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 60px; }
+  .component-bio-detail .component-header .meta {
+    color: #7C878E;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0 0 30px; }
+  .component-bio-detail .component-header h1 {
+    font-size: 26px;
+    line-height: 34px; }
+
+.component-bio-detail .cta {
+  margin: 40px 0 20px; }
+
+@media (min-width: 768px) {
+  .component-bio-detail .component-header .article-share {
+    margin: 0 0 45px; } }
+
+@media (min-width: 992px) {
+  .component-bio-detail .component-header h1 {
+    font-size: 34px;
+    line-height: 42px; } }
+
+/**
+ *  Main css for bio-list
+ */
