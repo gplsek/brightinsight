@@ -1,0 +1,21 @@
+uuid: af728c1b-9c00-46cd-9424-b794acfbd14d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ov
+    - paragraphs.paragraphs_type.featured_blogs
+  module:
+    - options
+id: paragraph.featured_blogs.field_ov
+field_name: field_ov
+entity_type: paragraph
+bundle: featured_blogs
+label: 'OverLay Position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

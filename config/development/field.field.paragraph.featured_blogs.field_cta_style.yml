@@ -1,0 +1,21 @@
+uuid: dc880cf0-de2e-41bc-8e1b-d4bf7af9c6c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_style
+    - paragraphs.paragraphs_type.featured_blogs
+  module:
+    - options
+id: paragraph.featured_blogs.field_cta_style
+field_name: field_cta_style
+entity_type: paragraph
+bundle: featured_blogs
+label: 'CTA Style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
