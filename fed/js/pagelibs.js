@@ -76,6 +76,7 @@ var bs4Overlay = function () {
 
 
 
+
 'use strict';
 
 /**
@@ -207,6 +208,7 @@ function initGlobalNavigation()
 
 
 //mobile-menu
+
 
 
 'use strict';
