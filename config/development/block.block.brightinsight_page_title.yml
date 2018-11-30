@@ -24,11 +24,14 @@ visibility:
     id: 'entity_bundle:node'
     bundles:
       blog_post: blog_post
+      clinicalboard: clinicalboard
       event: event
       homepage: homepage
       job_posting: job_posting
+      leadership: leadership
       news: news
       page: page
+      resource: resource
       secondary_page: secondary_page
       use_case: use_case
     negate: true

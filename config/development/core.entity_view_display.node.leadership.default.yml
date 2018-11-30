@@ -22,30 +22,30 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_head_shot:
-    weight: 109
-    label: above
+    weight: 3
+    label: hidden
     settings:
       image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    type: image_url
     region: content
   field_hero_image:
-    weight: 102
-    label: above
+    weight: 2
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_page_settings:
-    weight: 111
-    label: above
+    weight: 5
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -53,16 +53,16 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_role:
-    weight: 110
-    label: above
+    weight: 4
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   links:
-    weight: 100
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
