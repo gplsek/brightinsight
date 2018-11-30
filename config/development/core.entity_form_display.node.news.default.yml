@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
-    - field.field.node.news.field_hero_image
     - field.field.node.news.field_link
     - field.field.node.news.field_news_type
     - field.field.node.news.field_page_settings
@@ -35,15 +34,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_hero_image:
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_link:
     weight: 2
     settings:
@@ -54,12 +44,9 @@ content:
     region: content
   field_news_type:
     weight: 1
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_page_settings:
     weight: 26

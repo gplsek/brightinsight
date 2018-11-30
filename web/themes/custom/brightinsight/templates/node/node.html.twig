@@ -75,6 +75,59 @@
     'clearfix',
   ]
 %}
+{% if view_mode == "teaser" %}
+    {% if node.getType == 'event' %}
+        <article class="component-card box">
+            {% if content.field_hero_card_image.0 %}
+        	<div class="image">
+        		<img class="img-responsive img-fullwidth" src="{{ content.field_hero_card_image.0 }}">
+        	</div>
+            {% else %}
+    		<div class="type">
+    			 Event
+    		</div>
+            {% endif %}
+        	<div class="content">
+        		<header>
+        			<h4> {{ label }}</h4>
+        		</header>
+        		<div class="meta">
+        			 {{ content.field_event_date.0 }} {{ content.field_event_end_date.0 }}
+        		</div>
+        		<div class="body">
+        			{{ content.body }}
+        		</div>
+        		<div class="cta">
+                    {% if content.field_link %}
+        			    <a class='component-cta secondary' target="_new" href="{{ content.field_link[0]['#url'] }}"><span>learn more</span></a>
+                    {% else %}
+                        <a class='component-cta secondary' target="_new" href="{{ url }}"><span>learn more</span></a>
+                    {% endif %}
+        		</div>
+        	</div>
+        </article>
+    {% elseif node.getType == 'news' %}
+        <article class="component-card component-card-no-image box">
+        	<div class="content">
+        		<div class="type">
+        			 {{ content.field_news_type.0 }}
+        		</div>
+        		<header>
+        			<h4>{{ label }}</h4>
+        		</header>
+        		<div class="meta">
+        			{{ content.field_publication_name_and_date.0 }}
+        		</div>
+        		<div class="body">
+        			{{ content.body }}
+        		</div>
+        		<div class="cta">
+                    <a class='component-cta secondary' target="_new" href="{{ content.field_link[0]['#url'] }}"><span>learn more</span></a>
+        		</div>
+        	</div>
+        </article>
+    {% endif %}
+{% else %}
 
 <!--/*
   Main HTML template for the banner component.
@@ -149,7 +202,6 @@
       </div>
     </div>
   </section>
-
   <div{{ content_attributes.addClass('content') }}>
     <div class="container">
       {{ content.body }}
@@ -197,6 +249,7 @@
     </div>
   </div>
 </article>
+{% endif %}
 
 
 
