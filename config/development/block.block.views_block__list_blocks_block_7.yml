@@ -1,0 +1,30 @@
+uuid: 170d53e2-2e07-44ee-a1ed-1dbb19fa64ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.list_blocks
+  module:
+    - system
+    - views
+  theme:
+    - brightinsight
+id: views_block__list_blocks_block_7
+theme: brightinsight
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:list_blocks-block_7'
+settings:
+  id: 'views_block:list_blocks-block_7'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /clinical-board
+    negate: false
+    context_mapping: {  }

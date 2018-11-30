@@ -1,0 +1,30 @@
+uuid: 700701e0-5321-412c-8475-e02677060912
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.list_blocks
+  module:
+    - system
+    - views
+  theme:
+    - brightinsight
+id: views_block__list_blocks_block_6_2
+theme: brightinsight
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:list_blocks-block_6'
+settings:
+  id: 'views_block:list_blocks-block_6'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /leadership-team
+    negate: false
+    context_mapping: {  }
