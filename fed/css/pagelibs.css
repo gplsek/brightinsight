@@ -4450,3 +4450,14 @@ button {
 /**
  *  Main css for bio-list
  */
+/**
+ *  Main css for locations
+ */
+/**
+ *  Main css for card-location
+ */
+.component-card-location {
+  margin: 0 0 30px; }
+  .component-card-location .org,
+  .component-card-location .adr {
+    margin: 0 0 15px; }
