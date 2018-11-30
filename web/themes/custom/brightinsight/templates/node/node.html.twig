@@ -126,6 +126,29 @@
         		</div>
         	</div>
         </article>
+    {% elseif node.getType == 'leadership' or  node.getType == 'clinicalboard' %}
+        <!--/*
+            Main HTML template for the card-bio component.
+        */-->
+        <article class="component-card component-card-bio box">
+        	<div class="image">
+        		<img class="img-responsive img-fullwidth" src="{{ content.field_hero_image.0  }}">
+        	</div>
+        	<div class="content">
+        		<header>
+        			<h4>{{ label }}</h4>
+        		</header>
+        		<div class="meta">
+        			 {{ content.field_role.0 }}
+        		</div>
+        		<div class="body">
+        			 {{ content.body }}
+        		</div>
+        		<div class="cta">
+        			<a class='component-cta secondary' target="_new" href="{{ url }}"><span>View Bio</span></a>
+        		</div>
+        	</div>
+        </article>
     {% endif %}
 {% else %}
 
