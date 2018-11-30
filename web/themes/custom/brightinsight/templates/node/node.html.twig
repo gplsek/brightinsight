@@ -297,10 +297,33 @@
             </article>
 
         {% elseif node.getType == 'blog_post' %}
-          <div class="blogpost-details">
-            {{ content.field_hero_card_image }}
-            {{ content.body }}
-          </div>
+          <article class="component-text pad-top-sm pad-bot-lg">
+          	<div class="container">
+          		<div class="row">
+          			<div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+          				<div class="component-header">
+          					<div class="row align-items-end justify-content-between">
+          						<div class="col-12 col-md-3 order-md-2">
+          							<div class="article-share">
+          								{{ drupal_block("better_social_sharing_buttons_block") }}
+          							</div>
+          						</div>
+          						<div class="col-12 col-md-9 col-xl-8 col-xxl-7 order-md-1">
+          							<div class="meta">{{ author_name }} / {{ date }}</div>
+          							<header>
+          								<h1 class="line">{{ label }}</h1>
+          							</header>
+          						</div>
+          					</div>
+          				</div>
+          				<div class="component-body">
+          					{{ content.body }}
+          				</div>
+
+          			</div>
+          		</div>
+          	</div>
+          </article>
         {% endif %}
       <!-- /Content type depended blocks -->
     </div>
