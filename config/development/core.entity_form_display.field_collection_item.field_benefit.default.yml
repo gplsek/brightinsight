@@ -6,6 +6,7 @@ dependencies:
     - field.field.field_collection_item.field_benefit.field_be
     - field.field.field_collection_item.field_benefit.field_butt
     - field.field.field_collection_item.field_benefit.field_button_link
+    - field.field.field_collection_item.field_benefit.field_cta_style
     - field.field.field_collection_item.field_benefit.field_description
     - field.field.field_collection_item.field_benefit.field_title
     - field_collection.field_collection.field_benefit
@@ -35,6 +36,14 @@ content:
     region: content
   field_button_link:
     weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cta_style:
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select

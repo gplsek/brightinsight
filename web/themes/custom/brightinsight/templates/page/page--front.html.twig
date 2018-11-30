@@ -98,38 +98,4 @@
     {{page.content}}
   </section>
 </div>
-
-<footer class="component-global-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-legal col-12 col-lg-8 col-xl-9">
-        <a class="logo" href="/">
-          <img class="img-responsive" src="/{{ directory }}/images/logo-white.png">
-        </a>
-        <div class="colophon clearfix">
-          <div class="copyright">&copy; {{ 'now'|date('Y') }} BrightInsight. All rights reserved.</div>
-          <nav class="nav-legal clearfix">
-            <ul>
-              <li><a href="http://flex.com/">Flex.com</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Trademarked</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4 col-xl-3">
-        <nav class="nav-footer">
-          {{page.footer_menu}}
-        </nav>
-        <nav class="nav-social clearfix">
-          <ul>
-            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
-</footer>
+{% include directory ~ '/templates/page/global-footer.html.twig' %}
