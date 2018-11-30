@@ -31,7 +31,7 @@ content:
     region: content
   field_event_date:
     weight: 2
-    label: above
+    label: hidden
     settings:
       format_type: medium
       timezone_override: ''
@@ -40,7 +40,7 @@ content:
     region: content
   field_event_end_date:
     weight: 4
-    label: above
+    label: hidden
     settings:
       format_type: medium
       timezone_override: ''
@@ -49,7 +49,7 @@ content:
     region: content
   field_event_location:
     weight: 3
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -57,19 +57,19 @@ content:
     region: content
   field_link:
     weight: 6
-    label: above
+    label: hidden
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_page_settings:
     weight: 5
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''

@@ -98,7 +98,7 @@
         			{{ content.body }}
         		</div>
         		<div class="cta">
-                    {% if content.field_link %}
+                    {% if content.field_link[0]['#url'] %}
         			    <a class='component-cta secondary' target="_new" href="{{ content.field_link[0]['#url'] }}"><span>learn more</span></a>
                     {% else %}
                         <a class='component-cta secondary' target="_new" href="{{ url }}"><span>learn more</span></a>
@@ -236,9 +236,40 @@
            {{ content.body }}
         {% elseif node.getType == 'event' %}
           <div class="event-details">
-            {{ content.field_event_date }}
-            {{ content.field_event_end_date }}
-            {{ content.field_event_location }}
+            <article class="component-text pad-top-sm pad-bot-lg">
+            	<div class="container">
+            		<div class="row">
+            			<div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+            				<div class="component-header">
+            					<div class="row align-items-end justify-content-between">
+            						<div class="col-12 col-md-3 order-md-2">
+            							<div class="article-share">
+            								{{ drupal_block("better_social_sharing_buttons_block") }}
+            							</div>
+            						</div>
+            						<div class="col-12 col-md-9 col-xl-8 col-xxl-7 order-md-1">
+            							<div class="meta">{{ content.field_event_location.0 }} /  {{ content.field_event_date.0 }}
+                                            {% if content.field_event_end_date %} 
+                                                - {{ content.field_event_end_date.0 }}
+                                            {% endif %}
+                                        </div>
+            							<header>
+            								<h1 class="line">{{ label }}</h1>
+            							</header>
+            						</div>
+            					</div>
+            				</div>
+            				<div class="component-body">
+            					{{ content.body }}
+            				</div>
+
+            			</div>
+            		</div>
+            	</div>
+            </article>
+            
+            
+            
           </div>
         {% elseif node.getType == 'news' %}
           <div class="news-details">
