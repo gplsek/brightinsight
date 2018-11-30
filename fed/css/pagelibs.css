@@ -4401,3 +4401,52 @@ button {
 /**
  *  Main css for videos
  */
+/**
+ *  Main css for card-bio
+ */
+.component-card-bio header h1, .component-card-bio header h2, .component-card-bio header h3, .component-card-bio header h4, .component-card-bio header h5, .component-card-bio header h6 {
+  font-weight: 500; }
+
+.component-card-bio .content .meta {
+  margin: 5px 0 20px; }
+
+@media (min-width: 992px) {
+  .component-card-bio .content {
+    padding: 60px 30px 120px; }
+    .component-card-bio .content .cta {
+      bottom: 40px; } }
+
+/**
+ *  Main css for bio-detail
+ */
+.component-bio-detail .component-header {
+  margin: 0; }
+  .component-bio-detail .component-header .article-share {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 60px; }
+  .component-bio-detail .component-header .meta {
+    color: #7C878E;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0 0 30px; }
+  .component-bio-detail .component-header h1 {
+    font-size: 26px;
+    line-height: 34px; }
+
+.component-bio-detail .cta {
+  margin: 40px 0 20px; }
+
+@media (min-width: 768px) {
+  .component-bio-detail .component-header .article-share {
+    margin: 0 0 45px; } }
+
+@media (min-width: 992px) {
+  .component-bio-detail .component-header h1 {
+    font-size: 34px;
+    line-height: 42px; } }
+
+/**
+ *  Main css for bio-list
+ */
