@@ -5,9 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.body
-    - field.field.node.news.field_hero_image
     - field.field.node.news.field_link
     - field.field.node.news.field_news_type
+    - field.field.node.news.field_page_settings
     - field.field.node.news.field_publication_name_and_date
     - node.type.news
   module:
@@ -27,26 +27,17 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  field_hero_image:
-    type: entity_reference_entity_view
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
   field_link:
     type: link
     weight: 5
     region: content
     label: hidden
     settings:
-      trim_length: 80
-      url_only: false
+      trim_length: null
+      url_only: true
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
   field_news_type:
     type: entity_reference_label
@@ -54,7 +45,7 @@ content:
     region: content
     label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_publication_name_and_date:
     type: string
@@ -69,4 +60,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_page_settings: true

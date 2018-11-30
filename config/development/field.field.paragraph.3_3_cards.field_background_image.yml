@@ -1,16 +1,16 @@
-uuid: 79fb7f3e-047b-432c-9c1e-2077e14a7fb3
+uuid: 42de7e64-4b0d-454d-964b-58990b8b728b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_hero_image
+    - field.storage.paragraph.field_background_image
     - media.type.image
-    - node.type.event
-id: node.event.field_hero_image
-field_name: field_hero_image
-entity_type: node
-bundle: event
-label: 'Hero Image'
+    - paragraphs.paragraphs_type.3_3_cards
+id: paragraph.3_3_cards.field_background_image
+field_name: field_background_image
+entity_type: paragraph
+bundle: 3_3_cards
+label: 'Background Image'
 description: ''
 required: false
 translatable: true

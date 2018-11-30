@@ -1,20 +1,20 @@
-uuid: 14d0e932-9afc-4fa6-a5c4-c6e05209cd4a
+uuid: 04974b43-26bb-420a-b03a-d303f650a86e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_overlay_position
+    - field.storage.paragraph.field_bottom_angle_color
     - paragraphs.paragraphs_type.careers
   module:
     - options
-id: paragraph.careers.field_overlay_position
-field_name: field_overlay_position
+id: paragraph.careers.field_bottom_angle_color
+field_name: field_bottom_angle_color
 entity_type: paragraph
 bundle: careers
-label: 'OverLay Position'
+label: 'Bottom Angle Color'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

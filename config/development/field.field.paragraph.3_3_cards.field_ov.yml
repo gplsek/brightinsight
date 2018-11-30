@@ -1,0 +1,21 @@
+uuid: 8150b358-3db9-4d14-8fb3-7c59ecc322bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ov
+    - paragraphs.paragraphs_type.3_3_cards
+  module:
+    - options
+id: paragraph.3_3_cards.field_ov
+field_name: field_ov
+entity_type: paragraph
+bundle: 3_3_cards
+label: 'OverLay Position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

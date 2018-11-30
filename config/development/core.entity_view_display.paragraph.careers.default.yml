@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.field.paragraph.careers.field_background_color
     - field.field.paragraph.careers.field_background_image
+    - field.field.paragraph.careers.field_bottom_angle_color
     - field.field.paragraph.careers.field_content
-    - field.field.paragraph.careers.field_mask
-    - field.field.paragraph.careers.field_overlay_position
+    - field.field.paragraph.careers.field_ov
+    - field.field.paragraph.careers.field_overlay_direction
+    - field.field.paragraph.careers.field_text_color
     - field.field.paragraph.careers.field_title
+    - field.field.paragraph.careers.field_top_angle_color
     - field.field.paragraph.careers.field_use_case
     - paragraphs.paragraphs_type.careers
   module:
@@ -21,35 +24,49 @@ mode: default
 content:
   field_background_color:
     weight: 8
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_background_image:
     weight: 3
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_content:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_mask:
-    weight: 5
+  field_bottom_angle_color:
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_overlay_position:
-    weight: 7
+  field_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ov:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_overlay_direction:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text_color:
+    weight: 11
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -57,18 +74,26 @@ content:
     region: content
   field_title:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_top_angle_color:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_use_case:
     weight: 2
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
 hidden: {  }

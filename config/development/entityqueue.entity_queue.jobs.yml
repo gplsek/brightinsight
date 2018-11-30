@@ -1,0 +1,25 @@
+uuid: 8bac9428-b00a-404c-b082-f078ba1b42e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: jobs
+label: Jobs
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      job_posting: job_posting
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

@@ -7,12 +7,14 @@ dependencies:
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_end_date
     - field.field.node.event.field_event_location
-    - field.field.node.event.field_hero_image
+    - field.field.node.event.field_hero_card_image
+    - field.field.node.event.field_link
     - field.field.node.event.field_page_settings
     - node.type.event
   module:
     - datetime
     - entity_reference_revisions
+    - link
     - text
     - user
 id: node.event.default
@@ -23,12 +25,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_event_date:
-    weight: 102
+    weight: 2
     label: above
     settings:
       format_type: medium
@@ -37,7 +39,7 @@ content:
     type: datetime_default
     region: content
   field_event_end_date:
-    weight: 104
+    weight: 4
     label: above
     settings:
       format_type: medium
@@ -46,23 +48,27 @@ content:
     type: datetime_default
     region: content
   field_event_location:
-    weight: 103
+    weight: 3
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_hero_image:
-    weight: 105
+  field_link:
+    weight: 6
     label: above
     settings:
-      link: true
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    type: entity_reference_label
+    type: link
     region: content
   field_page_settings:
-    weight: 106
+    weight: 5
     label: above
     settings:
       view_mode: default
@@ -71,8 +77,9 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  field_hero_card_image: true

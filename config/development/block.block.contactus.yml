@@ -1,31 +1,31 @@
-uuid: 657ee1e4-b531-4440-b381-0dd8c34c0741
+uuid: 538266eb-4b48-49a9-9bdb-6cc6b853ad4a
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:42578170-3611-4ff6-93cb-0fcc092de802'
+    - 'block_content:contact_us_form:fba02a92-8a7c-4806-831a-25ce3a86fbed'
   module:
     - block_content
     - system
   theme:
     - brightinsight
-id: sources
+id: contactus
 theme: brightinsight
 region: content
-weight: 2
+weight: -1
 provider: null
-plugin: 'block_content:42578170-3611-4ff6-93cb-0fcc092de802'
+plugin: 'block_content:fba02a92-8a7c-4806-831a-25ce3a86fbed'
 settings:
-  id: 'block_content:42578170-3611-4ff6-93cb-0fcc092de802'
-  label: Sources
+  id: 'block_content:fba02a92-8a7c-4806-831a-25ce3a86fbed'
+  label: 'Contact Us'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /pharma
+    pages: /contact-us
     negate: false
     context_mapping: {  }
