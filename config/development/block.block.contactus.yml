@@ -12,7 +12,7 @@ dependencies:
 id: contactus
 theme: brightinsight
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: 'block_content:fba02a92-8a7c-4806-831a-25ce3a86fbed'
 settings:

@@ -12,7 +12,7 @@ dependencies:
 id: sources
 theme: brightinsight
 region: content
-weight: 0
+weight: 2
 provider: null
 plugin: 'block_content:42578170-3611-4ff6-93cb-0fcc092de802'
 settings:
