@@ -1,0 +1,21 @@
+uuid: ab8112df-8080-4d87-baf0-e53e982d622f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay_direction
+    - paragraphs.paragraphs_type.videos
+  module:
+    - options
+id: paragraph.videos.field_overlay_direction
+field_name: field_overlay_direction
+entity_type: paragraph
+bundle: videos
+label: 'Overlay Direction'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
