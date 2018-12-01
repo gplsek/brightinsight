@@ -91,7 +91,10 @@
 					<h4>{{ label }}</h4>
 				</header>
 				<div class="body">
-					 {{ content.body}}
+                    {% set conBody %}
+                         {{ content.body }}
+                    {% endset %}	
+                    {{ conBody|striptags }}
 				</div>
 				<div class="cta">
                     <a class='component-cta primary' href="{{ url }}"><span>learn more</span></a>

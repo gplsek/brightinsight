@@ -152,6 +152,30 @@
 
 (function ($) {
     'use strict';
+    Drupal.behaviors.cardCareer = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+          *  This is the main file for card
+          */
+ 
+          if ($('.component-card-career').length) {
+              $(function() {
+                  initCardCareer();
+              });
+          }
+
+          function initCardCareer() {
+              console.log('Initializing CardCareer');
+          }
+    
+      }
+  };
+        
+}(jQuery));
+(function ($) {
+    'use strict';
     Drupal.behaviors.cardBlog = {
       attach: function(context, settings) {
           'use strict';
@@ -202,30 +226,6 @@
 
 (function ($) {
     'use strict';
-    Drupal.behaviors.cardCareer = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-          *  This is the main file for card
-          */
- 
-          if ($('.component-card-career').length) {
-              $(function() {
-                  initCardCareer();
-              });
-          }
-
-          function initCardCareer() {
-              console.log('Initializing CardCareer');
-          }
-    
-      }
-  };
-        
-}(jQuery));
-(function ($) {
-    'use strict';
     Drupal.behaviors.cardIcon = {
       attach: function(context, settings) {
           'use strict';
@@ -272,6 +272,7 @@
   };
         
 }(jQuery));
+
 (function ($) {
     'use strict';
     Drupal.behaviors.cars = {
@@ -487,6 +488,32 @@
 
 (function ($) {
     'use strict';
+    Drupal.behaviors.text = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+           *  This is the main file for text
+           */
+ 
+          if ($('.component-text').length) {
+              $(function() {
+                  initText();
+              });
+          }
+
+          function initText() {
+              console.log('Initializing Text');
+          }
+    
+      }
+  };
+        
+}(jQuery));
+
+
+(function ($) {
+    'use strict';
     Drupal.behaviors.globalNavigation = {
       attach: function(context, settings) {
           'use strict';
@@ -514,32 +541,6 @@
 
 (function ($) {
     'use strict';
-    Drupal.behaviors.text = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-           *  This is the main file for text
-           */
- 
-          if ($('.component-text').length) {
-              $(function() {
-                  initText();
-              });
-          }
-
-          function initText() {
-              console.log('Initializing Text');
-          }
-    
-      }
-  };
-        
-}(jQuery));
-
-
-(function ($) {
-    'use strict';
     Drupal.behaviors.usecases = {
       attach: function(context, settings) {
           'use strict';
@@ -563,3 +564,16 @@
         
 }(jQuery));
 
+
+(function ($) {
+    'use strict';
+    Drupal.behaviors.videos = {
+      attach: function(context, settings) {
+          'use strict';
+
+          $('.video-modal-trigger').modalVideo();
+    
+      }
+  };
+        
+}(jQuery));

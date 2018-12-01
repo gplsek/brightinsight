@@ -18,8 +18,7 @@ rename          = require('gulp-rename');
 
 gulp.task('build', [
           'headerScripts',
-          'scripts',
-          'sass'
+          'scripts'
 ]);
 
 var headerScripts = ['headlibs/*.js'],
@@ -40,6 +39,7 @@ gulp.task('headerScripts', function() {
 });
 
 gulp.task('sass', function(){
+  return
   return gulp.src('pagelibs.scss')
     .pipe(sass())
     .pipe(gulp.dest('./css'))
@@ -64,7 +64,7 @@ gulp.task('sass', function(){
 
 gulp.task('watch', ['browserSync', 'sass', 'scripts'], function(){
   gulp.watch('components/**/*.scss', ['sass']); 
-  gulp.watch('styles/**/*.scss', ['sass']); 
+  // gulp.watch('styles/**/*.scss', ['sass']); 
   gulp.watch('headlibs/*.js', ['headerScripts']); 
   gulp.watch('scripts/*.js', ['scripts']); 
   gulp.watch('components/**/*.js', ['scripts']); 
@@ -74,9 +74,9 @@ gulp.task('watch', ['browserSync', 'sass', 'scripts'], function(){
 });
 
 gulp.task('build', ['sass', 'scripts'], function(){
-    gulp.src('pagelibs.scss')
-    .pipe(sass())
-    .pipe(gulp.dest(cssDest))
+    //gulp.src('pagelibs.scss')
+    //.pipe(sass())
+    //.pipe(gulp.dest(cssDest))
     gulp.src(headerScripts)
         .pipe(concat('headlibs.js'))
         .pipe(gulp.dest(jsDest));
