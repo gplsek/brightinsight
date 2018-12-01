@@ -155,7 +155,7 @@
 {% elseif view_mode == "featured_main" %}
     {% if node.getType == 'video' %}
         <div class="component-card-video">
-        	<a class="video-modal-trigger" href="https://www.youtube.com/watch?v=HN-{{ content.field_video_id.0 }}" data-video-id=" {{ content.field_video_id.0 }}">
+        	<a class="video-modal-trigger" href="https://www.youtube.com/watch?v={{ content.field_video_id.0 }}" data-video-id="{{ content.field_video_id.0 }}">
         		<div class="video">
         			<div class="image">
         				<img class="img-responsive img-fullwidth" src="{{ content.field_image.0 }}">
@@ -176,7 +176,7 @@
 {% elseif view_mode == "featured" %}
     {% if node.getType == 'video' %}
             <div class="component-card-video">
-            	<a class="video-modal-trigger" href="https://www.youtube.com/watch?v=HN-{{ content.field_video_id.0 }}" data-video-id=" {{ content.field_video_id.0 }}">
+            	<a class="video-modal-trigger" href="https://www.youtube.com/watch?v={{ content.field_video_id.0 }}" data-video-id="{{ content.field_video_id.0 }}">
             		<div class="video">
             			<div class="image">
             				<img class="img-responsive img-fullwidth" src="{{ content.field_image.0 }}">
