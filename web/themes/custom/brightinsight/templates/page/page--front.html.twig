@@ -77,18 +77,32 @@
         </div>
 
         <div class="desktop-menu">
-          <nav class="nav-utility clearfix">
-            <ul>
-              {# <li><a href="#">Customer Login</a></li> #}
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </nav>
-        
-          <nav class="nav-primary clearfix">
-            {{ page.navigation }}
-          </nav>
+          {{ page.navigation_desktop }}
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-8">
+            <img class="logo img-responsive" src="/{{ directory }}/images/logo-white-color.png">
+            <button class="back">
+              <span class="chevron-icon left white"></span>
+            </button>
+          </div>
+          <div class="col-4">
+            <button class="close">
+              <span class="close-icon white"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-wrap">
+      {{ page.navigation_mobile }}
     </div>
   </div>
 </section>
@@ -98,4 +112,5 @@
     {{page.content}}
   </section>
 </div>
+
 {% include directory ~ '/templates/page/global-footer.html.twig' %}
