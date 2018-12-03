@@ -30,3 +30,4 @@ require('components/bio-detail');
 require('components/bio-list');
 require('components/locations');
 require('components/card-location');
+require('components/form');
