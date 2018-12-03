@@ -125,55 +125,6 @@
         
 }(jQuery));
 
-(function ($) {
-    'use strict';
-    Drupal.behaviors.card = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-          *  This is the main file for card
-          */
- 
-          if ($('.component-card').length) {
-              $(function() {
-                  initCard();
-              });
-          }
-
-          function initCard() {
-              console.log('Initializing Card');
-          }
-    
-      }
-  };
-        
-}(jQuery));
-
-(function ($) {
-    'use strict';
-    Drupal.behaviors.cardBlog = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-          *  This is the main file for card
-          */
- 
-          if ($('.component-card-blog').length) {
-              $(function() {
-                  initCardBlog();
-              });
-          }
-
-          function initCardBlog() {
-              console.log('Initializing Card Blog');
-          }
-    
-      }
-  };
-        
-}(jQuery));
 
 (function ($) {
     'use strict';
@@ -202,6 +153,31 @@
 
 (function ($) {
     'use strict';
+    Drupal.behaviors.card = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+          *  This is the main file for card
+          */
+ 
+          if ($('.component-card').length) {
+              $(function() {
+                  initCard();
+              });
+          }
+
+          function initCard() {
+              console.log('Initializing Card');
+          }
+    
+      }
+  };
+        
+}(jQuery));
+
+(function ($) {
+    'use strict';
     Drupal.behaviors.cardCareer = {
       attach: function(context, settings) {
           'use strict';
@@ -218,6 +194,30 @@
 
           function initCardCareer() {
               console.log('Initializing CardCareer');
+          }
+    
+      }
+  };
+        
+}(jQuery));
+(function ($) {
+    'use strict';
+    Drupal.behaviors.cardBlog = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+          *  This is the main file for card
+          */
+ 
+          if ($('.component-card-blog').length) {
+              $(function() {
+                  initCardBlog();
+              });
+          }
+
+          function initCardBlog() {
+              console.log('Initializing Card Blog');
           }
     
       }
@@ -272,6 +272,7 @@
   };
         
 }(jQuery));
+
 (function ($) {
     'use strict';
     Drupal.behaviors.cars = {
@@ -284,61 +285,6 @@
   };
         
 }(jQuery));
-
-
-(function ($) {
-    'use strict';
-    Drupal.behaviors.columns = {
-      attach: function(context, settings) {
-          'use strict';
-
-          /**
-           *  This is the main file for columns
-           */
- 
-
-          var component_columns = $('.component-columns');
-
-          if (component_columns.length)
-          {
-          	$(function()
-          	{
-          		initColumns();
-          	});
-          }
-
-
-          function initColumns()
-          {
-          	component_columns.each(function()
-          	{
-          		var icons = $(this).find('.component-card-icon .image');
-		
-          		$(window).on('load resize', function(event)
-          		{
-          			var mq_win_w = navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth;
-
-          			if (mq_win_w > 767)
-          			{
-          				icons.syncHeight();
-          			}
-          			else
-          			{
-          				icons.css('height', 'auto');
-          			}
-          		});
-          	});
-          }
-
-          
-          
-    
-      }
-  };
-        
-}(jQuery));
-
-
 
 
 (function ($) {
@@ -388,6 +334,61 @@
           function initCta() {
               console.log('Initializing Cta');
           }
+          
+    
+      }
+  };
+        
+}(jQuery));
+
+
+
+
+(function ($) {
+    'use strict';
+    Drupal.behaviors.columns = {
+      attach: function(context, settings) {
+          'use strict';
+
+          /**
+           *  This is the main file for columns
+           */
+ 
+
+          var component_columns = $('.component-columns');
+
+          if (component_columns.length)
+          {
+          	$(function()
+          	{
+          		initColumns();
+          	});
+          }
+
+
+          function initColumns()
+          {
+          	component_columns.each(function()
+          	{
+          		var icons = $(this).find('.component-card-icon .image');
+		
+          		$(window).on('load resize', function(event)
+          		{
+          			var mq_win_w = navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth;
+
+          			if (mq_win_w > 767)
+          			{
+          				icons.syncHeight();
+          			}
+          			else
+          			{
+          				icons.css('height', 'auto');
+          			}
+          		});
+          	});
+          }
+
+          
           
     
       }
@@ -563,3 +564,16 @@
         
 }(jQuery));
 
+
+(function ($) {
+    'use strict';
+    Drupal.behaviors.videos = {
+      attach: function(context, settings) {
+          'use strict';
+
+          $('.video-modal-trigger', context).once().modalVideo();
+    
+      }
+  };
+        
+}(jQuery));

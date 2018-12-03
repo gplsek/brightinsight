@@ -1,0 +1,21 @@
+uuid: 2dbeaa4c-22fd-47d7-9331-8581e3cc8371
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay_direction
+    - paragraphs.paragraphs_type.featured_blogs
+  module:
+    - options
+id: paragraph.featured_blogs.field_overlay_direction
+field_name: field_overlay_direction
+entity_type: paragraph
+bundle: featured_blogs
+label: 'Overlay Direction'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

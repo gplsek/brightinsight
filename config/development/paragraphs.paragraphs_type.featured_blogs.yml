@@ -1,0 +1,14 @@
+uuid: 0659038d-a5b5-4ded-ae97-0262bc966634
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: featured_blogs
+label: 'Featured Blogs'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

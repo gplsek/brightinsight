@@ -98,7 +98,7 @@
         			{{ content.body }}
         		</div>
         		<div class="cta">
-                    {% if content.field_link %}
+                    {% if content.field_link[0]['#url'] %}
         			    <a class='component-cta secondary' target="_new" href="{{ content.field_link[0]['#url'] }}"><span>learn more</span></a>
                     {% else %}
                         <a class='component-cta secondary' target="_new" href="{{ url }}"><span>learn more</span></a>
@@ -126,9 +126,67 @@
         		</div>
         	</div>
         </article>
+    {% elseif node.getType == 'leadership' or  node.getType == 'clinicalboard' %}
+        <!--/*
+            Main HTML template for the card-bio component.
+        */-->
+        <article class="component-card component-card-bio box">
+        	<div class="image">
+                {% if content.field_head_shot.0 %}
+        		  <img class="img-responsive img-fullwidth" src="{{ content.field_head_shot.0  }}">
+                {% endif %}
+        	</div>
+        	<div class="content">
+        		<header>
+        			<h4>{{ label }}</h4>
+        		</header>
+        		<div class="meta">
+        			 {{ content.field_role.0 }}
+        		</div>
+        		<div class="body">
+        			 {{ content.body }}
+        		</div>
+        		<div class="cta">
+        			<a class='component-cta secondary' target="_new" href="{{ url }}"><span>View Bio</span></a>
+        		</div>
+        	</div>
+        </article>
+    {% endif %}
+{% elseif view_mode == "featured_main" %}
+    {% if node.getType == 'video' %}
+        <div class="component-card-video">
+        	<a class="video-modal-trigger" href="https://www.youtube.com/watch?v={{ content.field_video_id.0 }}" data-video-id="{{ content.field_video_id.0 }}">
+        		<div class="video">
+        			<div class="image">
+        				<img class="img-responsive img-fullwidth" src="{{ content.field_image.0 }}">
+        			</div>
+        			<span class="mask"><span class="play-button"><i class="fas fa-play"></i></span></span>
+        		</div>
+        		<div class="content">
+        			<header>
+        				<h4>{{ label }}</h4>
+        			</header>
+        			<div class="body">
+        				{{ content.field_description.0 }}
+        			</div>
+        		</div>
+        	</a>
+        </div>
+   {% endif %}
+{% elseif view_mode == "featured" %}
+    {% if node.getType == 'video' %}
+            <div class="component-card-video">
+            	<a class="video-modal-trigger" href="https://www.youtube.com/watch?v={{ content.field_video_id.0 }}" data-video-id="{{ content.field_video_id.0 }}">
+            		<div class="video">
+            			<div class="image">
+            				<img class="img-responsive img-fullwidth" src="{{ content.field_image.0 }}">
+            			</div>
+            			<span class="mask"><span class="play-button"><i class="fas fa-play"></i></span></span>
+            		</div>
+            	</a>
+            </div>
     {% endif %}
 {% else %}
-
 <!--/*
   Main HTML template for the banner component.
 
@@ -191,6 +249,7 @@
 
 <article{{ attributes.addClass(classes) }}>
   <!-- Variation: Tall banner, white text, white bottom angle, background image -->
+  {% if node.getType == 'page' %}
   <section class="component-banner bg-image {{css.section_classes}}" style="background-image:url('{{ background }}')">
     <div class="container">
       <div class="row pad-top-lg pad-bot-lg">
@@ -202,51 +261,148 @@
       </div>
     </div>
   </section>
+  {% endif %}
   <div{{ content_attributes.addClass('content') }}>
-    <div class="container">
-      {{ content.body }}
+        <!-- Content type depended blocks -->
+        {% if node.getType == 'page' %}
+            {% if content.field_paragraphblock %}
+              {{ content.field_paragraphblock }}
+            {% endif %}
+          {% if content.body|render %}
+            <article class="component-text pad-top-sm pad-bot-lg">
+            	<div class="container">
+            		<div class="row">
+            			<div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+            				<div class="component-body">
+            				   {{ content.body }}
+            				</div>
 
-      <!-- Content type depended blocks -->
-        {% if node.getType == 'event' %}
-          <div class="event-details">
-            {{ content.field_event_date }}
-            {{ content.field_event_end_date }}
-            {{ content.field_event_location }}
+            			</div>
+            		</div>
+            	</div>
+            </article>
+           {% endif %}    
+        {% elseif node.getType == 'event' %}
+            <article class="component-text pad-top-sm pad-bot-lg">
+            	<div class="container">
+            		<div class="row">
+            			<div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+            				<div class="component-header">
+            					<div class="row align-items-end justify-content-between">
+            						<div class="col-12 col-md-3 order-md-2">
+            							<div class="article-share">
+            								{{ drupal_block("better_social_sharing_buttons_block") }}
+            							</div>
+            						</div>
+            						<div class="col-12 col-md-9 col-xl-8 col-xxl-7 order-md-1">
+            							<div class="meta">{{ content.field_event_location.0 }} /  {{ content.field_event_date.0 }}
+                                            {% if content.field_event_end_date %} 
+                                                - {{ content.field_event_end_date.0 }}
+                                            {% endif %}
+                                        </div>
+            							<header>
+            								<h1 class="line">{{ label }}</h1>
+            							</header>
+            						</div>
+            					</div>
+            				</div>
+            				<div class="component-body">
+            					{{ content.body }}
+            				</div>
+            			</div>
+            		</div>
+            </article>
+            
+            
+            
           </div>
         {% elseif node.getType == 'news' %}
           <div class="news-details">
-            {{ content.field_publication_name_and_date }}
-            {{ content.field_news_type }}
-            {{ content.field_link }}
+            <!--/*
+                no nodepage
+            */-->
           </div>
         {% elseif node.getType == 'use_case' %}
           <div class="usecase-details">
-            {{ content.field_description }}
-            {{ content.field_files }}
-            {{ content.field_gated_file }}
-          </div>
-        {% elseif node.getType == 'clinicalboard' %}
-          <div class="clinicalboard-details">
-            {{ content.field_head_shot }}
-            {{ content.field_role }}
+            <!--/*
+                no nodepage
+            */-->
           </div>
         {% elseif node.getType == 'job_posting' %}
           <div class="jobs-details">
-            {{ content.field_location }}
-            {{ content.field_job_url }}
+            <!--/*
+                no nodepage
+            */-->
           </div>
-        {% elseif node.getType == 'leadership' %}
-          <div class="leadership-details">
-            {{ content.field_head_shot }}
-            {{ content.field_role }}
-          </div>
+        {% elseif node.getType == 'leadership' or  node.getType == 'clinicalboard' %}
+            <!--/*
+                Main HTML template for the bio-detail component.
+            */-->
+            <article class="component-bio-detail pad-top-sm pad-bot-lg">
+            	<div class="container">
+            		<div class="row">
+            			<div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+            				<div class="component-image margin-bot-lg">
+            					<div class="row">
+            						<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                        {% if content.field_head_shot.0 %}
+            							   <img class="img-responsive img-fullwidth" src="{{ content.field_head_shot.0  }}">
+                                        {% endif %}
+            						</div>
+            					</div>
+            				</div>
+            				<div class="component-header">
+            					<div class="row align-items-end justify-content-between">
+            						<div class="col-12 col-md-3 order-md-2">
+            							<div class="article-share">
+            								{{ drupal_block("better_social_sharing_buttons_block") }}
+            							</div>
+            						</div>
+            						<div class="col-12 col-md-9 col-xl-8 col-xxl-7 order-md-1">
+            							<header>
+            								<h1 class="line">{{ label }}</h1>
+            							</header>
+            						</div>
+            					</div>
+            				</div>
+            				<div class="component-body">
+                                    {{ content.body }}
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+            </article>
+
         {% elseif node.getType == 'blog_post' %}
-          <div class="blogpost-details">
-            {{ content.field_hero_card_image }}
-          </div>
+          <article class="component-text pad-top-sm pad-bot-lg">
+          	<div class="container">
+          		<div class="row">
+          			<div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+          				<div class="component-header">
+          					<div class="row align-items-end justify-content-between">
+          						<div class="col-12 col-md-3 order-md-2">
+          							<div class="article-share">
+          								{{ drupal_block("better_social_sharing_buttons_block") }}
+          							</div>
+          						</div>
+          						<div class="col-12 col-md-9 col-xl-8 col-xxl-7 order-md-1">
+          							<div class="meta">{{ author_name }} / {{ date }}</div>
+          							<header>
+          								<h1 class="line">{{ label }}</h1>
+          							</header>
+          						</div>
+          					</div>
+          				</div>
+          				<div class="component-body">
+          					{{ content.body }}
+          				</div>
+
+          			</div>
+          		</div>
+          	</div>
+          </article>
         {% endif %}
       <!-- /Content type depended blocks -->
-    </div>
   </div>
 </article>
 {% endif %}

@@ -1,0 +1,21 @@
+uuid: 46555b04-0215-4444-964e-a4953a84ed95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_color
+    - paragraphs.paragraphs_type.featured_blogs
+  module:
+    - options
+id: paragraph.featured_blogs.field_text_color
+field_name: field_text_color
+entity_type: paragraph
+bundle: featured_blogs
+label: 'Text Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

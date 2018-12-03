@@ -1,0 +1,21 @@
+uuid: be361709-d429-4c88-8e51-248d4601c425
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_top_angle_color
+    - paragraphs.paragraphs_type.videos
+  module:
+    - options
+id: paragraph.videos.field_top_angle_color
+field_name: field_top_angle_color
+entity_type: paragraph
+bundle: videos
+label: 'Top Angle Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

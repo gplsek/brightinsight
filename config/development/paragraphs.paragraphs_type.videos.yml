@@ -1,0 +1,14 @@
+uuid: f74808ef-c216-453e-8ce4-946e07e17108
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: videos
+label: Videos
+icon_uuid: null
+description: 'Youtube Videos'
+behavior_plugins: {  }

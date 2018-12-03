@@ -1,0 +1,30 @@
+uuid: df497d70-cbd8-4388-b813-4be840f0f051
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_collection
+    - options
+id: field_collection_item.field_cta_style
+field_name: field_cta_style
+entity_type: field_collection_item
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: primary
+      label: 'Solid Green'
+    -
+      value: secondary
+      label: 'Green Outline'
+    -
+      value: secondary-white
+      label: 'White Outline'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

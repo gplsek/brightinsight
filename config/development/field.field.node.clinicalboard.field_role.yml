@@ -9,7 +9,7 @@ id: node.clinicalboard.field_role
 field_name: field_role
 entity_type: node
 bundle: clinicalboard
-label: 'Tile / Role'
+label: 'Title / Role'
 description: ''
 required: false
 translatable: false

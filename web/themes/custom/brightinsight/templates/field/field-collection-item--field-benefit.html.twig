@@ -35,10 +35,14 @@
     */-->
 
     <section class="component-card-icon">
+         {% if content.field_be.0['#item'].entity.uri.value%}
     	<div class="image">
             {% set img_url = file_url(content.field_be.0['#item'].entity.uri.value) %}
+           
     		<img class="img-responsive img-centered" src="{{ img_url }}">
+           
     	</div>
+        {% endif %}
     	<div class="content">
     		<header>
     			<h5>{{ content.field_title }}</h5>
@@ -46,6 +50,11 @@
     		<div class="body">
     			{{ content.field_description }}
     		</div>
+            {% if content.field_button_link.0 %}
+              <div class="cta">
+                <a href="{{ content.field_button_link.0 }}" class="component-cta {{ content.field_cta_style.0 }}"><span>{{ content.field_butt.0 }}</span></a>
+              </div>
+            {% endif %}
     	</div>
     </section>
   </div>

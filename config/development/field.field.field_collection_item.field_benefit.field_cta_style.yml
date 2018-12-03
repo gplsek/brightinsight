@@ -1,0 +1,21 @@
+uuid: edc3ea3a-6cfe-4807-a7b6-5ea167e4b6f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_cta_style
+    - field_collection.field_collection.field_benefit
+  module:
+    - options
+id: field_collection_item.field_benefit.field_cta_style
+field_name: field_cta_style
+entity_type: field_collection_item
+bundle: field_benefit
+label: 'CTA Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

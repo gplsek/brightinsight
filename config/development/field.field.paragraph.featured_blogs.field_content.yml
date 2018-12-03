@@ -1,0 +1,21 @@
+uuid: 61d3dcda-044b-4aa1-9845-96c02631d1ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.featured_blogs
+  module:
+    - text
+id: paragraph.featured_blogs.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: featured_blogs
+label: 'Sub headline'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

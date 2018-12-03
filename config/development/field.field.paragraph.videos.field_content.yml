@@ -1,0 +1,21 @@
+uuid: 34319099-e94e-4320-95f1-3655c4c48e66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.videos
+  module:
+    - text
+id: paragraph.videos.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: videos
+label: 'Sub headline'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

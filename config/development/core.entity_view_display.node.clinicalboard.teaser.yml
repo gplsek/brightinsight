@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.clinicalboard.body
     - field.field.node.clinicalboard.field_head_shot
     - field.field.node.clinicalboard.field_hero_image
+    - field.field.node.clinicalboard.field_page_settings
     - field.field.node.clinicalboard.field_role
     - node.type.clinicalboard
   module:
+    - image
     - text
     - user
 id: node.clinicalboard.teaser
@@ -20,18 +22,32 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 100
+    weight: 0
     region: content
     settings:
       trim_length: 600
     third_party_settings: {  }
+  field_head_shot:
+    type: image_url
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+  field_role:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
-  field_head_shot: true
   field_hero_image: true
   field_page_settings: true
-  field_role: true

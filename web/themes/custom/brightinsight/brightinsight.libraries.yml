@@ -10,6 +10,7 @@ global-styling:
     # dist/js/init.js: {}
     # dist/js/pagelibs.js: {}
     js/pagelibs.js: {}
+    js/jquery.modal-video.min.js: {}
     # js/headlibs.js: {}
     # Production version.
     #dist/js/scripts.min.js: {}

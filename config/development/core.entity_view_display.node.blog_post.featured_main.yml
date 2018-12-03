@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.blog_post.body
     - field.field.node.blog_post.field_blog_hero_image
     - field.field.node.blog_post.field_hero_card_image
+    - field.field.node.blog_post.field_page_settings
     - node.type.blog_post
   module:
     - image
@@ -19,10 +20,10 @@ mode: featured_main
 content:
   body:
     label: hidden
-    type: text_summary_or_trimmed
+    type: text_trimmed
     weight: 1
     settings:
-      trim_length: 600
+      trim_length: 750
     third_party_settings: {  }
     region: content
   field_blog_hero_image:
@@ -40,3 +41,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_hero_card_image: true
+  field_page_settings: true

@@ -1,0 +1,21 @@
+uuid: af4df369-710c-460c-bc86-7e7710048eab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_style
+    - paragraphs.paragraphs_type.videos
+  module:
+    - options
+id: paragraph.videos.field_cta_style
+field_name: field_cta_style
+entity_type: paragraph
+bundle: videos
+label: 'CTA Style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

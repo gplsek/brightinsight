@@ -1,12 +1,10 @@
-uuid: 74b8191f-32ec-4ff7-b896-9888d1d40371
+uuid: 645c93ab-28bb-4add-b744-b7aba589e019
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.field_collection_item.field_button_link
     - field_collection.field_collection.field_benefit
-  module:
-    - options
 id: field_collection_item.field_benefit.field_button_link
 field_name: field_button_link
 entity_type: field_collection_item
@@ -18,4 +16,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: list_string
+field_type: string
