@@ -4461,3 +4461,177 @@ button {
   .component-card-location .org,
   .component-card-location .adr {
     margin: 0 0 15px; }
+
+/**
+ *  Main css for form
+ */
+.component-form .form-container {
+  color: #323F48; }
+  .component-form .form-container .form-actions {
+    text-align: center; }
+    .component-form .form-container .form-actions .btn-primary {
+      background: #00A56A;
+      border: 1px solid #00A56A;
+      border-radius: 20px;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Gilroy", Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 38px;
+      height: 38px;
+      margin: 0;
+      padding: 0 30px;
+      text-align: center;
+      text-decoration: none; }
+  .component-form .form-container .form-item {
+    margin: 0 0 20px; }
+    .component-form .form-container .form-item label {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 23px; }
+    .component-form .form-container .form-item input[type="email"],
+    .component-form .form-container .form-item input[type="number"],
+    .component-form .form-container .form-item input[type="text"],
+    .component-form .form-container .form-item textarea {
+      background: none;
+      border: 1px solid #7C878E;
+      border-width: 0 0 1px;
+      display: block;
+      font-family: "Gilroy", Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 23px;
+      margin: 0;
+      padding: 0 0 20px;
+      width: 100%; }
+    .component-form .form-container .form-item textarea {
+      border-width: 1px;
+      padding: 10px; }
+    .component-form .form-container .form-item.form-type-email label, .component-form .form-container .form-item.form-type-number label, .component-form .form-container .form-item.form-type-textfield label {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; }
+    .component-form .form-container .form-item.form-type-select {
+      display: flex; }
+      .component-form .form-container .form-item.form-type-select label {
+        flex: 0 1 auto;
+        line-height: 40px; }
+        .component-form .form-container .form-item.form-type-select label:after {
+          content: ':';
+          padding-right: 15px; }
+      .component-form .form-container .form-item.form-type-select .select-wrapper {
+        border-bottom: 1px solid #7C878E;
+        flex: 1 0 auto;
+        height: 40px;
+        overflow: hidden;
+        position: relative; }
+        .component-form .form-container .form-item.form-type-select .select-wrapper select {
+          background: transparent;
+          border: none;
+          color: #323F48;
+          font-family: "Gilroy", Helvetica, sans-serif;
+          font-size: 20px;
+          font-weight: 300;
+          height: 40px;
+          padding-right: 30px;
+          width: 100%;
+          -webkit-appearance: button;
+          -webkit-border-radius: 0;
+          -webkit-padding-end: 30px;
+          -webkit-padding-start: 0;
+          -webkit-user-select: none; }
+        .component-form .form-container .form-item.form-type-select .select-wrapper:after {
+          border: 1px solid #7C878E;
+          border-width: 0 0 1px 1px;
+          content: '';
+          display: block;
+          height: 12px;
+          pointer-events: none;
+          position: absolute;
+          right: 5px;
+          top: 10px;
+          transform: rotate(-45deg);
+          width: 12px; }
+    .component-form .form-container .form-item ::-webkit-input-placeholder {
+      color: #323F48;
+      opacity: 1; }
+    .component-form .form-container .form-item :-moz-placeholder {
+      /* Firefox 18- */
+      color: #323F48;
+      opacity: 1; }
+    .component-form .form-container .form-item ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #323F48;
+      opacity: 1; }
+    .component-form .form-container .form-item :-ms-input-placeholder {
+      color: #323F48;
+      opacity: 1; }
+    .component-form .form-container .form-item input:focus::-webkit-input-placeholder {
+      opacity: .4; }
+    .component-form .form-container .form-item input:focus:-moz-placeholder {
+      /* Firefox 18- */
+      opacity: .4; }
+    .component-form .form-container .form-item input:focus::-moz-placeholder {
+      /* Firefox 19+ */
+      opacity: .4; }
+    .component-form .form-container .form-item input:focus:-ms-input-placeholder {
+      opacity: .4; }
+  .component-form .form-container fieldset {
+    border: none;
+    margin: 0 0 20px;
+    padding: 0; }
+    .component-form .form-container fieldset .legend-form-fix,
+    .component-form .form-container fieldset legend {
+      font-family: "Gilroy", Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 30px;
+      margin: 0 0 5px;
+      padding: 0; }
+    .component-form .form-container fieldset.checkboxes--wrapper::after {
+      display: block;
+      content: "";
+      clear: both; }
+    .component-form .form-container fieldset.checkboxes--wrapper .form-item {
+      float: left;
+      margin: 0;
+      width: 50%; }
+  @media (min-width: 768px) {
+    .component-form .form-container .form-item {
+      margin: 0 0 30px; }
+      .component-form .form-container .form-item label,
+      .component-form .form-container .form-item input[type="email"],
+      .component-form .form-container .form-item input[type="number"],
+      .component-form .form-container .form-item input[type="text"],
+      .component-form .form-container .form-item textarea {
+        font-size: 16px;
+        line-height: 19px; }
+      .component-form .form-container .form-item.form-type-select .select-wrapper select {
+        font-size: 16px; }
+    .component-form .form-container fieldset {
+      margin: 0 0 30px; }
+      .component-form .form-container fieldset .legend-form-fix,
+      .component-form .form-container fieldset legend {
+        font-size: 16px; }
+      .component-form .form-container fieldset.checkboxes--wrapper .legend-form-fix,
+      .component-form .form-container fieldset.checkboxes--wrapper legend {
+        float: left; }
+      .component-form .form-container fieldset.checkboxes--wrapper div {
+        display: inline-block; }
+        .component-form .form-container fieldset.checkboxes--wrapper div.form-item {
+          margin-left: 20px; }
+      .component-form .form-container fieldset.checkboxes--wrapper input {
+        vertical-align: top; }
+      .component-form .form-container fieldset.checkboxes--wrapper .form-item {
+        margin: 0;
+        width: auto; } }
+  @media (min-width: 992px) {
+    .component-form .form-container fieldset.checkboxes--wrapper div.form-item {
+      margin-left: 40px; } }
