@@ -16,6 +16,14 @@
 		}
 	}
 
+	.cta {
+		margin: 20px 0 0;
+
+		.component-cta {
+			padding: 0 20px;
+		}
+	}
+
 	@include media-breakpoint-up(md) {
 		margin: 0 0 60px;
 	}

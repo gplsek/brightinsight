@@ -4135,6 +4135,10 @@ button {
     margin: 0 0 30px; }
   .component-card-icon header h5 {
     font-weight: 700; }
+  .component-card-icon .cta {
+    margin: 20px 0 0; }
+    .component-card-icon .cta .component-cta {
+      padding: 0 20px; }
   @media (min-width: 768px) {
     .component-card-icon {
       margin: 0 0 60px; } }

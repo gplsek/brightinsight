@@ -120,7 +120,6 @@ function initColumns()
 
 
 
-
 'use strict';
 
 /**
@@ -154,6 +153,24 @@ function initForms()
 	});
 }
 
+
+
+
+'use strict';
+
+/**
+ *  This is the main file for pagination
+ */
+ 
+if ($('.component-pagination').length) {
+    $(function() {
+        initPagination();
+    });
+}
+
+function initPagination() {
+    console.log('Initializing Pagination');
+}
 
 'use strict';
 
@@ -242,24 +259,6 @@ function initGlobalNavigation()
 
 
 //mobile-menu
-
-'use strict';
-
-/**
- *  This is the main file for pagination
- */
- 
-if ($('.component-pagination').length) {
-    $(function() {
-        initPagination();
-    });
-}
-
-function initPagination() {
-    console.log('Initializing Pagination');
-}
-
-
 
 'use strict';
 
