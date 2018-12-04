@@ -1,0 +1,47 @@
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-lg-3">
+        <a class="logo" href="{{ url('<front>') }}">
+          <img class="img-responsive img-standard" src="/{{ directory }}/images/logo-color.png">
+          <img class="img-responsive img-transparent" src="/{{ directory }}/images/logo-white-color.png">
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-9">
+        <div class="mobile-nav-trigger">
+          <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="desktop-menu">
+          {{ page.navigation_desktop }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-8">
+            <img class="logo img-responsive" src="/{{ directory }}/images/logo-white-color.png">
+            <button class="back">
+              <span class="chevron-icon left white"></span>
+            </button>
+          </div>
+          <div class="col-4">
+            <button class="close">
+              <span class="close-icon white"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-wrap">
+      {{ page.navigation_mobile }}
+    </div>
+  </div>
