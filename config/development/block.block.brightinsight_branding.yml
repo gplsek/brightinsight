@@ -10,8 +10,8 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: brightinsight_branding
 theme: brightinsight
-region: navigation
-weight: -3
+region: navigation_desktop
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:

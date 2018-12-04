@@ -1,0 +1,8 @@
+uuid: e1b80843-547b-4047-b434-c9d49904ab72
+langcode: en
+status: true
+dependencies: {  }
+id: trademark-footer-menu
+label: 'Trademark Footer Menu'
+description: 'Trademark menu links'
+locked: false
