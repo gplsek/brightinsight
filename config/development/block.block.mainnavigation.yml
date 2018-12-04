@@ -1,4 +1,4 @@
-uuid: 27392a9b-285c-4a70-bc6f-815bb488a459
+uuid: b1031363-6d17-4a59-9fad-9a297ac72b03
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - brightinsight
-_core:
-  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
-id: brightinsight_main_menu
+id: mainnavigation
 theme: brightinsight
-region: navigation_desktop
-weight: -8
+region: navigation_mobile
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:

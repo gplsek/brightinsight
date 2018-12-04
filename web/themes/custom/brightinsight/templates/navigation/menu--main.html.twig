@@ -25,12 +25,12 @@
 {{ menus.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
-  <nav class="nav-primary clearfix">
     {% import _self as menus %}
     
     {% if items %}
       {% if menu_level == 0 %}
-        <ul>
+        <nav class="nav-primary clearfix">
+          <ul>
       {% else %}
         <ul class="dropdown-menu">
       {% endif %}
@@ -43,7 +43,8 @@
           {% endif %}
         </li>
       {% endfor %}
+
       </ul>
     {% endif %}
-  </nav>
 {% endmacro %}
+</nav>
