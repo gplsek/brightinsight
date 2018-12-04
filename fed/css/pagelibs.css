@@ -4635,3 +4635,15 @@ button {
   @media (min-width: 992px) {
     .component-form .form-container fieldset.checkboxes--wrapper div.form-item {
       margin-left: 40px; } }
+
+/**
+ *  Main css for footnotes
+ */
+.component-footnotes .component-header {
+  margin: 0 0 20px; }
+
+.component-footnotes .component-body {
+  font-size: 14px;
+  line-height: 21px; }
+  .component-footnotes .component-body li {
+    margin-bottom: 8px; }
