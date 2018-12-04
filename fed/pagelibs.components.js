@@ -32,3 +32,4 @@ require('components/locations');
 require('components/card-location');
 require('components/form');
 require('components/footnotes');
+require('components/pagination');

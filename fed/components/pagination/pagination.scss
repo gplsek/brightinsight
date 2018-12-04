@@ -1,0 +1,80 @@
+/**
+ *  Main css for pagination
+ */
+
+.component-pagination {
+
+	.pagination {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+
+		> li {
+			background: $color-white;
+			border: 1px solid $color-gray;
+			border-radius: 50%;
+			display: inline-block;
+			font-size: 15px;
+			font-weight: 600;
+			height: 30px;
+			line-height: 30px;
+			margin: 0 3px;
+			width: 30px;
+
+			a {
+				color: $color-md-gray;
+				display: block;
+				text-decoration: none;
+			}
+
+			&.pager__item--first,
+			&.pager__item--last {
+				background: none;
+				border-color: transparent;
+				border-radius: 0;
+				width: auto;
+
+				a {
+					color: $color-green;
+				}
+			}
+
+			&.pager__item--next,
+			&.pager__item--previous {
+
+				a {
+					color: $color-green;
+				}
+			}
+
+			&.is-active,
+			&.active {
+				background: $color-green;
+				border-color: $color-green;
+
+				a {
+					color: $color-white;
+				}
+			}
+
+			&:hover {
+				background: $color-green-muted;
+				border-color: $color-green-muted;
+
+				a {
+					color: $color-white;
+				}
+
+				&.pager__item--first,
+				&.pager__item--last {
+					background: none;
+					border-color: transparent;
+
+					a {
+						color: $color-green-muted;
+					}
+				}
+			}
+		}
+	}
+}
