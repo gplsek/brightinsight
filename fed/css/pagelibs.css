@@ -2834,6 +2834,11 @@ body {
   body.menu-active {
     overflow: hidden; }
 
+.row {
+  display: -ms-flexbox;
+  /* IE 10 support */
+  display: flex; }
+
 .relative-wrapper {
   position: relative; }
 
@@ -3470,8 +3475,10 @@ button {
     display: block;
     width: 170px; }
     .component-global-navigation .logo .img-standard {
+      border: none;
       display: block; }
     .component-global-navigation .logo .img-transparent {
+      border: none;
       display: none; }
   .component-global-navigation .mobile-nav-trigger {
     float: right;
@@ -3719,6 +3726,8 @@ button {
   .component-global-footer .logo {
     display: block;
     width: 170px; }
+    .component-global-footer .logo img {
+      border: none; }
   .component-global-footer .col-legal {
     position: static; }
   .component-global-footer .colophon {
@@ -3852,28 +3861,28 @@ button {
   margin: 40px 0 0; }
 
 .component-banner.component-banner-tall .row {
-  min-height: 540px; }
+  height: 540px; }
 
 @media (min-width: 768px) {
   .component-banner.component-banner-tall .row {
-    min-height: 820px; }
+    height: 820px; }
   .component-banner.component-banner-tall h1 {
     font-size: 60px;
     line-height: 66px; } }
 
 .component-banner.component-banner-medium .row {
-  min-height: 400px; }
+  height: 400px; }
 
 @media (min-width: 768px) {
   .component-banner.component-banner-medium .row {
-    min-height: 570px; } }
+    height: 570px; } }
 
 .component-banner.component-banner-short .row {
-  min-height: 190px; }
+  height: 190px; }
 
 @media (min-width: 768px) {
   .component-banner.component-banner-short .row {
-    min-height: 270px; } }
+    height: 270px; } }
 
 /**
  *  Main css for columns
@@ -4017,6 +4026,7 @@ button {
         bottom: 0;
         content: '';
         display: block;
+        height: 100%;
         position: absolute;
         right: -1px;
         top: 0;
@@ -4033,7 +4043,9 @@ button {
       right: -10%;
       transform: skewX(-5deg);
       transform-origin: 100%;
-      width: 90px; }
+      width: 120px;
+      -webkit-clip-path: none;
+      clip-path: none; }
     .is-ie .component-fifty-fifty-fullbleed.image-right .col-image:after {
       left: -10%;
       right: auto;

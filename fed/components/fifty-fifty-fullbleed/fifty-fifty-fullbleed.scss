@@ -67,6 +67,7 @@
 				bottom: 0;
 				content: '';
 				display: block;
+				height: 100%;
 				position: absolute;
 				right: -1px;
 				top: 0;
@@ -100,7 +101,9 @@
 					right: -10%;
 					transform: skewX(-5deg);
 					transform-origin: 100%;
-					width: 90px;
+					width: 120px;
+					-webkit-clip-path: none;
+					clip-path: none;
 				}
 			}
 

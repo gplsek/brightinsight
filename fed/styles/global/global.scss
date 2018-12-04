@@ -15,6 +15,11 @@ body {
 	}
 }
 
+.row {
+	display: -ms-flexbox; /* IE 10 support */
+	display: flex;
+}
+
 .relative-wrapper {
 	position: relative;
 }
