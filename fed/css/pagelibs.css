@@ -4305,10 +4305,10 @@ button {
           position: absolute; } }
   @media (min-width: 1200px) {
     .component-card-blog {
-      flex: 1;
+      flex: 1 1 0%;
       margin-bottom: 30px; }
       .component-card-blog.standard-card {
-        flex: 1;
+        flex: 1 1 auto;
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
@@ -4330,7 +4330,7 @@ button {
       .component-card-blog .image .img-square {
         display: block; }
       .component-card-blog.featured-card {
-        flex: 2; } }
+        flex: 2 1 auto; } }
   @media (min-width: 1600px) {
     .component-card-blog.standard-card .content h4 {
       font-size: 26px;
@@ -4373,7 +4373,6 @@ button {
     padding-left: 15px;
     padding-right: 15px; }
   .component-blog-list .blog-grid {
-    display: flex;
     flex-wrap: wrap; }
     .component-blog-list .blog-grid .column {
       flex: 1;
