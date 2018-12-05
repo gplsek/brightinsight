@@ -1,6 +1,6 @@
 uuid: 2d5071a7-9f25-4662-831a-41389080c0ce
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
@@ -11,7 +11,7 @@ dependencies:
 id: useraccountmenu
 theme: brightinsight
 region: navigation_desktop
-weight: -9
+weight: -8
 provider: null
 plugin: 'system_menu_block:account'
 settings:

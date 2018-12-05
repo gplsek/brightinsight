@@ -1,0 +1,70 @@
+uuid: c68fcb14-9f0a-4cca-a44b-9c923c5be2e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.footnotes.field_background_color
+    - field.field.paragraph.footnotes.field_content
+    - field.field.paragraph.footnotes.field_padding_bottom
+    - field.field.paragraph.footnotes.field_padding_top
+    - field.field.paragraph.footnotes.field_text_color
+    - field.field.paragraph.footnotes.field_title
+    - paragraphs.paragraphs_type.footnotes
+  module:
+    - options
+    - text
+id: paragraph.footnotes.default
+targetEntityType: paragraph
+bundle: footnotes
+mode: default
+content:
+  field_background_color:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_padding_bottom:
+    type: boolean
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_padding_top:
+    type: boolean
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_text_color:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

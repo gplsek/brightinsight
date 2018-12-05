@@ -90,6 +90,20 @@ function _accumulate_css($entity) {
     $css['order']['img_order'] = $image_location == 'left' ? 'left' : 'right';
     $css['order']['text_order'] = $image_location == 'left' ? 'right' : 'left';
   }
+  
+  $padding_top = _get_option($entity, 'field_padding_top'); 
+  if ($padding_top) {
+     $css['section']['padding_top'] = 'pad-top-lg';   
+  } else {
+     $css['section']['padding_top'] = ''; 
+  }
+  
+  $padding_bottom = _get_option($entity, 'field_padding_bottom');
+  if ($padding_bottom) {
+     $css['section']['padding_bottom'] = 'pad-bot-lg';   
+  } else {
+     $css['section']['padding_bottom'] = ''; 
+  } 
 
   return [
     'section_classes' => implode(' ', $css['section']),

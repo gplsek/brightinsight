@@ -1,0 +1,24 @@
+uuid: f6c59ca6-acdf-4cd6-9508-368cb5c36889
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top-header-nav
+  module:
+    - system
+  theme:
+    - brightinsight
+id: topheadernav_2
+theme: brightinsight
+region: navigation_mobile
+weight: -10
+provider: null
+plugin: 'system_menu_block:top-header-nav'
+settings:
+  id: 'system_menu_block:top-header-nav'
+  label: 'Top Header Nav'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

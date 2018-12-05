@@ -79,7 +79,7 @@
     Main HTML template for the card component without image.
 */-->
 
-<article class="component-card component-card-no-image box">
+<article class="component-card component-card-no-image box" {{ attributes }}>
 	<div class="content">
 		<div class="type">
 			 {{ content.field_type.0 }}
@@ -88,7 +88,9 @@
 			<h4>{{ label }}</h4>
 		</header>
 		<div class="body">
-			{{ content.field_description.0 }}
+            {% set text = content.field_description.0|render|striptags %}
+    
+			{{ text|length > 150 ? text|slice(0, 150) ~ '...' : text }}
 		</div>
 		<div class="cta">
             <a class='component-cta secondary' target="_new" href="{{ content.field_resource_file.0 }}"><span>learn more</span></a>

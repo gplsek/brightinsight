@@ -2834,6 +2834,11 @@ body {
   body.menu-active {
     overflow: hidden; }
 
+.row {
+  display: -ms-flexbox;
+  /* IE 10 support */
+  display: flex; }
+
 .relative-wrapper {
   position: relative; }
 
@@ -2895,6 +2900,15 @@ nav ul li {
   display: block;
   content: "";
   clear: both; }
+
+.visually-hidden,
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal; }
 
 /*
 --------------------------------------------------
@@ -3461,8 +3475,10 @@ button {
     display: block;
     width: 170px; }
     .component-global-navigation .logo .img-standard {
+      border: none;
       display: block; }
     .component-global-navigation .logo .img-transparent {
+      border: none;
       display: none; }
   .component-global-navigation .mobile-nav-trigger {
     float: right;
@@ -3710,6 +3726,8 @@ button {
   .component-global-footer .logo {
     display: block;
     width: 170px; }
+    .component-global-footer .logo img {
+      border: none; }
   .component-global-footer .col-legal {
     position: static; }
   .component-global-footer .colophon {
@@ -3843,28 +3861,28 @@ button {
   margin: 40px 0 0; }
 
 .component-banner.component-banner-tall .row {
-  min-height: 540px; }
+  height: 540px; }
 
 @media (min-width: 768px) {
   .component-banner.component-banner-tall .row {
-    min-height: 820px; }
+    height: 820px; }
   .component-banner.component-banner-tall h1 {
     font-size: 60px;
     line-height: 66px; } }
 
 .component-banner.component-banner-medium .row {
-  min-height: 400px; }
+  height: 400px; }
 
 @media (min-width: 768px) {
   .component-banner.component-banner-medium .row {
-    min-height: 570px; } }
+    height: 570px; } }
 
 .component-banner.component-banner-short .row {
-  min-height: 190px; }
+  height: 190px; }
 
 @media (min-width: 768px) {
   .component-banner.component-banner-short .row {
-    min-height: 270px; } }
+    height: 270px; } }
 
 /**
  *  Main css for columns
@@ -3906,11 +3924,11 @@ button {
 
 @media (min-width: 768px) {
   .component-fifty-fifty.show-arrows {
-    background-image: url("./../images/bg-arrows-right.png");
+    background-image: url("../../images/bg-arrows-right.png");
     background-repeat: no-repeat;
     background-position: 100% 50%; }
   .component-fifty-fifty.image-left.show-arrows {
-    background-image: url("./../images/bg-arrows-left.png");
+    background-image: url("../../images/bg-arrows-left.png");
     background-position: 0 50%; }
   .component-fifty-fifty .col-content .cta {
     padding-top: 80px; } }
@@ -4008,6 +4026,7 @@ button {
         bottom: 0;
         content: '';
         display: block;
+        height: 100%;
         position: absolute;
         right: -1px;
         top: 0;
@@ -4024,7 +4043,9 @@ button {
       right: -10%;
       transform: skewX(-5deg);
       transform-origin: 100%;
-      width: 90px; }
+      width: 120px;
+      -webkit-clip-path: none;
+      clip-path: none; }
     .is-ie .component-fifty-fifty-fullbleed.image-right .col-image:after {
       left: -10%;
       right: auto;
@@ -4046,13 +4067,15 @@ button {
   .component-card .content {
     padding: 15px 20px 20px; }
     .component-card .content .type {
-      color: #323F48;
+      color: #FFFFFF;
       font-size: 16px;
       font-weight: 500;
+      line-height: 20px;
       margin: 0 0 45px;
-      padding: 0 0 10px;
-      position: relative;
-      text-transform: uppercase; }
+      padding: 0 0 12px;
+      position: absolute;
+      text-transform: uppercase;
+      top: 20px; }
       .component-card .content .type:after {
         background: #BDD441;
         bottom: 0;
@@ -4078,7 +4101,9 @@ button {
     .component-card {
       margin: 0 0 30px; }
       .component-card .content {
-        padding: 20px 30px 30px; } }
+        padding: 20px 30px 30px; }
+        .component-card .content .type {
+          top: 30px; } }
   @media (min-width: 992px) {
     .component-card .content {
       padding-bottom: 120px; }
@@ -4126,6 +4151,10 @@ button {
     margin: 0 0 30px; }
   .component-card-icon header h5 {
     font-weight: 700; }
+  .component-card-icon .cta {
+    margin: 20px 0 0; }
+    .component-card-icon .cta .component-cta {
+      padding: 0 20px; }
   @media (min-width: 768px) {
     .component-card-icon {
       margin: 0 0 60px; } }
@@ -4171,11 +4200,16 @@ button {
 /**
  *  Main css for card-no-image
  */
+.component-card-no-image .content .type {
+  color: #323F48;
+  position: relative;
+  top: auto; }
+
 /**
  *  Main css for card-career
  */
 .component-card-career header:before {
-  background: url("./../images/logo-arrows-only.png") no-repeat 0 0;
+  background: url("../images/logo-arrows-only.png") no-repeat 0 0;
   content: '';
   display: block;
   height: 33px;
@@ -4280,10 +4314,10 @@ button {
           position: absolute; } }
   @media (min-width: 1200px) {
     .component-card-blog {
-      flex: 1;
+      flex: 1 1 0%;
       margin-bottom: 30px; }
       .component-card-blog.standard-card {
-        flex: 1;
+        flex: 1 1 auto;
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
@@ -4305,7 +4339,7 @@ button {
       .component-card-blog .image .img-square {
         display: block; }
       .component-card-blog.featured-card {
-        flex: 2; } }
+        flex: 2 1 auto; } }
   @media (min-width: 1600px) {
     .component-card-blog.standard-card .content h4 {
       font-size: 26px;
@@ -4348,7 +4382,6 @@ button {
     padding-left: 15px;
     padding-right: 15px; }
   .component-blog-list .blog-grid {
-    display: flex;
     flex-wrap: wrap; }
     .component-blog-list .blog-grid .column {
       flex: 1;
@@ -4450,3 +4483,247 @@ button {
 /**
  *  Main css for bio-list
  */
+/**
+ *  Main css for locations
+ */
+/**
+ *  Main css for card-location
+ */
+.component-card-location {
+  margin: 0 0 30px; }
+  .component-card-location .org,
+  .component-card-location .adr {
+    margin: 0 0 15px; }
+
+/**
+ *  Main css for form
+ */
+.component-form .form-container {
+  color: #323F48; }
+  .component-form .form-container .form-actions {
+    text-align: center; }
+    .component-form .form-container .form-actions .btn-primary {
+      background: #00A56A;
+      border: 1px solid #00A56A;
+      border-radius: 20px;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Gilroy", Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 38px;
+      height: 38px;
+      margin: 0;
+      padding: 0 30px;
+      text-align: center;
+      text-decoration: none; }
+  .component-form .form-container .form-item {
+    margin: 0 0 20px; }
+    .component-form .form-container .form-item label {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 23px; }
+    .component-form .form-container .form-item input[type="email"],
+    .component-form .form-container .form-item input[type="number"],
+    .component-form .form-container .form-item input[type="text"],
+    .component-form .form-container .form-item textarea {
+      background: none;
+      border: 1px solid #7C878E;
+      border-width: 0 0 1px;
+      display: block;
+      font-family: "Gilroy", Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 23px;
+      margin: 0;
+      padding: 0 0 20px;
+      width: 100%; }
+    .component-form .form-container .form-item textarea {
+      border-width: 1px;
+      padding: 10px; }
+    .component-form .form-container .form-item.form-type-email label, .component-form .form-container .form-item.form-type-number label, .component-form .form-container .form-item.form-type-textfield label {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; }
+    .component-form .form-container .form-item.form-type-select {
+      display: flex; }
+      .component-form .form-container .form-item.form-type-select label {
+        flex: 0 1 auto;
+        line-height: 40px; }
+        .component-form .form-container .form-item.form-type-select label:after {
+          content: ':';
+          padding-right: 15px; }
+      .component-form .form-container .form-item.form-type-select .select-wrapper {
+        border-bottom: 1px solid #7C878E;
+        flex: 1 0 auto;
+        height: 40px;
+        overflow: hidden;
+        position: relative; }
+        .component-form .form-container .form-item.form-type-select .select-wrapper select {
+          background: transparent;
+          border: none;
+          color: #323F48;
+          font-family: "Gilroy", Helvetica, sans-serif;
+          font-size: 20px;
+          font-weight: 300;
+          height: 40px;
+          padding-right: 30px;
+          width: 100%;
+          -webkit-appearance: button;
+          -webkit-border-radius: 0;
+          -webkit-padding-end: 30px;
+          -webkit-padding-start: 0;
+          -webkit-user-select: none; }
+        .component-form .form-container .form-item.form-type-select .select-wrapper:after {
+          border: 1px solid #7C878E;
+          border-width: 0 0 1px 1px;
+          content: '';
+          display: block;
+          height: 12px;
+          pointer-events: none;
+          position: absolute;
+          right: 5px;
+          top: 10px;
+          transform: rotate(-45deg);
+          width: 12px; }
+    .component-form .form-container .form-item ::-webkit-input-placeholder {
+      color: #323F48;
+      opacity: 1; }
+    .component-form .form-container .form-item :-moz-placeholder {
+      /* Firefox 18- */
+      color: #323F48;
+      opacity: 1; }
+    .component-form .form-container .form-item ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #323F48;
+      opacity: 1; }
+    .component-form .form-container .form-item :-ms-input-placeholder {
+      color: #323F48;
+      opacity: 1; }
+    .component-form .form-container .form-item input:focus::-webkit-input-placeholder {
+      opacity: .4; }
+    .component-form .form-container .form-item input:focus:-moz-placeholder {
+      /* Firefox 18- */
+      opacity: .4; }
+    .component-form .form-container .form-item input:focus::-moz-placeholder {
+      /* Firefox 19+ */
+      opacity: .4; }
+    .component-form .form-container .form-item input:focus:-ms-input-placeholder {
+      opacity: .4; }
+  .component-form .form-container fieldset {
+    border: none;
+    margin: 0 0 20px;
+    padding: 0; }
+    .component-form .form-container fieldset .legend-form-fix,
+    .component-form .form-container fieldset legend {
+      font-family: "Gilroy", Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 30px;
+      margin: 0 0 5px;
+      padding: 0; }
+    .component-form .form-container fieldset.checkboxes--wrapper::after {
+      display: block;
+      content: "";
+      clear: both; }
+    .component-form .form-container fieldset.checkboxes--wrapper .form-item {
+      float: left;
+      margin: 0;
+      width: 50%; }
+  @media (min-width: 768px) {
+    .component-form .form-container .form-item {
+      margin: 0 0 30px; }
+      .component-form .form-container .form-item label,
+      .component-form .form-container .form-item input[type="email"],
+      .component-form .form-container .form-item input[type="number"],
+      .component-form .form-container .form-item input[type="text"],
+      .component-form .form-container .form-item textarea {
+        font-size: 16px;
+        line-height: 19px; }
+      .component-form .form-container .form-item.form-type-select .select-wrapper select {
+        font-size: 16px; }
+    .component-form .form-container fieldset {
+      margin: 0 0 30px; }
+      .component-form .form-container fieldset .legend-form-fix,
+      .component-form .form-container fieldset legend {
+        font-size: 16px; }
+      .component-form .form-container fieldset.checkboxes--wrapper .legend-form-fix,
+      .component-form .form-container fieldset.checkboxes--wrapper legend {
+        float: left; }
+      .component-form .form-container fieldset.checkboxes--wrapper div {
+        display: inline-block; }
+        .component-form .form-container fieldset.checkboxes--wrapper div.form-item {
+          margin-left: 20px; }
+      .component-form .form-container fieldset.checkboxes--wrapper input {
+        vertical-align: top; }
+      .component-form .form-container fieldset.checkboxes--wrapper .form-item {
+        margin: 0;
+        width: auto; } }
+  @media (min-width: 992px) {
+    .component-form .form-container fieldset.checkboxes--wrapper div.form-item {
+      margin-left: 40px; } }
+
+/**
+ *  Main css for footnotes
+ */
+.component-footnotes .component-header {
+  margin: 0 0 20px; }
+
+.component-footnotes .component-body {
+  font-size: 14px;
+  line-height: 21px; }
+  .component-footnotes .component-body li {
+    margin-bottom: 8px; }
+
+/**
+ *  Main css for pagination
+ */
+.component-pagination .pagination {
+  display: inline-block;
+  margin: 0;
+  padding: 0; }
+  .component-pagination .pagination > li {
+    background: #FFFFFF;
+    border: 1px solid #D0D3D3;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 3px;
+    width: 30px; }
+    .component-pagination .pagination > li a {
+      color: #7C878E;
+      display: block;
+      text-decoration: none; }
+    .component-pagination .pagination > li.pager__item--first, .component-pagination .pagination > li.pager__item--last {
+      background: none;
+      border-color: transparent;
+      border-radius: 0;
+      width: auto; }
+      .component-pagination .pagination > li.pager__item--first a, .component-pagination .pagination > li.pager__item--last a {
+        color: #00A56A; }
+    .component-pagination .pagination > li.pager__item--next a, .component-pagination .pagination > li.pager__item--previous a {
+      color: #00A56A; }
+    .component-pagination .pagination > li.is-active, .component-pagination .pagination > li.active {
+      background: #00A56A;
+      border-color: #00A56A; }
+      .component-pagination .pagination > li.is-active a, .component-pagination .pagination > li.active a {
+        color: #FFFFFF; }
+    .component-pagination .pagination > li:hover {
+      background: #35BA8C;
+      border-color: #35BA8C; }
+      .component-pagination .pagination > li:hover a {
+        color: #FFFFFF; }
+      .component-pagination .pagination > li:hover.pager__item--first, .component-pagination .pagination > li:hover.pager__item--last {
+        background: none;
+        border-color: transparent; }
+        .component-pagination .pagination > li:hover.pager__item--first a, .component-pagination .pagination > li:hover.pager__item--last a {
+          color: #35BA8C; }

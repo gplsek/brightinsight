@@ -1,0 +1,14 @@
+uuid: 943259b9-69f8-434e-9d87-68fded4f951a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: footnotes
+label: Footnotes
+icon_uuid: null
+description: 'paragraph for footnotes, uses smaller fonts'
+behavior_plugins: {  }

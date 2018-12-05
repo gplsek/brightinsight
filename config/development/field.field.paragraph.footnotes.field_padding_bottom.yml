@@ -1,0 +1,23 @@
+uuid: 4c0e61f2-9d8c-4369-b5f9-4ed525925498
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_bottom
+    - paragraphs.paragraphs_type.footnotes
+id: paragraph.footnotes.field_padding_bottom
+field_name: field_padding_bottom
+entity_type: paragraph
+bundle: footnotes
+label: 'Padding Bottom'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

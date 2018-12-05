@@ -1,0 +1,23 @@
+uuid: e19b3088-ccee-4b7f-aea2-13f24c78d55b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_bottom
+    - paragraphs.paragraphs_type.form
+id: paragraph.form.field_padding_bottom
+field_name: field_padding_bottom
+entity_type: paragraph
+bundle: form
+label: 'Padding Bottom'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
