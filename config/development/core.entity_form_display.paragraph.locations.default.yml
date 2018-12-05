@@ -1,0 +1,108 @@
+uuid: 617cd752-1483-4126-8ebf-17dfc54f3c81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.locations.field_background_color
+    - field.field.paragraph.locations.field_button_link
+    - field.field.paragraph.locations.field_button_text
+    - field.field.paragraph.locations.field_cta_style
+    - field.field.paragraph.locations.field_location
+    - field.field.paragraph.locations.field_padding_bottom
+    - field.field.paragraph.locations.field_padding_top
+    - field.field.paragraph.locations.field_text_color
+    - field.field.paragraph.locations.field_title
+    - paragraphs.paragraphs_type.locations
+  module:
+    - field_collection
+    - field_group
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_background_color
+        - field_text_color
+        - field_cta_style
+        - field_padding_bottom
+        - field_padding_top
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: Settings
+id: paragraph.locations.default
+targetEntityType: paragraph
+bundle: locations
+mode: default
+content:
+  field_background_color:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_link:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_button_text:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cta_style:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_location:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_embed
+    region: content
+  field_padding_bottom:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_padding_top:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_text_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

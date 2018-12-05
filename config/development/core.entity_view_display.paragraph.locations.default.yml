@@ -1,0 +1,96 @@
+uuid: 6809c117-a3a5-472a-b920-8ee3d05e3257
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.locations.field_background_color
+    - field.field.paragraph.locations.field_button_link
+    - field.field.paragraph.locations.field_button_text
+    - field.field.paragraph.locations.field_cta_style
+    - field.field.paragraph.locations.field_location
+    - field.field.paragraph.locations.field_padding_bottom
+    - field.field.paragraph.locations.field_padding_top
+    - field.field.paragraph.locations.field_text_color
+    - field.field.paragraph.locations.field_title
+    - paragraphs.paragraphs_type.locations
+  module:
+    - field_collection
+    - options
+id: paragraph.locations.default
+targetEntityType: paragraph
+bundle: locations
+mode: default
+content:
+  field_background_color:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_button_link:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_button_text:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cta_style:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_location:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_items
+    region: content
+  field_padding_bottom:
+    weight: 3
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_padding_top:
+    weight: 4
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_text_color:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,18 @@
+uuid: 8bf4e476-f2a6-466e-95c3-af11284d0321
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_collection
+id: field_collection_item.field_email
+field_name: field_email
+entity_type: field_collection_item
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: e8df9a5e-79fa-4d84-bc58-75a578615636
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_location
+    - paragraphs.paragraphs_type.locations
+  module:
+    - field_collection
+id: paragraph.locations.field_location
+field_name: field_location
+entity_type: paragraph
+bundle: locations
+label: Location
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection
