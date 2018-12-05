@@ -1,0 +1,21 @@
+uuid: e5772023-72a3-4529-8068-ce087b617bf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_color
+    - paragraphs.paragraphs_type.footnotes
+  module:
+    - options
+id: paragraph.footnotes.field_text_color
+field_name: field_text_color
+entity_type: paragraph
+bundle: footnotes
+label: 'Text Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

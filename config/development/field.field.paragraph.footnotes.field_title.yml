@@ -1,0 +1,19 @@
+uuid: 675a3478-e18b-41a1-998f-9d0dc9eacb9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.footnotes
+id: paragraph.footnotes.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: footnotes
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
