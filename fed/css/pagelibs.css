@@ -4067,13 +4067,15 @@ button {
   .component-card .content {
     padding: 15px 20px 20px; }
     .component-card .content .type {
-      color: #323F48;
+      color: #FFFFFF;
       font-size: 16px;
       font-weight: 500;
+      line-height: 20px;
       margin: 0 0 45px;
-      padding: 0 0 10px;
-      position: relative;
-      text-transform: uppercase; }
+      padding: 0 0 12px;
+      position: absolute;
+      text-transform: uppercase;
+      top: 20px; }
       .component-card .content .type:after {
         background: #BDD441;
         bottom: 0;
@@ -4099,7 +4101,9 @@ button {
     .component-card {
       margin: 0 0 30px; }
       .component-card .content {
-        padding: 20px 30px 30px; } }
+        padding: 20px 30px 30px; }
+        .component-card .content .type {
+          top: 30px; } }
   @media (min-width: 992px) {
     .component-card .content {
       padding-bottom: 120px; }
@@ -4196,6 +4200,11 @@ button {
 /**
  *  Main css for card-no-image
  */
+.component-card-no-image .content .type {
+  color: #323F48;
+  position: relative;
+  top: auto; }
+
 /**
  *  Main css for card-career
  */
