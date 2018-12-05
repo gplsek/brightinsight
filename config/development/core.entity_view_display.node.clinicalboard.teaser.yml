@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.clinicalboard.body
     - field.field.node.clinicalboard.field_head_shot
-    - field.field.node.clinicalboard.field_hero_image
+    - field.field.node.clinicalboard.field_hero_card_image
     - field.field.node.clinicalboard.field_page_settings
     - field.field.node.clinicalboard.field_role
     - node.type.clinicalboard
@@ -21,13 +21,12 @@ mode: teaser
 content:
   body:
     label: hidden
-    type: text_summary_or_trimmed
+    type: text_default
     weight: 0
     region: content
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
-  field_head_shot:
+  field_hero_card_image:
     type: image_url
     weight: 2
     region: content
@@ -49,5 +48,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_hero_image: true
+  field_head_shot: true
   field_page_settings: true
