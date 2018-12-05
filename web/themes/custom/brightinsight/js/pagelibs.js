@@ -36,6 +36,51 @@ function syncCards()
 	});
 }
 
+
+/**
+ * Detect IE
+ * returns version of IE or false, if browser is not Internet Explorer
+ */
+var detectIE = function()
+{
+	var ua = window.navigator.userAgent;
+
+	var msie = ua.indexOf('MSIE ');
+	if (msie > 0)
+	{
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	}
+
+	var trident = ua.indexOf('Trident/');
+	if (trident > 0)
+	{
+		// IE 11 => return version number
+		var rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	}
+
+	var edge = ua.indexOf('Edge/');
+	if (edge > 0)
+	{
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	}
+
+	// other browser
+	return false;
+};
+
+var is_IE = detectIE();
+
+if (is_IE)
+{
+	$(document).ready(function()
+	{
+		$('body').addClass('is-ie ie-'+is_IE);
+	});
+}
+
 var bs4Overlay = function () {
 	//return;
 	$('body').append('<div id="bs4_overlay"></div><div id="bs4_toggle"><span class="toggle">Toggle Grid</span><span class="close">(Hide)</span></div>');
@@ -126,6 +171,40 @@ function initColumns()
 'use strict';
 
 /**
+ *  This is the main file for form
+ */
+
+var component_form = $('.component-form');
+
+if (component_form.length)
+{
+	$(function()
+	{
+		initForms();
+	});
+}
+
+
+function initForms()
+{
+	component_form.each(function()
+	{
+		var self = $(this),
+			fieldsets = self.find('fieldset');
+
+		fieldsets.each(function()
+		{
+			var legend = $(this).find('legend');
+			legend.hide().after('<div class="legend-form-fix">'+legend.text()+'</div>');
+			
+		});
+	});
+}
+
+
+'use strict';
+
+/**
  *  This is the main file for global-navigation
  */
 
@@ -147,6 +226,7 @@ function initGlobalNavigation()
 		var mobile_menu = $(this).find('.mobile-menu'),
 			mobile_close = mobile_menu.find('.close'),
 			slide_item = mobile_menu.find('.slide-item'),
+			slide_toggle = mobile_menu.find('.slide-toggle'),
 			slide_menu = mobile_menu.find('.slide-menu'),
 			slide_back = mobile_menu.find('.back'),
 			mobile_trigger = $(this).find('.mobile-nav-trigger');
@@ -175,13 +255,19 @@ function initGlobalNavigation()
 
 		slide_item.each(function(index)
 		{
-			$(this).attr('data-item', index).on('click', function(event)
+			$(this).attr('data-item', index);
+		});
+
+		slide_toggle.each(function()
+		{
+			$(this).on('click', function(event)
 			{
 				event.preventDefault();
-				event.stopPropagation();
 
-				$(this).addClass('is-active');
-				mobile_menu.addClass('subnav-exposed').attr('data-active-item', index);
+				var parent = $(this).parents('.slide-item');
+
+				parent.addClass('is-active');
+				mobile_menu.addClass('subnav-exposed').attr('data-active-item', parent.attr('data-item'));
 			});
 		});
 
@@ -208,7 +294,6 @@ function initGlobalNavigation()
 }
 
 
-//mobile-menu
 
 
 
