@@ -24,13 +24,15 @@
 		padding: 15px 20px 20px;
 
 		.type {
-			color: $color-dk-gray;
+			color: $color-white;
 			font-size: 16px;
 			font-weight: 500;
+			line-height: 20px;
 			margin: 0 0 45px;
-			padding: 0 0 10px;
-			position: relative;
+			padding: 0 0 12px;
+			position: absolute;
 			text-transform: uppercase;
+			top: 20px;
 
 			&:after {
 				background: $color-lime;
@@ -68,6 +70,10 @@
 
 		.content {
 			padding: 20px 30px 30px;
+
+			.type {
+				top: 30px;
+			}
 		}
 	}
 

@@ -7,6 +7,9 @@
 		<img class="img-responsive img-fullwidth" src="@@image">
 	</div>
 	<div class="content">
+		@@if (type === 'true') {
+			@@include('partial/type.html')
+		}
 		<div class="meta">
 			 @@meta
 		</div>
