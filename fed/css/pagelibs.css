@@ -2896,6 +2896,10 @@ nav ul li {
   position: relative;
   z-index: 1; }
 
+@media (min-width: 768px) {
+  .sync-boxes .box {
+    height: calc(100% - 30px); } }
+
 .clearfix::after {
   display: block;
   content: "";
