@@ -144,7 +144,10 @@
         			 {{ content.field_role.0 }}
         		</div>
         		<div class="body">
-        			 {{ content.body }}
+                     {% set conBody %}
+                       {{ content.body }}
+                     {% endset %}	
+                     {{ conBody|striptags }}
         		</div>
         		<div class="cta">
         			<a class='component-cta secondary' target="_new" href="{{ url }}"><span>View Bio</span></a>
