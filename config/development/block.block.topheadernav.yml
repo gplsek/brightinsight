@@ -1,22 +1,22 @@
-uuid: 2d5071a7-9f25-4662-831a-41389080c0ce
+uuid: 5e3caf90-39ca-4d56-97ad-03fbe09629ec
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - system.menu.account
+    - system.menu.top-header-nav
   module:
     - system
   theme:
     - brightinsight
-id: useraccountmenu
+id: topheadernav
 theme: brightinsight
 region: navigation_desktop
-weight: -8
+weight: -10
 provider: null
-plugin: 'system_menu_block:account'
+plugin: 'system_menu_block:top-header-nav'
 settings:
-  id: 'system_menu_block:account'
-  label: 'User account menu'
+  id: 'system_menu_block:top-header-nav'
+  label: 'Top Header Nav'
   provider: system
   label_display: '0'
   level: 1
