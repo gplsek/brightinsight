@@ -148,11 +148,11 @@
 	}
 
 	@include media-breakpoint-up(xl) {
-		flex: 1;
+		flex: 1 1 0%;
 		margin-bottom: 30px;
 
 		&.standard-card {
-			flex: 1;
+			flex: 1 1 auto;
 			max-width: 100%;
 			margin-left: 0;
 			margin-right: 0;
@@ -178,8 +178,6 @@
 		}
 
 		.image {
-			// height: 100%;
-			// overflow: hidden;
 
 			.img-default {
 				display: none;
@@ -187,12 +185,11 @@
 
 			.img-square {
 				display: block;
-				//object-fit: cover;
 			}
 		}
 
 		&.featured-card {
-			flex: 2;
+			flex: 2 1 auto;
 		}
 	}
 
