@@ -224,6 +224,7 @@ function initGlobalNavigation()
 		var mobile_menu = $(this).find('.mobile-menu'),
 			mobile_close = mobile_menu.find('.close'),
 			slide_item = mobile_menu.find('.slide-item'),
+			slide_toggle = mobile_menu.find('.slide-toggle'),
 			slide_menu = mobile_menu.find('.slide-menu'),
 			slide_back = mobile_menu.find('.back'),
 			mobile_trigger = $(this).find('.mobile-nav-trigger');
@@ -252,13 +253,19 @@ function initGlobalNavigation()
 
 		slide_item.each(function(index)
 		{
-			$(this).attr('data-item', index).on('click', function(event)
+			$(this).attr('data-item', index);
+		});
+
+		slide_toggle.each(function()
+		{
+			$(this).on('click', function(event)
 			{
 				event.preventDefault();
-				event.stopPropagation();
 
-				$(this).addClass('is-active');
-				mobile_menu.addClass('subnav-exposed').attr('data-active-item', index);
+				var parent = $(this).parents('.slide-item');
+
+				parent.addClass('is-active');
+				mobile_menu.addClass('subnav-exposed').attr('data-active-item', parent.attr('data-item'));
 			});
 		});
 
@@ -284,9 +291,6 @@ function initGlobalNavigation()
 	});
 }
 
-
-
-//mobile-menu
 
 
 
