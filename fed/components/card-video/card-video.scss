@@ -12,6 +12,8 @@
 	.video-modal-trigger {
 		color: inherit;
 		display: block;
+		overflow: hidden;
+		position: relative;
 		text-decoration: none;
 
 		.video {
@@ -40,7 +42,7 @@
 		.content {
 			margin: 20px 0 0;
 
-			header {
+			h4 {
 				color: $color-blue;
 			}
 
@@ -66,4 +68,29 @@
 			}
 		}
 	}
+
+	.video-sidebar & {
+
+		@include media-breakpoint-up(lg) {
+
+			.video-modal-trigger {
+
+				.content {
+					left: 0;
+					margin: 0;
+					padding: 20px;
+					position: absolute;
+					right: 0;
+					top: 0;
+
+					h4 {
+						color: $color-white;
+						font-size: 18px;
+						line-height: 24px;
+					}
+				}
+			}
+		}
+	}
 }
+

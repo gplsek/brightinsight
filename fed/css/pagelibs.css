@@ -2700,7 +2700,8 @@ html {
   height: 35px;
   overflow: hidden;
   border: none;
-  background: transparent; }
+  background: transparent;
+  cursor: pointer; }
   .modal-video-close-btn:before {
     transform: rotate(45deg); }
   .modal-video-close-btn:after {
@@ -4402,6 +4403,8 @@ button {
   .component-card-video .video-modal-trigger {
     color: inherit;
     display: block;
+    overflow: hidden;
+    position: relative;
     text-decoration: none; }
     .component-card-video .video-modal-trigger .video {
       position: relative; }
@@ -4422,7 +4425,7 @@ button {
           transform: translate(-50%, -50%); }
     .component-card-video .video-modal-trigger .content {
       margin: 20px 0 0; }
-      .component-card-video .video-modal-trigger .content header {
+      .component-card-video .video-modal-trigger .content h4 {
         color: #1A3E6C; }
       .component-card-video .video-modal-trigger .content .body {
         color: #323F48;
@@ -4434,10 +4437,27 @@ button {
       margin-bottom: 30px; }
       .component-card-video .video-modal-trigger .content .body {
         margin-bottom: 0; } }
+  @media (min-width: 992px) {
+    .video-sidebar .component-card-video .video-modal-trigger .content {
+      left: 0;
+      margin: 0;
+      padding: 20px;
+      position: absolute;
+      right: 0;
+      top: 0; }
+      .video-sidebar .component-card-video .video-modal-trigger .content h4 {
+        color: #FFFFFF;
+        font-size: 18px;
+        line-height: 24px; } }
 
 /**
  *  Main css for videos
  */
+@media (min-width: 992px) {
+  .component-videos .video-sidebar {
+    max-height: 500px;
+    overflow-x: hidden; } }
+
 /**
  *  Main css for card-bio
  */

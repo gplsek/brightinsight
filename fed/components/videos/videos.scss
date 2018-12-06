@@ -4,4 +4,11 @@
 
 .component-videos {
 
+	@include media-breakpoint-up(lg) {
+
+		.video-sidebar {
+			max-height: 500px;
+			overflow-x: hidden;
+		}
+	}
 }
