@@ -3669,6 +3669,9 @@ button {
             position: relative; }
             .component-global-navigation .nav-primary ul li:first-child {
               margin-left: 0; }
+            .component-global-navigation .nav-primary ul li:last-child .dropdown-menu {
+              left: auto;
+              right: 0; }
             .component-global-navigation .nav-primary ul li a {
               display: block;
               text-decoration: none; }

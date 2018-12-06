@@ -321,6 +321,14 @@
 						margin-left: 0;
 					}
 
+					&:last-child {
+
+						.dropdown-menu {
+							left: auto;
+							right: 0;
+						}
+					}
+
 					a {
 						display: block;
 						text-decoration: none;
