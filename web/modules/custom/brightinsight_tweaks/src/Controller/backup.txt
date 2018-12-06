@@ -1,0 +1,134 @@
+<?php
+
+/**
+ * @file
+* Contains \Drupal\brightinsight_tweaks\Controller\BrightInsightFormSubmitController.
+ */
+
+namespace Drupal\brightinsight_tweaks\Controller;
+
+use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Ajax\AjaxResponse;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+use Drupal\Component\Serialization\Json;
+use Drupal\Component\Utility\Unicode;
+use Drupal\webform\Entity\Webform;
+use Drupal;
+
+
+
+/**
+ * sends form inquries to HubSpot FormAPI
+ */
+class BrightInsightFormSubmitController extends ControllerBase {
+	
+	
+	public function formSubmission(Request $request){
+		
+		\Drupal::logger('brightinsight')->notice('got submisions');
+		
+		// This condition checks the `Content-type` and makes sure to 
+		// decode JSON string from the request body into array.
+		    if ( 0 === strpos( $request->headers->get( 'Content-Type' ), 'application/json' ) ) {
+		      $data = json_decode( $request->getContent(), TRUE );
+		      $request->request->replace( is_array( $data ) ? $data : [] );
+		      $page = $data['entity_id'];
+              
+		        \Drupal::logger('brightinsight')->notice('test result <pre>' . print_r( $data, true) . '</pre>');   
+				$firstname = $data['name'];  //first name
+				$lastname = $data['last_name'];
+                $company = $data['company'];
+				$email = $data['email'];
+                $message = $data['message'];
+				$interests = implode(',',$data['interested_in_']);
+                $role = $data['role'];
+                
+                
+                $hubspotutk      = '3aea3ab5985f7bc544e847d1f76b5857'; //grab the cookie from the visitors browser.
+                $ip_addr         = $_SERVER['REMOTE_ADDR']; //IP address too.
+                $hs_context      = array(
+                    'hutk' => $hubspotutk,
+                    'ipAddress' => $ip_addr,
+                    'pageUrl' => 'http://www.brightinsights.com/contact-us',
+                    'pageName' => 'contact us',
+                    'sfdcCampaignId' => '70150000000T85uAAC'
+                );
+                $hs_context_json = json_encode($hs_context);
+
+                //Need to populate these variable with values from the form.
+                // $str_post = "firstname=" . urlencode($firstname)
+//                     . "&lastname=" . urlencode($lastname)
+//                     . "&company=" . urlencode($company)
+//                     . "&email=" . urlencode($email)
+//                     . "&message=" . urlencode($message)
+//                     . "&interests=" . urlencode($interests)
+//                     . "&job_function=" . urlencode($role)
+//                     . "&hs_context=" . urlencode($hs_context_json); //Leave this one be
+
+                //replace the values in this URL with your portal ID and your form GUID
+                $endpoint = 'https://forms.hubspot.com/uploads/form/v2/5104118/e1d3adaf-b4da-4d23-8704-9297fb7067ce';
+                
+				$client = \Drupal::httpClient();
+                
+       		     try {
+       			     $request = $client->post($endpoint, [
+           			     'headers' => [
+             			     'content-type' => 'application/x-www-form-urlencoded',
+           			      ],
+                          'form_params' => [
+                                  'firstname' => urlencode($firstname),
+                                  'lastname' => urlencode($lastname),
+                                  'company' => urlencode($company),
+                                  'email' => urlencode($email),
+                                  'message' => urlencode($message),
+                                  'interests' => urlencode($interests),
+                                  'job_function' => urlencode($role),
+                                  'hs_context' => urlencode($hs_context_json)
+                              ],
+         			  ]);
+       			      $code = $request->getStatusCode();
+			  
+                      \Drupal::logger('brightinsight')->notice('response Code '.$code); 
+                      $body = $request->getBody()->getContents();
+                      \Drupal::logger('brightinsight')->notice('response Body '.$body); 
+              
+       			      if($code == 200){
+       				      $body = $request->getBody()->getContents();
+       				      \Drupal::logger('brightinsight')->notice('response_captach '.$payload['captchaResponse']); 
+       			      }
+
+       		          $data = json_decode($request->getBody());
+       		          \Drupal::logger('brightinsight')->notice('response '.$data); 
+       		        }catch(RequestException $e){
+       			       watchdog_exception('brightinsight', $e->getMessage());
+       		        } 
+				
+		
+         $response['data'] = $data;
+		 $response['method'] = 'POST';
+
+		return new JsonResponse( $response );
+       }
+       return;
+	}
+	
+	public function formTest(){
+		$content = array(
+			'name' => 'George',
+			'email' => 'george@plsek.us',
+			'regardingParty' => 'Pennywise',
+			'primaryGenre' => 'Alternative',
+		);
+		
+		//$json = json_encode($content);
+		print_r($content);die();
+        return;
+	    // $response['data'] = $this->post_mail('tour',$content);
+		
+	}
+	
+	
+    
+}

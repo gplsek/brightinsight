@@ -85,7 +85,7 @@
     <!-- Variation: top right angle, white top angle, background image, CTA solid green -->
     {% set style = (background) ? 'background-image:url(' ~ background ~ ')' : '' %}
 
-    <section class="component-form {{css.section_classes}}" style="{{style}}">
+    <section class="component-form {{css.section_classes}}" style="{{style}}" {{ attributes }}>
   	<div class="container">
   		<div class="row">
   			<div class="col-12 col-md-6 col-lg-4 offset-lg-1">

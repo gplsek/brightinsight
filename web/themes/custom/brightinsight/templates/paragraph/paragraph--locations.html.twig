@@ -85,7 +85,7 @@
     <!-- Variation: top right angle, white top angle, background image, CTA solid green -->
     {% set style = (background) ? 'background-image:url(' ~ background ~ ')' : '' %}
 
-    <section class="component-columns component-locations text-centered {{css.section_classes}}" style="{{style}}">
+    <section class="component-columns component-locations text-centered {{css.section_classes}}" style="{{style}}" {{ attributes }}>
 	<div class="container">
 		<div class="component-header">
 			<div class="row">
