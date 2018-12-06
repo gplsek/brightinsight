@@ -1,0 +1,9 @@
+name: BrightInsight Tweaks
+type: module
+description: Any small custom site functions
+package: CAA
+# core: 8.x
+
+
+core: '8.x'
+project: 'BrightInsight'

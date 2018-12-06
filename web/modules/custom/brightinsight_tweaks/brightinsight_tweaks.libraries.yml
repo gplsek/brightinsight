@@ -1,0 +1,4 @@
+brightinsight_tweaks:
+  version: 3
+  dependencies:
+    - core/drupal

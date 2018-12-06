@@ -171,7 +171,7 @@ handlers:
     id: email
     label: Email
     handler_id: email
-    status: true
+    status: false
     conditions: {  }
     weight: 0
     settings:
@@ -201,3 +201,46 @@ handlers:
       sender_mail: ''
       sender_name: ''
       theme_name: ''
+  remote_post:
+    id: remote_post
+    label: 'Post To HubSpot'
+    handler_id: remote_post
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      method: POST
+      type: json
+      excluded_data:
+        serial: serial
+        sid: sid
+        uuid: uuid
+        token: token
+        uri: uri
+        created: created
+        completed: completed
+        changed: changed
+        in_draft: in_draft
+        uid: uid
+        langcode: langcode
+        webform_id: webform_id
+        entity_type: entity_type
+        entity_id: entity_id
+        locked: locked
+        sticky: sticky
+        notes: notes
+      custom_data: ''
+      custom_options: ''
+      debug: false
+      completed_url: 'http://bi.gtekg.com/bi/inquiryhandler'
+      completed_custom_data: ''
+      updated_url: ''
+      updated_custom_data: ''
+      deleted_url: ''
+      deleted_custom_data: ''
+      draft_url: ''
+      draft_custom_data: ''
+      converted_url: ''
+      converted_custom_data: ''
+      message: ''
+      messages: {  }

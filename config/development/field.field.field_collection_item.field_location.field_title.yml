@@ -1,0 +1,19 @@
+uuid: 2193ffe1-747f-47f6-800f-0166e874ab44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_title
+    - field_collection.field_collection.field_location
+id: field_collection_item.field_location.field_title
+field_name: field_title
+entity_type: field_collection_item
+bundle: field_location
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

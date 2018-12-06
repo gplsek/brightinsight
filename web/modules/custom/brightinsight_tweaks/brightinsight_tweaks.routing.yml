@@ -1,0 +1,14 @@
+brightinsight_tweaks.inquiryhandler:
+    path: '/bi/inquiryhandler'
+    defaults:
+        _controller: 'Drupal\brightinsight_tweaks\Controller\BrightInsightFormSubmitController::formSubmission'
+    methods: [POST]
+    requirements:
+        _access: 'TRUE'
+
+brightinsight_tweaks.inquiryhandlertest:
+    path: '/biform/test'
+    defaults:
+        _controller: 'Drupal\brightinsight_tweaks\Controller\BrightInsightFormSubmitController::formTest'
+    requirements:
+        _permission: 'access content'

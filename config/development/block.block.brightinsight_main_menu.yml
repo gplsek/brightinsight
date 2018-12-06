@@ -13,7 +13,7 @@ _core:
 id: brightinsight_main_menu
 theme: brightinsight
 region: navigation_desktop
-weight: -9
+weight: -8
 provider: null
 plugin: 'system_menu_block:main'
 settings:

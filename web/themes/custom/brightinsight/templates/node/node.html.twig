@@ -132,7 +132,7 @@
         */-->
         <article class="component-card component-card-bio box" {{ attributes }}>
         	<div class="image">
-                {% if content.field_head_shot.0 %}
+                {% if content.field_hero_card_image.0 %}
         		  <img class="img-responsive img-fullwidth" src="{{ content.field_hero_card_image.0  }}">
                 {% endif %}
         	</div>
@@ -253,7 +253,7 @@
 <article{{ attributes.addClass(classes) }} {{ attributes }}>
   <!-- Variation: Tall banner, white text, white bottom angle, background image -->
   {% if node.getType == 'page' %}
-  <section class="component-banner bg-image {{css.section_classes}}" style="background-image:url('{{ background }}')">
+  <section class="component-banner bg-image {{css.section_classes}}" style="background-image:url('{{ background }}')" {{ attributes }}>
     <div class="container">
       <div class="row pad-top-lg pad-bot-lg">
         <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
@@ -272,7 +272,7 @@
               {{ content.field_paragraphblock }}
             {% endif %}
           {% if content.body|render %}
-            <article class="component-text pad-top-sm pad-bot-lg">
+            <article class="component-text pad-top-sm pad-bot-lg" {{ attributes }}>
             	<div class="container">
             		<div class="row">
             			<div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">

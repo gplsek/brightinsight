@@ -1,0 +1,23 @@
+uuid: 716ecf62-0e82-44fe-af8f-0967fe82d242
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_bottom
+    - paragraphs.paragraphs_type.locations
+id: paragraph.locations.field_padding_bottom
+field_name: field_padding_bottom
+entity_type: paragraph
+bundle: locations
+label: 'Padding Bottom'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
