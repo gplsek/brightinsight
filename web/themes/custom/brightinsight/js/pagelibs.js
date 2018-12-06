@@ -3,40 +3,6 @@
 /* Global JS */
 
 
-var sync_boxes = $('.sync-boxes');
-
-if (sync_boxes.length)
-{
-	$(function()
-	{
-		syncCards();
-	});
-}
-
-
-function syncCards()
-{
-	sync_boxes.each(function()
-	{
-		var cards = $(this).find('.box');
-		
-		$(window).on('load resize', function(event)
-		{
-			var mq_win_w = navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth;
-
-			if (mq_win_w > 767)
-			{
-				cards.syncHeight();
-			}
-			else
-			{
-				cards.css('height', 'auto');
-			}
-		});
-	});
-}
-
-
 /**
  * Detect IE
  * returns version of IE or false, if browser is not Internet Explorer
@@ -104,11 +70,6 @@ var bs4Overlay = function () {
 }();
 
 
-/**
- * SyncHeight v1.1
- * @usage: $('selectors').syncHeight();
- */
-;(function($){$.fn.syncHeight=function(){var max=0;$(this).each(function(){$(this).css('height','auto');var val=$(this).outerHeight();if(val>max){max=val;}});$(this).each(function(){$(this).css('height',max+'px');});return this;};})(jQuery);
 
 
 
@@ -123,46 +84,6 @@ var bs4Overlay = function () {
 
 
 
-
-'use strict';
-
-/**
- *  This is the main file for columns
- */
- 
-
-var component_columns = $('.component-columns');
-
-if (component_columns.length)
-{
-	$(function()
-	{
-		initColumns();
-	});
-}
-
-
-function initColumns()
-{
-	component_columns.each(function()
-	{
-		var icons = $(this).find('.component-card-icon .image');
-		
-		$(window).on('load resize', function(event)
-		{
-			var mq_win_w = navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth;
-
-			if (mq_win_w > 767)
-			{
-				icons.syncHeight();
-			}
-			else
-			{
-				icons.css('height', 'auto');
-			}
-		});
-	});
-}
 
 
 
@@ -200,6 +121,7 @@ function initForms()
 		});
 	});
 }
+
 
 
 'use strict';

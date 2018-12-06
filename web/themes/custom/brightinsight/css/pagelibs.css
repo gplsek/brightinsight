@@ -2896,6 +2896,10 @@ nav ul li {
   position: relative;
   z-index: 1; }
 
+@media (min-width: 768px) {
+  .sync-boxes .box {
+    height: calc(100% - 30px); } }
+
 .clearfix::after {
   display: block;
   content: "";
@@ -3924,11 +3928,11 @@ button {
 
 @media (min-width: 768px) {
   .component-fifty-fifty.show-arrows {
-    background-image: url("../../images/bg-arrows-right.png");
+    background-image: url("./../images/bg-arrows-right.png");
     background-repeat: no-repeat;
     background-position: 100% 50%; }
   .component-fifty-fifty.image-left.show-arrows {
-    background-image: url("../../images/bg-arrows-left.png");
+    background-image: url("./../images/bg-arrows-left.png");
     background-position: 0 50%; }
   .component-fifty-fifty .col-content .cta {
     padding-top: 80px; } }
@@ -4209,7 +4213,7 @@ button {
  *  Main css for card-career
  */
 .component-card-career header:before {
-  background: url("../images/logo-arrows-only.png") no-repeat 0 0;
+  background: url("./../images/logo-arrows-only.png") no-repeat 0 0;
   content: '';
   display: block;
   height: 33px;
