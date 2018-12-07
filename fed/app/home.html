@@ -195,9 +195,12 @@
 	  - light gray:		bg-lt-gray
 
 	Background Image
-	  Help text: Recommended banner sizes are: Tall (1900x820), Medium (1900x570), Small (1900x270).
+	  Help text: Recommended banner sizes are: Tall (1600x820), Medium (1600x570), Small (1600x270).
 
 	  (Note: If defined use bg-image class and style="background-image:url(...)" attribute.)
+
+	Mobile Background Image
+	  Help text: Recommended banner sizes are: Tall (375x645), Medium (375x405), Small (375x220).
 
 	Bottom Angle Color:
 	  - black:			bottom-angle-black
@@ -231,7 +234,7 @@
 
 
 <!-- Variation: Tall banner, white text, white bottom angle, background image -->
-<section class="component-banner component-banner-tall bottom-angle-right bottom-angle-white text-white bg-image" style="background-image:url('http://picsum.photos/1900/820')">
+<section class="component-banner component-banner-tall bottom-angle-right bottom-angle-white text-white bg-image" id="component-id-abc">
 	<div class="container">
 		<div class="row pad-top-lg pad-bot-lg">
 			<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
@@ -259,11 +262,19 @@
 			</div>
 		</div>
 	</div>
+	<style>
+	@media only screen and (max-width: 499px) {
+		#component-id-abc { background-image:url('../../images/fpo/banner-mobile-tall-375x645.jpg') }
+	}
+	@media only screen and (min-width: 500px) {
+		#component-id-abc { background-image:url('../../images/fpo/banner-tall-home.jpg') }
+	}
+	</style>
 </section>
 
 
 <!-- Variation: Default banner, white text, white bottom angle, background image -->
-<section class="component-banner component-banner-medium bottom-angle-right bottom-angle-white text-white bg-image" style="background-image:url('http://picsum.photos/1901/570')">
+<section class="component-banner component-banner-medium bottom-angle-right bottom-angle-white text-white bg-image" id="component-id-123">
 	<div class="container">
 		<div class="row pad-top-lg pad-bot-lg">
 			<div class="col-12 col-md-8 offset-md-2">
@@ -280,11 +291,19 @@
 			</div>
 		</div>
 	</div>
+	<style>
+	@media only screen and (max-width: 499px) {
+		#component-id-123 { background-image:url('../../images/fpo/banner-mobile-medium-375x405.jpg') }
+	}
+	@media only screen and (min-width: 500px) {
+		#component-id-123 { background-image:url('../../images/fpo/banner-medium-solutions.jpg') }
+	}
+	</style>
 </section>
 
 
 <!-- Variation: Short banner, white text, white bottom angle, background image -->
-<section class="component-banner component-banner-short bottom-angle-right bottom-angle-white text-white bg-image" style="background-image:url('http://picsum.photos/1901/270')">
+<section class="component-banner component-banner-short bottom-angle-right bottom-angle-white text-white bg-image" id="component-id-xyz">
 	<div class="container">
 		<div class="row pad-top-lg pad-bot-lg">
 			<div class="col-12 col-md-8 offset-md-2">
@@ -294,6 +313,14 @@
 			</div>
 		</div>
 	</div>
+	<style>
+	@media only screen and (max-width: 499px) {
+		#component-id-xyz { background-image:url('../../images/fpo/banner-mobile-short-375x220.jpg') }
+	}
+	@media only screen and (min-width: 500px) {
+		#component-id-xyz { background-image:url('../../images/fpo/banner-medium-story.jpg') }
+	}
+	</style>
 </section>
 
 <!--/*
