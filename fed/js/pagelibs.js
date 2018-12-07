@@ -87,6 +87,8 @@ var bs4Overlay = function () {
 
 
 
+
+
 'use strict';
 
 /**
@@ -119,7 +121,6 @@ function initForms()
 		});
 	});
 }
-
 
 'use strict';
 
@@ -267,4 +268,3 @@ function mediaQueryWidth()
 {
 	return navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth;
 }
-
