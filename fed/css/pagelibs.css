@@ -3420,7 +3420,7 @@ button {
   box-shadow: 0 0 2px #000;
   color: #fff;
   cursor: pointer;
-  display: block;
+  display: none;
   font-weight: bold;
   padding: 0.5em 2.5em 0.5em 0.5em;
   position: fixed;
@@ -3435,32 +3435,6 @@ button {
     right: 10px;
     top: 13px; }
 
-/*
-
-.toolbar-loading {
-    .component-global-navigation {
-        .mobile {
-            margin-top: 45px;
-            border: solid 1px red;
-        }
-    }
-    .main {
-        margin-top: 77px;
-        border: solid 1px brown;
-    }
-
-    @include media-breakpoint-up(lg) {
-        .component-global-navigation {
-            margin-top: 100px;
-            border: solid 1px green;
-        }
-        .main {
-            margin-top: 132px;
-            border: solid 1px blue;
-        }
-    }
-}
-*/
 /**
 *
 * This file is updated automatically by yoeman generator-lionsclubs-component.
@@ -3932,11 +3906,11 @@ button {
 
 @media (min-width: 768px) {
   .component-fifty-fifty.show-arrows {
-    background-image: url("./../images/bg-arrows-right.png");
+    background-image: url("../images/bg-arrows-right.png");
     background-repeat: no-repeat;
     background-position: 100% 50%; }
   .component-fifty-fifty.image-left.show-arrows {
-    background-image: url("./../images/bg-arrows-left.png");
+    background-image: url("../images/bg-arrows-left.png");
     background-position: 0 50%; }
   .component-fifty-fifty .col-content .cta {
     padding-top: 80px; } }
@@ -4217,7 +4191,7 @@ button {
  *  Main css for card-career
  */
 .component-card-career header:before {
-  background: url("./../images/logo-arrows-only.png") no-repeat 0 0;
+  background: url("../images/logo-arrows-only.png") no-repeat 0 0;
   content: '';
   display: block;
   height: 33px;
