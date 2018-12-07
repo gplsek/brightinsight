@@ -47,26 +47,28 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes) }} {{ attributes }}>
     {% block content %}
 
     {% set style = (background) ? 'background-image:url(' ~ background ~ ')' : '' %}
 <!--/*
     Main HTML template for the videos component.
 */-->
-<section class="component-videos text-centered pad-top-lg pad-bot-lg {{css.section_classes}}" style="{{style}}">
+<section class="component-videos text-centered pad-top-lg pad-bot-lg {{css.section_classes}}" style="{{style}}" >
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-lg-9">
+			<div class="col-12 col-lg-8 col-xl-9">
                 <!--/*
                     Main HTML template for the "featured" verion of the card-video component.
                 */-->
                {{ content.field_featured_video.0 }}
             </div>
-			<div class="col-12 col-lg-3">
-               {{ content.field_video.0 }}
-			   {{ content.field_video.1 }}
-               {{ content.field_video.2 }}
+			<div class="col-12 col-lg-4 col-xl-3">
+                <div class="video-sidebar">
+                    {% for key, video in content.field_video if key|first!='#' %}
+    					{{ video }}
+    				{% endfor %}
+                </div>
 			</div>
 		</div>
 	</div>

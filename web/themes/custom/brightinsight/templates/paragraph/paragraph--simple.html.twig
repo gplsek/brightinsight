@@ -47,7 +47,7 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes) }} {{ attributes }}>
     {% block content %}
     <!--/*
         Main HTML template for the banner-inline component.
@@ -111,7 +111,7 @@
     <!-- Variation: top right angle, white top angle, background image, CTA solid green -->
     {% set style = (background) ? 'background-image:url(' ~ background ~ ')' : '' %}
 
-    <section class="component-banner-inline text-centered {{css.section_classes}}" style="{{style}}">
+    <section class="component-banner-inline text-centered {{css.section_classes}}" style="{{style}}" >
       <div class="container">
         <div class="row pad-top-lg pad-bot-lg">
           <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
