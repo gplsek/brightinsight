@@ -4576,11 +4576,15 @@ button {
           height: 40px;
           padding-right: 30px;
           width: 100%;
-          -webkit-appearance: button;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           -webkit-border-radius: 0;
           -webkit-padding-end: 30px;
           -webkit-padding-start: 0;
           -webkit-user-select: none; }
+          .component-form .form-container .form-item.form-type-select .select-wrapper select::-ms-expand {
+            display: none; }
         .component-form .form-container .form-item.form-type-select .select-wrapper:after {
           border: 1px solid #7C878E;
           border-width: 0 0 1px 1px;

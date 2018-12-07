@@ -107,11 +107,17 @@
 						height: 40px;
 						padding-right: 30px;
 						width: 100%;
-						-webkit-appearance: button;
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						appearance: none;
 						-webkit-border-radius: 0;
 						-webkit-padding-end: 30px;
 						-webkit-padding-start: 0;
 						-webkit-user-select: none;
+
+						&::-ms-expand {
+							display: none;
+						}
 					}
 
 					&:after {
