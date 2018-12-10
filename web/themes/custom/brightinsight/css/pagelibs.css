@@ -3420,7 +3420,7 @@ button {
   box-shadow: 0 0 2px #000;
   color: #fff;
   cursor: pointer;
-  display: block;
+  display: none;
   font-weight: bold;
   padding: 0.5em 2.5em 0.5em 0.5em;
   position: fixed;
@@ -3435,32 +3435,6 @@ button {
     right: 10px;
     top: 13px; }
 
-/*
-
-.toolbar-loading {
-    .component-global-navigation {
-        .mobile {
-            margin-top: 45px;
-            border: solid 1px red;
-        }
-    }
-    .main {
-        margin-top: 77px;
-        border: solid 1px brown;
-    }
-
-    @include media-breakpoint-up(lg) {
-        .component-global-navigation {
-            margin-top: 100px;
-            border: solid 1px green;
-        }
-        .main {
-            margin-top: 132px;
-            border: solid 1px blue;
-        }
-    }
-}
-*/
 /**
 *
 * This file is updated automatically by yoeman generator-lionsclubs-component.
@@ -3869,7 +3843,7 @@ button {
   margin: 40px 0 0; }
 
 .component-banner.component-banner-tall .row {
-  height: 540px; }
+  height: 645px; }
 
 @media (min-width: 768px) {
   .component-banner.component-banner-tall .row {
@@ -4602,11 +4576,15 @@ button {
           height: 40px;
           padding-right: 30px;
           width: 100%;
-          -webkit-appearance: button;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           -webkit-border-radius: 0;
           -webkit-padding-end: 30px;
           -webkit-padding-start: 0;
           -webkit-user-select: none; }
+          .component-form .form-container .form-item.form-type-select .select-wrapper select::-ms-expand {
+            display: none; }
         .component-form .form-container .form-item.form-type-select .select-wrapper:after {
           border: 1px solid #7C878E;
           border-width: 0 0 1px 1px;

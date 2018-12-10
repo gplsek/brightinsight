@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
+    - field.field.node.news.field_hero_card_image
     - field.field.node.news.field_link
     - field.field.node.news.field_news_type
     - field.field.node.news.field_page_settings
     - field.field.node.news.field_publication_name_and_date
+    - image.style.thumbnail
     - node.type.news
   module:
+    - image
     - link
     - paragraphs
     - path
@@ -34,6 +37,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_hero_card_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_link:
     weight: 2
     settings:
@@ -49,7 +60,7 @@ content:
     type: options_select
     region: content
   field_page_settings:
-    weight: 26
+    weight: 12
     settings:
       title: Paragraph
       title_plural: Paragraphs

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_paragraphblock
     - node.type.secondary_page
+    - paragraphs.paragraphs_type.page_settings
   module:
     - entity_reference_revisions
 id: node.secondary_page.field_paragraphblock
@@ -21,7 +22,8 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 1
-    target_bundles: null
+    target_bundles:
+      page_settings: page_settings
     target_bundles_drag_drop:
       from_library:
         weight: 5
@@ -34,5 +36,41 @@ settings:
         enabled: false
       simple:
         weight: 8
+        enabled: false
+      3_3_cards:
+        weight: 17
+        enabled: false
+      blog_posts:
+        weight: 18
+        enabled: false
+      careers:
+        weight: 19
+        enabled: false
+      featured_blogs:
+        weight: 20
+        enabled: false
+      footnotes:
+        weight: 21
+        enabled: false
+      form:
+        weight: 22
+        enabled: false
+      image_text_50_50_fullbleed:
+        weight: 25
+        enabled: false
+      locations:
+        weight: 27
+        enabled: false
+      news_and_events:
+        weight: 28
+        enabled: false
+      page_settings:
+        enabled: true
+        weight: 29
+      use_cases:
+        weight: 31
+        enabled: false
+      videos:
+        weight: 32
         enabled: false
 field_type: entity_reference_revisions
