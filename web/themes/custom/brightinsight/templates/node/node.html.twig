@@ -107,7 +107,12 @@
         	</div>
         </article>
     {% elseif node.getType == 'news' %}
-        <article class="component-card component-card-no-image box" {{ attributes }}>
+        <article class="component-card box" {{ attributes }}>
+        	<div class="image">
+                {% if content.field_hero_card_image.0 %}
+        		  <img class="img-responsive img-fullwidth" src="{{ content.field_hero_card_image.0  }}">
+                {% endif %}
+        	</div>
         	<div class="content">
         		<div class="type">
         			 {{ content.field_news_type.0 }}
