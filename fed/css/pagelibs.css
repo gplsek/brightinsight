@@ -3833,11 +3833,10 @@ button {
   font-size: 22px;
   line-height: 32px;
   margin: 20px 0 0; }
-  @media (min-width: 768px) {
-    .component-banner .component-content .component-content {
-      font-size: 30px;
-      line-height: 40px;
-      margin: 15px 0 0; } }
+
+@media (min-width: 992px) {
+  .component-banner .component-content {
+    width: 80%; } }
 
 .component-banner .cta {
   margin: 40px 0 0; }
@@ -3851,6 +3850,12 @@ button {
   .component-banner.component-banner-tall h1 {
     font-size: 60px;
     line-height: 66px; } }
+
+@media (min-width: 768px) {
+  .component-banner.component-banner-tall .component-content {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 15px 0 0; } }
 
 .component-banner.component-banner-medium .row {
   height: 400px; }

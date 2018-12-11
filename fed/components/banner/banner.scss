@@ -12,15 +12,13 @@
 		font-size: 22px;
 		line-height: 32px;
 		margin: 20px 0 0;
+	}
 
-		@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 
-			.component-content {
-				font-size: 30px;
-				line-height: 40px;
-				margin: 15px 0 0;
-			}		
-		}
+		.component-content {
+			width: 80%;
+		}		
 	}
 
 	.cta {
@@ -40,6 +38,15 @@
 			}
 
 			h1 { font-size: 60px; line-height: 66px; }
+		}
+
+		@include media-breakpoint-up(md) {
+
+			.component-content {
+				font-size: 30px;
+				line-height: 40px;
+				margin: 15px 0 0;
+			}		
 		}
 	}
 
