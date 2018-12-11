@@ -3,6 +3,7 @@
  */
 
 .component-blog-list {
+	min-height: 630px;
 
 	@include media-breakpoint-up(lg) {
 

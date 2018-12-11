@@ -24,6 +24,7 @@
 	}
 
 	@include media-breakpoint-up(md) {
+		min-height: 630px;
 
 		&.show-arrows {
 			background-image: url('../images/bg-arrows-right.png');
@@ -39,11 +40,10 @@
 			}
 		}
 
-
 		.col-content {
 
 			.cta {
-				padding-top: 80px;
+				padding-top: 60px;
 			}
 		}
 

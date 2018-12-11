@@ -3874,25 +3874,24 @@ button {
 /**
  *  Main css for columns
  */
-.component-columns .component-body .columns {
-  justify-content: space-between; }
-
-.component-columns.component-columns-connectors .cols-connector {
-  margin: -20px 0 30px; }
-
-.component-columns.component-columns-connectors .desktop-connector {
-  display: none; }
-
-@media (min-width: 992px) {
+.component-columns {
+  min-height: 630px; }
+  .component-columns .component-body .columns {
+    justify-content: space-between; }
   .component-columns.component-columns-connectors .cols-connector {
-    left: 50%;
-    margin: 0;
-    position: absolute;
-    transform: translateX(-50%); }
+    margin: -20px 0 30px; }
   .component-columns.component-columns-connectors .desktop-connector {
-    display: block; }
-  .component-columns.component-columns-connectors .mobile-connector {
-    display: none; } }
+    display: none; }
+  @media (min-width: 992px) {
+    .component-columns.component-columns-connectors .cols-connector {
+      left: 50%;
+      margin: 0;
+      position: absolute;
+      transform: translateX(-50%); }
+    .component-columns.component-columns-connectors .desktop-connector {
+      display: block; }
+    .component-columns.component-columns-connectors .mobile-connector {
+      display: none; } }
 
 /**
  *  Main css for fifty-fifty
@@ -3910,15 +3909,17 @@ button {
       margin-bottom: 40px; } }
 
 @media (min-width: 768px) {
-  .component-fifty-fifty.show-arrows {
-    background-image: url("../images/bg-arrows-right.png");
-    background-repeat: no-repeat;
-    background-position: 100% 50%; }
-  .component-fifty-fifty.image-left.show-arrows {
-    background-image: url("../images/bg-arrows-left.png");
-    background-position: 0 50%; }
-  .component-fifty-fifty .col-content .cta {
-    padding-top: 80px; } }
+  .component-fifty-fifty {
+    min-height: 630px; }
+    .component-fifty-fifty.show-arrows {
+      background-image: url("../images/bg-arrows-right.png");
+      background-repeat: no-repeat;
+      background-position: 100% 50%; }
+    .component-fifty-fifty.image-left.show-arrows {
+      background-image: url("../images/bg-arrows-left.png");
+      background-position: 0 50%; }
+    .component-fifty-fifty .col-content .cta {
+      padding-top: 60px; } }
 
 /**
  *  Main css for fifty-fifty-fullbleed
@@ -4024,7 +4025,9 @@ button {
       left: -1px;
       right: auto;
       -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
-      clip-path: polygon(0 0, 0 100%, 100% 0); } }
+      clip-path: polygon(0 0, 0 100%, 100% 0); }
+    .component-fifty-fifty-fullbleed .component-content {
+      min-height: 630px; } }
   @media (min-width: 768px) {
     .is-ie .component-fifty-fifty-fullbleed .col-image:after {
       right: -10%;
@@ -4149,6 +4152,9 @@ button {
 /**
  *  Main css for cards
  */
+.component-cards {
+  min-height: 630px; }
+
 /**
  *  Main css for cta
  */
@@ -4208,9 +4214,15 @@ button {
 /**
  *  Main css for careers
  */
+.component-careers {
+  min-height: 630px; }
+
 /**
  *  Main css for use-cases
  */
+.component-use-cases {
+  min-height: 630px; }
+
 /**
  *  Main css for card-blog
  */
@@ -4338,7 +4350,7 @@ button {
  */
 .component-banner-inline .row {
   align-items: center;
-  min-height: 600px; }
+  min-height: 630px; }
 
 .component-banner-inline .component-content {
   font-size: 20px;
@@ -4356,24 +4368,25 @@ button {
 /**
  *  Main css for blog-list
  */
-@media (min-width: 992px) {
-  .component-blog-list .column-secondary {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
-    padding-right: 0; } }
-
-@media (min-width: 1200px) {
-  .component-blog-list .column-secondary {
-    display: block;
-    padding-left: 15px;
-    padding-right: 15px; }
-  .component-blog-list .blog-grid {
-    flex-wrap: wrap; }
-    .component-blog-list .blog-grid .column {
-      flex: 1;
+.component-blog-list {
+  min-height: 630px; }
+  @media (min-width: 992px) {
+    .component-blog-list .column-secondary {
       display: flex;
-      flex-direction: column; } }
+      flex-wrap: wrap;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media (min-width: 1200px) {
+    .component-blog-list .column-secondary {
+      display: block;
+      padding-left: 15px;
+      padding-right: 15px; }
+    .component-blog-list .blog-grid {
+      flex-wrap: wrap; }
+      .component-blog-list .blog-grid .column {
+        flex: 1;
+        display: flex;
+        flex-direction: column; } }
 
 /**
  *  Main css for card-video
@@ -4489,6 +4502,9 @@ button {
 /**
  *  Main css for bio-list
  */
+.component-bio-list {
+  min-height: 630px; }
+
 /**
  *  Main css for locations
  */
