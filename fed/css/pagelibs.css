@@ -3834,6 +3834,12 @@ button {
   line-height: 32px;
   margin: 20px 0 0; }
 
+@media (min-width: 768px) {
+  .component-banner .component-content {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 15px 0 0; } }
+
 @media (min-width: 992px) {
   .component-banner .component-content {
     width: 80%; } }
@@ -3850,12 +3856,6 @@ button {
   .component-banner.component-banner-tall h1 {
     font-size: 60px;
     line-height: 66px; } }
-
-@media (min-width: 768px) {
-  .component-banner.component-banner-tall .component-content {
-    font-size: 30px;
-    line-height: 40px;
-    margin: 15px 0 0; } }
 
 .component-banner.component-banner-medium .row {
   height: 400px; }
@@ -3911,11 +3911,11 @@ button {
 
 @media (min-width: 768px) {
   .component-fifty-fifty.show-arrows {
-    background-image: url("./../images/bg-arrows-right.png");
+    background-image: url("../images/bg-arrows-right.png");
     background-repeat: no-repeat;
     background-position: 100% 50%; }
   .component-fifty-fifty.image-left.show-arrows {
-    background-image: url("./../images/bg-arrows-left.png");
+    background-image: url("../images/bg-arrows-left.png");
     background-position: 0 50%; }
   .component-fifty-fifty .col-content .cta {
     padding-top: 80px; } }
@@ -4196,7 +4196,7 @@ button {
  *  Main css for card-career
  */
 .component-card-career header:before {
-  background: url("./../images/logo-arrows-only.png") no-repeat 0 0;
+  background: url("../images/logo-arrows-only.png") no-repeat 0 0;
   content: '';
   display: block;
   height: 33px;
