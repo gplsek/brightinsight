@@ -294,6 +294,10 @@
 						a {
 							border-color: $color-green;
 							color: $color-green;
+
+							&:after {
+								color: $color-green;
+							}
 						}
 					}
 				}
