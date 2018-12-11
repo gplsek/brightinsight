@@ -45,6 +45,29 @@ if (is_IE)
 	});
 }
 
+
+/**
+ * Open external links in new tabs/windows
+ */
+$(document).ready(function()
+{
+	initExternalLinks();
+});
+
+
+var initExternalLinks = function()
+{
+	$('a').each(function()
+	{
+		var a = new RegExp('/' + window.location.host + '/');
+
+		if (!a.test(this.href))
+		{
+			$(this).attr('target', '_blank');
+		}
+	});
+}
+
 var bs4Overlay = function () {
 	return;
 	// $('body').append('<div id="bs4_overlay"></div><div id="bs4_toggle"><span class="toggle">Toggle Grid</span><span class="close">(Hide)</span></div>');

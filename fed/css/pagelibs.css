@@ -3630,6 +3630,8 @@ button {
           .component-global-navigation .nav-utility ul li.active a, .component-global-navigation .nav-utility ul li:hover a {
             border-color: #00A56A;
             color: #00A56A; }
+            .component-global-navigation .nav-utility ul li.active a:after, .component-global-navigation .nav-utility ul li:hover a:after {
+              color: #00A56A; }
       .component-global-navigation .nav-primary {
         padding: 30px 0 0; }
         .component-global-navigation .nav-primary ul {
@@ -3705,6 +3707,8 @@ button {
   .component-global-footer a {
     color: #D0D3D3;
     text-decoration: none; }
+    .component-global-footer a:hover {
+      color: #00A56A; }
   .component-global-footer ul {
     margin: 0;
     padding: 0; }
@@ -3712,7 +3716,14 @@ button {
     display: block;
     width: 170px; }
     .component-global-footer .logo img {
-      border: none; }
+      border: none;
+      display: block; }
+    .component-global-footer .logo .logo-hover {
+      display: none; }
+    .component-global-footer .logo:hover .logo-default {
+      display: none; }
+    .component-global-footer .logo:hover .logo-hover {
+      display: block; }
   .component-global-footer .col-legal {
     position: static; }
   .component-global-footer .colophon {
@@ -3750,6 +3761,8 @@ button {
     padding-top: 50px; }
     .component-global-footer .nav-footer a {
       color: #FFFFFF; }
+      .component-global-footer .nav-footer a:hover {
+        color: #00A56A; }
     .component-global-footer .nav-footer li {
       margin-top: 36px; }
       .component-global-footer .nav-footer li:last-child a {
@@ -3765,6 +3778,8 @@ button {
           position: absolute;
           right: 0;
           top: 3px; }
+        .component-global-footer .nav-footer li:last-child a:hover:after {
+          color: #00A56A; }
   .component-global-footer .nav-social {
     display: inline-block;
     font-size: 28px;

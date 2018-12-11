@@ -44,3 +44,26 @@ if (is_IE)
 		$('body').addClass('is-ie ie-'+is_IE);
 	});
 }
+
+
+/**
+ * Open external links in new tabs/windows
+ */
+$(document).ready(function()
+{
+	initExternalLinks();
+});
+
+
+var initExternalLinks = function()
+{
+	$('a').each(function()
+	{
+		var a = new RegExp('/' + window.location.host + '/');
+
+		if (!a.test(this.href))
+		{
+			$(this).attr('target', '_blank');
+		}
+	});
+}
