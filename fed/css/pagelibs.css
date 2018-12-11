@@ -2881,6 +2881,9 @@ ul {
       left: 1px;
       position: absolute; }
 
+sup {
+  font-size: 0.66667em; }
+
 .text-white ul li::before {
   color: #FFFFFF; }
 
