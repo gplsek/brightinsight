@@ -19,7 +19,7 @@
 	&.primary {
 		background: $color-green;
 		border-color: $color-green;
-		color: $color-white;
+		color: $color-white !important;
 
 		&:hover {
 			background: $color-green-muted;
@@ -30,17 +30,17 @@
 	&.secondary {
 		background: $color-white;
 		border-color: $color-green;
-		color: $color-green;
+		color: $color-green !important;
 
 		&:hover {
 			border-color: $color-green-muted;
-			color: $color-green-muted;
+			color: $color-green-muted !important;
 		}
 	}
 
 	&.secondary-white {
 		background: transparent;
 		border-color: $color-white;
-		color: $color-white;
+		color: $color-white !important;
 	}
 }
