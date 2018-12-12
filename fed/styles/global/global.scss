@@ -89,6 +89,14 @@ sup {
 	ul li::before {
 		color: $color-white;
 	}
+
+	a {
+		color: $color-white;
+
+		&:visited {
+			color: $color-white;
+		}
+	}
 }
 
 .text-black {
@@ -96,8 +104,15 @@ sup {
 	ul li::before {
 		color: $color-green;
 	}
-}
 
+	a {
+		color: $color-blue;
+
+		&:visited {
+			color: $color-blue;
+		}
+	}
+}
 
 nav {
 
