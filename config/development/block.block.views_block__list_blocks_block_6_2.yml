@@ -12,7 +12,7 @@ dependencies:
 id: views_block__list_blocks_block_6_2
 theme: brightinsight
 region: content
-weight: -6
+weight: -5
 provider: null
 plugin: 'views_block:list_blocks-block_6'
 settings:
