@@ -7,10 +7,19 @@
 	.component-header {
 		margin: 0;
 
-		.article-share {
+		.social {
 			display: flex;
 			justify-content: flex-end;
 			margin: 0 0 60px;
+
+			a {
+				color: $color-gray;
+				font-size: 28px;
+
+				&:hover {
+					color: $color-green;
+				}
+			}
 		}
 
 		.meta {
@@ -32,7 +41,7 @@
 
 		.component-header {
 
-			.article-share {
+			.social {
 				margin: 0 0 45px;
 			}
 		}

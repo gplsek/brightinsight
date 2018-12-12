@@ -4130,6 +4130,10 @@ button {
     display: flex;
     justify-content: flex-end;
     margin: 0 0 60px; }
+    .component-text .component-header .article-share svg {
+      fill: #D0D3D3; }
+    .component-text .component-header .article-share a:hover svg {
+      fill: #00A56A; }
   .component-text .component-header .meta {
     color: #7C878E;
     font-size: 14px;
@@ -4493,10 +4497,15 @@ button {
  */
 .component-bio-detail .component-header {
   margin: 0; }
-  .component-bio-detail .component-header .article-share {
+  .component-bio-detail .component-header .social {
     display: flex;
     justify-content: flex-end;
     margin: 0 0 60px; }
+    .component-bio-detail .component-header .social a {
+      color: #D0D3D3;
+      font-size: 28px; }
+      .component-bio-detail .component-header .social a:hover {
+        color: #00A56A; }
   .component-bio-detail .component-header .meta {
     color: #7C878E;
     font-size: 14px;
@@ -4511,7 +4520,7 @@ button {
   margin: 40px 0 20px; }
 
 @media (min-width: 768px) {
-  .component-bio-detail .component-header .article-share {
+  .component-bio-detail .component-header .social {
     margin: 0 0 45px; } }
 
 @media (min-width: 992px) {
