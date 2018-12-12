@@ -3456,6 +3456,8 @@ button {
   .component-global-navigation .logo {
     display: block;
     width: 170px; }
+    .component-global-navigation .logo:hover {
+      opacity: 0.5; }
     .component-global-navigation .logo .img-standard {
       border: none;
       display: block; }

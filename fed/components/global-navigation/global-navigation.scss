@@ -12,6 +12,10 @@
 		display: block;
 		width: 170px;
 
+		&:hover {
+			opacity: 0.5;
+		}
+
 		.img-standard {
 			border: none;
 			display: block;
