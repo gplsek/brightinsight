@@ -4202,13 +4202,14 @@ button {
   cursor: pointer;
   display: inline-block;
   font-family: "Gilroy", Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 38px;
   height: 38px;
   margin: 0;
   padding: 0 30px;
   text-align: center;
-  text-decoration: none; }
+  text-decoration: none;
+  text-transform: uppercase; }
   .component-cta.primary {
     background: #00A56A;
     border-color: #00A56A;
@@ -4575,13 +4576,14 @@ button {
       cursor: pointer;
       display: inline-block;
       font-family: "Gilroy", Helvetica, sans-serif;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 38px;
       height: 38px;
       margin: 0;
       padding: 0 30px;
       text-align: center;
-      text-decoration: none; }
+      text-decoration: none;
+      text-transform: uppercase; }
   .component-form .form-container .form-item {
     margin: 0 0 20px; }
     .component-form .form-container .form-item label {
