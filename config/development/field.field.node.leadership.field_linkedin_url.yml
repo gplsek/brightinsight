@@ -1,0 +1,23 @@
+uuid: 5e7b764a-e919-4a31-8686-9964d91f07be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_linkedin_url
+    - node.type.leadership
+  module:
+    - link
+id: node.leadership.field_linkedin_url
+field_name: field_linkedin_url
+entity_type: node
+bundle: leadership
+label: 'LinkedIn URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link
