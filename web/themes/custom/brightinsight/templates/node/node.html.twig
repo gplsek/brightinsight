@@ -99,9 +99,9 @@
         		</div>
         		<div class="cta">
                     {% if content.field_link[0]['#url'] %}
-        			    <a class='component-cta secondary' target="_new" href="{{ content.field_link[0]['#url'] }}"><span>learn more</span></a>
+        			    <a class='component-cta secondary' target="_new" href="{{ content.field_link[0]['#url'] }}"><span>LEARN MORE</span></a>
                     {% else %}
-                        <a class='component-cta secondary' target="_new" href="{{ url }}"><span>learn more</span></a>
+                        <a class='component-cta secondary' target="_new" href="{{ url }}"><span>LEARN MORE</span></a>
                     {% endif %}
         		</div>
         	</div>
@@ -127,7 +127,7 @@
         			{{ content.body }}
         		</div>
         		<div class="cta">
-                    <a class='component-cta secondary' target="_new" href="{{ content.field_link[0]['#url'] }}"><span>learn more</span></a>
+                    <a class='component-cta secondary' target="_new" href="{{ content.field_link[0]['#url'] }}"><span>LEARN MORE</span></a>
         		</div>
         	</div>
         </article>
@@ -149,13 +149,16 @@
         			 {{ content.field_role.0 }}
         		</div>
         		<div class="body">
+                {%  if node.body.summary is not empty %}                    
+                     {{ node.body.summary }}
+                {% else %}    
                     {% set text = content.body|render|striptags %}
-    
-        			{{ text|length > 250 ? text|slice(0, 250) ~ '...' : text }}
+                    {{ text|length > 250 ? text|slice(0, 250) ~ '...' : text }}      
+                {% endif %}
 
         		</div>
         		<div class="cta">
-        			<a class='component-cta secondary' href="{{ url }}"><span>View Bio</span></a>
+        			<a class='component-cta secondary' href="{{ url }}"><span>VIEW BIO</span></a>
         		</div>
         	</div>
         </article>
@@ -365,8 +368,12 @@
             				<div class="component-header">
             					<div class="row align-items-end justify-content-between">
             						<div class="col-12 col-md-3 order-md-2">
-            							<div class="article-share">
-            								{{ drupal_block("better_social_sharing_buttons_block") }}
+            							<div class="social">
+            								<!-- if LinkedIn profile -->
+                                        {% if content.field_linkedin_url[0]['#url'] %}
+            							   <a target="_new" href="{{ content.field_linkedin_url[0]['#url'] }}"><i class="fab fa-linkedin-in"></i></a>
+            								<!-- end if -->
+                                        {% endif %}
             							</div>
             						</div>
             						<div class="col-12 col-md-9 col-xl-8 col-xxl-7 order-md-1">

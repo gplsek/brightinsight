@@ -2887,8 +2887,18 @@ sup {
 .text-white ul li::before {
   color: #FFFFFF; }
 
+.text-white a {
+  color: #FFFFFF; }
+  .text-white a:visited {
+    color: #FFFFFF; }
+
 .text-black ul li::before {
   color: #00A56A; }
+
+.text-black a {
+  color: #1A3E6C; }
+  .text-black a:visited {
+    color: #1A3E6C; }
 
 nav ul li {
   padding-left: 0; }
@@ -3456,6 +3466,8 @@ button {
   .component-global-navigation .logo {
     display: block;
     width: 170px; }
+    .component-global-navigation .logo:hover {
+      opacity: 0.5; }
     .component-global-navigation .logo .img-standard {
       border: none;
       display: block; }
@@ -4103,6 +4115,10 @@ button {
       font-weight: 300;
       line-height: 26px;
       margin: 20px 0 0; }
+      .component-card .content .body a {
+        color: #1A3E6C; }
+        .component-card .content .body a:visited {
+          color: #1A3E6C; }
     .component-card .content .cta {
       margin: 20px 0 0; }
   @media (min-width: 768px) {
@@ -4128,6 +4144,10 @@ button {
     display: flex;
     justify-content: flex-end;
     margin: 0 0 60px; }
+    .component-text .component-header .article-share svg {
+      fill: #D0D3D3; }
+    .component-text .component-header .article-share a:hover svg {
+      fill: #00A56A; }
   .component-text .component-header .meta {
     color: #7C878E;
     font-size: 14px;
@@ -4182,31 +4202,32 @@ button {
   cursor: pointer;
   display: inline-block;
   font-family: "Gilroy", Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 38px;
   height: 38px;
   margin: 0;
   padding: 0 30px;
   text-align: center;
-  text-decoration: none; }
+  text-decoration: none;
+  text-transform: uppercase; }
   .component-cta.primary {
     background: #00A56A;
     border-color: #00A56A;
-    color: #FFFFFF; }
+    color: #FFFFFF !important; }
     .component-cta.primary:hover {
       background: #35BA8C;
       border-color: #35BA8C; }
   .component-cta.secondary {
     background: #FFFFFF;
     border-color: #00A56A;
-    color: #00A56A; }
+    color: #00A56A !important; }
     .component-cta.secondary:hover {
       border-color: #35BA8C;
-      color: #35BA8C; }
+      color: #35BA8C !important; }
   .component-cta.secondary-white {
     background: transparent;
     border-color: #FFFFFF;
-    color: #FFFFFF; }
+    color: #FFFFFF !important; }
 
 /**
  *  Main css for card-no-image
@@ -4491,10 +4512,15 @@ button {
  */
 .component-bio-detail .component-header {
   margin: 0; }
-  .component-bio-detail .component-header .article-share {
+  .component-bio-detail .component-header .social {
     display: flex;
     justify-content: flex-end;
     margin: 0 0 60px; }
+    .component-bio-detail .component-header .social a {
+      color: #D0D3D3;
+      font-size: 28px; }
+      .component-bio-detail .component-header .social a:hover {
+        color: #00A56A; }
   .component-bio-detail .component-header .meta {
     color: #7C878E;
     font-size: 14px;
@@ -4509,7 +4535,7 @@ button {
   margin: 40px 0 20px; }
 
 @media (min-width: 768px) {
-  .component-bio-detail .component-header .article-share {
+  .component-bio-detail .component-header .social {
     margin: 0 0 45px; } }
 
 @media (min-width: 992px) {
@@ -4550,13 +4576,14 @@ button {
       cursor: pointer;
       display: inline-block;
       font-family: "Gilroy", Helvetica, sans-serif;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 38px;
       height: 38px;
       margin: 0;
       padding: 0 30px;
       text-align: center;
-      text-decoration: none; }
+      text-decoration: none;
+      text-transform: uppercase; }
   .component-form .form-container .form-item {
     margin: 0 0 20px; }
     .component-form .form-container .form-item label {
