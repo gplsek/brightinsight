@@ -6,12 +6,14 @@ dependencies:
     - field.field.node.clinicalboard.body
     - field.field.node.clinicalboard.field_head_shot
     - field.field.node.clinicalboard.field_hero_card_image
+    - field.field.node.clinicalboard.field_linkedin_url
     - field.field.node.clinicalboard.field_page_settings
     - field.field.node.clinicalboard.field_role
     - node.type.clinicalboard
   module:
     - entity_reference_revisions
     - image
+    - link
     - text
     - user
 id: node.clinicalboard.default
@@ -27,7 +29,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_head_shot:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       image_style: ''
@@ -35,8 +37,20 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_linkedin_url:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
   field_page_settings:
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       view_mode: default
@@ -45,7 +59,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_role:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false

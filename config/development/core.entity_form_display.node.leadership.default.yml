@@ -6,12 +6,14 @@ dependencies:
     - field.field.node.leadership.body
     - field.field.node.leadership.field_head_shot
     - field.field.node.leadership.field_hero_card_image
+    - field.field.node.leadership.field_linkedin_url
     - field.field.node.leadership.field_page_settings
     - field.field.node.leadership.field_role
     - image.style.thumbnail
     - node.type.leadership
   module:
     - image
+    - link
     - paragraphs
     - path
     - text
@@ -22,7 +24,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 5
     region: content
     settings:
       rows: 9
@@ -31,19 +33,11 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   field_head_shot:
-    weight: 2
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_hero_card_image:
     weight: 3
     settings:
       progress_indicator: throbber
@@ -51,8 +45,24 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_hero_card_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_linkedin_url:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_page_settings:
-    weight: 11
+    weight: 12
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -73,7 +83,7 @@ content:
     region: content
   path:
     type: path
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -81,21 +91,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 8
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
@@ -108,7 +118,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
