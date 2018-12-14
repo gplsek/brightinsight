@@ -91,7 +91,8 @@
 			<div class="col-12 col-xl-6">
 				<div class="content">
 					<div class="meta">
-						 {{ date }}
+                         {% set createdDate = node.getCreatedTime|date('D M/d/Y') %}
+                         {{ createdDate }}
 					</div>
 					<header>
 						<h4>{{ label }}</h4>
