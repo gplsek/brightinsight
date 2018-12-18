@@ -407,7 +407,9 @@
           							</div>
           						</div>
           						<div class="col-12 col-md-9 col-xl-8 col-xxl-7 order-md-1">
-          							<div class="meta">{{ author_name }} / {{ date }}</div>
+                                    {% set createdDate = node.getCreatedTime|date('M d, Y') %}
+                                    
+          							<div class="meta">{{ author_name }} / {{ createdDate }}</div>
           							<header>
           								<h1 class="line">{{ label }}</h1>
           							</header>
