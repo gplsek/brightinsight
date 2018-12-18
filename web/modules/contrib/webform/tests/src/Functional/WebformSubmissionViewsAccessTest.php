@@ -105,7 +105,11 @@ class WebformSubmissionViewsAccessTest extends BrowserTestBase {
       $rid = reset($roles);
       user_role_revoke_permissions($rid, [
         'view any webform submission',
+<<<<<<< HEAD
         'view own webform submission'
+=======
+        'view own webform submission',
+>>>>>>> faf25a65d5e2b994f07c8483c25b84ae10f85c90
       ]);
     }
 
