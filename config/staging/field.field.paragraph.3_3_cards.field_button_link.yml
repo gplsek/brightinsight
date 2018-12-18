@@ -1,0 +1,19 @@
+uuid: 46d15f59-4914-45bd-9118-4c1fcd2346dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_link
+    - paragraphs.paragraphs_type.3_3_cards
+id: paragraph.3_3_cards.field_button_link
+field_name: field_button_link
+entity_type: paragraph
+bundle: 3_3_cards
+label: 'Button Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

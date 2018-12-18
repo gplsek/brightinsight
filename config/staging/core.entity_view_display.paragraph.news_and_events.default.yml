@@ -1,0 +1,59 @@
+uuid: a08a99e9-d083-41b6-8ca2-b26906e74b57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_and_events.field_background_color
+    - field.field.paragraph.news_and_events.field_button_link
+    - field.field.paragraph.news_and_events.field_button_text
+    - field.field.paragraph.news_and_events.field_heading
+    - field.field.paragraph.news_and_events.field_news_events_blog
+    - paragraphs.paragraphs_type.news_and_events
+  module:
+    - options
+id: paragraph.news_and_events.default
+targetEntityType: paragraph
+bundle: news_and_events
+mode: default
+content:
+  field_background_color:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_button_link:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_button_text:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_heading:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_news_events_blog:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

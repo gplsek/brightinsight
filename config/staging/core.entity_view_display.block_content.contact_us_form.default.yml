@@ -1,0 +1,41 @@
+uuid: 5ce4802e-f549-4860-957c-91605dc985c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us_form
+    - field.field.block_content.contact_us_form.body
+    - field.field.block_content.contact_us_form.field_form
+    - field.field.block_content.contact_us_form.field_heading
+  module:
+    - text
+    - webform
+id: block_content.contact_us_form.default
+targetEntityType: block_content
+bundle: contact_us_form
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_form:
+    weight: 2
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

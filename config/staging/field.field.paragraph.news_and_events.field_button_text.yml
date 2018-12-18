@@ -1,0 +1,19 @@
+uuid: c4d63f61-a0f6-4e69-a3f7-bc5a93ef3361
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_text
+    - paragraphs.paragraphs_type.news_and_events
+id: paragraph.news_and_events.field_button_text
+field_name: field_button_text
+entity_type: paragraph
+bundle: news_and_events
+label: 'Button Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

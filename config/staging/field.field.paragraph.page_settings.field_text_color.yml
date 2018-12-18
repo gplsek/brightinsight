@@ -1,0 +1,23 @@
+uuid: f28d2220-2fdf-4151-9d90-4b7e55daed3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_color
+    - paragraphs.paragraphs_type.page_settings
+  module:
+    - options
+id: paragraph.page_settings.field_text_color
+field_name: field_text_color
+entity_type: paragraph
+bundle: page_settings
+label: 'Text Color'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: text-black
+default_value_callback: ''
+settings: {  }
+field_type: list_string

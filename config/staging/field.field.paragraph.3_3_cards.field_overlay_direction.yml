@@ -1,0 +1,21 @@
+uuid: bf871a9c-94b7-4e8f-9c79-623d39bc11b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay_direction
+    - paragraphs.paragraphs_type.3_3_cards
+  module:
+    - options
+id: paragraph.3_3_cards.field_overlay_direction
+field_name: field_overlay_direction
+entity_type: paragraph
+bundle: 3_3_cards
+label: 'Overlay Direction'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

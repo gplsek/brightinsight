@@ -1,0 +1,21 @@
+uuid: 5bf701e5-46a4-45ba-bbb7-4124ed224fa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_color
+    - paragraphs.paragraphs_type.videos
+  module:
+    - options
+id: paragraph.videos.field_text_color
+field_name: field_text_color
+entity_type: paragraph
+bundle: videos
+label: 'Text Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

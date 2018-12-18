@@ -1,0 +1,21 @@
+uuid: 51dd6f2d-befe-48e0-971c-66abd3dadee6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_style
+    - paragraphs.paragraphs_type.use_cases
+  module:
+    - options
+id: paragraph.use_cases.field_cta_style
+field_name: field_cta_style
+entity_type: paragraph
+bundle: use_cases
+label: 'CTA Style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

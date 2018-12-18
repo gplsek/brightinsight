@@ -1,0 +1,18 @@
+uuid: e0a9877e-e2f6-4e36-96e5-ddcbf6ff5574
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_padding_top
+field_name: field_padding_top
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,59 @@
+uuid: 1b5c8752-7a43-404a-b232-447487e13cc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_and_events.field_background_color
+    - field.field.paragraph.news_and_events.field_button_link
+    - field.field.paragraph.news_and_events.field_button_text
+    - field.field.paragraph.news_and_events.field_heading
+    - field.field.paragraph.news_and_events.field_news_events_blog
+    - paragraphs.paragraphs_type.news_and_events
+id: paragraph.news_and_events.default
+targetEntityType: paragraph
+bundle: news_and_events
+mode: default
+content:
+  field_background_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_link:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_button_text:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_news_events_blog:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

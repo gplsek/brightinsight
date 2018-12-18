@@ -1,0 +1,36 @@
+uuid: 76cc7112-10dd-42f9-9b5b-b2a347070a50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_use_case
+    - node.type.blog_post
+    - node.type.event
+    - node.type.job_posting
+    - node.type.news
+    - node.type.resource
+    - paragraphs.paragraphs_type.3_3_cards
+id: paragraph.3_3_cards.field_use_case
+field_name: field_use_case
+entity_type: paragraph
+bundle: 3_3_cards
+label: Card
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blog_post: blog_post
+      event: event
+      job_posting: job_posting
+      news: news
+      resource: resource
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: news
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 9eee6650-4631-47b2-b77b-11d0500753a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_top
+    - paragraphs.paragraphs_type.form
+id: paragraph.form.field_padding_top
+field_name: field_padding_top
+entity_type: paragraph
+bundle: form
+label: 'Padding Top'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

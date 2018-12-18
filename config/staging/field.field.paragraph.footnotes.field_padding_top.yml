@@ -1,0 +1,23 @@
+uuid: 3695a21c-3e62-4bfb-aae4-3487d0ef8d25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_top
+    - paragraphs.paragraphs_type.footnotes
+id: paragraph.footnotes.field_padding_top
+field_name: field_padding_top
+entity_type: paragraph
+bundle: footnotes
+label: 'Padding Top'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

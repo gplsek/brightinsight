@@ -1,0 +1,74 @@
+uuid: 91072bb8-bd98-485c-9e77-65e77c61f445
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.leadership.body
+    - field.field.node.leadership.field_head_shot
+    - field.field.node.leadership.field_hero_card_image
+    - field.field.node.leadership.field_linkedin_url
+    - field.field.node.leadership.field_page_settings
+    - field.field.node.leadership.field_role
+    - node.type.leadership
+  module:
+    - entity_reference_revisions
+    - image
+    - link
+    - text
+    - user
+id: node.leadership.default
+targetEntityType: node
+bundle: leadership
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_head_shot:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_linkedin_url:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_page_settings:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_role:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_hero_card_image: true

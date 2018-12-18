@@ -1,0 +1,21 @@
+uuid: 1433e012-6290-4e95-896b-f6e342497073
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ov
+    - paragraphs.paragraphs_type.videos
+  module:
+    - options
+id: paragraph.videos.field_ov
+field_name: field_ov
+entity_type: paragraph
+bundle: videos
+label: 'OverLay Position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,54 @@
+uuid: 9efddcc9-ae3a-4e27-9d4c-032f0d83981a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.clinicalboard.body
+    - field.field.node.clinicalboard.field_head_shot
+    - field.field.node.clinicalboard.field_hero_card_image
+    - field.field.node.clinicalboard.field_page_settings
+    - field.field.node.clinicalboard.field_role
+    - node.type.clinicalboard
+  module:
+    - image
+    - text
+    - user
+id: node.clinicalboard.teaser
+targetEntityType: node
+bundle: clinicalboard
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    region: content
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_hero_card_image:
+    type: image_url
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+  field_role:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_head_shot: true
+  field_linkedin_url: true
+  field_page_settings: true

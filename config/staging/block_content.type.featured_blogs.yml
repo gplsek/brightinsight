@@ -1,0 +1,8 @@
+uuid: adfdb419-fb6b-4a9a-beca-aff3687ed6e5
+langcode: en
+status: true
+dependencies: {  }
+id: featured_blogs
+label: 'Featured Blogs'
+revision: 1
+description: 'feature 3 blogs'

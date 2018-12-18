@@ -1,0 +1,21 @@
+uuid: f3632329-d6dc-4f06-a23a-d5b0b3aa83ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_color
+    - paragraphs.paragraphs_type.form
+  module:
+    - options
+id: paragraph.form.field_text_color
+field_name: field_text_color
+entity_type: paragraph
+bundle: form
+label: 'Text Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

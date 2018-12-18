@@ -1,0 +1,76 @@
+uuid: e3c89b85-d3ca-4145-9599-43b2127c9b58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphblock
+    - node.type.page
+    - paragraphs.paragraphs_type.page_settings
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraphblock
+field_name: field_paragraphblock
+entity_type: node
+bundle: page
+label: ParagraphBlock
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles:
+      page_settings: page_settings
+    target_bundles_drag_drop:
+      3_3_cards:
+        weight: 13
+        enabled: false
+      blog_posts:
+        weight: 14
+        enabled: false
+      careers:
+        weight: 15
+        enabled: false
+      featured_blogs:
+        weight: 16
+        enabled: false
+      from_library:
+        weight: 17
+        enabled: false
+      image_text_50_50:
+        weight: 18
+        enabled: false
+      image_text_50_50_fullbleed:
+        weight: 19
+        enabled: false
+      insights:
+        weight: 20
+        enabled: false
+      footnotes:
+        weight: 21
+        enabled: false
+      news_and_events:
+        weight: 21
+        enabled: false
+      form:
+        weight: 22
+        enabled: false
+      page_settings:
+        enabled: true
+        weight: 22
+      simple:
+        weight: 23
+        enabled: false
+      use_cases:
+        weight: 24
+        enabled: false
+      locations:
+        weight: 27
+        enabled: false
+      videos:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

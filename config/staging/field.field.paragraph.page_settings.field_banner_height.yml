@@ -1,0 +1,23 @@
+uuid: 0a394629-b9a1-4c6c-ace0-d4f888cf7d7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_height
+    - paragraphs.paragraphs_type.page_settings
+  module:
+    - options
+id: paragraph.page_settings.field_banner_height
+field_name: field_banner_height
+entity_type: paragraph
+bundle: page_settings
+label: 'Banner Height'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: component-banner-short
+default_value_callback: ''
+settings: {  }
+field_type: list_string

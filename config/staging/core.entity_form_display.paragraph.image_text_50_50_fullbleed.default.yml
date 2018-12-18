@@ -1,0 +1,123 @@
+uuid: 3ef2478f-8de5-4e5f-80df-7c1470d3e8c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_text_50_50_fullbleed.field_background_color
+    - field.field.paragraph.image_text_50_50_fullbleed.field_button_link
+    - field.field.paragraph.image_text_50_50_fullbleed.field_button_text
+    - field.field.paragraph.image_text_50_50_fullbleed.field_content
+    - field.field.paragraph.image_text_50_50_fullbleed.field_cta_style
+    - field.field.paragraph.image_text_50_50_fullbleed.field_image
+    - field.field.paragraph.image_text_50_50_fullbleed.field_image_location
+    - field.field.paragraph.image_text_50_50_fullbleed.field_text_color
+    - field.field.paragraph.image_text_50_50_fullbleed.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_text_50_50_fullbleed
+  module:
+    - field_group
+    - image
+    - text
+third_party_settings:
+  field_group:
+    group_image:
+      children:
+        - field_image
+        - field_image_location
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Image
+    group_settings:
+      children:
+        - field_text_color
+        - field_cta_style
+        - field_background_color
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: Settings
+id: paragraph.image_text_50_50_fullbleed.default
+targetEntityType: paragraph
+bundle: image_text_50_50_fullbleed
+mode: default
+content:
+  field_background_color:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_button_link:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_button_text:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_content:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_cta_style:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: image_image
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_image_location:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_text_color:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

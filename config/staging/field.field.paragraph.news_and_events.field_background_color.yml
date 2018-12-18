@@ -1,0 +1,21 @@
+uuid: 2578082b-c495-4c1e-8940-6092f84ecef0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.news_and_events
+  module:
+    - options
+id: paragraph.news_and_events.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: news_and_events
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

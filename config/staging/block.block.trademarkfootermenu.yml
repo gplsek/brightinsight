@@ -1,0 +1,24 @@
+uuid: d37209f3-1d9e-481f-9e28-3546d5315451
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.trademark-footer-menu
+  module:
+    - system
+  theme:
+    - brightinsight
+id: trademarkfootermenu
+theme: brightinsight
+region: trademark_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:trademark-footer-menu'
+settings:
+  id: 'system_menu_block:trademark-footer-menu'
+  label: 'Trademark Footer Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

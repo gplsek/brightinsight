@@ -1,0 +1,63 @@
+uuid: 21279468-61f2-4d14-8dc2-5345f5ce8d64
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_top_angle_color
+field_name: field_top_angle_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: top-angle-black
+      label: black
+    -
+      value: top-angle-white
+      label: white
+    -
+      value: top-angle-blue
+      label: blue
+    -
+      value: top-angle-blue-muted
+      label: 'blue (muted)'
+    -
+      value: top-angle-green
+      label: green
+    -
+      value: top-angle-green-muted
+      label: 'green (muted)'
+    -
+      value: top-angle-lime
+      label: lime
+    -
+      value: top-angle-lime-muted
+      label: 'lime (muted)'
+    -
+      value: top-angle-teal
+      label: teal
+    -
+      value: top-angle-teal-muted
+      label: 'teal (muted)'
+    -
+      value: top-angle-dk-gray
+      label: 'dark gray'
+    -
+      value: top-angle-md-gray
+      label: 'medium gray'
+    -
+      value: top-angle-gray
+      label: gray
+    -
+      value: top-angle-lt-gray
+      label: 'light gray'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

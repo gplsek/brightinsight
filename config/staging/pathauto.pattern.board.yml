@@ -1,0 +1,22 @@
+uuid: 893ec293-b03c-48c8-a047-6c01f8b84730
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: board
+label: board
+type: 'canonical_entities:node'
+pattern: 'clinicalboard/[node:title]'
+selection_criteria:
+  64c3a39f-8e93-45ec-916f-cc5bece0a323:
+    id: node_type
+    bundles:
+      clinicalboard: clinicalboard
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 64c3a39f-8e93-45ec-916f-cc5bece0a323
+selection_logic: and
+weight: -5
+relationships: {  }

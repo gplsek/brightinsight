@@ -1,0 +1,21 @@
+uuid: 61fefc13-e1e6-4bc2-9c6c-73db0c960627
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_style
+    - paragraphs.paragraphs_type.3_3_cards
+  module:
+    - options
+id: paragraph.3_3_cards.field_cta_style
+field_name: field_cta_style
+entity_type: paragraph
+bundle: 3_3_cards
+label: 'CTA Style'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,25 @@
+uuid: 61e5172c-9795-464a-a332-b176c3686a91
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: clinical_board
+label: 'Clinical Board'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      clinicalboard: clinicalboard
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

@@ -1,0 +1,19 @@
+uuid: 82527129-87ac-446c-81aa-6c19db0472c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_id
+    - node.type.video
+id: node.video.field_video_id
+field_name: field_video_id
+entity_type: node
+bundle: video
+label: 'Video ID'
+description: 'Youtube Video ID (from link like this: ttps://www.youtube.com/watch?v=HN-oHkBKDEU  is it HN-oHkBKDEU )'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

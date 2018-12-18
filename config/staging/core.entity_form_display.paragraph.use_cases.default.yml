@@ -1,0 +1,157 @@
+uuid: 9d698aed-bcf6-4f4a-9f38-d4c777a14412
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.use_cases.field_background_color
+    - field.field.paragraph.use_cases.field_background_image
+    - field.field.paragraph.use_cases.field_bottom_angle_color
+    - field.field.paragraph.use_cases.field_button_link
+    - field.field.paragraph.use_cases.field_button_text
+    - field.field.paragraph.use_cases.field_content
+    - field.field.paragraph.use_cases.field_cta_style
+    - field.field.paragraph.use_cases.field_ov
+    - field.field.paragraph.use_cases.field_overlay_direction
+    - field.field.paragraph.use_cases.field_text_color
+    - field.field.paragraph.use_cases.field_title
+    - field.field.paragraph.use_cases.field_top_angle_color
+    - field.field.paragraph.use_cases.field_use_case
+    - paragraphs.paragraphs_type.use_cases
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_background_image
+        - field_background_color
+        - field_ov
+        - field_overlay_direction
+        - field_bottom_angle_color
+        - field_top_angle_color
+        - field_cta_style
+        - field_text_color
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Settings
+    group_use:
+      children:
+        - field_use_case
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Use Cases'
+id: paragraph.use_cases.default
+targetEntityType: paragraph
+bundle: use_cases
+mode: default
+content:
+  field_background_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_background_image:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_bottom_angle_color:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_button_link:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_button_text:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_cta_style:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ov:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_overlay_direction:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_color:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_top_angle_color:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_use_case:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

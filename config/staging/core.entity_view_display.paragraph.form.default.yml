@@ -1,0 +1,80 @@
+uuid: 409119b1-2803-4703-8702-2d146fa2c21e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.form.field_background_color
+    - field.field.paragraph.form.field_content
+    - field.field.paragraph.form.field_form
+    - field.field.paragraph.form.field_padding_bottom
+    - field.field.paragraph.form.field_padding_top
+    - field.field.paragraph.form.field_text_color
+    - field.field.paragraph.form.field_title
+    - paragraphs.paragraphs_type.form
+  module:
+    - options
+    - text
+    - webform
+id: paragraph.form.default
+targetEntityType: paragraph
+bundle: form
+mode: default
+content:
+  field_background_color:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_form:
+    weight: 2
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  field_padding_bottom:
+    weight: 5
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_padding_top:
+    weight: 6
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_text_color:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,14 @@
+uuid: 1774a0ed-a4da-4a60-bdeb-ba3f887cc627
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: form
+label: Form
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

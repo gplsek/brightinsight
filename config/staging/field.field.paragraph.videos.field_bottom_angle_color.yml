@@ -1,0 +1,21 @@
+uuid: b9951cbc-1deb-4bcb-8a72-88b0ff24b752
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bottom_angle_color
+    - paragraphs.paragraphs_type.videos
+  module:
+    - options
+id: paragraph.videos.field_bottom_angle_color
+field_name: field_bottom_angle_color
+entity_type: paragraph
+bundle: videos
+label: 'Bottom Angle Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

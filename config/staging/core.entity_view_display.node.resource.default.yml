@@ -1,0 +1,45 @@
+uuid: 7902860e-5234-4397-934f-3834ab9db613
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.resource.field_description
+    - field.field.node.resource.field_resource_file
+    - field.field.node.resource.field_type
+    - node.type.resource
+  module:
+    - file
+    - user
+id: node.resource.default
+targetEntityType: node
+bundle: resource
+mode: default
+content:
+  field_description:
+    weight: 101
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_resource_file:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+    region: content
+  field_type:
+    weight: 103
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

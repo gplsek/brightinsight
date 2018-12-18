@@ -1,0 +1,86 @@
+uuid: 1b31ff8b-0af4-4d12-bd67-871c3bd6d2da
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_end_date
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_hero_card_image
+    - field.field.node.event.field_link
+    - field.field.node.event.field_page_settings
+    - node.type.event
+  module:
+    - datetime
+    - image
+    - link
+    - text
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_event_date:
+    type: datetime_custom
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'M d, Y'
+    third_party_settings: {  }
+  field_event_end_date:
+    type: datetime_custom
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'M d, Y'
+    third_party_settings: {  }
+  field_event_location:
+    type: string
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_hero_card_image:
+    type: image_url
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+  field_link:
+    type: link
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_page_settings: true

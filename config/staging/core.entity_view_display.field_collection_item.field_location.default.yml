@@ -1,0 +1,37 @@
+uuid: 17e1c732-c028-420d-81b7-f8409c4b9ff6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_location.field_description
+    - field.field.field_collection_item.field_location.field_email
+    - field.field.field_collection_item.field_location.field_title
+    - field_collection.field_collection.field_location
+id: field_collection_item.field_location.default
+targetEntityType: field_collection_item
+bundle: field_location
+mode: default
+content:
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_email:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

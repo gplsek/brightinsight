@@ -1,0 +1,58 @@
+uuid: 2b47ef89-695d-43cb-99f1-4ce20ec1c3be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_settings
+    - node.type.event
+    - paragraphs.paragraphs_type.page_settings
+  module:
+    - entity_reference_revisions
+id: node.event.field_page_settings
+field_name: field_page_settings
+entity_type: node
+bundle: event
+label: 'Page Settings'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      page_settings: page_settings
+    target_bundles_drag_drop:
+      blog_posts:
+        weight: 11
+        enabled: false
+      careers:
+        weight: 12
+        enabled: false
+      from_library:
+        weight: 13
+        enabled: false
+      image_text_50_50:
+        weight: 14
+        enabled: false
+      image_text_50_50_fullbleed:
+        weight: 15
+        enabled: false
+      insights:
+        weight: 16
+        enabled: false
+      news_and_events:
+        weight: 17
+        enabled: false
+      page_settings:
+        enabled: true
+        weight: 18
+      simple:
+        weight: 19
+        enabled: false
+      use_cases:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

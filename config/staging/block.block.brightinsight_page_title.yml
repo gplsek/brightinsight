@@ -1,0 +1,39 @@
+uuid: ef5d4dc4-ffb0-411b-964a-b03102810dce
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+  theme:
+    - brightinsight
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: brightinsight_page_title
+theme: brightinsight
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blog_post: blog_post
+      clinicalboard: clinicalboard
+      event: event
+      homepage: homepage
+      job_posting: job_posting
+      leadership: leadership
+      news: news
+      page: page
+      resource: resource
+      secondary_page: secondary_page
+      use_case: use_case
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

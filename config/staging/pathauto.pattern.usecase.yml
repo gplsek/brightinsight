@@ -1,0 +1,22 @@
+uuid: 17984ca8-38c3-421e-8834-c1483f6d57c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: usecase
+label: usecase
+type: 'canonical_entities:node'
+pattern: 'usecase/[node:title]'
+selection_criteria:
+  ec862d46-4532-4626-be7e-a4fc9fb3679b:
+    id: node_type
+    bundles:
+      use_case: use_case
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ec862d46-4532-4626-be7e-a4fc9fb3679b
+selection_logic: and
+weight: -5
+relationships: {  }

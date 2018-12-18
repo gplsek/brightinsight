@@ -1,0 +1,22 @@
+uuid: 19483ac6-6e52-4f68-8be1-46b3b62f8a9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.jobs
+id: entity_subqueue.jobs.default
+targetEntityType: entity_subqueue
+bundle: jobs
+mode: default
+content:
+  items:
+    label: hidden
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+hidden:
+  title: true

@@ -1,0 +1,19 @@
+uuid: 7ed22c07-f868-49d0-820b-159604ccf9f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.news_and_events
+id: paragraph.news_and_events.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: news_and_events
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

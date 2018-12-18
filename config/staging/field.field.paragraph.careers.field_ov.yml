@@ -1,0 +1,21 @@
+uuid: 5e55fe8b-ddef-4dfe-8bd3-8d7a2678d9e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ov
+    - paragraphs.paragraphs_type.careers
+  module:
+    - options
+id: paragraph.careers.field_ov
+field_name: field_ov
+entity_type: paragraph
+bundle: careers
+label: 'Overlay Position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

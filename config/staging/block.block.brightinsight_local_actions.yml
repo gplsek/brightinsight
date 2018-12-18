@@ -1,0 +1,20 @@
+uuid: 01eba465-5d86-4405-a858-3a6a8d10fc65
+langcode: en
+status: true
+dependencies:
+  theme:
+    - brightinsight
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: brightinsight_local_actions
+theme: brightinsight
+region: help
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
