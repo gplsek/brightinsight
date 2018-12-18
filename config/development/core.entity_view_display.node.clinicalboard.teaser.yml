@@ -50,4 +50,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_head_shot: true
+  field_linkedin_url: true
   field_page_settings: true

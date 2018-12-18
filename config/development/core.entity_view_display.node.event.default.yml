@@ -34,7 +34,7 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      date_format: 'D M/d/Y'
+      date_format: 'M d, Y'
     third_party_settings: {  }
     type: datetime_custom
     region: content
@@ -43,7 +43,7 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      date_format: 'D M/d/Y'
+      date_format: 'M d, Y'
     third_party_settings: {  }
     type: datetime_custom
     region: content
