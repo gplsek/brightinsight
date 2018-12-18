@@ -85,7 +85,12 @@
 	<div class="content">
 		<div class="meta">
             {% set createdDate = node.getCreatedTime|date('M d, Y') %}
-            {{ createdDate }}
+            {% if content.field_author.0 %}
+                {% set author =  content.field_author.0 %}
+            {% else %}
+                {% set author =  author_name %}
+            {% endif %}
+            {{ author }} / {{ createdDate }}
 		</div>
 		<header>
 			<h4>{{ label }}</h4>

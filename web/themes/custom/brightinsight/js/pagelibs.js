@@ -295,5 +295,4 @@ function mediaQueryWidth()
 }
 
 
-
 })(jQuery, Drupal);

@@ -369,8 +369,8 @@
             					</div>
             				</div>
             				<div class="component-header">
-            					<div class="row align-items-end justify-content-between">
-            						<div class="col-12 col-md-3 order-md-2">
+            					<div class="row align-items-end">
+            						<div class="col-md-auto order-md-2">
             							<div class="social">
             								<!-- if LinkedIn profile -->
                                         {% if content.field_linkedin_url[0]['#url'] %}
@@ -379,7 +379,7 @@
                                         {% endif %}
             							</div>
             						</div>
-            						<div class="col-12 col-md-9 col-xl-8 col-xxl-7 order-md-1">
+            						<div class="col-md-auto order-md-1">
             							<header>
             								<h1 class="line">{{ label }}</h1>
             							</header>
@@ -408,8 +408,12 @@
           						</div>
           						<div class="col-12 col-md-9 col-xl-8 col-xxl-7 order-md-1">
                                     {% set createdDate = node.getCreatedTime|date('M d, Y') %}
-                                    
-          							<div class="meta">{{ author_name }} / {{ createdDate }}</div>
+                                    {% if content.field_author.0 %}
+                                        {% set author =  content.field_author.0 %}
+                                    {% else %}
+                                        {% set author =  author_name %}
+                                    {% endif %}
+          							<div class="meta">{{ author }} / {{ createdDate }}</div>
           							<header>
           								<h1 class="line">{{ label }}</h1>
           							</header>

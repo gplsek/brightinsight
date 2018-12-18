@@ -4393,6 +4393,7 @@ button {
 
 .component-banner-inline .component-content {
   font-size: 20px;
+  font-weight: 500;
   line-height: 28px;
   margin: 20px 0 0; }
   @media (min-width: 768px) {

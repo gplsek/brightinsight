@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.featured
     - field.field.node.blog_post.body
+    - field.field.node.blog_post.field_author
     - field.field.node.blog_post.field_blog_hero_image
     - field.field.node.blog_post.field_hero_card_image
+    - field.field.node.blog_post.field_page_settings
     - node.type.blog_post
   module:
     - image
@@ -20,12 +22,20 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_author:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_blog_hero_image:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       image_style: ''
@@ -34,7 +44,7 @@ content:
     region: content
   field_hero_card_image:
     type: image_url
-    weight: 3
+    weight: 4
     region: content
     label: above
     settings:
@@ -45,4 +55,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_page_settings: true
